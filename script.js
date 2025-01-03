@@ -83,13 +83,4 @@ function decreaseStats() {
   // Update everything after the stats decrease
   updateStatus();
 
-  // If any stat hits zero, pet is "dead"
-  if (hunger <= 0 || happiness <= 0 || energy <= 0) {
-    alert("Your pet has passed away... :( Refresh to try again!");
-    // Reset all stats for next try
-    hunger = happiness = energy = 100;
-    updateStatus();
-}
-
-// Set interval to decrease stats every second (this line is outside of any function)
-setInterval(decreaseStats, 1000);
+  //
