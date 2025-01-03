@@ -3,33 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tamagotchi Pet</title>
+  <title>My Townie</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>My Townie</h1>
-    
-    <!-- Display the pet's image -->
-    <div id="petImage" class="pet-image">
-      <img src="images/neutral.png" alt="My Townie" id="petImg"/>
+    <!-- Townie Image -->
+    <div class="pet-container">
+      <img id="petImg" src="images/neutral.png" alt="Tamagotchi Pet" class="pet-img">
     </div>
-    
-    <!-- Display the pet's status -->
-    <div id="status">
-      <p>Hunger: <span id="hungerLevel">100</span>%</p>
-      <p>Happiness: <span id="happinessLevel">100</span>%</p>
-      <p>Energy: <span id="energyLevel">100</span>%</p>
+
+    <!-- Stats Progress Bars -->
+    <div class="stats-container">
+      <div class="stat">
+        <label for="hunger">Hunger</label>
+        <div class="progress-bar">
+          <div id="hunger-bar" class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="stat">
+        <label for="happiness">Happiness</label>
+        <div class="progress-bar">
+          <div id="happiness-bar" class="progress-fill"></div>
+        </div>
+      </div>
+      <div class="stat">
+        <label for="energy">Energy</label>
+        <div class="progress-bar">
+          <div id="energy-bar" class="progress-fill"></div>
+        </div>
+      </div>
     </div>
-    
-    <!-- Buttons to interact with the pet -->
-    <div class="buttons">
-      <button id="feedBtn">Feed</button>
-      <button id="playBtn">Play</button>
-      <button id="sleepBtn">Sleep</button>
+
+    <!-- Action Buttons -->
+    <div class="buttons-container">
+      <button id="feed-btn" onclick="feedPet()">Feed</button>
+      <button id="play-btn" onclick="playWithPet()">Play</button>
+      <button id="sleep-btn" onclick="sleepPet()">Sleep</button>
     </div>
   </div>
 
+  <!-- Corrected script reference -->
   <script src="script.js"></script>
 </body>
 </html>
+
