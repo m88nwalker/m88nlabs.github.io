@@ -1,42 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tamagotchi Pet</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamagotchi Pet</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>Tamagotchi Pet</h1>
 
-    <div class="container">
-        <h1>Your Tamagotchi Pet</h1>
-
-        <div class="pet-image">
-            <img id="petImg" src="images/neutral.png" alt="Tamagotchi" />
-        </div>
-
-        <div class="progress-bars">
-            <div class="bar">
-                <label>Hunger</label>
-                <div id="hunger-bar" class="progress-bar"></div>
-            </div>
-            <div class="bar">
-                <label>Happiness</label>
-                <div id="happiness-bar" class="progress-bar"></div>
-            </div>
-            <div class="bar">
-                <label>Energy</label>
-                <div id="energy-bar" class="progress-bar"></div>
-            </div>
-        </div>
-
-        <div class="buttons">
-            <button onclick="feedPet()">Feed Pet</button>
-            <button onclick="playWithPet()">Play with Pet</button>
-            <button onclick="sleepPet()">Put Pet to Sleep</button>
-        </div>
+    <!-- Pet Image -->
+    <div class="pet-container">
+      <img id="petImg" src="images/neutral.png" alt="Tamagotchi Pet" class="pet-img">
     </div>
 
-    <script src="script.js"></script>
+    <!-- Progress Bars -->
+    <div class="progress-container">
+      <div class="progress-bar-container">
+        <label for="hunger-bar">Hunger</label>
+        <div class="progress-bar" id="hunger-bar">
+          <span class="progress-text" id="hunger-text">100%</span>
+        </div>
+      </div>
+      <div class="progress-bar-container">
+        <label for="happiness-bar">Happiness</label>
+        <div class="progress-bar" id="happiness-bar">
+          <span class="progress-text" id="happiness-text">100%</span>
+        </div>
+      </div>
+      <div class="progress-bar-container">
+        <label for="energy-bar">Energy</label>
+        <div class="progress-bar" id="energy-bar">
+          <span class="progress-text" id="energy-text">100%</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Buttons to Interact with the Pet -->
+    <div class="button-container">
+      <button class="action-btn" onclick="feedPet()">Feed</button>
+      <button class="action-btn" onclick="playWithPet()">Play</button>
+      <button class="action-btn" onclick="sleepPet()">Sleep</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>

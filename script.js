@@ -11,11 +11,21 @@ function updateStatus() {
   const hungerBar = document.getElementById('hunger-bar');
   const happinessBar = document.getElementById('happiness-bar');
   const energyBar = document.getElementById('energy-bar');
+  
+  // Select progress text elements
+  const hungerText = document.getElementById('hunger-text');
+  const happinessText = document.getElementById('happiness-text');
+  const energyText = document.getElementById('energy-text');
 
   // Update the progress bars based on stats
   hungerBar.style.width = hunger + '%';
   happinessBar.style.width = happiness + '%';
   energyBar.style.width = energy + '%';
+
+  // Update the progress text inside each bar
+  hungerText.textContent = Math.round(hunger) + '%';
+  happinessText.textContent = Math.round(happiness) + '%';
+  energyText.textContent = Math.round(energy) + '%';
 
   // Update pet image based on stats
   updatePetImage();
@@ -79,7 +89,7 @@ function decreaseStats() {
     // Reset all stats for next try
     hunger = happiness = energy = 100;
     updateStatus();
-}  // <-- Closing brace for the decreaseStats function
+}
 
 // Set interval to decrease stats every second (this line is outside of any function)
-setInterval(decreaseStats, 1000);  // <-- This should be outside of all functions
+setInterval(decreaseStats, 1000);
