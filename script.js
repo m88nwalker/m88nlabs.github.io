@@ -4,10 +4,10 @@ let happiness = 100;
 let energy = 100;
 
 // Get elements from the DOM
+const petImg = document.getElementById('petImg');
 const hungerLevel = document.getElementById('hungerLevel');
 const happinessLevel = document.getElementById('happinessLevel');
 const energyLevel = document.getElementById('energyLevel');
-const petImg = document.getElementById('petImg');
 
 // Buttons
 const feedBtn = document.getElementById('feedBtn');
@@ -23,21 +23,20 @@ function updateStatus() {
 
 // Update the Townie image based on its state
 function updatePetImage() {
-    console.log(`Hunger: ${hunger}, Happiness: ${happiness}, Energy: ${energy}`); // Log current stats
+    // Log to the console to check Townie stats when the image updates
+    console.log(`Updating image with stats: Hunger: ${hunger}, Happiness: ${happiness}, Energy: ${energy}`);
+    
+    // Set image based on hunger, happiness, and energy levels
     if (hunger === 0 || happiness === 0 || energy === 0) {
-      petImg.src = 'images/sad.png'; // Show sad image if the Townie is "dead"
-      console.log('Showing sad image');
-    } else if (energy === 100 && happiness === 100) {
-      petImg.src = 'images/happy.png'; // Show happy image if everything is full
-      console.log('Showing happy image');
+      petImg.src = 'images/sad.png'; // Show sad image if any stat is zero
+    } else if (happiness === 100 && energy === 100) {
+      petImg.src = 'images/happy.png'; // Happy image when everything is full
     } else if (energy < 50) {
-      petImg.src = 'images/sleeping.png'; // Show sleeping image if low energy
-      console.log('Showing sleeping image');
+      petImg.src = 'images/sleeping.png'; // Sleeping image if energy is low
     } else {
       petImg.src = 'images/neutral.png'; // Default neutral image
-      console.log('Showing neutral image');
     }
-  }  
+  } 
 
 // Feed the Townie
 feedBtn.addEventListener('click', () => {
