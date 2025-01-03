@@ -20,7 +20,7 @@ function updateStatus() {
   energyLevel.textContent = energy;
 }
 
-// Feed the pet
+// Feed the Townie
 feedBtn.addEventListener('click', () => {
   hunger = Math.min(100, hunger + 20); // Increase hunger level
   energy = Math.min(100, energy + 10); // Slightly increase energy
@@ -36,11 +36,11 @@ playBtn.addEventListener('click', () => {
     updateStatus();
     checkIfDead();
   } else {
-    alert("You need more energy to play!");
+    alert("Your Townie needs more energy to play!");
   }
 });
 
-// Put the pet to sleep
+// Put the Townie to sleep
 sleepBtn.addEventListener('click', () => {
   energy = Math.min(100, energy + 40); // Restore energy
   hunger = Math.max(0, hunger - 10); // Decrease hunger slightly
@@ -57,10 +57,10 @@ function decreaseStats() {
   checkIfDead();
 }
 
-// Check if the Tamagotchi has died
+// Check if the Townie has died
 function checkIfDead() {
   if (hunger === 0 || happiness === 0 || energy === 0) {
-    alert("Your Tamagotchi has passed away... :( Try again!");
+    alert("Your Townie has passed away... :( So sad. Try again!");
     resetGame();
   }
 }
@@ -72,6 +72,52 @@ function resetGame() {
   energy = 100;
   updateStatus();
 }
+
+// Get the image element
+const petImg = document.getElementById('petImg');
+
+// Update the image based on the pet's state
+function updatePetImage() {
+  if (hunger === 0 || happiness === 0 || energy === 0) {
+    petImg.src = 'images/sad.png'; // Show sad image if the pet is "dead"
+  } else if (energy === 100 && happiness === 100) {
+    petImg.src = 'images/happy.png'; // Show happy image if everything is full
+  } else if (energy < 50) {
+    petImg.src = 'images/sleeping.png'; // Show sleeping image if the pet is low on energy
+  } else {
+    petImg.src = 'images/neutral.png'; // Show neutral image for regular state
+  }
+}
+
+// Call updatePetImage when the pet's state changes
+feedBtn.addEventListener('click', () => {
+  hunger = Math.min(100, hunger + 20);
+  energy = Math.min(100, energy + 10);
+  updateStatus();
+  updatePetImage();  // Update image when fed
+});
+
+playBtn.addEventListener('click', () => {
+  if (energy > 20) {
+    happiness = Math.min(100, happiness + 30);
+    energy -= 20;
+    updateStatus();
+    updatePetImage();  // Update image after playing
+  } else {
+    alert("You need more energy to play!");
+  }
+});
+
+sleepBtn.addEventListener('click', () => {
+  energy = Math.min(100, energy + 40);
+  hunger = Math.max(0, hunger - 10);
+  updateStatus();
+  updatePetImage();  // Update image after sleeping
+});
+
+// Also call updatePetImage on the initial page load
+updatePetImage();
+
 
 // Decrease stats every second
 setInterval(decreaseStats, 1000);
