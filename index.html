@@ -1,50 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Townie</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamagotchi Pet</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Townie Image -->
-    <div class="pet-container">
-      <img id="petImg" src="images/neutral.png" alt="Tamagotchi Pet" class="pet-img">
+
+    <div class="container">
+        <h1>Your Tamagotchi Pet</h1>
+
+        <div class="pet-image">
+            <img id="petImg" src="images/neutral.png" alt="Tamagotchi" />
+        </div>
+
+        <div class="progress-bars">
+            <div class="bar">
+                <label>Hunger</label>
+                <div id="hunger-bar" class="progress-bar"></div>
+            </div>
+            <div class="bar">
+                <label>Happiness</label>
+                <div id="happiness-bar" class="progress-bar"></div>
+            </div>
+            <div class="bar">
+                <label>Energy</label>
+                <div id="energy-bar" class="progress-bar"></div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button onclick="feedPet()">Feed Pet</button>
+            <button onclick="playWithPet()">Play with Pet</button>
+            <button onclick="sleepPet()">Put Pet to Sleep</button>
+        </div>
     </div>
 
-    <!-- Stats Progress Bars -->
-    <div class="stats-container">
-      <div class="stat">
-        <label for="hunger">Hunger</label>
-        <div class="progress-bar">
-          <div id="hunger-bar" class="progress-fill"></div>
-        </div>
-      </div>
-      <div class="stat">
-        <label for="happiness">Happiness</label>
-        <div class="progress-bar">
-          <div id="happiness-bar" class="progress-fill"></div>
-        </div>
-      </div>
-      <div class="stat">
-        <label for="energy">Energy</label>
-        <div class="progress-bar">
-          <div id="energy-bar" class="progress-fill"></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Action Buttons -->
-    <div class="buttons-container">
-      <button id="feed-btn" onclick="feedPet()">Feed</button>
-      <button id="play-btn" onclick="playWithPet()">Play</button>
-      <button id="sleep-btn" onclick="sleepPet()">Sleep</button>
-    </div>
-  </div>
-
-  <!-- Corrected script reference -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-

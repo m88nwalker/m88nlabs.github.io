@@ -8,7 +8,6 @@ const petImg = document.getElementById("petImg");
 
 // Function to update the status of the pet and its progress bars
 function updateStatus() {
-  // Select progress bar elements
   const hungerBar = document.getElementById('hunger-bar');
   const happinessBar = document.getElementById('happiness-bar');
   const energyBar = document.getElementById('energy-bar');
@@ -26,11 +25,9 @@ function updateStatus() {
 function updatePetImage() {
   if (happiness > 90) {
     petImg.src = 'images/happy.png'; // Happy image
-  } else if (happiness < 20) {
+  } else if (happiness < 20 || hunger === 0 || happiness === 0 || energy === 0) {
     petImg.src = 'images/sad.png'; // Sad image
-  } else if (hunger === 0 || happiness === 0 || energy === 0) {
-    petImg.src = 'images/sad.png'; // If dead or too low in any stat, sad image
-  } else if (energy < 30) {
+  } else if (energy < 50) {
     petImg.src = 'images/sleeping.png'; // Sleeping image if energy is low
   } else {
     petImg.src = 'images/neutral.png'; // Neutral image
@@ -42,7 +39,7 @@ function feedPet() {
   if (hunger < 100) {
     hunger += 10;
   }
-  updateStatus();  // Update the progress bars and image after feeding
+  updateStatus();  // Refresh everything
 }
 
 // Play with the pet (increase happiness)
@@ -50,7 +47,7 @@ function playWithPet() {
   if (happiness < 100) {
     happiness += 10;
   }
-  updateStatus();  // Update the progress bars and image after playing
+  updateStatus();  // Refresh everything
 }
 
 // Pet goes to sleep (increase energy)
@@ -58,29 +55,31 @@ function sleepPet() {
   if (energy < 100) {
     energy += 10;
   }
-  updateStatus();  // Update the progress bars and image after sleeping
+  updateStatus();  // Refresh everything
 }
 
 // Decrease stats over time (simulating aging or natural stat decay)
 function decreaseStats() {
-  // Decrease hunger, happiness, and energy over time
-  if (hunger > 0) hunger -= 0.05;
-  if (happiness > 0) happiness -= 0.05;
-  if (energy > 0) energy -= 0.05;
+  if (hunger > 0) {
+    hunger -= 0.05; // Decrease hunger
+  }
+  if (happiness > 0) {
+    happiness -= 0.05; // Decrease happiness
+  }
+  if (energy > 0) {
+    energy -= 0.05; // Decrease energy
+  }
 
-  // Update status and check if the pet is still alive
+  // Update everything after the stats decrease
   updateStatus();
 
-  // Check if pet is dead (all stats are zero or below)
+  // If any stat hits zero, pet is "dead"
   if (hunger <= 0 || happiness <= 0 || energy <= 0) {
-    alert("Your Townie has passed away... :( So sad. Refresh to try again!");
-  }
-}
+    alert("Your pet has passed away... :( Refresh to try again!");
+    // Reset all stats for next try
+    hunger = happiness = energy = 100;
+    updateStatus();
+}  // <-- Closing brace for the decreaseStats function
 
-// Call decreaseStats every 1 second to simulate pet’s natural decay
-setInterval(decreaseStats, 1000);
-
-// Initial call to set up the pet's status and progress bars
-updateStatus();
-
-
+// Set interval to decrease stats every second (this line is outside of any function)
+setInterval(decreaseStats, 1000);  // <-- This should be outside of all functions

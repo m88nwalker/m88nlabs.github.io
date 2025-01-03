@@ -1,124 +1,74 @@
-/* Reset some basic styles */
+/* Basic reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Body Styling */
-  body {
-    font-family: 'Arial', sans-serif;
-    background: #f4f4f9;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    flex-direction: column;
-  }
-  
-  /* Container */
-  .container {
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
     text-align: center;
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 400px;
-    max-width: 90%;
-  }
-  
-  /* Townie Image Styling */
-  .pet-container {
-    margin-bottom: 20px;
-  }
-  
-  .pet-img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .pet-img:hover {
-    transform: scale(1.1); /* Slight zoom effect on hover */
-  }
-  
-  /* Progress Bar Styling */
-  .stats-container {
-    margin-bottom: 20px;
-  }
-  
-  .stat {
-    margin-bottom: 15px;
-  }
-  
-  .stat label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .progress-bar {
-    width: 100%;
+    padding: 50px;
+}
+
+/* Container for the whole pet game */
+.container {
+    width: 60%;
+    margin: 0 auto;
+}
+
+/* Progress bar styling */
+.progress-bar {
     height: 20px;
-    background-color: #eee;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    width: 100%; /* We’ll adjust the width dynamically based on the stat value */
-    background-color: #4caf50;
-    border-radius: 10px;
-    transition: width 0.5s ease-in-out;
-  }
-  
-  /* Button Styling */
-  .buttons-container {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  button {
-    background-color: #4caf50;
-    color: white;
+    background-color: #ddd;
+    width: 0%; /* This will dynamically change via JavaScript */
+    transition: width 0.3s ease-in-out;
+}
+
+.bar {
+    margin-bottom: 15px;
+}
+
+#hunger-bar {
+    background-color: #ff6347; /* Red for hunger */
+}
+
+#happiness-bar {
+    background-color: #32cd32; /* Green for happiness */
+}
+
+#energy-bar {
+    background-color: #87ceeb; /* Blue for energy */
+}
+
+/* Pet image section */
+.pet-image img {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+}
+
+/* Buttons styling */
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
     font-size: 16px;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 5px;
     transition: background-color 0.3s ease;
-    width: 30%;
-  }
-  
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  /* Sad Animation */
-  .pet-img.sad {
-    animation: sadAnimation 1s ease-in-out infinite;
-  }
-  
-  @keyframes sadAnimation {
-    0% {
-      transform: rotate(5deg);
-    }
-    50% {
-      transform: rotate(-5deg);
-    }
-    100% {
-      transform: rotate(5deg);
-    }
-  }
-  
-  
+}
+
+.buttons button:hover {
+    background-color: #2980b9;
+}
+
+/* General layout adjustments */
+h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 20px;
+}
