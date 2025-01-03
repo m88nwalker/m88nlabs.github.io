@@ -24,24 +24,24 @@ function updateStatus() {
 // Update the Townie image based on its state
 function updatePetImage() {
     console.log(`Updating image... Hunger: ${hunger}, Happiness: ${happiness}, Energy: ${energy}`);
-    
-    // Show sad image when happiness is below 20
-    if (happiness < 20) {
-      petImg.src = 'images/sad.png'; // Show sad image if happiness is below 20
-      console.log('Happiness below 20, showing sad image');
+  
+    // Show happy image when happiness is above 80
+    if (happiness > 80) {
+      petImg.src = 'images/happy.png'; // Show happy image if happiness is above 80
+      console.log('Happiness above 80, showing happy image');
+    } 
+    // Show sad image when happiness is below 15
+    else if (happiness < 15) {
+      petImg.src = 'images/sad.png'; // Show sad image if happiness is below 15
+      console.log('Happiness below 15, showing sad image');
     } 
     // Show sad image if any stat is 0 (hunger, happiness, energy)
     else if (hunger === 0 || happiness === 0 || energy === 0) {
       petImg.src = 'images/sad.png'; // Show sad image if any stat is zero
       console.log('Pet is dead. Showing sad image');
     } 
-    // Show happy image when everything is full
-    else if (happiness === 100 && energy === 100) {
-      petImg.src = 'images/happy.png';
-      console.log('Happiness and energy full, showing happy image');
-    } 
     // Show sleeping image if energy is low
-    else if (energy < 50) {
+    else if (energy < 30) {
       petImg.src = 'images/sleeping.png';
       console.log('Energy low, showing sleeping image');
     } 
@@ -101,18 +101,19 @@ function decreaseStats() {
   
 // Check if the Townie has died
 function checkIfDead() {
-    // If any stat is 0 (hunger, happiness, or energy), the Townie dies
     if (hunger === 0 || happiness === 0 || energy === 0) {
+      // Show the sad image when the Townie dies
       console.log('Pet is dead. Showing sad image');
       petImg.src = 'images/sad.png'; // Show sad image when the Townie dies
   
       // Pause for 2 seconds to show the sad image
       setTimeout(() => {
-        alert("Your Townie has passed away... :( So sad. Try again!");
+        alert("Your Tamagotchi has passed away... :( Try again!");
         resetGame(); // Reset the game after a 2-second pause
       }, 2000);
     }
   }
+  
     
 
 // Reset the game to initial state
