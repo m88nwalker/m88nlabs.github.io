@@ -23,21 +23,36 @@ function updateStatus() {
 
 // Update the Townie image based on its state
 function updatePetImage() {
-    // Log to the console to check Townie stats when the image updates
-    console.log(`Updating image with stats: Hunger: ${hunger}, Happiness: ${happiness}, Energy: ${energy}`);
+    console.log(`Updating image... Hunger: ${hunger}, Happiness: ${happiness}, Energy: ${energy}`);
     
-    // Set image based on hunger, happiness, and energy levels
-    if (hunger === 0 || happiness === 0 || energy === 0) {
+    // Show sad image when happiness is below 20
+    if (happiness < 20) {
+      petImg.src = 'images/sad.png'; // Show sad image if happiness is below 20
+      console.log('Happiness below 20, showing sad image');
+    } 
+    // Show sad image if any stat is 0 (hunger, happiness, energy)
+    else if (hunger === 0 || happiness === 0 || energy === 0) {
       petImg.src = 'images/sad.png'; // Show sad image if any stat is zero
-    } else if (happiness === 100 && energy === 100) {
-      petImg.src = 'images/happy.png'; // Happy image when everything is full
-    } else if (energy < 50) {
-      petImg.src = 'images/sleeping.png'; // Sleeping image if energy is low
-    } else {
-      petImg.src = 'images/neutral.png'; // Default neutral image
+      console.log('Pet is dead. Showing sad image');
+    } 
+    // Show happy image when everything is full
+    else if (happiness === 100 && energy === 100) {
+      petImg.src = 'images/happy.png';
+      console.log('Happiness and energy full, showing happy image');
+    } 
+    // Show sleeping image if energy is low
+    else if (energy < 50) {
+      petImg.src = 'images/sleeping.png';
+      console.log('Energy low, showing sleeping image');
+    } 
+    // Default neutral image
+    else {
+      petImg.src = 'images/neutral.png';
+      console.log('Neutral image');
     }
-  } 
-
+  }
+  
+   
 // Feed the Townie
 feedBtn.addEventListener('click', () => {
     hunger = Math.min(100, hunger + 20); // Increase hunger level
@@ -71,21 +86,34 @@ feedBtn.addEventListener('click', () => {
 
 // Decrease hunger, happiness, and energy over time
 function decreaseStats() {
-  hunger = Math.max(0, hunger - 1);
-  happiness = Math.max(0, happiness - 1);
-  energy = Math.max(0, energy - 1);
-  updateStatus();
-  updatePetImage(); // Update image as stats change
-  checkIfDead();
-}
-
+    hunger = Math.max(0, hunger - 1); // Hunger decreases by 1, but not below 0
+    happiness = Math.max(0, happiness - 1); // Happiness decreases by 1, but not below 0
+    energy = Math.max(0, energy - 1); // Energy decreases by 1, but not below 0
+    
+    console.log(`Stats after decrease: Hunger: ${hunger}, Happiness: ${happiness}, Energy: ${energy}`);
+    
+    updateStatus();
+    updatePetImage(); // Update image as stats change
+    
+    checkIfDead(); // Check if the Townie is dead (stats hit 0)
+  }
+  
+  
 // Check if the Townie has died
 function checkIfDead() {
-  if (hunger === 0 || happiness === 0 || energy === 0) {
-    alert("Your Townie has passed away... :( So sad. Try again!");
-    resetGame();
+    // If any stat is 0 (hunger, happiness, or energy), the Townie dies
+    if (hunger === 0 || happiness === 0 || energy === 0) {
+      console.log('Pet is dead. Showing sad image');
+      petImg.src = 'images/sad.png'; // Show sad image when the Townie dies
+  
+      // Pause for 2 seconds to show the sad image
+      setTimeout(() => {
+        alert("Your Townie has passed away... :( So sad. Try again!");
+        resetGame(); // Reset the game after a 2-second pause
+      }, 2000);
+    }
   }
-}
+    
 
 // Reset the game to initial state
 function resetGame() {
