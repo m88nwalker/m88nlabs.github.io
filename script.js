@@ -1,95 +1,52 @@
-// Initial stat values
-let hunger = 100;
-let happiness = 100;
-let energy = 100;
+// Select Elements
+const hungerMeter = document.getElementById('hunger');
+const happinessMeter = document.getElementById('happiness');
+const healthMeter = document.getElementById('health');
+const feedBtn = document.getElementById('feed-btn');
+const playBtn = document.getElementById('play-btn');
+const cleanBtn = document.getElementById('clean-btn');
+const scoldBtn = document.getElementById('scold-btn');
+const praiseBtn = document.getElementById('praise-btn');
 
-// Select pet image element
-const petImg = document.getElementById("petImg");
+// Initial Stats
+let hunger = 50;
+let happiness = 75;
+let health = 90;
 
-// Function to update the status of the pet and its progress bars
-function updateStatus() {
-  const hungerBar = document.getElementById('hunger-bar');
-  const happinessBar = document.getElementById('happiness-bar');
-  const energyBar = document.getElementById('energy-bar');
-  
-  // Select progress text elements
-  const hungerText = document.getElementById('hunger-text');
-  const happinessText = document.getElementById('happiness-text');
-  const energyText = document.getElementById('energy-text');
-
-  // Update the progress bars based on stats
-  hungerBar.style.width = hunger + '%';
-  happinessBar.style.width = happiness + '%';
-  energyBar.style.width = energy + '%';
-
-  // Update the progress text inside each bar
-  hungerText.textContent = Math.round(hunger) + '%';
-  happinessText.textContent = Math.round(happiness) + '%';
-  energyText.textContent = Math.round(energy) + '%';
-
-  // Update pet image based on stats
-  updatePetImage();
+// Functions to update meters
+function updateMeters() {
+    hungerMeter.value = hunger;
+    happinessMeter.value = happiness;
+    healthMeter.value = health;
 }
 
-// Function to update the pet's image based on its current state
-function updatePetImage() {
-  if (happiness > 90) {
-    petImg.src = 'images/happy.png'; // Happy image
-  } else if (happiness < 20 || hunger === 0 || happiness === 0 || energy === 0) {
-    petImg.src = 'images/sad.png'; // Sad image
-  } else if (energy < 50) {
-    petImg.src = 'images/sleeping.png'; // Sleeping image if energy is low
-  } else {
-    petImg.src = 'images/neutral.png'; // Neutral image
-  }
-}
+// Event Listeners
+feedBtn.addEventListener('click', () => {
+    hunger = Math.min(100, hunger + 10);
+    happiness = Math.min(100, happiness + 5);
+    updateMeters();
+});
 
-// Feed the pet (increase hunger, but don't exceed 100)
-function feedPet() {
-  if (hunger < 100) {
-    hunger += 10;
-  }
-  updateStatus();  // Refresh everything
-}
+playBtn.addEventListener('click', () => {
+    happiness = Math.min(100, happiness + 10);
+    hunger = Math.max(0, hunger - 5);
+    updateMeters();
+});
 
-// Play with the pet (increase happiness)
-function playWithPet() {
-  if (happiness < 100) {
-    happiness += 10;
-  }
-  updateStatus();  // Refresh everything
-}
+cleanBtn.addEventListener('click', () => {
+    health = Math.min(100, health + 10);
+    updateMeters();
+});
 
-// Pet goes to sleep (increase energy)
-function sleepPet() {
-  if (energy < 100) {
-    energy += 10;
-  }
-  updateStatus();  // Refresh everything
-}
+scoldBtn.addEventListener('click', () => {
+    happiness = Math.max(0, happiness - 10);
+    updateMeters();
+});
 
-// Decrease stats over time (simulating aging or natural stat decay)
-function decreaseStats() {
-  if (hunger > 0) {
-    hunger -= 0.05; // Decrease hunger
-  }
-  if (happiness > 0) {
-    happiness -= 0.05; // Decrease happiness
-  }
-  if (energy > 0) {
-    energy -= 0.05; // Decrease energy
-  }
+praiseBtn.addEventListener('click', () => {
+    happiness = Math.min(100, happiness + 10);
+    updateMeters();
+});
 
-  // Update everything after the stats decrease
-  updateStatus();
-
-  // If any stat hits zero, pet is "dead"
-  if (hunger <= 0 || happiness <= 0 || energy <= 0) {
-    alert("Your pet has passed away... :( Refresh to try again!");
-    // Reset all stats for next try
-    hunger = happiness = energy = 100;
-    updateStatus();
-}
-
-// Set interval to decrease stats every second (this line is outside of any function)
-setInterval(decreaseStats, 1000);
+// Initial Render
+updateMeters();
