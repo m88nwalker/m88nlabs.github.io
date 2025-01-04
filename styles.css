@@ -1,63 +1,179 @@
-/* General styles for the body and game container */
-body {
-  font-family: Arial, sans-serif;
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+/* Center the game container */
+body {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: #f0f0f0;
+  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  position: relative;
 }
 
+/* Game Container */
 .game-container {
-  text-align: center;
+  position: relative;
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 300px;
+  text-align: center;
 }
 
-.townie img {
-  width: 150px; /* Adjust the size of the Townie image */
+/* Townie Wrapper */
+#townie-wrapper {
+  position: relative; /* Allow absolute positioning of pants */
+  width: 100px; /* Match the width of the body image */
   height: auto;
-  margin-bottom: 20px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
 }
 
-.info p {
+/* Pants image styles */
+#pants-image {
+  position: absolute;
+  bottom: 0; /* Position the pants directly at the bottom of the body */
+  left: 0;
+  width: 100px; /* Match the body image width */
+  z-index: 1; /* Ensure pants are above the body */
+}
+
+/* Townie Image */
+#townie-image {
+  width: 100px;
+  height: auto;
+}
+
+/* Age and Health Displays */
+.age-display, .health-display {
+  margin-top: 15px;
   font-size: 16px;
-  margin: 10px 0;
 }
 
-.controls button {
+/* Controls */
+.controls {
+  margin-top: 20px;
+}
+
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ddd;
+}
+
+/* Body Tab */
+.body-tab {
+  position: absolute;
+  top: 0px; /* Align with the top of the game container */
+  left: 100%; /* Position it to the right of the game container */
+  margin-left: 0px; /* Add space between the tab and the game container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #4CAF50;
   color: white;
-  border: none;
-  padding: 10px 20px;
-  margin: 5px;
+  padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.controls button:hover {
+.body-tab:hover {
   background-color: #45a049;
 }
 
-.body-picker {
-  margin-top: 20px;
-  font-size: 16px;
+#body-options {
+  display: flex;
+  flex-direction: row; /* Align items side by side */
+  gap: 10px; /* Adjust spacing between body types */
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  z-index: 1000;
 }
 
-#body-type {
-  padding: 10px;
-  font-size: 16px;
+.hidden {
+  display: none;
+}
+
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tab:hover {
+  transform: scale(1.1);
+}
+
+.tab-image {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+}
+
+.tab p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* Pants Tab Styles */
+.pants-tab {
+  position: absolute;
+  top: calc(100% + 5px); /* Position 5px below the bottom of the Body tab */
+  left: 100%; /* Align to the right side of the game container */
+  margin-left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #4CAF50;
+  color: white;
+  padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Same width as the body tab */
 }
 
-.time {
-  margin-top: 20px;
-  font-size: 16px;
-  font-weight: bold;
+.pants-tab:hover {
+  background-color: #45a049;
+}
+
+/* Pants Options Container */
+#pants-options {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  max-width: 300px; /* Match the body tab width */
+  overflow-x: auto; /* Allow scrolling horizontally */
+  white-space: nowrap;
 }
