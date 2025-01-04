@@ -3,52 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Townies</title>
+    <title>Townies Tamagotchi</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div id="app">
-        <!-- Header -->
-        <header>
-            <h1>Townies</h1>
-        </header>
+    <div class="game-container">
+        <div class="townie">
+            <!-- Default image for the Townie -->
+            <img id="townie-image" src="images/OG.png" alt="Townie">
+        </div>
 
-        <!-- Main Game Screen -->
-        <main>
-            <!-- Townie Display -->
-            <section id="townie-display">
-                <canvas id="townie-canvas" width="300" height="300"></canvas>
-                <div id="meters">
-                    <div class="meter">
-                        <label for="hunger">Hunger</label>
-                        <progress id="hunger" value="50" max="100"></progress>
-                    </div>
-                    <div class="meter">
-                        <label for="happiness">Happiness</label>
-                        <progress id="happiness" value="75" max="100"></progress>
-                    </div>
-                    <div class="meter">
-                        <label for="health">Health</label>
-                        <progress id="health" value="90" max="100"></progress>
-                    </div>
-                </div>
-            </section>
+        <div class="info">
+            <p id="age">Age: 0 days</p>
+            <p id="health">Health: 100%</p>
+            <p id="mood">Mood: Happy</p>
+        </div>
 
-            <!-- Interaction Buttons -->
-            <section id="actions">
-                <button id="feed-btn">Feed</button>
-                <button id="play-btn">Play</button>
-                <button id="clean-btn">Clean</button>
-                <button id="scold-btn">Scold</button>
-                <button id="praise-btn">Praise</button>
-            </section>
-        </main>
+        <div class="controls">
+            <button id="feed">Feed</button>
+            <button id="play">Play</button>
+            <button id="clean">Clean</button>
+        </div>
 
-        <!-- Footer -->
-        <footer>
-            <p>&copy; 2025 Townies</p>
-        </footer>
+        <!-- Body Type Picker -->
+        <div class="body-picker">
+            <label for="body-type">Choose a Body Type:</label>
+            <select id="body-type">
+                <option value="og">OG</option>
+                <option value="zombie">Zombie</option>
+            </select>
+        </div>
+
+        <div class="time">
+            <p id="time">Alive for: 0 days</p>
+        </div>
     </div>
 
     <script src="script.js"></script>

@@ -1,73 +1,63 @@
-/* General Styles */
+/* General styles for the body and game container */
 body {
-  font-family: 'Press Start 2P', cursive;
-  background-color: #282c34;
-  color: #ffffff;
+  font-family: Arial, sans-serif;
   margin: 0;
+  padding: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
+  background-color: #f0f0f0;
 }
 
-#app {
+.game-container {
   text-align: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
 }
 
-header h1 {
-  font-size: 2rem;
+.townie img {
+  width: 150px; /* Adjust the size of the Townie image */
+  height: auto;
   margin-bottom: 20px;
 }
 
-#townie-display {
-  margin-bottom: 20px;
-}
-
-canvas {
-  background-color: #000;
-  border: 3px solid #ffffff;
-  margin-bottom: 10px;
-}
-
-.meter {
+.info p {
+  font-size: 16px;
   margin: 10px 0;
 }
 
-.meter label {
-  display: block;
-  font-size: 0.8rem;
-}
-
-progress {
-  width: 100%;
-  height: 10px;
-  background-color: #444;
-}
-
-progress::-webkit-progress-value {
-  background-color: #76c7c0;
-}
-
-progress::-moz-progress-bar {
-  background-color: #76c7c0;
-}
-
-#actions button {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 0.8rem;
-  background-color: #76c7c0;
-  color: #000;
+.controls button {
+  background-color: #4CAF50;
+  color: white;
   border: none;
   padding: 10px 20px;
   margin: 5px;
+  border-radius: 5px;
   cursor: pointer;
 }
 
-#actions button:hover {
-  background-color: #5da89f;
+.controls button:hover {
+  background-color: #45a049;
 }
 
-footer {
+.body-picker {
   margin-top: 20px;
+  font-size: 16px;
+}
+
+#body-type {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.time {
+  margin-top: 20px;
+  font-size: 16px;
+  font-weight: bold;
 }
