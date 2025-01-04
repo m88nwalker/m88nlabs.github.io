@@ -1,50 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tamagotchi Pet</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Townies</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <h1>Tamagotchi Pet</h1>
+    <div id="app">
+        <!-- Header -->
+        <header>
+            <h1>Townies</h1>
+        </header>
 
-    <!-- Pet Image -->
-    <div class="pet-container">
-      <img id="petImg" src="images/neutral.png" alt="Tamagotchi Pet" class="pet-img">
+        <!-- Main Game Screen -->
+        <main>
+            <!-- Townie Display -->
+            <section id="townie-display">
+                <canvas id="townie-canvas" width="300" height="300"></canvas>
+                <div id="meters">
+                    <div class="meter">
+                        <label for="hunger">Hunger</label>
+                        <progress id="hunger" value="50" max="100"></progress>
+                    </div>
+                    <div class="meter">
+                        <label for="happiness">Happiness</label>
+                        <progress id="happiness" value="75" max="100"></progress>
+                    </div>
+                    <div class="meter">
+                        <label for="health">Health</label>
+                        <progress id="health" value="90" max="100"></progress>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Interaction Buttons -->
+            <section id="actions">
+                <button id="feed-btn">Feed</button>
+                <button id="play-btn">Play</button>
+                <button id="clean-btn">Clean</button>
+                <button id="scold-btn">Scold</button>
+                <button id="praise-btn">Praise</button>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2025 Townies</p>
+        </footer>
     </div>
 
-    <!-- Progress Bars -->
-    <div class="progress-container">
-      <div class="progress-bar-container">
-        <label for="hunger-bar">Hunger</label>
-        <div class="progress-bar" id="hunger-bar">
-          <span class="progress-text" id="hunger-text">100%</span>
-        </div>
-      </div>
-      <div class="progress-bar-container">
-        <label for="happiness-bar">Happiness</label>
-        <div class="progress-bar" id="happiness-bar">
-          <span class="progress-text" id="happiness-text">100%</span>
-        </div>
-      </div>
-      <div class="progress-bar-container">
-        <label for="energy-bar">Energy</label>
-        <div class="progress-bar" id="energy-bar">
-          <span class="progress-text" id="energy-text">100%</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Buttons to Interact with the Pet -->
-    <div class="button-container">
-      <button class="action-btn hunger-btn" onclick="feedPet()">Feed</button>
-      <button class="action-btn happiness-btn" onclick="playWithPet()">Play</button>
-      <button class="action-btn energy-btn" onclick="sleepPet()">Sleep</button>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
