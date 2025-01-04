@@ -3,21 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Townies Tamagotchi</title>
+    <title>Townies Virtual Pet Game</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="game-container">
-        <div class="townie">
-            <!-- Default image for the Townie -->
+        <h1>Townies Virtual Pet Game</h1>
+
+        <div id="townie-wrapper">
             <img id="townie-image" src="images/OG.png" alt="Townie">
         </div>
 
-        <div class="info">
-            <p id="age">Age: 0 days</p>
-            <p id="health">Health: 100%</p>
-            <p id="mood">Mood: Happy</p>
-        </div>
+        <div class="age-display" id="age">Age: 0 seconds</div>
+        <div class="health-display" id="health">Health: 100%</div>
+        <div class="mood-display" id="mood">Mood: Happy</div>
 
         <div class="controls">
             <button id="feed">Feed</button>
@@ -25,18 +24,36 @@
             <button id="clean">Clean</button>
         </div>
 
-        <!-- Body Type Picker -->
-        <div class="body-picker">
-            <label for="body-type">Choose a Body Type:</label>
-            <select id="body-type">
-                <option value="og">OG</option>
-                <option value="zombie">Zombie</option>
-            </select>
+        <!-- Body Tab -->
+        <div class="body-tab" id="body-tab">
+            <span>Body</span>
+            <div id="body-options" class="hidden">
+                <div class="tab" onclick="changeBodyType('OG')">
+                    <img src="images/OG.png" alt="OG Body" class="tab-image">
+                    <p>OG</p>
+                </div>
+                <div class="tab" onclick="changeBodyType('Zombie')">
+                    <img src="images/Zombie.png" alt="Zombie Body" class="tab-image">
+                    <p>Zombie</p>
+                </div>
+            </div>
         </div>
 
-        <div class="time">
-            <p id="time">Alive for: 0 days</p>
+        <!-- Pants Tab -->
+        <div class="pants-tab" id="pants-tab">
+            <span>Pants</span>
+            <div id="pants-options" class="hidden">
+                <div class="tab" onclick="changePants('Beach-Pants')">
+                    <img src="images/Beach-Pants.png" alt="Beach Pants" class="tab-image">
+                    <p>Beach</p>
+                </div>
+                <div class="tab" onclick="changePants('Blue-Jeans')">
+                    <img src="images/Blue-Jeans.png" alt="Blue Jeans" class="tab-image">
+                    <p>Blue Jeans</p>
+                </div>
+            </div>
         </div>
+
     </div>
 
     <script src="script.js"></script>
