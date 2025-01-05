@@ -94,6 +94,7 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 50%; /* Same width as the body tab */
 }
 
 .body-tab:hover {
@@ -143,7 +144,7 @@ button:hover {
 /* Pants Tab Styles */
 .pants-tab {
   position: absolute;
-  top: calc(100% + 5px); /* Position 5px below the bottom of the Body tab */
+  top: calc(100% - 285px); /* Position 5px below the bottom of the Body tab */
   left: 100%; /* Align to the right side of the game container */
   margin-left: 0;
   display: flex;
@@ -156,7 +157,7 @@ button:hover {
   cursor: pointer;
   transition: background-color 0.3s ease;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 100%; /* Same width as the body tab */
+  width: 50%; /* Same width as the body tab */
 }
 
 .pants-tab:hover {
