@@ -1,0 +1,140 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(to bottom, #1e293b, #0f172a);
+  color: #fff;
+  padding: 20px;
+}
+
+/* Header Styles */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #f39c12;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* Layout for main container */
+.main-container {
+  display: flex;
+  gap: 40px; /* Increased gap for more space between sidebar and gallery */
+}
+
+/* Filters panel */
+.filters {
+  width: 1000px; /* Width of the sidebar, adjust this to change the size */
+  padding: 30px; /* Padding for a spacious look */
+  background: #1e293b;
+  color: #fff;
+  border-radius: 10px;
+  max-height: 100%; /* Removes the scrollbar */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+/* Accordion styling */
+.accordion-item {
+  margin-bottom: 15px; /* More space between accordion items */
+  border-bottom: 1px solid #334155;
+}
+
+.accordion-header {
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px; /* Increased padding for better accessibility */
+  cursor: pointer;
+  background: #334155;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+  background: #475569;
+}
+
+.accordion-body {
+  display: none;
+  padding: 15px; /* Increased padding inside the body */
+  background: #2d3748;
+  border-radius: 8px;
+}
+
+.accordion-body.open {
+  display: block;
+}
+
+.accordion-body label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px; /* More spacing between labels */
+  font-size: 1rem; /* Slightly larger font for readability */
+}
+
+.accordion-body input {
+  margin-right: 15px;
+}
+
+/* Gallery layout */
+.gallery {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+/* Card Styles */
+.card {
+  background: linear-gradient(to bottom, #334155, #1e293b);
+  border: 1px solid #38bdf8;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.7);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.card .name {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  color: #f39c12;
+}
+
+.card .attributes {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.card .attribute {
+  background: #2d3748;
+  border: 1px solid #38bdf8;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 0.85rem;
+  color: #fff;
+}
