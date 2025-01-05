@@ -77,12 +77,88 @@ document.addEventListener("DOMContentLoaded", () => {
         { trait_type: "Hat", value: "Captain's Hat" },
         { trait_type: "Mouth", value: "Yikes" }
       ]
+    },
+    {
+      tokenId: 6,
+      name: "Townie #6",
+      image: "images/6.png",
+      attributes: [
+        { trait_type: "Background", value: "Blue" },
+        { trait_type: "Townie", value: "OG" },
+        { trait_type: "Pants", value: "Cargo Pants" },
+        { trait_type: "Shirt", value: "Tank Top" },
+        { trait_type: "Hair", value: "Short Blonde" },
+        { trait_type: "Eyes", value: "Sharp" },
+        { trait_type: "Hat", value: "Baseball Cap" },
+        { trait_type: "Mouth", value: "Smile" }
+      ]
+    },
+    {
+      tokenId: 7,
+      name: "Townie #7",
+      image: "images/7.png",
+      attributes: [
+        { trait_type: "Background", value: "Red" },
+        { trait_type: "Townie", value: "OG" },
+        { trait_type: "Pants", value: "Sweatpants" },
+        { trait_type: "Shirt", value: "Hoodie" },
+        { trait_type: "Hair", value: "Curly Black" },
+        { trait_type: "Eyes", value: "Wide Open" },
+        { trait_type: "Hat", value: "Beanie" },
+        { trait_type: "Mouth", value: "Straight" }
+      ]
+    },
+    {
+      tokenId: 8,
+      name: "Townie #8",
+      image: "images/8.png",
+      attributes: [
+        { trait_type: "Background", value: "Yellow" },
+        { trait_type: "Townie", value: "OG" },
+        { trait_type: "Pants", value: "Khakis" },
+        { trait_type: "Shirt", value: "Blazer" },
+        { trait_type: "Hair", value: "Straight Brown" },
+        { trait_type: "Eyes", value: "Looking Left" },
+        { trait_type: "Hat", value: "Cowboy Hat" },
+        { trait_type: "Mouth", value: "Frown" }
+      ]
+    },
+    {
+      tokenId: 9,
+      name: "Townie #9",
+      image: "images/9.png",
+      attributes: [
+        { trait_type: "Background", value: "Green" },
+        { trait_type: "Townie", value: "OG" },
+        { trait_type: "Pants", value: "Joggers" },
+        { trait_type: "Shirt", value: "Sweater" },
+        { trait_type: "Hair", value: "Wavy Blonde" },
+        { trait_type: "Eyes", value: "Closed" },
+        { trait_type: "Hat", value: "Flat Cap" },
+        { trait_type: "Mouth", value: "Smirk" }
+      ]
+    },
+    {
+      tokenId: 10,
+      name: "Townie #10",
+      image: "images/10.png",
+      attributes: [
+        { trait_type: "Background", value: "Pink" },
+        { trait_type: "Townie", value: "OG" },
+        { trait_type: "Pants", value: "Jeans" },
+        { trait_type: "Shirt", value: "Graphic Tee" },
+        { trait_type: "Hair", value: "Buzz Cut" },
+        { trait_type: "Eyes", value: "Staring" },
+        { trait_type: "Hat", value: "Top Hat" },
+        { trait_type: "Mouth", value: "Wide Smile" }
+      ]
     }
   ];
 
   const traitTypes = ["Background", "Townie", "Pants", "Shirt", "Hair", "Eyes", "Hat", "Mouth"];
   const traitValues = {};
 
+  // Populate trait values for filters
   jsonData.forEach((item) => {
     item.attributes.forEach((attr) => {
       if (!traitValues[attr.trait_type]) {
@@ -108,7 +184,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const body = document.createElement("div");
       body.className = "accordion-body";
 
-      traitValues[trait].forEach((value) => {
+      Array.from(traitValues[trait]).forEach((value) => {
         const label = document.createElement("label");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
@@ -180,6 +256,8 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   filters.addEventListener("change", applyFilters);
+
+  // Initialize
   renderFilters();
   renderGallery(jsonData);
 });
