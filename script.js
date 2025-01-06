@@ -63,10 +63,37 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Render filters with counts
-  const renderFilters = () => {
+  // Render filters with total counts
+  const renderFilters = async () => {
     filters.innerHTML = ""; // Clear filters before rendering
 
+    const traitCounts = {};
+
+    // Load counts for all trait values from all metadata files
+    try {
+      const metadataPromises = manifestFiles.map(async (file) => {
+        const fileResponse = await fetch(`metadata/${file}`);
+        if (!fileResponse.ok) {
+          throw new Error(`Failed to fetch: ${file}`);
+        }
+        return fileResponse.json();
+      });
+
+      const allMetadata = await Promise.all(metadataPromises);
+
+      allMetadata.forEach((item) => {
+        item.attributes.forEach((attr) => {
+          if (!traitCounts[attr.trait_type]) {
+            traitCounts[attr.trait_type] = {};
+          }
+          traitCounts[attr.trait_type][attr.value] = (traitCounts[attr.trait_type][attr.value] || 0) + 1;
+        });
+      });
+    } catch (error) {
+      console.error("Error calculating total trait counts:", error);
+    }
+
+    // Render filters with total counts
     traitTypes.forEach((trait) => {
       const accordionItem = document.createElement("div");
       accordionItem.className = "accordion-item";
@@ -82,17 +109,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       const body = document.createElement("div");
       body.className = "accordion-body";
 
-      // Calculate the count of each value for the trait
-      const traitCounts = {};
-      jsonData.forEach((item) => {
-        item.attributes.forEach((attr) => {
-          if (attr.trait_type === trait) {
-            traitCounts[attr.value] = (traitCounts[attr.value] || 0) + 1;
-          }
-        });
-      });
-
-      // Render each value with its count
       Array.from(traitValues[trait]).forEach((value) => {
         const label = document.createElement("label");
         label.className = "filter-item";
@@ -104,7 +120,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         const count = document.createElement("span");
         count.className = "filter-count";
-        count.textContent = traitCounts[value] || 0;
+        count.textContent = traitCounts[trait]?.[value] || 0;
 
         const valueText = document.createElement("span");
         valueText.className = "filter-value";
@@ -213,6 +229,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   await loadManifest();
   await loadMetadataChunk();
   processTraitValues();
-  renderFilters();
+  await renderFilters(); // Ensure filters include all metadata counts
   renderGallery(jsonData.slice(0, pageSize));
 });
