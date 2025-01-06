@@ -1,23 +1,33 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const pagination = document.getElementById("pagination");
-  const ITEMS_PER_PAGE = 20;
+  const BATCH_SIZE = 50; // Number of files to fetch in each batch
+  const ITEMS_PER_PAGE = 20; // Number of items to display per page
   let jsonData = [];
   let currentPage = 1;
 
   async function loadMetadata() {
     try {
-      const response = await fetch("metadata/manifest.json");
-      const files = await response.json();
+      const response = await fetch("metadata/manifest.json"); // Fetch the manifest
+      const allFiles = await response.json();
 
-      const metadataPromises = files.map(async (file) => {
-        const fileResponse = await fetch(`metadata/${file}`);
-        return fileResponse.json();
-      });
+      for (let i = 0; i < allFiles.length; i += BATCH_SIZE) {
+        const batch = allFiles.slice(i, i + BATCH_SIZE);
 
-      jsonData = await Promise.all(metadataPromises);
-      renderGallery(getCurrentPageData());
-      renderPagination();
+        const metadataPromises = batch.map(async (file) => {
+          const fileResponse = await fetch(`metadata/${file}`);
+          return fileResponse.json();
+        });
+
+        const batchData = await Promise.all(metadataPromises);
+        jsonData.push(...batchData);
+
+        // Render current batch
+        if (jsonData.length <= ITEMS_PER_PAGE) {
+          renderGallery(getCurrentPageData());
+          renderPagination();
+        }
+      }
     } catch (error) {
       console.error("Error loading metadata files:", error);
     }
@@ -62,7 +72,6 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   function renderPagination() {
     pagination.innerHTML = "";
-
     const totalPages = Math.ceil(jsonData.length / ITEMS_PER_PAGE);
 
     if (currentPage > 1) {
