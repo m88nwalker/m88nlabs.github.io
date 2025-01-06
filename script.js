@@ -1,52 +1,111 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
-  const pagination = document.getElementById("pagination");
-  const BATCH_SIZE = 50; // Number of files to fetch in each batch
-  const ITEMS_PER_PAGE = 20; // Number of items to display per page
+  const filters = document.getElementById("filters");
   let jsonData = [];
-  let currentPage = 1;
 
+  // Dynamically load metadata using the manifest file
   async function loadMetadata() {
     try {
-      const response = await fetch("metadata/manifest.json"); // Fetch the manifest
-      const allFiles = await response.json();
+      const response = await fetch("metadata/manifest.json");
+      const files = await response.json();
 
-      for (let i = 0; i < allFiles.length; i += BATCH_SIZE) {
-        const batch = allFiles.slice(i, i + BATCH_SIZE);
-
-        const metadataPromises = batch.map(async (file) => {
-          const fileResponse = await fetch(`metadata/${file}`);
-          return fileResponse.json();
-        });
-
-        const batchData = await Promise.all(metadataPromises);
-        jsonData.push(...batchData);
-
-        // Render current batch
-        if (jsonData.length <= ITEMS_PER_PAGE) {
-          renderGallery(getCurrentPageData());
-          renderPagination();
+      const metadataPromises = files.map(async (file) => {
+        const fileResponse = await fetch(`metadata/${file}`);
+        if (!fileResponse.ok) {
+          throw new Error(`Failed to fetch: ${file}`);
         }
-      }
+        return fileResponse.json();
+      });
+
+      jsonData = await Promise.all(metadataPromises);
     } catch (error) {
       console.error("Error loading metadata files:", error);
     }
   }
 
-  function getCurrentPageData() {
-    const start = (currentPage - 1) * ITEMS_PER_PAGE;
-    const end = start + ITEMS_PER_PAGE;
-    return jsonData.slice(start, end);
-  }
+  const traitTypes = ["Background", "Townie", "Pants", "Shirt", "Hair", "Eyes", "Hat", "Mouth"];
+  const traitValues = {};
 
-  function renderGallery(data) {
-    gallery.innerHTML = "";
+  // Process and collect trait values
+  const processTraitValues = () => {
+    jsonData.forEach((item) => {
+      item.attributes.forEach((attr) => {
+        if (!traitValues[attr.trait_type]) {
+          traitValues[attr.trait_type] = new Set();
+        }
+        traitValues[attr.trait_type].add(attr.value);
+      });
+    });
+  };
+
+  // Render the filters
+  const renderFilters = () => {
+    filters.innerHTML = ""; // Clear filters before rendering
+    traitTypes.forEach((trait) => {
+      const accordionItem = document.createElement("div");
+      accordionItem.className = "accordion-item";
+
+      const header = document.createElement("div");
+      header.className = "accordion-header";
+      header.textContent = trait;
+      header.addEventListener("click", () => {
+        const body = header.nextElementSibling;
+        body.classList.toggle("open");
+      });
+
+      const body = document.createElement("div");
+      body.className = "accordion-body";
+
+      Array.from(traitValues[trait]).forEach((value) => {
+        const label = document.createElement("label");
+        const checkbox = document.createElement("input");
+        checkbox.type = "checkbox";
+        checkbox.value = value;
+        checkbox.dataset.traitType = trait;
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(value));
+        body.appendChild(label);
+      });
+
+      accordionItem.appendChild(header);
+      accordionItem.appendChild(body);
+      filters.appendChild(accordionItem);
+    });
+  };
+
+  // Apply filters to the gallery
+  const applyFilters = () => {
+    const selectedFilters = {};
+    document.querySelectorAll(".accordion-body input:checked").forEach((checkbox) => {
+      const traitType = checkbox.dataset.traitType;
+      if (!selectedFilters[traitType]) {
+        selectedFilters[traitType] = new Set();
+      }
+      selectedFilters[traitType].add(checkbox.value);
+    });
+
+    const filteredData = jsonData.filter((item) =>
+      item.attributes.every((attr) => {
+        if (!selectedFilters[attr.trait_type] || selectedFilters[attr.trait_type].size === 0) {
+          return true;
+        }
+        return selectedFilters[attr.trait_type].has(attr.value);
+      })
+    );
+
+    renderGallery(filteredData);
+  };
+
+  // Render the gallery
+  const renderGallery = (data) => {
+    gallery.innerHTML = ""; // Clear gallery before rendering
     data.forEach((item) => {
       const card = document.createElement("div");
       card.className = "card";
 
       const img = document.createElement("img");
-      img.src = item.image;
+      img.src = `images/${item.image}`;
       img.alt = item.name;
       card.appendChild(img);
 
@@ -68,48 +127,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.appendChild(attributes);
       gallery.appendChild(card);
     });
-  }
-
-  function renderPagination() {
-    pagination.innerHTML = "";
-    const totalPages = Math.ceil(jsonData.length / ITEMS_PER_PAGE);
-
-    if (currentPage > 1) {
-      const prevButton = document.createElement("button");
-      prevButton.textContent = "Previous";
-      prevButton.addEventListener("click", () => {
-        currentPage--;
-        renderGallery(getCurrentPageData());
-        renderPagination();
-      });
-      pagination.appendChild(prevButton);
-    }
-
-    for (let i = 1; i <= totalPages; i++) {
-      const pageButton = document.createElement("button");
-      pageButton.textContent = i;
-      if (i === currentPage) {
-        pageButton.disabled = true;
-      }
-      pageButton.addEventListener("click", () => {
-        currentPage = i;
-        renderGallery(getCurrentPageData());
-        renderPagination();
-      });
-      pagination.appendChild(pageButton);
-    }
-
-    if (currentPage < totalPages) {
-      const nextButton = document.createElement("button");
-      nextButton.textContent = "Next";
-      nextButton.addEventListener("click", () => {
-        currentPage++;
-        renderGallery(getCurrentPageData());
-        renderPagination();
-      });
-      pagination.appendChild(nextButton);
-    }
-  }
+  };
 
   await loadMetadata();
+  processTraitValues();
+  renderFilters();
+  renderGallery(jsonData);
+
+  filters.addEventListener("change", applyFilters);
 });
