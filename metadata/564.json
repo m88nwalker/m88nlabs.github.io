@@ -1,0 +1,40 @@
+{
+  "tokenId": 564,
+  "name": "Townie #564",
+  "description": "No matter where in the digital world you find yourself, you’ll never be just another brick in the wall with the Townies NFT Collection.\n\nThese fun funky characters break the mold and are not concerned about fitting in, rather they are an inspiration to stand out in the crowd.\n\nChoose a character as unique as you and embark on a new frontier...Integrate your NFT as a digital asset at LooperLands.io to let the adventure begin.\n\nWARNING: Collecting these can become addictive and may cause a compulsive need to have a Townie for each mood.",
+  "image": "564.png",
+  "attributes": [
+    {
+      "trait_type": "Background",
+      "value": "Pink"
+    },
+    {
+      "trait_type": "Townie",
+      "value": "OG"
+    },
+    {
+      "trait_type": "Pants",
+      "value": "Blue Jeans"
+    },
+    {
+      "trait_type": "Shirt",
+      "value": "Guayabera"
+    },
+    {
+      "trait_type": "Hair",
+      "value": "Short Brown"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "Eye Patch"
+    },
+    {
+      "trait_type": "Hat",
+      "value": "White Hat 2"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "Mouth Breather"
+    }
+  ]
+}
