@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #0a056f, #90caf9);
+  background: linear-gradient(to bottom, #060340, #090340);
   color: #333;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ header h1 {
 aside#filters {
   width: 300px;
   max-width: 30%;
-  background-color: #0a056f;
+  background-color: #f1f8e9;
   padding: 20px;
   margin-right: 20px;
   border-radius: 8px;
@@ -70,20 +70,21 @@ aside#filters h2 {
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
-  background-color: #c8e6c9;
-  border: 1px solid #a5d6a7;
+  background-color: #060340;
+  color: white;
+  border: 1px solid #030340;
   border-radius: 5px;
 }
 
 .accordion-header:hover {
-  background-color: #aed581;
+  background-color: #030340;
 }
 
 .accordion-body {
   display: none;
   padding: 10px;
   background-color: #ffffff;
-  border: 1px solid #a5d6a7;
+  border: 1px solid #030340;
   border-radius: 5px;
   margin-top: 5px;
 }
@@ -92,14 +93,35 @@ aside#filters h2 {
   display: block;
 }
 
-.accordion-body label {
-  display: block;
-  margin: 5px 0;
-  cursor: pointer;
+/* Filter Item Layout */
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
 }
 
-.accordion-body input {
+.filter-item:hover {
+  background-color: #e0f7fa;
+}
+
+.filter-value {
+  flex: 1;
+  text-align: left;
+}
+
+.filter-count {
   margin-right: 10px;
+  color: #666;
+  font-weight: bold;
+}
+
+.filter-item input[type="checkbox"] {
+  margin-left: auto;
 }
 
 /* Gallery Section */
@@ -165,7 +187,9 @@ section#gallery {
 }
 
 #load-more:hover {
-  background-color: #040232;
+  background-color: #060340;
+  color: white;
+  text-align: center;
   transform: scale(1.05);
 }
 
