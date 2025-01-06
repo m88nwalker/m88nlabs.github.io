@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
-  const filters = document.getElementById("filters");
+  const pagination = document.getElementById("pagination");
+  const ITEMS_PER_PAGE = 20;
   let jsonData = [];
+  let currentPage = 1;
 
-  // Dynamically load JSON files from the 'metadata' folder based on manifest
   async function loadMetadata() {
     try {
-      const response = await fetch("metadata/manifest.json"); // Fetch manifest
+      const response = await fetch("metadata/manifest.json");
       const files = await response.json();
 
       const metadataPromises = files.map(async (file) => {
@@ -15,82 +16,20 @@ document.addEventListener("DOMContentLoaded", async () => {
       });
 
       jsonData = await Promise.all(metadataPromises);
+      renderGallery(getCurrentPageData());
+      renderPagination();
     } catch (error) {
       console.error("Error loading metadata files:", error);
     }
   }
 
-  const traitTypes = ["Background", "Townie", "Pants", "Shirt", "Hair", "Eyes", "Hat", "Mouth"];
-  const traitValues = {};
+  function getCurrentPageData() {
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const end = start + ITEMS_PER_PAGE;
+    return jsonData.slice(start, end);
+  }
 
-  const processTraitValues = () => {
-    jsonData.forEach((item) => {
-      item.attributes.forEach((attr) => {
-        if (!traitValues[attr.trait_type]) {
-          traitValues[attr.trait_type] = new Set();
-        }
-        traitValues[attr.trait_type].add(attr.value);
-      });
-    });
-  };
-
-  const renderFilters = () => {
-    traitTypes.forEach((trait) => {
-      const accordionItem = document.createElement("div");
-      accordionItem.className = "accordion-item";
-
-      const header = document.createElement("div");
-      header.className = "accordion-header";
-      header.textContent = trait;
-      header.addEventListener("click", () => {
-        const body = header.nextElementSibling;
-        body.classList.toggle("open");
-      });
-
-      const body = document.createElement("div");
-      body.className = "accordion-body";
-
-      Array.from(traitValues[trait] || []).forEach((value) => {
-        const label = document.createElement("label");
-        const checkbox = document.createElement("input");
-        checkbox.type = "checkbox";
-        checkbox.value = value;
-        checkbox.dataset.traitType = trait;
-
-        label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(value));
-        body.appendChild(label);
-      });
-
-      accordionItem.appendChild(header);
-      accordionItem.appendChild(body);
-      filters.appendChild(accordionItem);
-    });
-  };
-
-  const applyFilters = () => {
-    const selectedFilters = {};
-    document.querySelectorAll(".accordion-body input:checked").forEach((checkbox) => {
-      const traitType = checkbox.dataset.traitType;
-      if (!selectedFilters[traitType]) {
-        selectedFilters[traitType] = new Set();
-      }
-      selectedFilters[traitType].add(checkbox.value);
-    });
-
-    const filteredData = jsonData.filter((item) =>
-      item.attributes.every((attr) => {
-        if (!selectedFilters[attr.trait_type] || selectedFilters[attr.trait_type].size === 0) {
-          return true;
-        }
-        return selectedFilters[attr.trait_type].has(attr.value);
-      })
-    );
-
-    renderGallery(filteredData);
-  };
-
-  const renderGallery = (data) => {
+  function renderGallery(data) {
     gallery.innerHTML = "";
     data.forEach((item) => {
       const card = document.createElement("div");
@@ -119,12 +58,49 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.appendChild(attributes);
       gallery.appendChild(card);
     });
-  };
+  }
+
+  function renderPagination() {
+    pagination.innerHTML = "";
+
+    const totalPages = Math.ceil(jsonData.length / ITEMS_PER_PAGE);
+
+    if (currentPage > 1) {
+      const prevButton = document.createElement("button");
+      prevButton.textContent = "Previous";
+      prevButton.addEventListener("click", () => {
+        currentPage--;
+        renderGallery(getCurrentPageData());
+        renderPagination();
+      });
+      pagination.appendChild(prevButton);
+    }
+
+    for (let i = 1; i <= totalPages; i++) {
+      const pageButton = document.createElement("button");
+      pageButton.textContent = i;
+      if (i === currentPage) {
+        pageButton.disabled = true;
+      }
+      pageButton.addEventListener("click", () => {
+        currentPage = i;
+        renderGallery(getCurrentPageData());
+        renderPagination();
+      });
+      pagination.appendChild(pageButton);
+    }
+
+    if (currentPage < totalPages) {
+      const nextButton = document.createElement("button");
+      nextButton.textContent = "Next";
+      nextButton.addEventListener("click", () => {
+        currentPage++;
+        renderGallery(getCurrentPageData());
+        renderPagination();
+      });
+      pagination.appendChild(nextButton);
+    }
+  }
 
   await loadMetadata();
-  processTraitValues();
-  renderFilters();
-  renderGallery(jsonData);
-
-  filters.addEventListener("change", applyFilters);
 });
