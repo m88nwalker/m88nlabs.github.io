@@ -2,20 +2,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
   let jsonData = [];
-  const chunkSize = 500; // Number of files to fetch in one chunk
-  let currentPage = 0;
+  const pageSize = 50; // Number of images to load per page
+  let currentPage = 0; // Track the current page
 
   // Dynamically load metadata from the manifest
-  async function loadMetadataChunk() {
+  async function loadMetadata() {
     try {
       const response = await fetch("metadata/manifest.json");
       const files = await response.json();
 
-      const start = currentPage * chunkSize;
-      const end = start + chunkSize;
-      const chunk = files.slice(start, end);
-
-      const metadataPromises = chunk.map(async (file) => {
+      const metadataPromises = files.map(async (file) => {
         const fileResponse = await fetch(`metadata/${file}`);
         if (!fileResponse.ok) {
           throw new Error(`Failed to fetch: ${file}`);
@@ -23,11 +19,10 @@ document.addEventListener("DOMContentLoaded", async () => {
         return fileResponse.json();
       });
 
-      const chunkData = await Promise.all(metadataPromises);
-      jsonData = [...jsonData, ...chunkData];
+      jsonData = await Promise.all(metadataPromises);
       processTraitValues();
       renderFilters();
-      renderGallery(jsonData);
+      renderGallery(jsonData.slice(0, pageSize)); // Render the first page of images
     } catch (error) {
       console.error("Error loading metadata files:", error);
     }
@@ -104,10 +99,10 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
     );
 
-    renderGallery(filteredData);
+    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1))); // Render filtered data up to the current page
   };
 
-  // Render gallery
+  // Render gallery with lazy-loaded images
   const renderGallery = (data) => {
     gallery.innerHTML = ""; // Clear gallery before rendering
     data.forEach((item) => {
@@ -115,8 +110,23 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.className = "card";
 
       const img = document.createElement("img");
-      img.src = `images/${item.image}`;
+      img.dataset.src = `images/${item.image}`;
       img.alt = item.name;
+      img.classList.add("lazy");
+
+      const observer = new IntersectionObserver(
+        ([entry], observer) => {
+          if (entry.isIntersecting) {
+            const lazyImage = entry.target;
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.onload = () => lazyImage.classList.remove("lazy");
+            observer.unobserve(lazyImage);
+          }
+        },
+        { rootMargin: "0px 0px 50px 0px" }
+      );
+
+      observer.observe(img);
       card.appendChild(img);
 
       const name = document.createElement("div");
@@ -139,13 +149,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Load initial chunk and set up pagination
-  await loadMetadataChunk();
-
-  document.getElementById("load-more").addEventListener("click", async () => {
+  // Load more images on button click
+  document.getElementById("load-more").addEventListener("click", () => {
     currentPage++;
-    await loadMetadataChunk();
+    const start = currentPage * pageSize;
+    const end = start + pageSize;
+    renderGallery(jsonData.slice(0, end)); // Render up to the new page limit
   });
 
   filters.addEventListener("change", applyFilters);
+
+  // Initial load
+  await loadMetadata();
 });
