@@ -2,10 +2,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
   let jsonData = [];
-  const pageSize = 50;
+  const pageSize = 50; // Number of images to load per page
   let currentPage = 0;
   let manifestFiles = [];
-  const placeholderImage = "images/0.png"; // Placeholder image path
 
   // Helper function to determine the folder for an image
   const getImageFolder = (id) => {
@@ -17,7 +16,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     return "2001-2222";
   };
 
-  // Dynamically load the manifest
+  // Load manifest file
   async function loadManifest() {
     try {
       const response = await fetch("metadata/manifest.json");
@@ -52,7 +51,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const traitTypes = ["Background", "Townie", "Pants", "Shirt", "Hair", "Eyes", "Hat", "Mouth"];
   const traitValues = {};
 
-  // Process and collect trait values
+  // Collect and count trait values
   const processTraitValues = () => {
     jsonData.forEach((item) => {
       item.attributes.forEach((attr) => {
@@ -64,9 +63,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Render filters
+  // Render filters with counts
   const renderFilters = () => {
-    filters.innerHTML = "";
+    filters.innerHTML = ""; // Clear filters before rendering
+
     traitTypes.forEach((trait) => {
       const accordionItem = document.createElement("div");
       accordionItem.className = "accordion-item";
@@ -82,15 +82,37 @@ document.addEventListener("DOMContentLoaded", async () => {
       const body = document.createElement("div");
       body.className = "accordion-body";
 
+      // Calculate the count of each value for the trait
+      const traitCounts = {};
+      jsonData.forEach((item) => {
+        item.attributes.forEach((attr) => {
+          if (attr.trait_type === trait) {
+            traitCounts[attr.value] = (traitCounts[attr.value] || 0) + 1;
+          }
+        });
+      });
+
+      // Render each value with its count
       Array.from(traitValues[trait]).forEach((value) => {
         const label = document.createElement("label");
+        label.className = "filter-item";
+
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
         checkbox.value = value;
         checkbox.dataset.traitType = trait;
 
+        const count = document.createElement("span");
+        count.className = "filter-count";
+        count.textContent = traitCounts[value] || 0;
+
+        const valueText = document.createElement("span");
+        valueText.className = "filter-value";
+        valueText.textContent = value;
+
+        label.appendChild(valueText);
+        label.appendChild(count);
         label.appendChild(checkbox);
-        label.appendChild(document.createTextNode(value));
         body.appendChild(label);
       });
 
@@ -120,12 +142,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
     );
 
-    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1)));
+    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1))); // Render filtered data up to the current page
   };
 
   // Render gallery with lazy-loaded images
   const renderGallery = (data) => {
-    gallery.innerHTML = "";
+    gallery.innerHTML = ""; // Clear gallery before rendering
     data.forEach((item) => {
       const card = document.createElement("div");
       card.className = "card";
@@ -138,7 +160,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       // Fallback to placeholder if image fails to load
       img.onerror = () => {
-        img.src = placeholderImage;
+        img.src = "images/0.png";
       };
 
       const observer = new IntersectionObserver(
