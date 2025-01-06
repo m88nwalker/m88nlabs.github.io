@@ -2,9 +2,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
   let jsonData = [];
-  const pageSize = 50; // Number of images per page
-  let currentPage = 0; // Track the current page
-  let manifestFiles = []; // Holds the list of files from the manifest
+  const pageSize = 50;
+  let currentPage = 0;
+  let manifestFiles = [];
+  const placeholderImage = "images/0.png"; // Placeholder image path
 
   // Helper function to determine the folder for an image
   const getImageFolder = (id) => {
@@ -65,7 +66,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   // Render filters
   const renderFilters = () => {
-    filters.innerHTML = ""; // Clear filters before rendering
+    filters.innerHTML = "";
     traitTypes.forEach((trait) => {
       const accordionItem = document.createElement("div");
       accordionItem.className = "accordion-item";
@@ -119,12 +120,12 @@ document.addEventListener("DOMContentLoaded", async () => {
       })
     );
 
-    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1))); // Render filtered data up to the current page
+    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1)));
   };
 
-  // Render gallery
+  // Render gallery with lazy-loaded images
   const renderGallery = (data) => {
-    gallery.innerHTML = ""; // Clear gallery before rendering
+    gallery.innerHTML = "";
     data.forEach((item) => {
       const card = document.createElement("div");
       card.className = "card";
@@ -134,6 +135,11 @@ document.addEventListener("DOMContentLoaded", async () => {
       img.dataset.src = `images/${folder}/${item.image}`;
       img.alt = item.name;
       img.classList.add("lazy");
+
+      // Fallback to placeholder if image fails to load
+      img.onerror = () => {
+        img.src = placeholderImage;
+      };
 
       const observer = new IntersectionObserver(
         ([entry], observer) => {
