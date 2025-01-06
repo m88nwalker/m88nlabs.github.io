@@ -6,6 +6,16 @@ document.addEventListener("DOMContentLoaded", async () => {
   let currentPage = 0; // Track the current page
   let manifestFiles = []; // Holds the list of files from the manifest
 
+  // Helper function to determine the folder for an image
+  const getImageFolder = (id) => {
+    const tokenId = parseInt(id);
+    if (tokenId <= 500) return "1-500";
+    if (tokenId <= 1000) return "501-1000";
+    if (tokenId <= 1500) return "1001-1500";
+    if (tokenId <= 2000) return "1501-2000";
+    return "2001-2222";
+  };
+
   // Dynamically load the manifest
   async function loadManifest() {
     try {
@@ -119,8 +129,9 @@ document.addEventListener("DOMContentLoaded", async () => {
       const card = document.createElement("div");
       card.className = "card";
 
+      const folder = getImageFolder(item.image.split(".")[0]);
       const img = document.createElement("img");
-      img.dataset.src = `images/${item.image}`;
+      img.dataset.src = `images/${folder}/${item.image}`;
       img.alt = item.name;
       img.classList.add("lazy");
 
