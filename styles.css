@@ -7,7 +7,7 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #e3f2fd, #90caf9);
+  background: linear-gradient(to bottom, #0a056f, #90caf9);
   color: #333;
   margin: 0;
   padding: 0;
@@ -51,7 +51,7 @@ header h1 {
 aside#filters {
   width: 300px;
   max-width: 30%;
-  background-color: #f1f8e9;
+  background-color: #0a056f;
   padding: 20px;
   margin-right: 20px;
   border-radius: 8px;
