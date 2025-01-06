@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Townie Gallery</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Townie Gallery</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Townie Gallery</h1>
-    </header>
-    <main>
-        <aside id="filters">
-            <!-- Filter options will be dynamically rendered here -->
-        </aside>
-        <section id="gallery-container">
-            <div id="gallery"></div>
-            <div id="pagination"></div>
-        </section>
-    </main>
-    <footer>
-        <p>Powered by Townie Metadata</p>
-    </footer>
-    <script src="script.js"></script>
+  <header>
+    <h1>Townie Gallery</h1>
+  </header>
+
+  <div class="main-container">
+    <!-- Filters Section -->
+    <aside id="filters">
+      <h2>Filter Townies</h2>
+      <!-- Filters will be dynamically generated here -->
+    </aside>
+
+    <!-- Gallery Section -->
+    <section id="gallery">
+      <!-- Gallery items will be dynamically generated here -->
+    </section>
+  </div>
+
+  <!-- Load More Button -->
+  <div id="load-more-container">
+    <button id="load-more">Load More</button>
+  </div>
+
+  <footer>
+    <p>Powered by Townie Metadata</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
