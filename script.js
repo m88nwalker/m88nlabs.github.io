@@ -3,10 +3,10 @@ document.addEventListener("DOMContentLoaded", async () => {
   const filters = document.getElementById("filters");
   let jsonData = [];
 
-  // Dynamically load JSON files from the 'metadata' folder
+  // Dynamically load JSON files from the 'metadata' folder based on manifest
   async function loadMetadata() {
     try {
-      const response = await fetch("metadata/manifest.json"); // Manifest file listing all JSON filenames
+      const response = await fetch("metadata/manifest.json"); // Fetch manifest
       const files = await response.json();
 
       const metadataPromises = files.map(async (file) => {
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const body = document.createElement("div");
       body.className = "accordion-body";
 
-      Array.from(traitValues[trait]).forEach((value) => {
+      Array.from(traitValues[trait] || []).forEach((value) => {
         const label = document.createElement("label");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
