@@ -1,5 +1,5 @@
 /* General Reset */
-body, h1, p, div {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -7,133 +7,166 @@ body, h1, p, div {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
+  background: linear-gradient(to bottom, #e3f2fd, #90caf9);
   color: #333;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
+/* Header */
 header {
-  background-color: #4CAF50;
+  background-color: #1e88e5;
   color: white;
-  padding: 1em;
+  padding: 20px;
   text-align: center;
 }
 
-main {
-  display: flex;
-  flex-direction: row;
-  gap: 1em;
-  margin: 1em;
+header h1 {
+  font-size: 2rem;
+  margin: 0;
 }
 
-/* Filters Sidebar */
-#filters {
-  width: 20%;
-  padding: 1em;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  overflow-y: auto;
-  height: auto;
+/* Main Container */
+.main-container {
+  display: flex;
+  margin: 20px;
+}
+
+/* Filters Section */
+aside#filters {
+  width: 300px;
+  max-width: 30%;
+  background-color: #f1f8e9;
+  padding: 20px;
+  margin-right: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+aside#filters h2 {
+  margin-bottom: 20px;
 }
 
 .accordion-item {
-  margin-bottom: 1em;
+  margin-bottom: 10px;
 }
 
 .accordion-header {
   font-weight: bold;
   cursor: pointer;
-  margin-bottom: 0.5em;
+  padding: 10px;
+  background-color: #c8e6c9;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+}
+
+.accordion-header:hover {
+  background-color: #aed581;
 }
 
 .accordion-body {
-  padding-left: 1em;
   display: none;
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid #a5d6a7;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
 .accordion-body.open {
   display: block;
 }
 
-/* Gallery and Pagination */
-#gallery-container {
-  width: 75%;
+.accordion-body label {
+  display: block;
+  margin: 5px 0;
+  cursor: pointer;
 }
 
-#gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 1em;
+.accordion-body input {
+  margin-right: 10px;
+}
+
+/* Gallery Section */
+section#gallery {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .card {
-  background: white;
+  width: 200px;
+  background-color: #ffffff;
   border: 1px solid #ddd;
-  border-radius: 5px;
-  padding: 1em;
-  text-align: center;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  border-radius: 5px;
 }
 
 .card .name {
   font-weight: bold;
-  margin: 0.5em 0;
+  padding: 10px;
+  background-color: #f5f5f5;
 }
 
 .card .attributes {
-  margin-top: 1em;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5em;
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #666;
 }
 
-.attribute {
-  background: #f4f4f9;
-  padding: 0.5em;
-  border-radius: 3px;
-  font-size: 0.9em;
-  border: 1px solid #ddd;
+.card .attribute {
+  margin-bottom: 5px;
 }
 
-/* Pagination */
-#pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 1em;
-  gap: 0.5em;
+/* Load More Button */
+#load-more-container {
+  text-align: center;
+  margin: 20px 0;
 }
 
-#pagination button {
-  padding: 0.5em 1em;
-  background: #4CAF50;
+#load-more {
+  background-color: #1e88e5;
   color: white;
   border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  font-size: 1em;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-#pagination button:hover {
-  background: #45a049;
+#load-more:hover {
+  background-color: #1565c0;
+  transform: scale(1.05);
 }
 
-#pagination button:disabled {
-  background: #ddd;
-  color: #666;
-  cursor: not-allowed;
+#load-more:active {
+  transform: scale(1);
 }
 
+/* Footer */
 footer {
-  text-align: center;
-  margin-top: 2em;
-  padding: 1em;
-  background: #4CAF50;
+  background-color: #1e88e5;
   color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+footer p {
+  margin: 0;
 }

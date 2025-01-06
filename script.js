@@ -2,14 +2,20 @@ document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
   let jsonData = [];
+  const chunkSize = 500; // Number of files to fetch in one chunk
+  let currentPage = 0;
 
-  // Dynamically load metadata using the manifest file
-  async function loadMetadata() {
+  // Dynamically load metadata from the manifest
+  async function loadMetadataChunk() {
     try {
       const response = await fetch("metadata/manifest.json");
       const files = await response.json();
 
-      const metadataPromises = files.map(async (file) => {
+      const start = currentPage * chunkSize;
+      const end = start + chunkSize;
+      const chunk = files.slice(start, end);
+
+      const metadataPromises = chunk.map(async (file) => {
         const fileResponse = await fetch(`metadata/${file}`);
         if (!fileResponse.ok) {
           throw new Error(`Failed to fetch: ${file}`);
@@ -17,7 +23,11 @@ document.addEventListener("DOMContentLoaded", async () => {
         return fileResponse.json();
       });
 
-      jsonData = await Promise.all(metadataPromises);
+      const chunkData = await Promise.all(metadataPromises);
+      jsonData = [...jsonData, ...chunkData];
+      processTraitValues();
+      renderFilters();
+      renderGallery(jsonData);
     } catch (error) {
       console.error("Error loading metadata files:", error);
     }
@@ -38,7 +48,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Render the filters
+  // Render filters
   const renderFilters = () => {
     filters.innerHTML = ""; // Clear filters before rendering
     traitTypes.forEach((trait) => {
@@ -74,7 +84,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Apply filters to the gallery
+  // Apply filters
   const applyFilters = () => {
     const selectedFilters = {};
     document.querySelectorAll(".accordion-body input:checked").forEach((checkbox) => {
@@ -97,7 +107,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderGallery(filteredData);
   };
 
-  // Render the gallery
+  // Render gallery
   const renderGallery = (data) => {
     gallery.innerHTML = ""; // Clear gallery before rendering
     data.forEach((item) => {
@@ -129,10 +139,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  await loadMetadata();
-  processTraitValues();
-  renderFilters();
-  renderGallery(jsonData);
+  // Load initial chunk and set up pagination
+  await loadMetadataChunk();
+
+  document.getElementById("load-more").addEventListener("click", async () => {
+    currentPage++;
+    await loadMetadataChunk();
+  });
 
   filters.addEventListener("change", applyFilters);
 });
