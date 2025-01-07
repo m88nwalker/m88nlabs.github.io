@@ -1,3 +1,5 @@
+// Script.js - Final and verified version
+
 document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
@@ -5,6 +7,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const pageSize = 50; // Number of images to load per page
   let currentPage = 0;
   let manifestFiles = [];
+  let traitCounts = {}; // Holds precomputed counts for traits
 
   // Helper function to determine the folder for an image
   const getImageFolder = (id) => {
@@ -23,6 +26,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       manifestFiles = await response.json();
     } catch (error) {
       console.error("Error loading manifest file:", error);
+    }
+  }
+
+  // Load precomputed trait counts
+  async function loadTraitCounts() {
+    try {
+      const response = await fetch("metadata/trait_counts.json");
+      traitCounts = await response.json();
+    } catch (error) {
+      console.error("Error loading trait counts:", error);
     }
   }
 
@@ -48,26 +61,11 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  const traitTypes = ["Background", "Townie", "Pants", "Shirt", "Hair", "Eyes", "Hat", "Mouth"];
-  const traitValues = {};
-
-  // Collect and count trait values
-  const processTraitValues = () => {
-    jsonData.forEach((item) => {
-      item.attributes.forEach((attr) => {
-        if (!traitValues[attr.trait_type]) {
-          traitValues[attr.trait_type] = new Set();
-        }
-        traitValues[attr.trait_type].add(attr.value);
-      });
-    });
-  };
-
-  // Render filters with counts
+  // Render filters using precomputed counts
   const renderFilters = () => {
     filters.innerHTML = ""; // Clear filters before rendering
 
-    traitTypes.forEach((trait) => {
+    Object.keys(traitCounts).forEach((trait) => {
       const accordionItem = document.createElement("div");
       accordionItem.className = "accordion-item";
 
@@ -82,18 +80,7 @@ document.addEventListener("DOMContentLoaded", async () => {
       const body = document.createElement("div");
       body.className = "accordion-body";
 
-      // Calculate the count of each value for the trait
-      const traitCounts = {};
-      jsonData.forEach((item) => {
-        item.attributes.forEach((attr) => {
-          if (attr.trait_type === trait) {
-            traitCounts[attr.value] = (traitCounts[attr.value] || 0) + 1;
-          }
-        });
-      });
-
-      // Render each value with its count
-      Array.from(traitValues[trait]).forEach((value) => {
+      Object.entries(traitCounts[trait]).forEach(([value, count]) => {
         const label = document.createElement("label");
         label.className = "filter-item";
 
@@ -102,16 +89,16 @@ document.addEventListener("DOMContentLoaded", async () => {
         checkbox.value = value;
         checkbox.dataset.traitType = trait;
 
-        const count = document.createElement("span");
-        count.className = "filter-count";
-        count.textContent = traitCounts[value] || 0;
+        const countElement = document.createElement("span");
+        countElement.className = "filter-count";
+        countElement.textContent = count;
 
         const valueText = document.createElement("span");
         valueText.className = "filter-value";
         valueText.textContent = value;
 
         label.appendChild(valueText);
-        label.appendChild(count);
+        label.appendChild(countElement);
         label.appendChild(checkbox);
         body.appendChild(label);
       });
@@ -120,29 +107,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       accordionItem.appendChild(body);
       filters.appendChild(accordionItem);
     });
-  };
-
-  // Apply filters
-  const applyFilters = () => {
-    const selectedFilters = {};
-    document.querySelectorAll(".accordion-body input:checked").forEach((checkbox) => {
-      const traitType = checkbox.dataset.traitType;
-      if (!selectedFilters[traitType]) {
-        selectedFilters[traitType] = new Set();
-      }
-      selectedFilters[traitType].add(checkbox.value);
-    });
-
-    const filteredData = jsonData.filter((item) =>
-      item.attributes.every((attr) => {
-        if (!selectedFilters[attr.trait_type] || selectedFilters[attr.trait_type].size === 0) {
-          return true;
-        }
-        return selectedFilters[attr.trait_type].has(attr.value);
-      })
-    );
-
-    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1))); // Render filtered data up to the current page
   };
 
   // Render gallery with lazy-loaded images
@@ -202,17 +166,35 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("load-more").addEventListener("click", async () => {
     currentPage++;
     await loadMetadataChunk();
-    processTraitValues();
-    renderFilters();
     renderGallery(jsonData.slice(0, pageSize * (currentPage + 1)));
   });
 
-  filters.addEventListener("change", applyFilters);
+  filters.addEventListener("change", () => {
+    const selectedFilters = {};
+    document.querySelectorAll(".accordion-body input:checked").forEach((checkbox) => {
+      const traitType = checkbox.dataset.traitType;
+      if (!selectedFilters[traitType]) {
+        selectedFilters[traitType] = new Set();
+      }
+      selectedFilters[traitType].add(checkbox.value);
+    });
+
+    const filteredData = jsonData.filter((item) =>
+      item.attributes.every((attr) => {
+        if (!selectedFilters[attr.trait_type] || selectedFilters[attr.trait_type].size === 0) {
+          return true;
+        }
+        return selectedFilters[attr.trait_type].has(attr.value);
+      })
+    );
+
+    renderGallery(filteredData.slice(0, pageSize * (currentPage + 1)));
+  });
 
   // Initial load
   await loadManifest();
+  await loadTraitCounts();
   await loadMetadataChunk();
-  processTraitValues();
   renderFilters();
   renderGallery(jsonData.slice(0, pageSize));
 });
