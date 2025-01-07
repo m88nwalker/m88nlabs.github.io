@@ -1,212 +1,98 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base styling */
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #060340, #090340);
-  color: #333;
   margin: 0;
   padding: 0;
+  background-color: #f4f4f4;
+  color: #333;
 }
 
-/* Banner Styles */
-#banner {
+/* Banner styling */
+.banner {
   width: 100%;
-  text-align: center;
-  background-color: #fff; /* Fallback background */
-  margin-bottom: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  height: 200px;
+  background: url('banner.jpg') no-repeat center center/cover;
 }
 
-#banner img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Header */
-header {
-  background-color: #060340;
-  color: white;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2rem;
-  margin: 0;
-}
-
-/* Main Container */
-.main-container {
-  display: flex;
-  margin: 20px;
-}
-
-/* Filters Section */
-aside#filters {
-  width: 300px;
-  max-width: 30%;
-  background-color: #f1f8e9;
-  padding: 20px;
-  margin-right: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-aside#filters h2 {
-  margin-bottom: 20px;
-}
-
-.accordion-item {
-  margin-bottom: 10px;
-}
-
-.accordion-header {
-  font-weight: bold;
-  cursor: pointer;
+/* Filter sidebar */
+.filters {
+  float: left;
+  width: 20%;
   padding: 10px;
-  background-color: #060340;
-  color: white;
-  border: 1px solid #030340;
-  border-radius: 5px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
 }
 
-.accordion-header:hover {
-  background-color: #030340;
-}
-
-.accordion-body {
-  display: none;
-  padding: 10px;
-  background-color: #ffffff;
-  border: 1px solid #030340;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-
-.accordion-body.open {
-  display: block;
-}
-
-/* Filter Item Layout */
-.filter-item {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  margin-bottom: 5px;
-  background-color: #f9f9f9;
-}
-
-.filter-item:hover {
-  background-color: #e0f7fa;
-}
-
-.filter-value {
-  flex: 1;
-  text-align: left;
-}
-
-.filter-count {
-  margin-right: 10px;
-  color: #666;
-  font-weight: bold;
-}
-
-.filter-item input[type="checkbox"] {
-  margin-left: auto;
-}
-
-/* Gallery Section */
-section#gallery {
-  flex: 1;
+/* Gallery styling */
+.gallery {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 20%;
 }
 
 .card {
-  width: 200px;
-  background-color: #ffffff;
+  background-color: #fff;
   border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s;
-  height: auto;
-}
-
-.card:hover {
-  transform: scale(1.05);
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 10px;
+  width: calc(25% - 20px);
 }
 
 .card img {
   width: 100%;
-  height: auto;
+  border-radius: 5px;
 }
 
-.card .name {
-  font-weight: bold;
-  padding: 10px;
-  background-color: #f5f5f5;
+.card h3 {
+  font-size: 1.2rem;
+  margin: 10px 0 5px;
 }
 
-.card .attributes {
-  padding: 10px;
+.card p {
   font-size: 0.9rem;
-  color: #666;
 }
 
-.card .attribute {
-  margin-bottom: 5px;
-}
-
-/* Load More Button */
-#load-more-container {
-  text-align: center;
-  margin: 20px 0;
-}
-
+/* Load more button */
 #load-more {
-  background-color: #060340;
-  color: white;
-  border: none;
+  display: block;
+  margin: 20px auto;
   padding: 10px 20px;
   font-size: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  transition: background-color 0.3s, transform 0.2s;
 }
 
 #load-more:hover {
-  background-color: #060340;
-  color: white;
-  text-align: center;
-  transform: scale(1.05);
+  background-color: #0056b3;
 }
 
-#load-more:active {
-  transform: scale(1);
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .gallery {
+      margin-left: 0;
+  }
+
+  .filters {
+      width: 100%;
+      float: none;
+      border-right: none;
+      border-bottom: 1px solid #ddd;
+  }
+
+  .card {
+      width: calc(50% - 20px);
+  }
 }
 
-/* Footer */
-footer {
-  background-color: #060340;
-  color: white;
-  text-align: center;
-  padding: 10px;
-  margin-top: 20px;
-}
-
-footer p {
-  margin: 0;
+@media (max-width: 480px) {
+  .card {
+      width: calc(100% - 20px);
+  }
 }
