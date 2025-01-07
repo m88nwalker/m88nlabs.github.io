@@ -141,6 +141,7 @@ section#gallery {
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s;
+  height: auto;
 }
 
 .card:hover {
