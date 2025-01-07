@@ -7,15 +7,30 @@
 
 body {
   font-family: Arial, sans-serif;
-  background: linear-gradient(to bottom, #e3f2fd, #90caf9);
+  background: linear-gradient(to bottom, #060340, #090340);
   color: #333;
   margin: 0;
   padding: 0;
 }
 
+/* Banner Styles */
+#banner {
+  width: 100%;
+  text-align: center;
+  background-color: #fff; /* Fallback background */
+  margin-bottom: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 /* Header */
 header {
-  background-color: #1e88e5;
+  background-color: #060340;
   color: white;
   padding: 20px;
   text-align: center;
@@ -55,20 +70,21 @@ aside#filters h2 {
   font-weight: bold;
   cursor: pointer;
   padding: 10px;
-  background-color: #c8e6c9;
-  border: 1px solid #a5d6a7;
+  background-color: #060340;
+  color: white;
+  border: 1px solid #030340;
   border-radius: 5px;
 }
 
 .accordion-header:hover {
-  background-color: #aed581;
+  background-color: #030340;
 }
 
 .accordion-body {
   display: none;
   padding: 10px;
   background-color: #ffffff;
-  border: 1px solid #a5d6a7;
+  border: 1px solid #030340;
   border-radius: 5px;
   margin-top: 5px;
 }
@@ -77,14 +93,35 @@ aside#filters h2 {
   display: block;
 }
 
-.accordion-body label {
-  display: block;
-  margin: 5px 0;
-  cursor: pointer;
+/* Filter Item Layout */
+.filter-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  background-color: #f9f9f9;
 }
 
-.accordion-body input {
+.filter-item:hover {
+  background-color: #e0f7fa;
+}
+
+.filter-value {
+  flex: 1;
+  text-align: left;
+}
+
+.filter-count {
   margin-right: 10px;
+  color: #666;
+  font-weight: bold;
+}
+
+.filter-item input[type="checkbox"] {
+  margin-left: auto;
 }
 
 /* Gallery Section */
@@ -104,6 +141,7 @@ section#gallery {
   overflow: hidden;
   text-align: center;
   transition: transform 0.2s;
+  height: auto;
 }
 
 .card:hover {
@@ -138,7 +176,7 @@ section#gallery {
 }
 
 #load-more {
-  background-color: #1e88e5;
+  background-color: #060340;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -150,7 +188,9 @@ section#gallery {
 }
 
 #load-more:hover {
-  background-color: #1565c0;
+  background-color: white;
+  color: #060340;
+  text-align: center;
   transform: scale(1.05);
 }
 
@@ -160,7 +200,7 @@ section#gallery {
 
 /* Footer */
 footer {
-  background-color: #1e88e5;
+  background-color: #060340;
   color: white;
   text-align: center;
   padding: 10px;
