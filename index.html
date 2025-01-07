@@ -1,46 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Townie Gallery</title>
-  <link rel="icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Townie Gallery</title>
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
-  <!-- Banner Section -->
-  <div id="banner">
-    <img src="images/banner.jpg" alt="Townie Gallery Banner">
-  </div>
+    <!-- Banner Section -->
+    <div class="banner">
+        <h1>Townie Gallery</h1>
+    </div>
 
-  <!-- Header Section -->
-  <header>
-    <h1>Townie Gallery</h1>
-  </header>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Filter Sidebar -->
+        <aside class="filters" id="filters">
+            <!-- Filters will be dynamically rendered here -->
+        </aside>
 
-  <!-- Main Container -->
-  <div class="main-container">
-    <!-- Filters Section -->
-    <aside id="filters">
-      <h2>Filter Townies</h2>
-      <!-- Filters will be dynamically generated here -->
-    </aside>
+        <!-- Gallery Section -->
+        <main class="gallery" id="gallery">
+            <!-- Gallery cards will be dynamically rendered here -->
+        </main>
+    </div>
 
-    <!-- Gallery Section -->
-    <section id="gallery">
-      <!-- Gallery items will be dynamically generated here -->
-    </section>
-  </div>
-
-  <!-- Load More Button -->
-  <div id="load-more-container">
+    <!-- Load More Button -->
     <button id="load-more">Load More</button>
-  </div>
 
-  <footer>
-    <p>Powered by m88nlabs</p>
-  </footer>
+    <footer>
+        <p>Powered by m88nlabs</p>
+    </footer>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
