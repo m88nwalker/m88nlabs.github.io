@@ -5,10 +5,11 @@
   box-sizing: border-box;
 }
 
+/* Possibly add 8font-family: 'Press Start 2P', sans-serif8 */
 body {
   font-family: Arial, sans-serif;
   background: linear-gradient(to bottom, #060340, #090340);
-  color: #333;
+  color: #060340;
   margin: 0;
   padding: 0;
 }
@@ -51,11 +52,12 @@ header h1 {
 aside#filters {
   width: 300px;
   max-width: 30%;
-  background-color: #f1f8e9;
+  background-color: #090340;
   padding: 20px;
   margin-right: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  height: auto;
 }
 
 aside#filters h2 {
@@ -139,12 +141,14 @@ section#gallery {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  text-align: center;
-  transition: transform 0.2s;
+  text-align: left;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  height: auto;
 }
 
 .card:hover {
   transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 .card img {
@@ -160,8 +164,10 @@ section#gallery {
 
 .card .attributes {
   padding: 10px;
-  font-size: 0.9rem;
-  color: #666;
+  background-color: #060340;
+  color: #fff;
+  padding: 5px 5px;
+  font-size: 0.7rem;
 }
 
 .card .attribute {
@@ -175,8 +181,8 @@ section#gallery {
 }
 
 #load-more {
-  background-color: #060340;
-  color: white;
+  background-color: white;
+  color: #060340;
   border: none;
   padding: 10px 20px;
   font-size: 1rem;
