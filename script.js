@@ -1,13 +1,15 @@
-// Script.js - Final and verified version
+// Script.js - Final and verified version with rarity integration
 
 document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
+  const sortOptions = document.getElementById("sort-options");
   let jsonData = [];
   const pageSize = 50; // Number of images to load per page
   let currentPage = 0;
   let manifestFiles = [];
-  let traitCounts = {}; // Holds precomputed counts for traits
+  let traitCounts = {};
+  let rarityData = [];
 
   // Helper function to determine the folder for an image
   const getImageFolder = (id) => {
@@ -39,6 +41,16 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
+  // Load rarity data
+  async function loadRarityData() {
+    try {
+      const response = await fetch("metadata/rarity.json");
+      rarityData = await response.json();
+    } catch (error) {
+      console.error("Error loading rarity data:", error);
+    }
+  }
+
   // Load metadata for the current page
   async function loadMetadataChunk() {
     const start = currentPage * pageSize;
@@ -60,6 +72,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       console.error("Error loading metadata files:", error);
     }
   }
+
+  // Merge rarity data with metadata
+  const mergeRarityData = () => {
+    const rarityMap = new Map(rarityData.map((item) => [item.tokenId, item]));
+    jsonData = jsonData.map((item) => ({
+      ...item,
+      rarityScore: rarityMap.get(item.tokenId)?.rarityScore || 0,
+      rank: rarityMap.get(item.tokenId)?.rank || 0,
+    }));
+  };
 
   // Render filters using precomputed counts
   const renderFilters = () => {
@@ -147,6 +169,16 @@ document.addEventListener("DOMContentLoaded", async () => {
       name.textContent = item.name;
       card.appendChild(name);
 
+      const rank = document.createElement("div");
+      rank.className = "rank";
+      rank.textContent = `Rank: #${item.rank}`;
+      card.appendChild(rank);
+
+      const score = document.createElement("div");
+      score.className = "score";
+      score.textContent = `Rarity Score: ${item.rarityScore.toFixed(2)}`;
+      card.appendChild(score);
+
       const attributes = document.createElement("div");
       attributes.className = "attributes";
 
@@ -166,6 +198,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   document.getElementById("load-more").addEventListener("click", async () => {
     currentPage++;
     await loadMetadataChunk();
+    mergeRarityData();
     renderGallery(jsonData.slice(0, pageSize * (currentPage + 1)));
   });
 
@@ -194,7 +227,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   // Initial load
   await loadManifest();
   await loadTraitCounts();
+  await loadRarityData();
   await loadMetadataChunk();
+  mergeRarityData();
   renderFilters();
   renderGallery(jsonData.slice(0, pageSize));
 });
