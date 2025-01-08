@@ -1,0 +1,11112 @@
+[
+  {
+    "tokenId": 432,
+    "rarityScore": 1237.6818184012698,
+    "rank": 1
+  },
+  {
+    "tokenId": 2158,
+    "rarityScore": 1180.657435850926,
+    "rank": 2
+  },
+  {
+    "tokenId": 1867,
+    "rarityScore": 679.441131157253,
+    "rank": 3
+  },
+  {
+    "tokenId": 648,
+    "rarityScore": 660.5769008484694,
+    "rank": 4
+  },
+  {
+    "tokenId": 412,
+    "rarityScore": 649.236237188719,
+    "rank": 5
+  },
+  {
+    "tokenId": 1779,
+    "rarityScore": 634.057947467884,
+    "rank": 6
+  },
+  {
+    "tokenId": 112,
+    "rarityScore": 633.0790505653882,
+    "rank": 7
+  },
+  {
+    "tokenId": 187,
+    "rarityScore": 564.6481229082515,
+    "rank": 8
+  },
+  {
+    "tokenId": 1580,
+    "rarityScore": 557.0311258416968,
+    "rank": 9
+  },
+  {
+    "tokenId": 1821,
+    "rarityScore": 541.9129595302903,
+    "rank": 10
+  },
+  {
+    "tokenId": 1578,
+    "rarityScore": 528.4555704036169,
+    "rank": 11
+  },
+  {
+    "tokenId": 1296,
+    "rarityScore": 527.618735277227,
+    "rank": 12
+  },
+  {
+    "tokenId": 35,
+    "rarityScore": 527.1827849830833,
+    "rank": 13
+  },
+  {
+    "tokenId": 222,
+    "rarityScore": 518.7583448351993,
+    "rank": 14
+  },
+  {
+    "tokenId": 1049,
+    "rarityScore": 513.9361425435211,
+    "rank": 15
+  },
+  {
+    "tokenId": 223,
+    "rarityScore": 501.03605938132165,
+    "rank": 16
+  },
+  {
+    "tokenId": 1398,
+    "rarityScore": 464.3854914069774,
+    "rank": 17
+  },
+  {
+    "tokenId": 1647,
+    "rarityScore": 458.33813875575004,
+    "rank": 18
+  },
+  {
+    "tokenId": 632,
+    "rarityScore": 455.8770900873939,
+    "rank": 19
+  },
+  {
+    "tokenId": 239,
+    "rarityScore": 440.04399776572495,
+    "rank": 20
+  },
+  {
+    "tokenId": 871,
+    "rarityScore": 429.5131603289256,
+    "rank": 21
+  },
+  {
+    "tokenId": 2051,
+    "rarityScore": 413.0717009335644,
+    "rank": 22
+  },
+  {
+    "tokenId": 748,
+    "rarityScore": 413.0277366476546,
+    "rank": 23
+  },
+  {
+    "tokenId": 1880,
+    "rarityScore": 407.90711029604745,
+    "rank": 24
+  },
+  {
+    "tokenId": 252,
+    "rarityScore": 402.8181285374194,
+    "rank": 25
+  },
+  {
+    "tokenId": 347,
+    "rarityScore": 397.9144382598167,
+    "rank": 26
+  },
+  {
+    "tokenId": 619,
+    "rarityScore": 396.8740678198434,
+    "rank": 27
+  },
+  {
+    "tokenId": 493,
+    "rarityScore": 391.137825852667,
+    "rank": 28
+  },
+  {
+    "tokenId": 2209,
+    "rarityScore": 388.89469786185447,
+    "rank": 29
+  },
+  {
+    "tokenId": 2093,
+    "rarityScore": 384.6395282192052,
+    "rank": 30
+  },
+  {
+    "tokenId": 1860,
+    "rarityScore": 378.06133599645096,
+    "rank": 31
+  },
+  {
+    "tokenId": 2144,
+    "rarityScore": 377.6749414888599,
+    "rank": 32
+  },
+  {
+    "tokenId": 1910,
+    "rarityScore": 376.0057657485127,
+    "rank": 33
+  },
+  {
+    "tokenId": 1956,
+    "rarityScore": 373.9461666531652,
+    "rank": 34
+  },
+  {
+    "tokenId": 703,
+    "rarityScore": 373.3221232193555,
+    "rank": 35
+  },
+  {
+    "tokenId": 1990,
+    "rarityScore": 372.1682582541976,
+    "rank": 36
+  },
+  {
+    "tokenId": 2040,
+    "rarityScore": 371.1736399514205,
+    "rank": 37
+  },
+  {
+    "tokenId": 167,
+    "rarityScore": 369.6368331930596,
+    "rank": 38
+  },
+  {
+    "tokenId": 620,
+    "rarityScore": 369.607350949654,
+    "rank": 39
+  },
+  {
+    "tokenId": 369,
+    "rarityScore": 368.9311679080614,
+    "rank": 40
+  },
+  {
+    "tokenId": 1469,
+    "rarityScore": 364.39510799092193,
+    "rank": 41
+  },
+  {
+    "tokenId": 134,
+    "rarityScore": 363.8328753830791,
+    "rank": 42
+  },
+  {
+    "tokenId": 1417,
+    "rarityScore": 363.225885476262,
+    "rank": 43
+  },
+  {
+    "tokenId": 725,
+    "rarityScore": 361.94039099942904,
+    "rank": 44
+  },
+  {
+    "tokenId": 634,
+    "rarityScore": 361.7258304905696,
+    "rank": 45
+  },
+  {
+    "tokenId": 2157,
+    "rarityScore": 360.99748618811714,
+    "rank": 46
+  },
+  {
+    "tokenId": 691,
+    "rarityScore": 359.7512583354366,
+    "rank": 47
+  },
+  {
+    "tokenId": 1225,
+    "rarityScore": 357.0413017479172,
+    "rank": 48
+  },
+  {
+    "tokenId": 1981,
+    "rarityScore": 356.39242997209885,
+    "rank": 49
+  },
+  {
+    "tokenId": 689,
+    "rarityScore": 349.79320852848997,
+    "rank": 50
+  },
+  {
+    "tokenId": 1702,
+    "rarityScore": 341.3206276134564,
+    "rank": 51
+  },
+  {
+    "tokenId": 1269,
+    "rarityScore": 339.95246095366235,
+    "rank": 52
+  },
+  {
+    "tokenId": 1075,
+    "rarityScore": 337.3503475360564,
+    "rank": 53
+  },
+  {
+    "tokenId": 306,
+    "rarityScore": 335.19480654102034,
+    "rank": 54
+  },
+  {
+    "tokenId": 365,
+    "rarityScore": 333.09369096256626,
+    "rank": 55
+  },
+  {
+    "tokenId": 653,
+    "rarityScore": 332.73607596474227,
+    "rank": 56
+  },
+  {
+    "tokenId": 1644,
+    "rarityScore": 332.32194625591626,
+    "rank": 57
+  },
+  {
+    "tokenId": 1938,
+    "rarityScore": 331.4270873260727,
+    "rank": 58
+  },
+  {
+    "tokenId": 1862,
+    "rarityScore": 327.9734444622771,
+    "rank": 59
+  },
+  {
+    "tokenId": 2024,
+    "rarityScore": 326.4111753279878,
+    "rank": 60
+  },
+  {
+    "tokenId": 729,
+    "rarityScore": 324.2381769856864,
+    "rank": 61
+  },
+  {
+    "tokenId": 1998,
+    "rarityScore": 324.1197875371082,
+    "rank": 62
+  },
+  {
+    "tokenId": 1744,
+    "rarityScore": 321.6043267319515,
+    "rank": 63
+  },
+  {
+    "tokenId": 1412,
+    "rarityScore": 319.0575826472707,
+    "rank": 64
+  },
+  {
+    "tokenId": 351,
+    "rarityScore": 318.1733352457166,
+    "rank": 65
+  },
+  {
+    "tokenId": 2183,
+    "rarityScore": 315.02413846744815,
+    "rank": 66
+  },
+  {
+    "tokenId": 1870,
+    "rarityScore": 310.1535702082803,
+    "rank": 67
+  },
+  {
+    "tokenId": 524,
+    "rarityScore": 309.43385907405775,
+    "rank": 68
+  },
+  {
+    "tokenId": 1822,
+    "rarityScore": 308.8504367845216,
+    "rank": 69
+  },
+  {
+    "tokenId": 1695,
+    "rarityScore": 304.4373684080747,
+    "rank": 70
+  },
+  {
+    "tokenId": 1445,
+    "rarityScore": 301.6359207821984,
+    "rank": 71
+  },
+  {
+    "tokenId": 2149,
+    "rarityScore": 301.595998845888,
+    "rank": 72
+  },
+  {
+    "tokenId": 1495,
+    "rarityScore": 301.26534769644917,
+    "rank": 73
+  },
+  {
+    "tokenId": 818,
+    "rarityScore": 298.83467610940215,
+    "rank": 74
+  },
+  {
+    "tokenId": 1674,
+    "rarityScore": 298.7111078842568,
+    "rank": 75
+  },
+  {
+    "tokenId": 699,
+    "rarityScore": 298.6584642353374,
+    "rank": 76
+  },
+  {
+    "tokenId": 1875,
+    "rarityScore": 296.72387869339457,
+    "rank": 77
+  },
+  {
+    "tokenId": 1835,
+    "rarityScore": 293.7740918391922,
+    "rank": 78
+  },
+  {
+    "tokenId": 491,
+    "rarityScore": 292.00273445959147,
+    "rank": 79
+  },
+  {
+    "tokenId": 2187,
+    "rarityScore": 288.2267806652012,
+    "rank": 80
+  },
+  {
+    "tokenId": 1209,
+    "rarityScore": 287.0574696404223,
+    "rank": 81
+  },
+  {
+    "tokenId": 342,
+    "rarityScore": 286.2793466067934,
+    "rank": 82
+  },
+  {
+    "tokenId": 1927,
+    "rarityScore": 285.96489597779447,
+    "rank": 83
+  },
+  {
+    "tokenId": 172,
+    "rarityScore": 283.81931523289336,
+    "rank": 84
+  },
+  {
+    "tokenId": 2140,
+    "rarityScore": 282.2274445864049,
+    "rank": 85
+  },
+  {
+    "tokenId": 554,
+    "rarityScore": 280.4883487303612,
+    "rank": 86
+  },
+  {
+    "tokenId": 2028,
+    "rarityScore": 279.6818286146377,
+    "rank": 87
+  },
+  {
+    "tokenId": 1602,
+    "rarityScore": 269.7955034882109,
+    "rank": 88
+  },
+  {
+    "tokenId": 2112,
+    "rarityScore": 269.4087760813126,
+    "rank": 89
+  },
+  {
+    "tokenId": 1467,
+    "rarityScore": 268.53282732238915,
+    "rank": 90
+  },
+  {
+    "tokenId": 531,
+    "rarityScore": 268.35128366272727,
+    "rank": 91
+  },
+  {
+    "tokenId": 341,
+    "rarityScore": 268.1671390226374,
+    "rank": 92
+  },
+  {
+    "tokenId": 220,
+    "rarityScore": 266.92236990752104,
+    "rank": 93
+  },
+  {
+    "tokenId": 1010,
+    "rarityScore": 265.35809040293145,
+    "rank": 94
+  },
+  {
+    "tokenId": 855,
+    "rarityScore": 265.342675380917,
+    "rank": 95
+  },
+  {
+    "tokenId": 1261,
+    "rarityScore": 264.45921428541453,
+    "rank": 96
+  },
+  {
+    "tokenId": 484,
+    "rarityScore": 262.7673040169413,
+    "rank": 97
+  },
+  {
+    "tokenId": 1923,
+    "rarityScore": 260.0381661601638,
+    "rank": 98
+  },
+  {
+    "tokenId": 1041,
+    "rarityScore": 258.2489542977014,
+    "rank": 99
+  },
+  {
+    "tokenId": 178,
+    "rarityScore": 256.5128085415903,
+    "rank": 100
+  },
+  {
+    "tokenId": 2115,
+    "rarityScore": 256.23771694043785,
+    "rank": 101
+  },
+  {
+    "tokenId": 1130,
+    "rarityScore": 256.21588201311573,
+    "rank": 102
+  },
+  {
+    "tokenId": 594,
+    "rarityScore": 254.37929599320748,
+    "rank": 103
+  },
+  {
+    "tokenId": 1525,
+    "rarityScore": 251.5506323420246,
+    "rank": 104
+  },
+  {
+    "tokenId": 1809,
+    "rarityScore": 250.6610338295376,
+    "rank": 105
+  },
+  {
+    "tokenId": 2069,
+    "rarityScore": 250.4318972306956,
+    "rank": 106
+  },
+  {
+    "tokenId": 122,
+    "rarityScore": 248.4865420767287,
+    "rank": 107
+  },
+  {
+    "tokenId": 2120,
+    "rarityScore": 248.38513129223753,
+    "rank": 108
+  },
+  {
+    "tokenId": 1635,
+    "rarityScore": 247.95649596189844,
+    "rank": 109
+  },
+  {
+    "tokenId": 1326,
+    "rarityScore": 246.10756800263573,
+    "rank": 110
+  },
+  {
+    "tokenId": 782,
+    "rarityScore": 245.31581313167828,
+    "rank": 111
+  },
+  {
+    "tokenId": 2113,
+    "rarityScore": 243.5956188708697,
+    "rank": 112
+  },
+  {
+    "tokenId": 102,
+    "rarityScore": 243.1515949694078,
+    "rank": 113
+  },
+  {
+    "tokenId": 1171,
+    "rarityScore": 241.75125967437546,
+    "rank": 114
+  },
+  {
+    "tokenId": 1971,
+    "rarityScore": 241.33942483366434,
+    "rank": 115
+  },
+  {
+    "tokenId": 1127,
+    "rarityScore": 241.30061257907474,
+    "rank": 116
+  },
+  {
+    "tokenId": 1972,
+    "rarityScore": 240.11056624251597,
+    "rank": 117
+  },
+  {
+    "tokenId": 1548,
+    "rarityScore": 238.51866344693852,
+    "rank": 118
+  },
+  {
+    "tokenId": 1653,
+    "rarityScore": 237.32063972312184,
+    "rank": 119
+  },
+  {
+    "tokenId": 1616,
+    "rarityScore": 237.2707132082644,
+    "rank": 120
+  },
+  {
+    "tokenId": 406,
+    "rarityScore": 236.71970235239377,
+    "rank": 121
+  },
+  {
+    "tokenId": 104,
+    "rarityScore": 236.32833526364865,
+    "rank": 122
+  },
+  {
+    "tokenId": 601,
+    "rarityScore": 234.85033261787848,
+    "rank": 123
+  },
+  {
+    "tokenId": 607,
+    "rarityScore": 233.95263646549924,
+    "rank": 124
+  },
+  {
+    "tokenId": 837,
+    "rarityScore": 233.8222359200572,
+    "rank": 125
+  },
+  {
+    "tokenId": 499,
+    "rarityScore": 232.51171021509452,
+    "rank": 126
+  },
+  {
+    "tokenId": 717,
+    "rarityScore": 231.69271611473525,
+    "rank": 127
+  },
+  {
+    "tokenId": 1395,
+    "rarityScore": 231.6392983366137,
+    "rank": 128
+  },
+  {
+    "tokenId": 1806,
+    "rarityScore": 230.61176047972438,
+    "rank": 129
+  },
+  {
+    "tokenId": 284,
+    "rarityScore": 228.93209610106823,
+    "rank": 130
+  },
+  {
+    "tokenId": 453,
+    "rarityScore": 228.60215945912734,
+    "rank": 131
+  },
+  {
+    "tokenId": 706,
+    "rarityScore": 227.17489989442117,
+    "rank": 132
+  },
+  {
+    "tokenId": 954,
+    "rarityScore": 225.56445767160818,
+    "rank": 133
+  },
+  {
+    "tokenId": 1063,
+    "rarityScore": 225.0804514291116,
+    "rank": 134
+  },
+  {
+    "tokenId": 1531,
+    "rarityScore": 224.62242804422286,
+    "rank": 135
+  },
+  {
+    "tokenId": 1724,
+    "rarityScore": 223.92188107097232,
+    "rank": 136
+  },
+  {
+    "tokenId": 704,
+    "rarityScore": 222.36026303708417,
+    "rank": 137
+  },
+  {
+    "tokenId": 872,
+    "rarityScore": 222.23790110743323,
+    "rank": 138
+  },
+  {
+    "tokenId": 2136,
+    "rarityScore": 221.57855479631704,
+    "rank": 139
+  },
+  {
+    "tokenId": 831,
+    "rarityScore": 221.15009925909527,
+    "rank": 140
+  },
+  {
+    "tokenId": 1624,
+    "rarityScore": 220.22564452192552,
+    "rank": 141
+  },
+  {
+    "tokenId": 2116,
+    "rarityScore": 219.5543801376554,
+    "rank": 142
+  },
+  {
+    "tokenId": 638,
+    "rarityScore": 218.8233385566461,
+    "rank": 143
+  },
+  {
+    "tokenId": 711,
+    "rarityScore": 218.23303566582666,
+    "rank": 144
+  },
+  {
+    "tokenId": 650,
+    "rarityScore": 217.32507905157254,
+    "rank": 145
+  },
+  {
+    "tokenId": 158,
+    "rarityScore": 216.78179948647843,
+    "rank": 146
+  },
+  {
+    "tokenId": 667,
+    "rarityScore": 216.51759616905798,
+    "rank": 147
+  },
+  {
+    "tokenId": 221,
+    "rarityScore": 216.08694071160303,
+    "rank": 148
+  },
+  {
+    "tokenId": 944,
+    "rarityScore": 216.028482338484,
+    "rank": 149
+  },
+  {
+    "tokenId": 1192,
+    "rarityScore": 214.70032529247496,
+    "rank": 150
+  },
+  {
+    "tokenId": 1942,
+    "rarityScore": 214.54954557543377,
+    "rank": 151
+  },
+  {
+    "tokenId": 1146,
+    "rarityScore": 214.4179886311172,
+    "rank": 152
+  },
+  {
+    "tokenId": 662,
+    "rarityScore": 212.6898685898455,
+    "rank": 153
+  },
+  {
+    "tokenId": 2159,
+    "rarityScore": 212.59501228578776,
+    "rank": 154
+  },
+  {
+    "tokenId": 81,
+    "rarityScore": 211.9498195246931,
+    "rank": 155
+  },
+  {
+    "tokenId": 1486,
+    "rarityScore": 211.93316854889613,
+    "rank": 156
+  },
+  {
+    "tokenId": 747,
+    "rarityScore": 211.8191517405385,
+    "rank": 157
+  },
+  {
+    "tokenId": 2122,
+    "rarityScore": 211.61568907695224,
+    "rank": 158
+  },
+  {
+    "tokenId": 277,
+    "rarityScore": 211.5982798503433,
+    "rank": 159
+  },
+  {
+    "tokenId": 353,
+    "rarityScore": 211.14886142308268,
+    "rank": 160
+  },
+  {
+    "tokenId": 246,
+    "rarityScore": 210.075693380771,
+    "rank": 161
+  },
+  {
+    "tokenId": 1851,
+    "rarityScore": 210.0203058502567,
+    "rank": 162
+  },
+  {
+    "tokenId": 383,
+    "rarityScore": 209.75985392151574,
+    "rank": 163
+  },
+  {
+    "tokenId": 870,
+    "rarityScore": 209.6899840627557,
+    "rank": 164
+  },
+  {
+    "tokenId": 389,
+    "rarityScore": 208.78019487729438,
+    "rank": 165
+  },
+  {
+    "tokenId": 1390,
+    "rarityScore": 208.77622859577258,
+    "rank": 166
+  },
+  {
+    "tokenId": 997,
+    "rarityScore": 208.7512260336831,
+    "rank": 167
+  },
+  {
+    "tokenId": 1399,
+    "rarityScore": 208.68104287584765,
+    "rank": 168
+  },
+  {
+    "tokenId": 113,
+    "rarityScore": 208.60957240623802,
+    "rank": 169
+  },
+  {
+    "tokenId": 996,
+    "rarityScore": 208.5909646596466,
+    "rank": 170
+  },
+  {
+    "tokenId": 553,
+    "rarityScore": 208.55025179907975,
+    "rank": 171
+  },
+  {
+    "tokenId": 57,
+    "rarityScore": 208.4186119778542,
+    "rank": 172
+  },
+  {
+    "tokenId": 1332,
+    "rarityScore": 208.1053972258402,
+    "rank": 173
+  },
+  {
+    "tokenId": 1125,
+    "rarityScore": 207.9429120262752,
+    "rank": 174
+  },
+  {
+    "tokenId": 2218,
+    "rarityScore": 207.93886498628723,
+    "rank": 175
+  },
+  {
+    "tokenId": 1706,
+    "rarityScore": 207.19744343767732,
+    "rank": 176
+  },
+  {
+    "tokenId": 268,
+    "rarityScore": 207.11396362427064,
+    "rank": 177
+  },
+  {
+    "tokenId": 1212,
+    "rarityScore": 206.60299083493578,
+    "rank": 178
+  },
+  {
+    "tokenId": 247,
+    "rarityScore": 206.4129930062066,
+    "rank": 179
+  },
+  {
+    "tokenId": 1452,
+    "rarityScore": 205.7644842249491,
+    "rank": 180
+  },
+  {
+    "tokenId": 745,
+    "rarityScore": 204.5663984883843,
+    "rank": 181
+  },
+  {
+    "tokenId": 543,
+    "rarityScore": 204.26944933305398,
+    "rank": 182
+  },
+  {
+    "tokenId": 344,
+    "rarityScore": 203.90169070269033,
+    "rank": 183
+  },
+  {
+    "tokenId": 299,
+    "rarityScore": 203.52255669185405,
+    "rank": 184
+  },
+  {
+    "tokenId": 2049,
+    "rarityScore": 203.46764181225046,
+    "rank": 185
+  },
+  {
+    "tokenId": 1128,
+    "rarityScore": 203.1549141354079,
+    "rank": 186
+  },
+  {
+    "tokenId": 1993,
+    "rarityScore": 202.96767355144272,
+    "rank": 187
+  },
+  {
+    "tokenId": 1471,
+    "rarityScore": 202.3534051446246,
+    "rank": 188
+  },
+  {
+    "tokenId": 87,
+    "rarityScore": 201.1713281010219,
+    "rank": 189
+  },
+  {
+    "tokenId": 550,
+    "rarityScore": 200.87929851951952,
+    "rank": 190
+  },
+  {
+    "tokenId": 1556,
+    "rarityScore": 200.30125419918124,
+    "rank": 191
+  },
+  {
+    "tokenId": 1134,
+    "rarityScore": 200.06975467500206,
+    "rank": 192
+  },
+  {
+    "tokenId": 873,
+    "rarityScore": 199.3861011524161,
+    "rank": 193
+  },
+  {
+    "tokenId": 1087,
+    "rarityScore": 199.3781625096687,
+    "rank": 194
+  },
+  {
+    "tokenId": 1311,
+    "rarityScore": 198.60389908966903,
+    "rank": 195
+  },
+  {
+    "tokenId": 1598,
+    "rarityScore": 198.4882526878814,
+    "rank": 196
+  },
+  {
+    "tokenId": 1292,
+    "rarityScore": 198.48020045857024,
+    "rank": 197
+  },
+  {
+    "tokenId": 720,
+    "rarityScore": 198.29851402416014,
+    "rank": 198
+  },
+  {
+    "tokenId": 193,
+    "rarityScore": 197.9881866875041,
+    "rank": 199
+  },
+  {
+    "tokenId": 1694,
+    "rarityScore": 197.80004315170814,
+    "rank": 200
+  },
+  {
+    "tokenId": 780,
+    "rarityScore": 197.73431601556422,
+    "rank": 201
+  },
+  {
+    "tokenId": 1532,
+    "rarityScore": 197.65367250816908,
+    "rank": 202
+  },
+  {
+    "tokenId": 1558,
+    "rarityScore": 197.21800920385772,
+    "rank": 203
+  },
+  {
+    "tokenId": 1827,
+    "rarityScore": 197.0814294529363,
+    "rank": 204
+  },
+  {
+    "tokenId": 2163,
+    "rarityScore": 196.90430558298877,
+    "rank": 205
+  },
+  {
+    "tokenId": 1011,
+    "rarityScore": 196.8513823204721,
+    "rank": 206
+  },
+  {
+    "tokenId": 861,
+    "rarityScore": 195.93778420119943,
+    "rank": 207
+  },
+  {
+    "tokenId": 1228,
+    "rarityScore": 195.93157340846045,
+    "rank": 208
+  },
+  {
+    "tokenId": 1159,
+    "rarityScore": 195.92478111940036,
+    "rank": 209
+  },
+  {
+    "tokenId": 833,
+    "rarityScore": 195.70597368261767,
+    "rank": 210
+  },
+  {
+    "tokenId": 1815,
+    "rarityScore": 195.2571129655903,
+    "rank": 211
+  },
+  {
+    "tokenId": 964,
+    "rarityScore": 195.0980944555096,
+    "rank": 212
+  },
+  {
+    "tokenId": 618,
+    "rarityScore": 194.6781996464429,
+    "rank": 213
+  },
+  {
+    "tokenId": 1014,
+    "rarityScore": 193.96707296669013,
+    "rank": 214
+  },
+  {
+    "tokenId": 894,
+    "rarityScore": 193.95864573603149,
+    "rank": 215
+  },
+  {
+    "tokenId": 592,
+    "rarityScore": 193.78565437286397,
+    "rank": 216
+  },
+  {
+    "tokenId": 255,
+    "rarityScore": 193.4212552595174,
+    "rank": 217
+  },
+  {
+    "tokenId": 2203,
+    "rarityScore": 193.2896448957499,
+    "rank": 218
+  },
+  {
+    "tokenId": 287,
+    "rarityScore": 193.06670958833965,
+    "rank": 219
+  },
+  {
+    "tokenId": 613,
+    "rarityScore": 192.80403936835808,
+    "rank": 220
+  },
+  {
+    "tokenId": 2055,
+    "rarityScore": 192.75348442926096,
+    "rank": 221
+  },
+  {
+    "tokenId": 2041,
+    "rarityScore": 192.40326339541377,
+    "rank": 222
+  },
+  {
+    "tokenId": 636,
+    "rarityScore": 192.34089550429871,
+    "rank": 223
+  },
+  {
+    "tokenId": 295,
+    "rarityScore": 191.72296758736238,
+    "rank": 224
+  },
+  {
+    "tokenId": 1741,
+    "rarityScore": 191.4427379783872,
+    "rank": 225
+  },
+  {
+    "tokenId": 1716,
+    "rarityScore": 191.20465560127755,
+    "rank": 226
+  },
+  {
+    "tokenId": 1405,
+    "rarityScore": 190.85450628300683,
+    "rank": 227
+  },
+  {
+    "tokenId": 1757,
+    "rarityScore": 190.8090600023086,
+    "rank": 228
+  },
+  {
+    "tokenId": 1190,
+    "rarityScore": 190.64978172104395,
+    "rank": 229
+  },
+  {
+    "tokenId": 1767,
+    "rarityScore": 190.33287411176252,
+    "rank": 230
+  },
+  {
+    "tokenId": 1198,
+    "rarityScore": 190.32833074583976,
+    "rank": 231
+  },
+  {
+    "tokenId": 235,
+    "rarityScore": 190.31912975679046,
+    "rank": 232
+  },
+  {
+    "tokenId": 1690,
+    "rarityScore": 190.30627658713172,
+    "rank": 233
+  },
+  {
+    "tokenId": 1179,
+    "rarityScore": 190.2093053572055,
+    "rank": 234
+  },
+  {
+    "tokenId": 1230,
+    "rarityScore": 190.1719490036387,
+    "rank": 235
+  },
+  {
+    "tokenId": 917,
+    "rarityScore": 190.1295760490355,
+    "rank": 236
+  },
+  {
+    "tokenId": 414,
+    "rarityScore": 189.9616127966031,
+    "rank": 237
+  },
+  {
+    "tokenId": 480,
+    "rarityScore": 189.77610914636975,
+    "rank": 238
+  },
+  {
+    "tokenId": 955,
+    "rarityScore": 189.67058052024845,
+    "rank": 239
+  },
+  {
+    "tokenId": 1922,
+    "rarityScore": 189.50623197026005,
+    "rank": 240
+  },
+  {
+    "tokenId": 1662,
+    "rarityScore": 189.46407332145284,
+    "rank": 241
+  },
+  {
+    "tokenId": 359,
+    "rarityScore": 189.35837316073966,
+    "rank": 242
+  },
+  {
+    "tokenId": 1604,
+    "rarityScore": 189.33444428024336,
+    "rank": 243
+  },
+  {
+    "tokenId": 805,
+    "rarityScore": 189.12673039951744,
+    "rank": 244
+  },
+  {
+    "tokenId": 1885,
+    "rarityScore": 189.10535520418753,
+    "rank": 245
+  },
+  {
+    "tokenId": 1866,
+    "rarityScore": 188.97267976587295,
+    "rank": 246
+  },
+  {
+    "tokenId": 1626,
+    "rarityScore": 188.5371146065114,
+    "rank": 247
+  },
+  {
+    "tokenId": 1940,
+    "rarityScore": 188.28386621096266,
+    "rank": 248
+  },
+  {
+    "tokenId": 1485,
+    "rarityScore": 188.22424414944882,
+    "rank": 249
+  },
+  {
+    "tokenId": 1736,
+    "rarityScore": 188.1875900738419,
+    "rank": 250
+  },
+  {
+    "tokenId": 817,
+    "rarityScore": 188.12091579008018,
+    "rank": 251
+  },
+  {
+    "tokenId": 409,
+    "rarityScore": 187.96594683189898,
+    "rank": 252
+  },
+  {
+    "tokenId": 101,
+    "rarityScore": 187.8308091570175,
+    "rank": 253
+  },
+  {
+    "tokenId": 475,
+    "rarityScore": 187.4826716541443,
+    "rank": 254
+  },
+  {
+    "tokenId": 86,
+    "rarityScore": 187.43379736491525,
+    "rank": 255
+  },
+  {
+    "tokenId": 824,
+    "rarityScore": 187.00347879941168,
+    "rank": 256
+  },
+  {
+    "tokenId": 393,
+    "rarityScore": 186.88891873776973,
+    "rank": 257
+  },
+  {
+    "tokenId": 1750,
+    "rarityScore": 186.8793927677392,
+    "rank": 258
+  },
+  {
+    "tokenId": 836,
+    "rarityScore": 186.74338192809458,
+    "rank": 259
+  },
+  {
+    "tokenId": 1947,
+    "rarityScore": 186.42119016519138,
+    "rank": 260
+  },
+  {
+    "tokenId": 436,
+    "rarityScore": 186.22197756719922,
+    "rank": 261
+  },
+  {
+    "tokenId": 495,
+    "rarityScore": 186.04200079308967,
+    "rank": 262
+  },
+  {
+    "tokenId": 2071,
+    "rarityScore": 185.7116350416315,
+    "rank": 263
+  },
+  {
+    "tokenId": 322,
+    "rarityScore": 185.66483783494343,
+    "rank": 264
+  },
+  {
+    "tokenId": 2155,
+    "rarityScore": 185.56102533737374,
+    "rank": 265
+  },
+  {
+    "tokenId": 2211,
+    "rarityScore": 185.48664715495673,
+    "rank": 266
+  },
+  {
+    "tokenId": 1314,
+    "rarityScore": 185.38566796938895,
+    "rank": 267
+  },
+  {
+    "tokenId": 1796,
+    "rarityScore": 185.31975755977683,
+    "rank": 268
+  },
+  {
+    "tokenId": 598,
+    "rarityScore": 185.30500475422767,
+    "rank": 269
+  },
+  {
+    "tokenId": 915,
+    "rarityScore": 185.29304646885217,
+    "rank": 270
+  },
+  {
+    "tokenId": 2054,
+    "rarityScore": 185.27395945023562,
+    "rank": 271
+  },
+  {
+    "tokenId": 1939,
+    "rarityScore": 185.23837984720754,
+    "rank": 272
+  },
+  {
+    "tokenId": 2046,
+    "rarityScore": 185.2101837438397,
+    "rank": 273
+  },
+  {
+    "tokenId": 160,
+    "rarityScore": 185.12525795715652,
+    "rank": 274
+  },
+  {
+    "tokenId": 114,
+    "rarityScore": 185.08789521846828,
+    "rank": 275
+  },
+  {
+    "tokenId": 28,
+    "rarityScore": 184.68432109076085,
+    "rank": 276
+  },
+  {
+    "tokenId": 1381,
+    "rarityScore": 184.39125867274063,
+    "rank": 277
+  },
+  {
+    "tokenId": 1363,
+    "rarityScore": 184.05083892588524,
+    "rank": 278
+  },
+  {
+    "tokenId": 663,
+    "rarityScore": 183.4880079179686,
+    "rank": 279
+  },
+  {
+    "tokenId": 1029,
+    "rarityScore": 183.29488858707234,
+    "rank": 280
+  },
+  {
+    "tokenId": 816,
+    "rarityScore": 183.069973389387,
+    "rank": 281
+  },
+  {
+    "tokenId": 1900,
+    "rarityScore": 182.95158791787497,
+    "rank": 282
+  },
+  {
+    "tokenId": 2188,
+    "rarityScore": 182.87765880007163,
+    "rank": 283
+  },
+  {
+    "tokenId": 878,
+    "rarityScore": 182.384150221926,
+    "rank": 284
+  },
+  {
+    "tokenId": 1855,
+    "rarityScore": 182.03256687462522,
+    "rank": 285
+  },
+  {
+    "tokenId": 269,
+    "rarityScore": 181.91463831080378,
+    "rank": 286
+  },
+  {
+    "tokenId": 91,
+    "rarityScore": 181.89966027433235,
+    "rank": 287
+  },
+  {
+    "tokenId": 942,
+    "rarityScore": 181.88326484688662,
+    "rank": 288
+  },
+  {
+    "tokenId": 570,
+    "rarityScore": 181.85383457621643,
+    "rank": 289
+  },
+  {
+    "tokenId": 1952,
+    "rarityScore": 181.80497551969052,
+    "rank": 290
+  },
+  {
+    "tokenId": 451,
+    "rarityScore": 181.52571657039633,
+    "rank": 291
+  },
+  {
+    "tokenId": 860,
+    "rarityScore": 181.44037404554206,
+    "rank": 292
+  },
+  {
+    "tokenId": 1823,
+    "rarityScore": 181.2493003824207,
+    "rank": 293
+  },
+  {
+    "tokenId": 702,
+    "rarityScore": 181.05772358299888,
+    "rank": 294
+  },
+  {
+    "tokenId": 427,
+    "rarityScore": 181.01249785271733,
+    "rank": 295
+  },
+  {
+    "tokenId": 139,
+    "rarityScore": 180.9535450184634,
+    "rank": 296
+  },
+  {
+    "tokenId": 1422,
+    "rarityScore": 180.88664533199236,
+    "rank": 297
+  },
+  {
+    "tokenId": 190,
+    "rarityScore": 180.61285474559898,
+    "rank": 298
+  },
+  {
+    "tokenId": 205,
+    "rarityScore": 180.491382812206,
+    "rank": 299
+  },
+  {
+    "tokenId": 967,
+    "rarityScore": 180.42129356129615,
+    "rank": 300
+  },
+  {
+    "tokenId": 1189,
+    "rarityScore": 180.33958093905545,
+    "rank": 301
+  },
+  {
+    "tokenId": 1168,
+    "rarityScore": 180.2211244494874,
+    "rank": 302
+  },
+  {
+    "tokenId": 1346,
+    "rarityScore": 179.73267585011203,
+    "rank": 303
+  },
+  {
+    "tokenId": 1769,
+    "rarityScore": 179.730783468617,
+    "rank": 304
+  },
+  {
+    "tokenId": 257,
+    "rarityScore": 179.7054754157296,
+    "rank": 305
+  },
+  {
+    "tokenId": 1416,
+    "rarityScore": 179.37134644867012,
+    "rank": 306
+  },
+  {
+    "tokenId": 556,
+    "rarityScore": 179.28192801838003,
+    "rank": 307
+  },
+  {
+    "tokenId": 1165,
+    "rarityScore": 179.09003957658786,
+    "rank": 308
+  },
+  {
+    "tokenId": 1902,
+    "rarityScore": 179.056937024205,
+    "rank": 309
+  },
+  {
+    "tokenId": 1726,
+    "rarityScore": 178.38552229397968,
+    "rank": 310
+  },
+  {
+    "tokenId": 574,
+    "rarityScore": 178.36684982347296,
+    "rank": 311
+  },
+  {
+    "tokenId": 1241,
+    "rarityScore": 178.28986696099543,
+    "rank": 312
+  },
+  {
+    "tokenId": 1961,
+    "rarityScore": 178.21374771961413,
+    "rank": 313
+  },
+  {
+    "tokenId": 785,
+    "rarityScore": 177.8222624107433,
+    "rank": 314
+  },
+  {
+    "tokenId": 2086,
+    "rarityScore": 177.76968575044472,
+    "rank": 315
+  },
+  {
+    "tokenId": 133,
+    "rarityScore": 177.74969402883795,
+    "rank": 316
+  },
+  {
+    "tokenId": 923,
+    "rarityScore": 177.63589853027287,
+    "rank": 317
+  },
+  {
+    "tokenId": 488,
+    "rarityScore": 177.60209626409159,
+    "rank": 318
+  },
+  {
+    "tokenId": 1216,
+    "rarityScore": 177.45659384837234,
+    "rank": 319
+  },
+  {
+    "tokenId": 2074,
+    "rarityScore": 177.4198521083419,
+    "rank": 320
+  },
+  {
+    "tokenId": 2195,
+    "rarityScore": 177.1525132319422,
+    "rank": 321
+  },
+  {
+    "tokenId": 1551,
+    "rarityScore": 176.9877988898658,
+    "rank": 322
+  },
+  {
+    "tokenId": 1968,
+    "rarityScore": 176.58591539633116,
+    "rank": 323
+  },
+  {
+    "tokenId": 1443,
+    "rarityScore": 176.40422519826123,
+    "rank": 324
+  },
+  {
+    "tokenId": 37,
+    "rarityScore": 176.35827209624676,
+    "rank": 325
+  },
+  {
+    "tokenId": 324,
+    "rarityScore": 176.31159902505885,
+    "rank": 326
+  },
+  {
+    "tokenId": 1950,
+    "rarityScore": 175.91890933356967,
+    "rank": 327
+  },
+  {
+    "tokenId": 1483,
+    "rarityScore": 175.90230276472244,
+    "rank": 328
+  },
+  {
+    "tokenId": 1459,
+    "rarityScore": 175.82285435862195,
+    "rank": 329
+  },
+  {
+    "tokenId": 741,
+    "rarityScore": 175.8147561645667,
+    "rank": 330
+  },
+  {
+    "tokenId": 2011,
+    "rarityScore": 175.73215858470155,
+    "rank": 331
+  },
+  {
+    "tokenId": 400,
+    "rarityScore": 175.6675944023293,
+    "rank": 332
+  },
+  {
+    "tokenId": 812,
+    "rarityScore": 175.56476344493967,
+    "rank": 333
+  },
+  {
+    "tokenId": 1455,
+    "rarityScore": 175.4061020854478,
+    "rank": 334
+  },
+  {
+    "tokenId": 2027,
+    "rarityScore": 175.403781073759,
+    "rank": 335
+  },
+  {
+    "tokenId": 1425,
+    "rarityScore": 175.32778241263648,
+    "rank": 336
+  },
+  {
+    "tokenId": 1777,
+    "rarityScore": 175.26180363795137,
+    "rank": 337
+  },
+  {
+    "tokenId": 2145,
+    "rarityScore": 175.18353837051532,
+    "rank": 338
+  },
+  {
+    "tokenId": 392,
+    "rarityScore": 175.15129326452637,
+    "rank": 339
+  },
+  {
+    "tokenId": 1671,
+    "rarityScore": 175.1491028118695,
+    "rank": 340
+  },
+  {
+    "tokenId": 1371,
+    "rarityScore": 175.12907315929442,
+    "rank": 341
+  },
+  {
+    "tokenId": 481,
+    "rarityScore": 175.12204117355785,
+    "rank": 342
+  },
+  {
+    "tokenId": 512,
+    "rarityScore": 174.80574430502446,
+    "rank": 343
+  },
+  {
+    "tokenId": 1723,
+    "rarityScore": 174.79886728983996,
+    "rank": 344
+  },
+  {
+    "tokenId": 797,
+    "rarityScore": 174.78262796224226,
+    "rank": 345
+  },
+  {
+    "tokenId": 563,
+    "rarityScore": 174.71107855005482,
+    "rank": 346
+  },
+  {
+    "tokenId": 1107,
+    "rarityScore": 174.69723918316214,
+    "rank": 347
+  },
+  {
+    "tokenId": 2146,
+    "rarityScore": 174.60379860964372,
+    "rank": 348
+  },
+  {
+    "tokenId": 14,
+    "rarityScore": 174.3833458431908,
+    "rank": 349
+  },
+  {
+    "tokenId": 127,
+    "rarityScore": 174.21908643835553,
+    "rank": 350
+  },
+  {
+    "tokenId": 2100,
+    "rarityScore": 174.17678047234716,
+    "rank": 351
+  },
+  {
+    "tokenId": 349,
+    "rarityScore": 174.13328417364693,
+    "rank": 352
+  },
+  {
+    "tokenId": 1566,
+    "rarityScore": 174.03729813278056,
+    "rank": 353
+  },
+  {
+    "tokenId": 1852,
+    "rarityScore": 173.94397594781694,
+    "rank": 354
+  },
+  {
+    "tokenId": 1080,
+    "rarityScore": 173.909347758417,
+    "rank": 355
+  },
+  {
+    "tokenId": 1320,
+    "rarityScore": 173.83351125576104,
+    "rank": 356
+  },
+  {
+    "tokenId": 38,
+    "rarityScore": 173.7830683154395,
+    "rank": 357
+  },
+  {
+    "tokenId": 1262,
+    "rarityScore": 173.77167120158495,
+    "rank": 358
+  },
+  {
+    "tokenId": 95,
+    "rarityScore": 173.64207555190106,
+    "rank": 359
+  },
+  {
+    "tokenId": 1909,
+    "rarityScore": 173.49462214972786,
+    "rank": 360
+  },
+  {
+    "tokenId": 215,
+    "rarityScore": 173.444899513585,
+    "rank": 361
+  },
+  {
+    "tokenId": 56,
+    "rarityScore": 173.330971847104,
+    "rank": 362
+  },
+  {
+    "tokenId": 953,
+    "rarityScore": 173.32946366265793,
+    "rank": 363
+  },
+  {
+    "tokenId": 523,
+    "rarityScore": 173.1395248158244,
+    "rank": 364
+  },
+  {
+    "tokenId": 1754,
+    "rarityScore": 172.88139088169268,
+    "rank": 365
+  },
+  {
+    "tokenId": 146,
+    "rarityScore": 172.7288216578867,
+    "rank": 366
+  },
+  {
+    "tokenId": 1152,
+    "rarityScore": 172.70322743009024,
+    "rank": 367
+  },
+  {
+    "tokenId": 1248,
+    "rarityScore": 172.64109397028835,
+    "rank": 368
+  },
+  {
+    "tokenId": 174,
+    "rarityScore": 172.47028118062727,
+    "rank": 369
+  },
+  {
+    "tokenId": 1430,
+    "rarityScore": 172.09623087274437,
+    "rank": 370
+  },
+  {
+    "tokenId": 1651,
+    "rarityScore": 172.04638016648317,
+    "rank": 371
+  },
+  {
+    "tokenId": 1208,
+    "rarityScore": 172.0421946954389,
+    "rank": 372
+  },
+  {
+    "tokenId": 1804,
+    "rarityScore": 172.03274173129898,
+    "rank": 373
+  },
+  {
+    "tokenId": 1213,
+    "rarityScore": 172.01747497655913,
+    "rank": 374
+  },
+  {
+    "tokenId": 99,
+    "rarityScore": 172.00187289167684,
+    "rank": 375
+  },
+  {
+    "tokenId": 290,
+    "rarityScore": 171.94312875943496,
+    "rank": 376
+  },
+  {
+    "tokenId": 1633,
+    "rarityScore": 171.9044429493965,
+    "rank": 377
+  },
+  {
+    "tokenId": 588,
+    "rarityScore": 171.71675034290735,
+    "rank": 378
+  },
+  {
+    "tokenId": 784,
+    "rarityScore": 171.65433690203946,
+    "rank": 379
+  },
+  {
+    "tokenId": 1844,
+    "rarityScore": 171.61067397027554,
+    "rank": 380
+  },
+  {
+    "tokenId": 337,
+    "rarityScore": 171.58742027287948,
+    "rank": 381
+  },
+  {
+    "tokenId": 142,
+    "rarityScore": 171.3901933518411,
+    "rank": 382
+  },
+  {
+    "tokenId": 1481,
+    "rarityScore": 171.38680520770822,
+    "rank": 383
+  },
+  {
+    "tokenId": 136,
+    "rarityScore": 171.31252905056994,
+    "rank": 384
+  },
+  {
+    "tokenId": 1872,
+    "rarityScore": 170.91091028615836,
+    "rank": 385
+  },
+  {
+    "tokenId": 2214,
+    "rarityScore": 170.78452777875953,
+    "rank": 386
+  },
+  {
+    "tokenId": 1930,
+    "rarityScore": 170.71460526355008,
+    "rank": 387
+  },
+  {
+    "tokenId": 723,
+    "rarityScore": 170.714591053855,
+    "rank": 388
+  },
+  {
+    "tokenId": 943,
+    "rarityScore": 170.69461590498952,
+    "rank": 389
+  },
+  {
+    "tokenId": 2066,
+    "rarityScore": 170.53810492548067,
+    "rank": 390
+  },
+  {
+    "tokenId": 1351,
+    "rarityScore": 170.52673726173037,
+    "rank": 391
+  },
+  {
+    "tokenId": 1463,
+    "rarityScore": 170.46618325943473,
+    "rank": 392
+  },
+  {
+    "tokenId": 1783,
+    "rarityScore": 170.01849338573322,
+    "rank": 393
+  },
+  {
+    "tokenId": 1345,
+    "rarityScore": 170.01834390109414,
+    "rank": 394
+  },
+  {
+    "tokenId": 1387,
+    "rarityScore": 169.8039450624717,
+    "rank": 395
+  },
+  {
+    "tokenId": 1691,
+    "rarityScore": 169.689119666456,
+    "rank": 396
+  },
+  {
+    "tokenId": 2114,
+    "rarityScore": 169.65158206300913,
+    "rank": 397
+  },
+  {
+    "tokenId": 2012,
+    "rarityScore": 169.28766482629396,
+    "rank": 398
+  },
+  {
+    "tokenId": 1507,
+    "rarityScore": 169.25008851023642,
+    "rank": 399
+  },
+  {
+    "tokenId": 1717,
+    "rarityScore": 169.18641016925594,
+    "rank": 400
+  },
+  {
+    "tokenId": 832,
+    "rarityScore": 169.07214129469895,
+    "rank": 401
+  },
+  {
+    "tokenId": 853,
+    "rarityScore": 168.91160532265621,
+    "rank": 402
+  },
+  {
+    "tokenId": 1082,
+    "rarityScore": 168.8894546395215,
+    "rank": 403
+  },
+  {
+    "tokenId": 472,
+    "rarityScore": 168.8566125831976,
+    "rank": 404
+  },
+  {
+    "tokenId": 2186,
+    "rarityScore": 168.85248277931908,
+    "rank": 405
+  },
+  {
+    "tokenId": 1482,
+    "rarityScore": 168.71967914276368,
+    "rank": 406
+  },
+  {
+    "tokenId": 1676,
+    "rarityScore": 168.65382427904612,
+    "rank": 407
+  },
+  {
+    "tokenId": 1689,
+    "rarityScore": 168.6265844738578,
+    "rank": 408
+  },
+  {
+    "tokenId": 591,
+    "rarityScore": 168.50889510904773,
+    "rank": 409
+  },
+  {
+    "tokenId": 1084,
+    "rarityScore": 168.4396626973612,
+    "rank": 410
+  },
+  {
+    "tokenId": 1727,
+    "rarityScore": 168.41520856803206,
+    "rank": 411
+  },
+  {
+    "tokenId": 551,
+    "rarityScore": 168.3606941253168,
+    "rank": 412
+  },
+  {
+    "tokenId": 918,
+    "rarityScore": 168.33614011191236,
+    "rank": 413
+  },
+  {
+    "tokenId": 813,
+    "rarityScore": 168.1421817238995,
+    "rank": 414
+  },
+  {
+    "tokenId": 803,
+    "rarityScore": 168.1069272342097,
+    "rank": 415
+  },
+  {
+    "tokenId": 926,
+    "rarityScore": 168.01701679893281,
+    "rank": 416
+  },
+  {
+    "tokenId": 1145,
+    "rarityScore": 167.92424926119017,
+    "rank": 417
+  },
+  {
+    "tokenId": 2023,
+    "rarityScore": 167.91397203537707,
+    "rank": 418
+  },
+  {
+    "tokenId": 559,
+    "rarityScore": 167.90276309155564,
+    "rank": 419
+  },
+  {
+    "tokenId": 1925,
+    "rarityScore": 167.74432391331865,
+    "rank": 420
+  },
+  {
+    "tokenId": 1732,
+    "rarityScore": 167.72471461321666,
+    "rank": 421
+  },
+  {
+    "tokenId": 1980,
+    "rarityScore": 167.63996672601232,
+    "rank": 422
+  },
+  {
+    "tokenId": 11,
+    "rarityScore": 167.59638968108754,
+    "rank": 423
+  },
+  {
+    "tokenId": 2192,
+    "rarityScore": 167.52213484254588,
+    "rank": 424
+  },
+  {
+    "tokenId": 275,
+    "rarityScore": 167.46852006640043,
+    "rank": 425
+  },
+  {
+    "tokenId": 1533,
+    "rarityScore": 167.41782462971963,
+    "rank": 426
+  },
+  {
+    "tokenId": 1761,
+    "rarityScore": 167.23323308338237,
+    "rank": 427
+  },
+  {
+    "tokenId": 266,
+    "rarityScore": 167.21219515337148,
+    "rank": 428
+  },
+  {
+    "tokenId": 1843,
+    "rarityScore": 167.13629329340165,
+    "rank": 429
+  },
+  {
+    "tokenId": 1003,
+    "rarityScore": 167.13417784895495,
+    "rank": 430
+  },
+  {
+    "tokenId": 1589,
+    "rarityScore": 167.0651443170878,
+    "rank": 431
+  },
+  {
+    "tokenId": 1282,
+    "rarityScore": 166.81214557617366,
+    "rank": 432
+  },
+  {
+    "tokenId": 1899,
+    "rarityScore": 166.6615553082264,
+    "rank": 433
+  },
+  {
+    "tokenId": 911,
+    "rarityScore": 166.63962821886014,
+    "rank": 434
+  },
+  {
+    "tokenId": 1474,
+    "rarityScore": 166.53470252956166,
+    "rank": 435
+  },
+  {
+    "tokenId": 1338,
+    "rarityScore": 166.48209986548594,
+    "rank": 436
+  },
+  {
+    "tokenId": 1505,
+    "rarityScore": 166.43735366057905,
+    "rank": 437
+  },
+  {
+    "tokenId": 1737,
+    "rarityScore": 166.33852129321275,
+    "rank": 438
+  },
+  {
+    "tokenId": 26,
+    "rarityScore": 166.3330338150899,
+    "rank": 439
+  },
+  {
+    "tokenId": 1099,
+    "rarityScore": 166.2921683207522,
+    "rank": 440
+  },
+  {
+    "tokenId": 1088,
+    "rarityScore": 166.1963494433087,
+    "rank": 441
+  },
+  {
+    "tokenId": 1982,
+    "rarityScore": 166.08920321278578,
+    "rank": 442
+  },
+  {
+    "tokenId": 733,
+    "rarityScore": 166.00406840795773,
+    "rank": 443
+  },
+  {
+    "tokenId": 27,
+    "rarityScore": 165.96701951788765,
+    "rank": 444
+  },
+  {
+    "tokenId": 34,
+    "rarityScore": 165.8778442523998,
+    "rank": 445
+  },
+  {
+    "tokenId": 1090,
+    "rarityScore": 165.82551859257651,
+    "rank": 446
+  },
+  {
+    "tokenId": 332,
+    "rarityScore": 165.7903601105814,
+    "rank": 447
+  },
+  {
+    "tokenId": 251,
+    "rarityScore": 165.78524775902298,
+    "rank": 448
+  },
+  {
+    "tokenId": 1066,
+    "rarityScore": 165.6918762080477,
+    "rank": 449
+  },
+  {
+    "tokenId": 515,
+    "rarityScore": 165.6294708156346,
+    "rank": 450
+  },
+  {
+    "tokenId": 214,
+    "rarityScore": 165.48561299296682,
+    "rank": 451
+  },
+  {
+    "tokenId": 975,
+    "rarityScore": 165.48026055908002,
+    "rank": 452
+  },
+  {
+    "tokenId": 426,
+    "rarityScore": 165.45215265020815,
+    "rank": 453
+  },
+  {
+    "tokenId": 500,
+    "rarityScore": 165.37628815358858,
+    "rank": 454
+  },
+  {
+    "tokenId": 1050,
+    "rarityScore": 165.3567871552964,
+    "rank": 455
+  },
+  {
+    "tokenId": 1729,
+    "rarityScore": 165.1520842432155,
+    "rank": 456
+  },
+  {
+    "tokenId": 79,
+    "rarityScore": 164.72097366926408,
+    "rank": 457
+  },
+  {
+    "tokenId": 1147,
+    "rarityScore": 164.700742552769,
+    "rank": 458
+  },
+  {
+    "tokenId": 2083,
+    "rarityScore": 164.61806353459497,
+    "rank": 459
+  },
+  {
+    "tokenId": 930,
+    "rarityScore": 164.54499214910717,
+    "rank": 460
+  },
+  {
+    "tokenId": 1243,
+    "rarityScore": 164.51302385798823,
+    "rank": 461
+  },
+  {
+    "tokenId": 1861,
+    "rarityScore": 164.28028975184893,
+    "rank": 462
+  },
+  {
+    "tokenId": 1097,
+    "rarityScore": 164.23048029489928,
+    "rank": 463
+  },
+  {
+    "tokenId": 1709,
+    "rarityScore": 164.18599784533635,
+    "rank": 464
+  },
+  {
+    "tokenId": 1992,
+    "rarityScore": 164.1212164800844,
+    "rank": 465
+  },
+  {
+    "tokenId": 390,
+    "rarityScore": 164.06105687340195,
+    "rank": 466
+  },
+  {
+    "tokenId": 492,
+    "rarityScore": 164.05916230433263,
+    "rank": 467
+  },
+  {
+    "tokenId": 2013,
+    "rarityScore": 163.92726874702387,
+    "rank": 468
+  },
+  {
+    "tokenId": 1418,
+    "rarityScore": 163.78261852961828,
+    "rank": 469
+  },
+  {
+    "tokenId": 292,
+    "rarityScore": 163.72711084986958,
+    "rank": 470
+  },
+  {
+    "tokenId": 1319,
+    "rarityScore": 163.64013965016667,
+    "rank": 471
+  },
+  {
+    "tokenId": 1295,
+    "rarityScore": 163.61770964307237,
+    "rank": 472
+  },
+  {
+    "tokenId": 1294,
+    "rarityScore": 163.58459493042548,
+    "rank": 473
+  },
+  {
+    "tokenId": 700,
+    "rarityScore": 163.39165476328213,
+    "rank": 474
+  },
+  {
+    "tokenId": 1186,
+    "rarityScore": 163.3192720081511,
+    "rank": 475
+  },
+  {
+    "tokenId": 1614,
+    "rarityScore": 163.2921736361729,
+    "rank": 476
+  },
+  {
+    "tokenId": 2167,
+    "rarityScore": 163.2618162025482,
+    "rank": 477
+  },
+  {
+    "tokenId": 1423,
+    "rarityScore": 163.2109361386925,
+    "rank": 478
+  },
+  {
+    "tokenId": 294,
+    "rarityScore": 162.9327422541288,
+    "rank": 479
+  },
+  {
+    "tokenId": 1682,
+    "rarityScore": 162.90849106344325,
+    "rank": 480
+  },
+  {
+    "tokenId": 1907,
+    "rarityScore": 162.87745740319792,
+    "rank": 481
+  },
+  {
+    "tokenId": 1122,
+    "rarityScore": 162.8193919824124,
+    "rank": 482
+  },
+  {
+    "tokenId": 808,
+    "rarityScore": 162.69720681171506,
+    "rank": 483
+  },
+  {
+    "tokenId": 1202,
+    "rarityScore": 162.6707756949807,
+    "rank": 484
+  },
+  {
+    "tokenId": 859,
+    "rarityScore": 162.49992577887906,
+    "rank": 485
+  },
+  {
+    "tokenId": 728,
+    "rarityScore": 162.46759326710804,
+    "rank": 486
+  },
+  {
+    "tokenId": 51,
+    "rarityScore": 162.42720103577454,
+    "rank": 487
+  },
+  {
+    "tokenId": 752,
+    "rarityScore": 162.39644023229448,
+    "rank": 488
+  },
+  {
+    "tokenId": 727,
+    "rarityScore": 162.1089283940379,
+    "rank": 489
+  },
+  {
+    "tokenId": 2213,
+    "rarityScore": 161.94411695823186,
+    "rank": 490
+  },
+  {
+    "tokenId": 375,
+    "rarityScore": 161.89555733504469,
+    "rank": 491
+  },
+  {
+    "tokenId": 1400,
+    "rarityScore": 161.80377396938312,
+    "rank": 492
+  },
+  {
+    "tokenId": 310,
+    "rarityScore": 161.72640113549846,
+    "rank": 493
+  },
+  {
+    "tokenId": 1934,
+    "rarityScore": 161.67390136884217,
+    "rank": 494
+  },
+  {
+    "tokenId": 2091,
+    "rarityScore": 161.4959922841718,
+    "rank": 495
+  },
+  {
+    "tokenId": 1524,
+    "rarityScore": 161.4709997557073,
+    "rank": 496
+  },
+  {
+    "tokenId": 77,
+    "rarityScore": 161.46638696023442,
+    "rank": 497
+  },
+  {
+    "tokenId": 1200,
+    "rarityScore": 161.46276561591802,
+    "rank": 498
+  },
+  {
+    "tokenId": 1336,
+    "rarityScore": 161.30462310073992,
+    "rank": 499
+  },
+  {
+    "tokenId": 1764,
+    "rarityScore": 161.25963687019302,
+    "rank": 500
+  },
+  {
+    "tokenId": 2150,
+    "rarityScore": 161.24508146738262,
+    "rank": 501
+  },
+  {
+    "tokenId": 1896,
+    "rarityScore": 161.15155903303014,
+    "rank": 502
+  },
+  {
+    "tokenId": 1722,
+    "rarityScore": 161.0638421988174,
+    "rank": 503
+  },
+  {
+    "tokenId": 10,
+    "rarityScore": 161.03364214846582,
+    "rank": 504
+  },
+  {
+    "tokenId": 1270,
+    "rarityScore": 160.8967889742346,
+    "rank": 505
+  },
+  {
+    "tokenId": 912,
+    "rarityScore": 160.8156077003476,
+    "rank": 506
+  },
+  {
+    "tokenId": 315,
+    "rarityScore": 160.81507308555163,
+    "rank": 507
+  },
+  {
+    "tokenId": 604,
+    "rarityScore": 160.6316507652078,
+    "rank": 508
+  },
+  {
+    "tokenId": 1974,
+    "rarityScore": 160.59011809337449,
+    "rank": 509
+  },
+  {
+    "tokenId": 1979,
+    "rarityScore": 160.49322311089261,
+    "rank": 510
+  },
+  {
+    "tokenId": 180,
+    "rarityScore": 160.4743381751117,
+    "rank": 511
+  },
+  {
+    "tokenId": 952,
+    "rarityScore": 160.41919613061572,
+    "rank": 512
+  },
+  {
+    "tokenId": 1349,
+    "rarityScore": 160.39887510315089,
+    "rank": 513
+  },
+  {
+    "tokenId": 1397,
+    "rarityScore": 160.15898572575097,
+    "rank": 514
+  },
+  {
+    "tokenId": 722,
+    "rarityScore": 160.13388032088776,
+    "rank": 515
+  },
+  {
+    "tokenId": 674,
+    "rarityScore": 160.0064370332493,
+    "rank": 516
+  },
+  {
+    "tokenId": 1421,
+    "rarityScore": 159.98284003136598,
+    "rank": 517
+  },
+  {
+    "tokenId": 568,
+    "rarityScore": 159.9740157149545,
+    "rank": 518
+  },
+  {
+    "tokenId": 1044,
+    "rarityScore": 159.77354677163336,
+    "rank": 519
+  },
+  {
+    "tokenId": 1683,
+    "rarityScore": 159.69562394406827,
+    "rank": 520
+  },
+  {
+    "tokenId": 1625,
+    "rarityScore": 159.69296050044332,
+    "rank": 521
+  },
+  {
+    "tokenId": 1285,
+    "rarityScore": 159.65865948180834,
+    "rank": 522
+  },
+  {
+    "tokenId": 1245,
+    "rarityScore": 159.59451637105934,
+    "rank": 523
+  },
+  {
+    "tokenId": 787,
+    "rarityScore": 159.48793622430892,
+    "rank": 524
+  },
+  {
+    "tokenId": 9,
+    "rarityScore": 159.48678374968702,
+    "rank": 525
+  },
+  {
+    "tokenId": 358,
+    "rarityScore": 159.4502629865495,
+    "rank": 526
+  },
+  {
+    "tokenId": 110,
+    "rarityScore": 159.32598367357545,
+    "rank": 527
+  },
+  {
+    "tokenId": 552,
+    "rarityScore": 159.19098182389905,
+    "rank": 528
+  },
+  {
+    "tokenId": 1983,
+    "rarityScore": 159.13624483859462,
+    "rank": 529
+  },
+  {
+    "tokenId": 2201,
+    "rarityScore": 159.00586590990736,
+    "rank": 530
+  },
+  {
+    "tokenId": 1592,
+    "rarityScore": 158.9164529171935,
+    "rank": 531
+  },
+  {
+    "tokenId": 651,
+    "rarityScore": 158.89030228421765,
+    "rank": 532
+  },
+  {
+    "tokenId": 128,
+    "rarityScore": 158.6884122824194,
+    "rank": 533
+  },
+  {
+    "tokenId": 1254,
+    "rarityScore": 158.66275890074786,
+    "rank": 534
+  },
+  {
+    "tokenId": 624,
+    "rarityScore": 158.56650736411424,
+    "rank": 535
+  },
+  {
+    "tokenId": 2060,
+    "rarityScore": 158.42351220944735,
+    "rank": 536
+  },
+  {
+    "tokenId": 1646,
+    "rarityScore": 158.3762928040726,
+    "rank": 537
+  },
+  {
+    "tokenId": 474,
+    "rarityScore": 158.37598473752527,
+    "rank": 538
+  },
+  {
+    "tokenId": 889,
+    "rarityScore": 158.3436251156918,
+    "rank": 539
+  },
+  {
+    "tokenId": 1268,
+    "rarityScore": 158.17000340159018,
+    "rank": 540
+  },
+  {
+    "tokenId": 1012,
+    "rarityScore": 158.1603884142955,
+    "rank": 541
+  },
+  {
+    "tokenId": 1068,
+    "rarityScore": 158.0752974339697,
+    "rank": 542
+  },
+  {
+    "tokenId": 1277,
+    "rarityScore": 158.06973747295484,
+    "rank": 543
+  },
+  {
+    "tokenId": 1954,
+    "rarityScore": 157.74799939523243,
+    "rank": 544
+  },
+  {
+    "tokenId": 1728,
+    "rarityScore": 157.73350237349,
+    "rank": 545
+  },
+  {
+    "tokenId": 1499,
+    "rarityScore": 157.71826589842658,
+    "rank": 546
+  },
+  {
+    "tokenId": 1058,
+    "rarityScore": 157.6493668448847,
+    "rank": 547
+  },
+  {
+    "tokenId": 59,
+    "rarityScore": 157.64898383761295,
+    "rank": 548
+  },
+  {
+    "tokenId": 1759,
+    "rarityScore": 157.6375658948625,
+    "rank": 549
+  },
+  {
+    "tokenId": 2196,
+    "rarityScore": 157.5982743782414,
+    "rank": 550
+  },
+  {
+    "tokenId": 1960,
+    "rarityScore": 157.47770980203543,
+    "rank": 551
+  },
+  {
+    "tokenId": 1184,
+    "rarityScore": 157.4371347706455,
+    "rank": 552
+  },
+  {
+    "tokenId": 792,
+    "rarityScore": 157.42835807000023,
+    "rank": 553
+  },
+  {
+    "tokenId": 1826,
+    "rarityScore": 157.33623616849485,
+    "rank": 554
+  },
+  {
+    "tokenId": 157,
+    "rarityScore": 157.33588364332303,
+    "rank": 555
+  },
+  {
+    "tokenId": 69,
+    "rarityScore": 157.1903621113822,
+    "rank": 556
+  },
+  {
+    "tokenId": 789,
+    "rarityScore": 157.176838730321,
+    "rank": 557
+  },
+  {
+    "tokenId": 864,
+    "rarityScore": 157.160455006407,
+    "rank": 558
+  },
+  {
+    "tokenId": 1129,
+    "rarityScore": 157.12587146666064,
+    "rank": 559
+  },
+  {
+    "tokenId": 642,
+    "rarityScore": 157.11675120848076,
+    "rank": 560
+  },
+  {
+    "tokenId": 1784,
+    "rarityScore": 157.08795164985622,
+    "rank": 561
+  },
+  {
+    "tokenId": 2007,
+    "rarityScore": 157.00022609759236,
+    "rank": 562
+  },
+  {
+    "tokenId": 2200,
+    "rarityScore": 156.9537656465871,
+    "rank": 563
+  },
+  {
+    "tokenId": 1374,
+    "rarityScore": 156.93655040364206,
+    "rank": 564
+  },
+  {
+    "tokenId": 1221,
+    "rarityScore": 156.87507549560004,
+    "rank": 565
+  },
+  {
+    "tokenId": 1257,
+    "rarityScore": 156.87217179391013,
+    "rank": 566
+  },
+  {
+    "tokenId": 283,
+    "rarityScore": 156.80149868741998,
+    "rank": 567
+  },
+  {
+    "tokenId": 2141,
+    "rarityScore": 156.78335819414048,
+    "rank": 568
+  },
+  {
+    "tokenId": 1719,
+    "rarityScore": 156.7101118299018,
+    "rank": 569
+  },
+  {
+    "tokenId": 1685,
+    "rarityScore": 156.66343299802818,
+    "rank": 570
+  },
+  {
+    "tokenId": 920,
+    "rarityScore": 156.5720666516773,
+    "rank": 571
+  },
+  {
+    "tokenId": 1605,
+    "rarityScore": 156.55238141314382,
+    "rank": 572
+  },
+  {
+    "tokenId": 66,
+    "rarityScore": 156.46503146545106,
+    "rank": 573
+  },
+  {
+    "tokenId": 1101,
+    "rarityScore": 156.44435890524204,
+    "rank": 574
+  },
+  {
+    "tokenId": 902,
+    "rarityScore": 156.42555665793014,
+    "rank": 575
+  },
+  {
+    "tokenId": 830,
+    "rarityScore": 156.31676702886494,
+    "rank": 576
+  },
+  {
+    "tokenId": 240,
+    "rarityScore": 156.27277948862016,
+    "rank": 577
+  },
+  {
+    "tokenId": 1263,
+    "rarityScore": 156.21000513409115,
+    "rank": 578
+  },
+  {
+    "tokenId": 1102,
+    "rarityScore": 156.15896187301118,
+    "rank": 579
+  },
+  {
+    "tokenId": 100,
+    "rarityScore": 156.0335586688596,
+    "rank": 580
+  },
+  {
+    "tokenId": 83,
+    "rarityScore": 155.85246349158072,
+    "rank": 581
+  },
+  {
+    "tokenId": 413,
+    "rarityScore": 155.7062708220176,
+    "rank": 582
+  },
+  {
+    "tokenId": 1677,
+    "rarityScore": 155.59568344376925,
+    "rank": 583
+  },
+  {
+    "tokenId": 1187,
+    "rarityScore": 155.5320420896809,
+    "rank": 584
+  },
+  {
+    "tokenId": 1160,
+    "rarityScore": 155.453823627974,
+    "rank": 585
+  },
+  {
+    "tokenId": 885,
+    "rarityScore": 155.33945504561353,
+    "rank": 586
+  },
+  {
+    "tokenId": 2210,
+    "rarityScore": 155.08924437275996,
+    "rank": 587
+  },
+  {
+    "tokenId": 2194,
+    "rarityScore": 155.0220448146164,
+    "rank": 588
+  },
+  {
+    "tokenId": 1111,
+    "rarityScore": 155.01200177978242,
+    "rank": 589
+  },
+  {
+    "tokenId": 2127,
+    "rarityScore": 154.99556943103897,
+    "rank": 590
+  },
+  {
+    "tokenId": 1837,
+    "rarityScore": 154.94809289956552,
+    "rank": 591
+  },
+  {
+    "tokenId": 300,
+    "rarityScore": 154.93537445443522,
+    "rank": 592
+  },
+  {
+    "tokenId": 938,
+    "rarityScore": 154.91035482791978,
+    "rank": 593
+  },
+  {
+    "tokenId": 639,
+    "rarityScore": 154.6649849491193,
+    "rank": 594
+  },
+  {
+    "tokenId": 1711,
+    "rarityScore": 154.62650249396796,
+    "rank": 595
+  },
+  {
+    "tokenId": 1055,
+    "rarityScore": 154.54268450350673,
+    "rank": 596
+  },
+  {
+    "tokenId": 1932,
+    "rarityScore": 154.50947519430107,
+    "rank": 597
+  },
+  {
+    "tokenId": 317,
+    "rarityScore": 154.49165442583976,
+    "rank": 598
+  },
+  {
+    "tokenId": 1353,
+    "rarityScore": 154.43450691055986,
+    "rank": 599
+  },
+  {
+    "tokenId": 1903,
+    "rarityScore": 154.42563871126941,
+    "rank": 600
+  },
+  {
+    "tokenId": 85,
+    "rarityScore": 154.40089156997954,
+    "rank": 601
+  },
+  {
+    "tokenId": 1842,
+    "rarityScore": 154.2985544992064,
+    "rank": 602
+  },
+  {
+    "tokenId": 716,
+    "rarityScore": 154.25454777641355,
+    "rank": 603
+  },
+  {
+    "tokenId": 1770,
+    "rarityScore": 154.13445232035485,
+    "rank": 604
+  },
+  {
+    "tokenId": 513,
+    "rarityScore": 154.01530791913837,
+    "rank": 605
+  },
+  {
+    "tokenId": 228,
+    "rarityScore": 153.9562504629175,
+    "rank": 606
+  },
+  {
+    "tokenId": 1560,
+    "rarityScore": 153.8498862287656,
+    "rank": 607
+  },
+  {
+    "tokenId": 270,
+    "rarityScore": 153.8470444266325,
+    "rank": 608
+  },
+  {
+    "tokenId": 143,
+    "rarityScore": 153.5330286673357,
+    "rank": 609
+  },
+  {
+    "tokenId": 1468,
+    "rarityScore": 153.48177844155862,
+    "rank": 610
+  },
+  {
+    "tokenId": 721,
+    "rarityScore": 153.4696321411782,
+    "rank": 611
+  },
+  {
+    "tokenId": 2147,
+    "rarityScore": 153.3503648168717,
+    "rank": 612
+  },
+  {
+    "tokenId": 1701,
+    "rarityScore": 153.29362618116468,
+    "rank": 613
+  },
+  {
+    "tokenId": 2121,
+    "rarityScore": 153.27824484558877,
+    "rank": 614
+  },
+  {
+    "tokenId": 558,
+    "rarityScore": 153.1342784306255,
+    "rank": 615
+  },
+  {
+    "tokenId": 1137,
+    "rarityScore": 153.03895150566163,
+    "rank": 616
+  },
+  {
+    "tokenId": 333,
+    "rarityScore": 153.014522776048,
+    "rank": 617
+  },
+  {
+    "tokenId": 1498,
+    "rarityScore": 153.00924013970032,
+    "rank": 618
+  },
+  {
+    "tokenId": 2197,
+    "rarityScore": 153.00023110587475,
+    "rank": 619
+  },
+  {
+    "tokenId": 1688,
+    "rarityScore": 152.91658517249667,
+    "rank": 620
+  },
+  {
+    "tokenId": 1477,
+    "rarityScore": 152.9059155901103,
+    "rank": 621
+  },
+  {
+    "tokenId": 1059,
+    "rarityScore": 152.86615531147913,
+    "rank": 622
+  },
+  {
+    "tokenId": 118,
+    "rarityScore": 152.76510643714025,
+    "rank": 623
+  },
+  {
+    "tokenId": 838,
+    "rarityScore": 152.7584966743627,
+    "rank": 624
+  },
+  {
+    "tokenId": 1169,
+    "rarityScore": 152.72676230729934,
+    "rank": 625
+  },
+  {
+    "tokenId": 844,
+    "rarityScore": 152.6135626940182,
+    "rank": 626
+  },
+  {
+    "tokenId": 1865,
+    "rarityScore": 152.590318335511,
+    "rank": 627
+  },
+  {
+    "tokenId": 1801,
+    "rarityScore": 152.46391767390625,
+    "rank": 628
+  },
+  {
+    "tokenId": 1234,
+    "rarityScore": 152.4225860948683,
+    "rank": 629
+  },
+  {
+    "tokenId": 541,
+    "rarityScore": 152.39948762911234,
+    "rank": 630
+  },
+  {
+    "tokenId": 21,
+    "rarityScore": 152.38939841672521,
+    "rank": 631
+  },
+  {
+    "tokenId": 1699,
+    "rarityScore": 152.3753283629003,
+    "rank": 632
+  },
+  {
+    "tokenId": 1121,
+    "rarityScore": 152.34175369157208,
+    "rank": 633
+  },
+  {
+    "tokenId": 111,
+    "rarityScore": 152.21408556311349,
+    "rank": 634
+  },
+  {
+    "tokenId": 1828,
+    "rarityScore": 152.19658739167892,
+    "rank": 635
+  },
+  {
+    "tokenId": 627,
+    "rarityScore": 152.12413026130864,
+    "rank": 636
+  },
+  {
+    "tokenId": 1191,
+    "rarityScore": 152.05596681296785,
+    "rank": 637
+  },
+  {
+    "tokenId": 1006,
+    "rarityScore": 152.01507702653672,
+    "rank": 638
+  },
+  {
+    "tokenId": 2077,
+    "rarityScore": 151.85147125098302,
+    "rank": 639
+  },
+  {
+    "tokenId": 695,
+    "rarityScore": 151.7663650777767,
+    "rank": 640
+  },
+  {
+    "tokenId": 1693,
+    "rarityScore": 151.74524015062045,
+    "rank": 641
+  },
+  {
+    "tokenId": 259,
+    "rarityScore": 151.73393466867435,
+    "rank": 642
+  },
+  {
+    "tokenId": 1847,
+    "rarityScore": 151.7143593936261,
+    "rank": 643
+  },
+  {
+    "tokenId": 1298,
+    "rarityScore": 151.60648162385522,
+    "rank": 644
+  },
+  {
+    "tokenId": 999,
+    "rarityScore": 151.55517408440727,
+    "rank": 645
+  },
+  {
+    "tokenId": 1776,
+    "rarityScore": 151.51308260387395,
+    "rank": 646
+  },
+  {
+    "tokenId": 137,
+    "rarityScore": 151.27033780967903,
+    "rank": 647
+  },
+  {
+    "tokenId": 282,
+    "rarityScore": 151.15228684304515,
+    "rank": 648
+  },
+  {
+    "tokenId": 368,
+    "rarityScore": 151.14612896703187,
+    "rank": 649
+  },
+  {
+    "tokenId": 1879,
+    "rarityScore": 151.11910322104265,
+    "rank": 650
+  },
+  {
+    "tokenId": 212,
+    "rarityScore": 151.07299422293602,
+    "rank": 651
+  },
+  {
+    "tokenId": 352,
+    "rarityScore": 150.9684973923046,
+    "rank": 652
+  },
+  {
+    "tokenId": 1215,
+    "rarityScore": 150.9181648570672,
+    "rank": 653
+  },
+  {
+    "tokenId": 788,
+    "rarityScore": 150.71199497570598,
+    "rank": 654
+  },
+  {
+    "tokenId": 2003,
+    "rarityScore": 150.5583102648069,
+    "rank": 655
+  },
+  {
+    "tokenId": 1670,
+    "rarityScore": 150.55293664482272,
+    "rank": 656
+  },
+  {
+    "tokenId": 2038,
+    "rarityScore": 150.47419184524583,
+    "rank": 657
+  },
+  {
+    "tokenId": 1231,
+    "rarityScore": 150.3694475715768,
+    "rank": 658
+  },
+  {
+    "tokenId": 922,
+    "rarityScore": 150.32450607749965,
+    "rank": 659
+  },
+  {
+    "tokenId": 461,
+    "rarityScore": 150.23253110484904,
+    "rank": 660
+  },
+  {
+    "tokenId": 686,
+    "rarityScore": 150.22799347824665,
+    "rank": 661
+  },
+  {
+    "tokenId": 697,
+    "rarityScore": 150.1679633542073,
+    "rank": 662
+  },
+  {
+    "tokenId": 1775,
+    "rarityScore": 150.11998802287866,
+    "rank": 663
+  },
+  {
+    "tokenId": 2204,
+    "rarityScore": 150.11569850815752,
+    "rank": 664
+  },
+  {
+    "tokenId": 692,
+    "rarityScore": 150.06137724051223,
+    "rank": 665
+  },
+  {
+    "tokenId": 617,
+    "rarityScore": 149.88386718478577,
+    "rank": 666
+  },
+  {
+    "tokenId": 1020,
+    "rarityScore": 149.80125480669517,
+    "rank": 667
+  },
+  {
+    "tokenId": 974,
+    "rarityScore": 149.79865371425092,
+    "rank": 668
+  },
+  {
+    "tokenId": 693,
+    "rarityScore": 149.7562908586973,
+    "rank": 669
+  },
+  {
+    "tokenId": 446,
+    "rarityScore": 149.698860909585,
+    "rank": 670
+  },
+  {
+    "tokenId": 1869,
+    "rarityScore": 149.63658119296187,
+    "rank": 671
+  },
+  {
+    "tokenId": 360,
+    "rarityScore": 149.63395110088777,
+    "rank": 672
+  },
+  {
+    "tokenId": 1007,
+    "rarityScore": 149.50942998010026,
+    "rank": 673
+  },
+  {
+    "tokenId": 108,
+    "rarityScore": 149.4858606898509,
+    "rank": 674
+  },
+  {
+    "tokenId": 1158,
+    "rarityScore": 149.44988991104321,
+    "rank": 675
+  },
+  {
+    "tokenId": 1905,
+    "rarityScore": 149.40935911592427,
+    "rank": 676
+  },
+  {
+    "tokenId": 417,
+    "rarityScore": 149.3599463532611,
+    "rank": 677
+  },
+  {
+    "tokenId": 381,
+    "rarityScore": 149.3135153882961,
+    "rank": 678
+  },
+  {
+    "tokenId": 511,
+    "rarityScore": 149.30853496832782,
+    "rank": 679
+  },
+  {
+    "tokenId": 243,
+    "rarityScore": 149.19886573169134,
+    "rank": 680
+  },
+  {
+    "tokenId": 2151,
+    "rarityScore": 149.18488441070056,
+    "rank": 681
+  },
+  {
+    "tokenId": 660,
+    "rarityScore": 149.14833497090865,
+    "rank": 682
+  },
+  {
+    "tokenId": 33,
+    "rarityScore": 149.12738455441357,
+    "rank": 683
+  },
+  {
+    "tokenId": 705,
+    "rarityScore": 149.1237703953552,
+    "rank": 684
+  },
+  {
+    "tokenId": 1833,
+    "rarityScore": 149.11569311636262,
+    "rank": 685
+  },
+  {
+    "tokenId": 906,
+    "rarityScore": 149.05488736842153,
+    "rank": 686
+  },
+  {
+    "tokenId": 1409,
+    "rarityScore": 148.88993390564528,
+    "rank": 687
+  },
+  {
+    "tokenId": 196,
+    "rarityScore": 148.86852466877338,
+    "rank": 688
+  },
+  {
+    "tokenId": 807,
+    "rarityScore": 148.84357009822295,
+    "rank": 689
+  },
+  {
+    "tokenId": 584,
+    "rarityScore": 148.7606863233574,
+    "rank": 690
+  },
+  {
+    "tokenId": 701,
+    "rarityScore": 148.7383266081886,
+    "rank": 691
+  },
+  {
+    "tokenId": 362,
+    "rarityScore": 148.6328257816303,
+    "rank": 692
+  },
+  {
+    "tokenId": 612,
+    "rarityScore": 148.62798520748072,
+    "rank": 693
+  },
+  {
+    "tokenId": 1156,
+    "rarityScore": 148.62119676976397,
+    "rank": 694
+  },
+  {
+    "tokenId": 1765,
+    "rarityScore": 148.60052773307223,
+    "rank": 695
+  },
+  {
+    "tokenId": 297,
+    "rarityScore": 148.4702764467078,
+    "rank": 696
+  },
+  {
+    "tokenId": 1491,
+    "rarityScore": 148.45501459210536,
+    "rank": 697
+  },
+  {
+    "tokenId": 2202,
+    "rarityScore": 148.42725291799454,
+    "rank": 698
+  },
+  {
+    "tokenId": 1953,
+    "rarityScore": 148.29083515643313,
+    "rank": 699
+  },
+  {
+    "tokenId": 1700,
+    "rarityScore": 148.2288656679533,
+    "rank": 700
+  },
+  {
+    "tokenId": 1567,
+    "rarityScore": 148.22332370534247,
+    "rank": 701
+  },
+  {
+    "tokenId": 707,
+    "rarityScore": 148.2088680348993,
+    "rank": 702
+  },
+  {
+    "tokenId": 1271,
+    "rarityScore": 148.01496039991036,
+    "rank": 703
+  },
+  {
+    "tokenId": 1475,
+    "rarityScore": 147.9999435436758,
+    "rank": 704
+  },
+  {
+    "tokenId": 1210,
+    "rarityScore": 147.9718314846281,
+    "rank": 705
+  },
+  {
+    "tokenId": 458,
+    "rarityScore": 147.93134424866273,
+    "rank": 706
+  },
+  {
+    "tokenId": 1795,
+    "rarityScore": 147.87678966084002,
+    "rank": 707
+  },
+  {
+    "tokenId": 2137,
+    "rarityScore": 147.86667199537575,
+    "rank": 708
+  },
+  {
+    "tokenId": 2185,
+    "rarityScore": 147.81547857883336,
+    "rank": 709
+  },
+  {
+    "tokenId": 1175,
+    "rarityScore": 147.8080484046031,
+    "rank": 710
+  },
+  {
+    "tokenId": 1705,
+    "rarityScore": 147.7587004980166,
+    "rank": 711
+  },
+  {
+    "tokenId": 995,
+    "rarityScore": 147.75372518426445,
+    "rank": 712
+  },
+  {
+    "tokenId": 1297,
+    "rarityScore": 147.73541799436958,
+    "rank": 713
+  },
+  {
+    "tokenId": 882,
+    "rarityScore": 147.677255226119,
+    "rank": 714
+  },
+  {
+    "tokenId": 1760,
+    "rarityScore": 147.659936103236,
+    "rank": 715
+  },
+  {
+    "tokenId": 1619,
+    "rarityScore": 147.65433914091903,
+    "rank": 716
+  },
+  {
+    "tokenId": 577,
+    "rarityScore": 147.64572451320765,
+    "rank": 717
+  },
+  {
+    "tokenId": 25,
+    "rarityScore": 147.59366449896672,
+    "rank": 718
+  },
+  {
+    "tokenId": 1936,
+    "rarityScore": 147.5926873491052,
+    "rank": 719
+  },
+  {
+    "tokenId": 506,
+    "rarityScore": 147.58907411925114,
+    "rank": 720
+  },
+  {
+    "tokenId": 1704,
+    "rarityScore": 147.58572247689523,
+    "rank": 721
+  },
+  {
+    "tokenId": 1858,
+    "rarityScore": 147.5324141950902,
+    "rank": 722
+  },
+  {
+    "tokenId": 1074,
+    "rarityScore": 147.52165557805068,
+    "rank": 723
+  },
+  {
+    "tokenId": 661,
+    "rarityScore": 147.51736289285412,
+    "rank": 724
+  },
+  {
+    "tokenId": 407,
+    "rarityScore": 147.47566383238643,
+    "rank": 725
+  },
+  {
+    "tokenId": 2182,
+    "rarityScore": 147.34614626423357,
+    "rank": 726
+  },
+  {
+    "tokenId": 1553,
+    "rarityScore": 147.29220025107276,
+    "rank": 727
+  },
+  {
+    "tokenId": 1109,
+    "rarityScore": 147.2237790916308,
+    "rank": 728
+  },
+  {
+    "tokenId": 561,
+    "rarityScore": 147.20679925195373,
+    "rank": 729
+  },
+  {
+    "tokenId": 749,
+    "rarityScore": 147.18172201981665,
+    "rank": 730
+  },
+  {
+    "tokenId": 1008,
+    "rarityScore": 147.17756112431056,
+    "rank": 731
+  },
+  {
+    "tokenId": 163,
+    "rarityScore": 147.1463266394044,
+    "rank": 732
+  },
+  {
+    "tokenId": 1077,
+    "rarityScore": 147.11745349488552,
+    "rank": 733
+  },
+  {
+    "tokenId": 2208,
+    "rarityScore": 147.11569541850312,
+    "rank": 734
+  },
+  {
+    "tokenId": 1838,
+    "rarityScore": 147.10150317672569,
+    "rank": 735
+  },
+  {
+    "tokenId": 685,
+    "rarityScore": 146.8968097096184,
+    "rank": 736
+  },
+  {
+    "tokenId": 416,
+    "rarityScore": 146.8653034948361,
+    "rank": 737
+  },
+  {
+    "tokenId": 829,
+    "rarityScore": 146.71805803057296,
+    "rank": 738
+  },
+  {
+    "tokenId": 1734,
+    "rarityScore": 146.5225245259186,
+    "rank": 739
+  },
+  {
+    "tokenId": 921,
+    "rarityScore": 146.4971596365232,
+    "rank": 740
+  },
+  {
+    "tokenId": 1845,
+    "rarityScore": 146.3996639738845,
+    "rank": 741
+  },
+  {
+    "tokenId": 1104,
+    "rarityScore": 146.38524631976804,
+    "rank": 742
+  },
+  {
+    "tokenId": 1918,
+    "rarityScore": 146.29678955739269,
+    "rank": 743
+  },
+  {
+    "tokenId": 2008,
+    "rarityScore": 146.2347534118062,
+    "rank": 744
+  },
+  {
+    "tokenId": 343,
+    "rarityScore": 146.18473579029896,
+    "rank": 745
+  },
+  {
+    "tokenId": 1281,
+    "rarityScore": 146.12340835800282,
+    "rank": 746
+  },
+  {
+    "tokenId": 2189,
+    "rarityScore": 146.06866422310281,
+    "rank": 747
+  },
+  {
+    "tokenId": 1120,
+    "rarityScore": 146.06143603364305,
+    "rank": 748
+  },
+  {
+    "tokenId": 843,
+    "rarityScore": 146.0239296167899,
+    "rank": 749
+  },
+  {
+    "tokenId": 1882,
+    "rarityScore": 146.01573436658637,
+    "rank": 750
+  },
+  {
+    "tokenId": 171,
+    "rarityScore": 145.93816408565812,
+    "rank": 751
+  },
+  {
+    "tokenId": 1434,
+    "rarityScore": 145.85804615959066,
+    "rank": 752
+  },
+  {
+    "tokenId": 159,
+    "rarityScore": 145.85426870532552,
+    "rank": 753
+  },
+  {
+    "tokenId": 73,
+    "rarityScore": 145.7108952498188,
+    "rank": 754
+  },
+  {
+    "tokenId": 384,
+    "rarityScore": 145.5315343065323,
+    "rank": 755
+  },
+  {
+    "tokenId": 2142,
+    "rarityScore": 145.47919430004322,
+    "rank": 756
+  },
+  {
+    "tokenId": 1562,
+    "rarityScore": 145.45161991971767,
+    "rank": 757
+  },
+  {
+    "tokenId": 2098,
+    "rarityScore": 145.44181039550287,
+    "rank": 758
+  },
+  {
+    "tokenId": 218,
+    "rarityScore": 145.3892239235986,
+    "rank": 759
+  },
+  {
+    "tokenId": 1408,
+    "rarityScore": 145.18609978250402,
+    "rank": 760
+  },
+  {
+    "tokenId": 490,
+    "rarityScore": 145.18588398785866,
+    "rank": 761
+  },
+  {
+    "tokenId": 22,
+    "rarityScore": 144.98574486820303,
+    "rank": 762
+  },
+  {
+    "tokenId": 84,
+    "rarityScore": 144.80519992487262,
+    "rank": 763
+  },
+  {
+    "tokenId": 949,
+    "rarityScore": 144.6304898335108,
+    "rank": 764
+  },
+  {
+    "tokenId": 1033,
+    "rarityScore": 144.60557913122597,
+    "rank": 765
+  },
+  {
+    "tokenId": 1493,
+    "rarityScore": 144.5864518473369,
+    "rank": 766
+  },
+  {
+    "tokenId": 154,
+    "rarityScore": 144.56768739426667,
+    "rank": 767
+  },
+  {
+    "tokenId": 891,
+    "rarityScore": 144.49367416730965,
+    "rank": 768
+  },
+  {
+    "tokenId": 801,
+    "rarityScore": 144.4400990468905,
+    "rank": 769
+  },
+  {
+    "tokenId": 162,
+    "rarityScore": 144.37916023958238,
+    "rank": 770
+  },
+  {
+    "tokenId": 621,
+    "rarityScore": 144.29192829488943,
+    "rank": 771
+  },
+  {
+    "tokenId": 2123,
+    "rarityScore": 144.2493032591444,
+    "rank": 772
+  },
+  {
+    "tokenId": 363,
+    "rarityScore": 144.222904823518,
+    "rank": 773
+  },
+  {
+    "tokenId": 1487,
+    "rarityScore": 144.19772417046738,
+    "rank": 774
+  },
+  {
+    "tokenId": 1433,
+    "rarityScore": 144.15673442848237,
+    "rank": 775
+  },
+  {
+    "tokenId": 2043,
+    "rarityScore": 144.0678017075362,
+    "rank": 776
+  },
+  {
+    "tokenId": 2014,
+    "rarityScore": 143.98582063626856,
+    "rank": 777
+  },
+  {
+    "tokenId": 63,
+    "rarityScore": 143.93712466320085,
+    "rank": 778
+  },
+  {
+    "tokenId": 698,
+    "rarityScore": 143.83734054325805,
+    "rank": 779
+  },
+  {
+    "tokenId": 1151,
+    "rarityScore": 143.79296029690937,
+    "rank": 780
+  },
+  {
+    "tokenId": 1406,
+    "rarityScore": 143.78342238651908,
+    "rank": 781
+  },
+  {
+    "tokenId": 1218,
+    "rarityScore": 143.75293333847446,
+    "rank": 782
+  },
+  {
+    "tokenId": 1583,
+    "rarityScore": 143.74615291743504,
+    "rank": 783
+  },
+  {
+    "tokenId": 665,
+    "rarityScore": 143.72118789153467,
+    "rank": 784
+  },
+  {
+    "tokenId": 496,
+    "rarityScore": 143.71196128727274,
+    "rank": 785
+  },
+  {
+    "tokenId": 1117,
+    "rarityScore": 143.66048819349552,
+    "rank": 786
+  },
+  {
+    "tokenId": 1894,
+    "rarityScore": 143.65574925346107,
+    "rank": 787
+  },
+  {
+    "tokenId": 1636,
+    "rarityScore": 143.60102938274574,
+    "rank": 788
+  },
+  {
+    "tokenId": 762,
+    "rarityScore": 143.55867474784532,
+    "rank": 789
+  },
+  {
+    "tokenId": 1669,
+    "rarityScore": 143.52157223092263,
+    "rank": 790
+  },
+  {
+    "tokenId": 48,
+    "rarityScore": 143.50897471189447,
+    "rank": 791
+  },
+  {
+    "tokenId": 575,
+    "rarityScore": 143.42487980851163,
+    "rank": 792
+  },
+  {
+    "tokenId": 783,
+    "rarityScore": 143.4228938401124,
+    "rank": 793
+  },
+  {
+    "tokenId": 670,
+    "rarityScore": 143.38133429847085,
+    "rank": 794
+  },
+  {
+    "tokenId": 1789,
+    "rarityScore": 143.1833006597209,
+    "rank": 795
+  },
+  {
+    "tokenId": 1114,
+    "rarityScore": 143.18091433767583,
+    "rank": 796
+  },
+  {
+    "tokenId": 1251,
+    "rarityScore": 143.1540929076885,
+    "rank": 797
+  },
+  {
+    "tokenId": 1341,
+    "rarityScore": 143.04638984771367,
+    "rank": 798
+  },
+  {
+    "tokenId": 2064,
+    "rarityScore": 143.02720589620043,
+    "rank": 799
+  },
+  {
+    "tokenId": 2207,
+    "rarityScore": 143.01778283272935,
+    "rank": 800
+  },
+  {
+    "tokenId": 1258,
+    "rarityScore": 143.01227221009344,
+    "rank": 801
+  },
+  {
+    "tokenId": 1995,
+    "rarityScore": 142.96994670209688,
+    "rank": 802
+  },
+  {
+    "tokenId": 910,
+    "rarityScore": 142.88233856140553,
+    "rank": 803
+  },
+  {
+    "tokenId": 1306,
+    "rarityScore": 142.8304235708174,
+    "rank": 804
+  },
+  {
+    "tokenId": 959,
+    "rarityScore": 142.78964063135768,
+    "rank": 805
+  },
+  {
+    "tokenId": 1973,
+    "rarityScore": 142.7334243398439,
+    "rank": 806
+  },
+  {
+    "tokenId": 1236,
+    "rarityScore": 142.62395643086137,
+    "rank": 807
+  },
+  {
+    "tokenId": 1411,
+    "rarityScore": 142.59417042223924,
+    "rank": 808
+  },
+  {
+    "tokenId": 1304,
+    "rarityScore": 142.58893037905088,
+    "rank": 809
+  },
+  {
+    "tokenId": 1289,
+    "rarityScore": 142.2751002904996,
+    "rank": 810
+  },
+  {
+    "tokenId": 925,
+    "rarityScore": 142.24757434234414,
+    "rank": 811
+  },
+  {
+    "tokenId": 271,
+    "rarityScore": 142.23854704430906,
+    "rank": 812
+  },
+  {
+    "tokenId": 535,
+    "rarityScore": 142.20061832681884,
+    "rank": 813
+  },
+  {
+    "tokenId": 635,
+    "rarityScore": 142.17821262418067,
+    "rank": 814
+  },
+  {
+    "tokenId": 94,
+    "rarityScore": 142.14584484440266,
+    "rank": 815
+  },
+  {
+    "tokenId": 1222,
+    "rarityScore": 142.126514251569,
+    "rank": 816
+  },
+  {
+    "tokenId": 2212,
+    "rarityScore": 142.1125534253885,
+    "rank": 817
+  },
+  {
+    "tokenId": 738,
+    "rarityScore": 142.06713936069565,
+    "rank": 818
+  },
+  {
+    "tokenId": 1941,
+    "rarityScore": 142.0597743861577,
+    "rank": 819
+  },
+  {
+    "tokenId": 1889,
+    "rarityScore": 141.98296828650507,
+    "rank": 820
+  },
+  {
+    "tokenId": 97,
+    "rarityScore": 141.92560752247323,
+    "rank": 821
+  },
+  {
+    "tokenId": 1061,
+    "rarityScore": 141.86079925237408,
+    "rank": 822
+  },
+  {
+    "tokenId": 753,
+    "rarityScore": 141.79736554286018,
+    "rank": 823
+  },
+  {
+    "tokenId": 1009,
+    "rarityScore": 141.7689340037269,
+    "rank": 824
+  },
+  {
+    "tokenId": 1415,
+    "rarityScore": 141.75652270136385,
+    "rank": 825
+  },
+  {
+    "tokenId": 1948,
+    "rarityScore": 141.70811735927853,
+    "rank": 826
+  },
+  {
+    "tokenId": 1173,
+    "rarityScore": 141.6615485989463,
+    "rank": 827
+  },
+  {
+    "tokenId": 986,
+    "rarityScore": 141.64574671407195,
+    "rank": 828
+  },
+  {
+    "tokenId": 503,
+    "rarityScore": 141.59328093142545,
+    "rank": 829
+  },
+  {
+    "tokenId": 814,
+    "rarityScore": 141.5837694479475,
+    "rank": 830
+  },
+  {
+    "tokenId": 1774,
+    "rarityScore": 141.5560739899716,
+    "rank": 831
+  },
+  {
+    "tokenId": 1023,
+    "rarityScore": 141.5092057581349,
+    "rank": 832
+  },
+  {
+    "tokenId": 1637,
+    "rarityScore": 141.4894412043362,
+    "rank": 833
+  },
+  {
+    "tokenId": 2095,
+    "rarityScore": 141.3870039790087,
+    "rank": 834
+  },
+  {
+    "tokenId": 1590,
+    "rarityScore": 141.34921952803154,
+    "rank": 835
+  },
+  {
+    "tokenId": 281,
+    "rarityScore": 141.32265870324972,
+    "rank": 836
+  },
+  {
+    "tokenId": 153,
+    "rarityScore": 141.297534691521,
+    "rank": 837
+  },
+  {
+    "tokenId": 373,
+    "rarityScore": 141.2840911424032,
+    "rank": 838
+  },
+  {
+    "tokenId": 1118,
+    "rarityScore": 141.2657872270079,
+    "rank": 839
+  },
+  {
+    "tokenId": 1283,
+    "rarityScore": 141.26058070167247,
+    "rank": 840
+  },
+  {
+    "tokenId": 1504,
+    "rarityScore": 141.25431982172623,
+    "rank": 841
+  },
+  {
+    "tokenId": 2009,
+    "rarityScore": 141.215632216172,
+    "rank": 842
+  },
+  {
+    "tokenId": 501,
+    "rarityScore": 141.16255126331004,
+    "rank": 843
+  },
+  {
+    "tokenId": 1106,
+    "rarityScore": 141.13853739941368,
+    "rank": 844
+  },
+  {
+    "tokenId": 1461,
+    "rarityScore": 141.13798903804584,
+    "rank": 845
+  },
+  {
+    "tokenId": 2088,
+    "rarityScore": 141.13180754212848,
+    "rank": 846
+  },
+  {
+    "tokenId": 581,
+    "rarityScore": 140.915029975867,
+    "rank": 847
+  },
+  {
+    "tokenId": 811,
+    "rarityScore": 140.83977021418653,
+    "rank": 848
+  },
+  {
+    "tokenId": 1170,
+    "rarityScore": 140.7588919405347,
+    "rank": 849
+  },
+  {
+    "tokenId": 927,
+    "rarityScore": 140.74413747611447,
+    "rank": 850
+  },
+  {
+    "tokenId": 1030,
+    "rarityScore": 140.72357205538538,
+    "rank": 851
+  },
+  {
+    "tokenId": 2143,
+    "rarityScore": 140.6176497862645,
+    "rank": 852
+  },
+  {
+    "tokenId": 75,
+    "rarityScore": 140.54676239474756,
+    "rank": 853
+  },
+  {
+    "tokenId": 19,
+    "rarityScore": 140.54208891952126,
+    "rank": 854
+  },
+  {
+    "tokenId": 1385,
+    "rarityScore": 140.51711802057625,
+    "rank": 855
+  },
+  {
+    "tokenId": 265,
+    "rarityScore": 140.50935790002416,
+    "rank": 856
+  },
+  {
+    "tokenId": 849,
+    "rarityScore": 140.43569569002386,
+    "rank": 857
+  },
+  {
+    "tokenId": 1506,
+    "rarityScore": 140.30933791965484,
+    "rank": 858
+  },
+  {
+    "tokenId": 465,
+    "rarityScore": 140.2898259503952,
+    "rank": 859
+  },
+  {
+    "tokenId": 30,
+    "rarityScore": 140.28203229627843,
+    "rank": 860
+  },
+  {
+    "tokenId": 1300,
+    "rarityScore": 140.1595405984655,
+    "rank": 861
+  },
+  {
+    "tokenId": 1510,
+    "rarityScore": 140.11816088425346,
+    "rank": 862
+  },
+  {
+    "tokenId": 866,
+    "rarityScore": 140.04663688425347,
+    "rank": 863
+  },
+  {
+    "tokenId": 529,
+    "rarityScore": 139.99567183476537,
+    "rank": 864
+  },
+  {
+    "tokenId": 1293,
+    "rarityScore": 139.97725770892168,
+    "rank": 865
+  },
+  {
+    "tokenId": 578,
+    "rarityScore": 139.94972989563027,
+    "rank": 866
+  },
+  {
+    "tokenId": 173,
+    "rarityScore": 139.89736489852902,
+    "rank": 867
+  },
+  {
+    "tokenId": 1746,
+    "rarityScore": 139.77740531232755,
+    "rank": 868
+  },
+  {
+    "tokenId": 847,
+    "rarityScore": 139.7371353276439,
+    "rank": 869
+  },
+  {
+    "tokenId": 2215,
+    "rarityScore": 139.57975361351455,
+    "rank": 870
+  },
+  {
+    "tokenId": 1460,
+    "rarityScore": 139.57706088776044,
+    "rank": 871
+  },
+  {
+    "tokenId": 2087,
+    "rarityScore": 139.49852077993393,
+    "rank": 872
+  },
+  {
+    "tokenId": 1832,
+    "rarityScore": 139.30269651863202,
+    "rank": 873
+  },
+  {
+    "tokenId": 1042,
+    "rarityScore": 139.3025714056498,
+    "rank": 874
+  },
+  {
+    "tokenId": 29,
+    "rarityScore": 139.2949228422212,
+    "rank": 875
+  },
+  {
+    "tokenId": 1391,
+    "rarityScore": 139.261562574311,
+    "rank": 876
+  },
+  {
+    "tokenId": 1339,
+    "rarityScore": 139.2461701190355,
+    "rank": 877
+  },
+  {
+    "tokenId": 533,
+    "rarityScore": 139.15958420808175,
+    "rank": 878
+  },
+  {
+    "tokenId": 2160,
+    "rarityScore": 139.1218514970189,
+    "rank": 879
+  },
+  {
+    "tokenId": 236,
+    "rarityScore": 139.0394140401134,
+    "rank": 880
+  },
+  {
+    "tokenId": 509,
+    "rarityScore": 139.00061012633063,
+    "rank": 881
+  },
+  {
+    "tokenId": 726,
+    "rarityScore": 138.95728674816178,
+    "rank": 882
+  },
+  {
+    "tokenId": 1404,
+    "rarityScore": 138.75121620855995,
+    "rank": 883
+  },
+  {
+    "tokenId": 253,
+    "rarityScore": 138.74198614775122,
+    "rank": 884
+  },
+  {
+    "tokenId": 444,
+    "rarityScore": 138.72488293480566,
+    "rank": 885
+  },
+  {
+    "tokenId": 1330,
+    "rarityScore": 138.62618044374304,
+    "rank": 886
+  },
+  {
+    "tokenId": 41,
+    "rarityScore": 138.59370565713468,
+    "rank": 887
+  },
+  {
+    "tokenId": 224,
+    "rarityScore": 138.525186634705,
+    "rank": 888
+  },
+  {
+    "tokenId": 740,
+    "rarityScore": 138.49367282394857,
+    "rank": 889
+  },
+  {
+    "tokenId": 668,
+    "rarityScore": 138.48526557481972,
+    "rank": 890
+  },
+  {
+    "tokenId": 1834,
+    "rarityScore": 138.40338157117182,
+    "rank": 891
+  },
+  {
+    "tokenId": 652,
+    "rarityScore": 138.38955372295504,
+    "rank": 892
+  },
+  {
+    "tokenId": 519,
+    "rarityScore": 138.3565432381288,
+    "rank": 893
+  },
+  {
+    "tokenId": 1155,
+    "rarityScore": 138.32992635075763,
+    "rank": 894
+  },
+  {
+    "tokenId": 1933,
+    "rarityScore": 138.19398564201066,
+    "rank": 895
+  },
+  {
+    "tokenId": 1805,
+    "rarityScore": 138.1445866486858,
+    "rank": 896
+  },
+  {
+    "tokenId": 1497,
+    "rarityScore": 138.11808142256842,
+    "rank": 897
+  },
+  {
+    "tokenId": 1138,
+    "rarityScore": 138.09740515802156,
+    "rank": 898
+  },
+  {
+    "tokenId": 478,
+    "rarityScore": 138.08885934805625,
+    "rank": 899
+  },
+  {
+    "tokenId": 1569,
+    "rarityScore": 138.06424856430843,
+    "rank": 900
+  },
+  {
+    "tokenId": 777,
+    "rarityScore": 138.00277329086208,
+    "rank": 901
+  },
+  {
+    "tokenId": 2076,
+    "rarityScore": 138.00250404760766,
+    "rank": 902
+  },
+  {
+    "tokenId": 879,
+    "rarityScore": 137.98998405330371,
+    "rank": 903
+  },
+  {
+    "tokenId": 1001,
+    "rarityScore": 137.9688841739832,
+    "rank": 904
+  },
+  {
+    "tokenId": 1912,
+    "rarityScore": 137.9476738325495,
+    "rank": 905
+  },
+  {
+    "tokenId": 520,
+    "rarityScore": 137.70595406459182,
+    "rank": 906
+  },
+  {
+    "tokenId": 714,
+    "rarityScore": 137.64896219373878,
+    "rank": 907
+  },
+  {
+    "tokenId": 1740,
+    "rarityScore": 137.5980717647025,
+    "rank": 908
+  },
+  {
+    "tokenId": 1555,
+    "rarityScore": 137.5639111956874,
+    "rank": 909
+  },
+  {
+    "tokenId": 2035,
+    "rarityScore": 137.55324683120676,
+    "rank": 910
+  },
+  {
+    "tokenId": 1148,
+    "rarityScore": 137.5162659285091,
+    "rank": 911
+  },
+  {
+    "tokenId": 546,
+    "rarityScore": 137.3958331686125,
+    "rank": 912
+  },
+  {
+    "tokenId": 806,
+    "rarityScore": 137.34135974025256,
+    "rank": 913
+  },
+  {
+    "tokenId": 1500,
+    "rarityScore": 137.26665254595625,
+    "rank": 914
+  },
+  {
+    "tokenId": 1984,
+    "rarityScore": 137.25755629477766,
+    "rank": 915
+  },
+  {
+    "tokenId": 900,
+    "rarityScore": 137.16121998848877,
+    "rank": 916
+  },
+  {
+    "tokenId": 1797,
+    "rarityScore": 137.03496830575781,
+    "rank": 917
+  },
+  {
+    "tokenId": 992,
+    "rarityScore": 137.02897845142172,
+    "rank": 918
+  },
+  {
+    "tokenId": 970,
+    "rarityScore": 136.99307006579824,
+    "rank": 919
+  },
+  {
+    "tokenId": 868,
+    "rarityScore": 136.98407069553687,
+    "rank": 920
+  },
+  {
+    "tokenId": 2082,
+    "rarityScore": 136.98182082146727,
+    "rank": 921
+  },
+  {
+    "tokenId": 1476,
+    "rarityScore": 136.9512609704382,
+    "rank": 922
+  },
+  {
+    "tokenId": 2156,
+    "rarityScore": 136.78953520196052,
+    "rank": 923
+  },
+  {
+    "tokenId": 610,
+    "rarityScore": 136.72373740971312,
+    "rank": 924
+  },
+  {
+    "tokenId": 517,
+    "rarityScore": 136.68890654309124,
+    "rank": 925
+  },
+  {
+    "tokenId": 2131,
+    "rarityScore": 136.6746892369033,
+    "rank": 926
+  },
+  {
+    "tokenId": 1698,
+    "rarityScore": 136.65340311405316,
+    "rank": 927
+  },
+  {
+    "tokenId": 1850,
+    "rarityScore": 136.63318645389396,
+    "rank": 928
+  },
+  {
+    "tokenId": 1161,
+    "rarityScore": 136.61124878804193,
+    "rank": 929
+  },
+  {
+    "tokenId": 774,
+    "rarityScore": 136.6023951598773,
+    "rank": 930
+  },
+  {
+    "tokenId": 1403,
+    "rarityScore": 136.588779276551,
+    "rank": 931
+  },
+  {
+    "tokenId": 1881,
+    "rarityScore": 136.5886940945942,
+    "rank": 932
+  },
+  {
+    "tokenId": 318,
+    "rarityScore": 136.55431808686794,
+    "rank": 933
+  },
+  {
+    "tokenId": 155,
+    "rarityScore": 136.54122289108597,
+    "rank": 934
+  },
+  {
+    "tokenId": 1920,
+    "rarityScore": 136.5261083101018,
+    "rank": 935
+  },
+  {
+    "tokenId": 149,
+    "rarityScore": 136.51180596101295,
+    "rank": 936
+  },
+  {
+    "tokenId": 1811,
+    "rarityScore": 136.50285275677908,
+    "rank": 937
+  },
+  {
+    "tokenId": 1172,
+    "rarityScore": 136.48144656403042,
+    "rank": 938
+  },
+  {
+    "tokenId": 191,
+    "rarityScore": 136.47991436180908,
+    "rank": 939
+  },
+  {
+    "tokenId": 536,
+    "rarityScore": 136.4582387004537,
+    "rank": 940
+  },
+  {
+    "tokenId": 1612,
+    "rarityScore": 136.4548946405645,
+    "rank": 941
+  },
+  {
+    "tokenId": 1966,
+    "rarityScore": 136.44114304193226,
+    "rank": 942
+  },
+  {
+    "tokenId": 1813,
+    "rarityScore": 136.39282188662526,
+    "rank": 943
+  },
+  {
+    "tokenId": 669,
+    "rarityScore": 136.383389843413,
+    "rank": 944
+  },
+  {
+    "tokenId": 1140,
+    "rarityScore": 136.35555602897583,
+    "rank": 945
+  },
+  {
+    "tokenId": 1768,
+    "rarityScore": 136.31119569789973,
+    "rank": 946
+  },
+  {
+    "tokenId": 673,
+    "rarityScore": 136.21579593266839,
+    "rank": 947
+  },
+  {
+    "tokenId": 308,
+    "rarityScore": 136.14049037866525,
+    "rank": 948
+  },
+  {
+    "tokenId": 1133,
+    "rarityScore": 136.10978343642682,
+    "rank": 949
+  },
+  {
+    "tokenId": 1380,
+    "rarityScore": 136.04626341765257,
+    "rank": 950
+  },
+  {
+    "tokenId": 914,
+    "rarityScore": 136.00239629976747,
+    "rank": 951
+  },
+  {
+    "tokenId": 1659,
+    "rarityScore": 135.97866882962293,
+    "rank": 952
+  },
+  {
+    "tokenId": 1929,
+    "rarityScore": 135.97045760755967,
+    "rank": 953
+  },
+  {
+    "tokenId": 852,
+    "rarityScore": 135.9533678868528,
+    "rank": 954
+  },
+  {
+    "tokenId": 2039,
+    "rarityScore": 135.92161854598442,
+    "rank": 955
+  },
+  {
+    "tokenId": 1494,
+    "rarityScore": 135.89305195645113,
+    "rank": 956
+  },
+  {
+    "tokenId": 1970,
+    "rarityScore": 135.8319790157794,
+    "rank": 957
+  },
+  {
+    "tokenId": 2193,
+    "rarityScore": 135.82983981166316,
+    "rank": 958
+  },
+  {
+    "tokenId": 394,
+    "rarityScore": 135.80896047516092,
+    "rank": 959
+  },
+  {
+    "tokenId": 263,
+    "rarityScore": 135.69860929101893,
+    "rank": 960
+  },
+  {
+    "tokenId": 1458,
+    "rarityScore": 135.58237938017845,
+    "rank": 961
+  },
+  {
+    "tokenId": 2022,
+    "rarityScore": 135.5469472672135,
+    "rank": 962
+  },
+  {
+    "tokenId": 656,
+    "rarityScore": 135.52201052955448,
+    "rank": 963
+  },
+  {
+    "tokenId": 1369,
+    "rarityScore": 135.5070571451706,
+    "rank": 964
+  },
+  {
+    "tokenId": 1773,
+    "rarityScore": 135.4958251247976,
+    "rank": 965
+  },
+  {
+    "tokenId": 732,
+    "rarityScore": 135.4858244288002,
+    "rank": 966
+  },
+  {
+    "tokenId": 1343,
+    "rarityScore": 135.4245157429715,
+    "rank": 967
+  },
+  {
+    "tokenId": 1877,
+    "rarityScore": 135.4056664507217,
+    "rank": 968
+  },
+  {
+    "tokenId": 403,
+    "rarityScore": 135.39316905989716,
+    "rank": 969
+  },
+  {
+    "tokenId": 1274,
+    "rarityScore": 135.31483306314544,
+    "rank": 970
+  },
+  {
+    "tokenId": 1668,
+    "rarityScore": 135.2613767191173,
+    "rank": 971
+  },
+  {
+    "tokenId": 140,
+    "rarityScore": 135.23660006262696,
+    "rank": 972
+  },
+  {
+    "tokenId": 1153,
+    "rarityScore": 135.23457111179232,
+    "rank": 973
+  },
+  {
+    "tokenId": 1194,
+    "rarityScore": 135.210949652156,
+    "rank": 974
+  },
+  {
+    "tokenId": 440,
+    "rarityScore": 135.1691604096662,
+    "rank": 975
+  },
+  {
+    "tokenId": 450,
+    "rarityScore": 135.08144452661614,
+    "rank": 976
+  },
+  {
+    "tokenId": 1051,
+    "rarityScore": 135.0248058267552,
+    "rank": 977
+  },
+  {
+    "tokenId": 1515,
+    "rarityScore": 134.93410154819574,
+    "rank": 978
+  },
+  {
+    "tokenId": 1022,
+    "rarityScore": 134.91802634606606,
+    "rank": 979
+  },
+  {
+    "tokenId": 1256,
+    "rarityScore": 134.91631306914456,
+    "rank": 980
+  },
+  {
+    "tokenId": 2032,
+    "rarityScore": 134.82977627181856,
+    "rank": 981
+  },
+  {
+    "tokenId": 960,
+    "rarityScore": 134.82067012325354,
+    "rank": 982
+  },
+  {
+    "tokenId": 1969,
+    "rarityScore": 134.81849161681535,
+    "rank": 983
+  },
+  {
+    "tokenId": 382,
+    "rarityScore": 134.7991885771318,
+    "rank": 984
+  },
+  {
+    "tokenId": 1177,
+    "rarityScore": 134.6419198039607,
+    "rank": 985
+  },
+  {
+    "tokenId": 1334,
+    "rarityScore": 134.6159346337026,
+    "rank": 986
+  },
+  {
+    "tokenId": 1572,
+    "rarityScore": 134.52976261181792,
+    "rank": 987
+  },
+  {
+    "tokenId": 1561,
+    "rarityScore": 134.48370279943717,
+    "rank": 988
+  },
+  {
+    "tokenId": 1743,
+    "rarityScore": 134.4311812241056,
+    "rank": 989
+  },
+  {
+    "tokenId": 1708,
+    "rarityScore": 134.42769042185176,
+    "rank": 990
+  },
+  {
+    "tokenId": 420,
+    "rarityScore": 134.40672875789343,
+    "rank": 991
+  },
+  {
+    "tokenId": 248,
+    "rarityScore": 134.23602838354543,
+    "rank": 992
+  },
+  {
+    "tokenId": 2162,
+    "rarityScore": 134.11152748408875,
+    "rank": 993
+  },
+  {
+    "tokenId": 106,
+    "rarityScore": 134.01841146279193,
+    "rank": 994
+  },
+  {
+    "tokenId": 1904,
+    "rarityScore": 134.01022578612304,
+    "rank": 995
+  },
+  {
+    "tokenId": 442,
+    "rarityScore": 133.96987944262398,
+    "rank": 996
+  },
+  {
+    "tokenId": 863,
+    "rarityScore": 133.9024673096635,
+    "rank": 997
+  },
+  {
+    "tokenId": 151,
+    "rarityScore": 133.8777112233365,
+    "rank": 998
+  },
+  {
+    "tokenId": 994,
+    "rarityScore": 133.8206652384116,
+    "rank": 999
+  },
+  {
+    "tokenId": 1113,
+    "rarityScore": 133.78424134195768,
+    "rank": 1000
+  },
+  {
+    "tokenId": 258,
+    "rarityScore": 133.76370916780854,
+    "rank": 1001
+  },
+  {
+    "tokenId": 67,
+    "rarityScore": 133.71888056087238,
+    "rank": 1002
+  },
+  {
+    "tokenId": 1645,
+    "rarityScore": 133.70384777422413,
+    "rank": 1003
+  },
+  {
+    "tokenId": 1046,
+    "rarityScore": 133.69652833404095,
+    "rank": 1004
+  },
+  {
+    "tokenId": 2019,
+    "rarityScore": 133.68849505084358,
+    "rank": 1005
+  },
+  {
+    "tokenId": 262,
+    "rarityScore": 133.63458866155293,
+    "rank": 1006
+  },
+  {
+    "tokenId": 1997,
+    "rarityScore": 133.60137618753873,
+    "rank": 1007
+  },
+  {
+    "tokenId": 1260,
+    "rarityScore": 133.5173681847342,
+    "rank": 1008
+  },
+  {
+    "tokenId": 379,
+    "rarityScore": 133.45283739366297,
+    "rank": 1009
+  },
+  {
+    "tokenId": 430,
+    "rarityScore": 133.36454535991925,
+    "rank": 1010
+  },
+  {
+    "tokenId": 1026,
+    "rarityScore": 133.3344998641058,
+    "rank": 1011
+  },
+  {
+    "tokenId": 941,
+    "rarityScore": 133.33204793618432,
+    "rank": 1012
+  },
+  {
+    "tokenId": 2178,
+    "rarityScore": 133.3240237201801,
+    "rank": 1013
+  },
+  {
+    "tokenId": 132,
+    "rarityScore": 133.2597374779151,
+    "rank": 1014
+  },
+  {
+    "tokenId": 58,
+    "rarityScore": 133.2470441326684,
+    "rank": 1015
+  },
+  {
+    "tokenId": 1846,
+    "rarityScore": 133.20132942833519,
+    "rank": 1016
+  },
+  {
+    "tokenId": 68,
+    "rarityScore": 133.16053010003185,
+    "rank": 1017
+  },
+  {
+    "tokenId": 1888,
+    "rarityScore": 133.15674440950988,
+    "rank": 1018
+  },
+  {
+    "tokenId": 1576,
+    "rarityScore": 133.1396381843645,
+    "rank": 1019
+  },
+  {
+    "tokenId": 819,
+    "rarityScore": 133.11358132698328,
+    "rank": 1020
+  },
+  {
+    "tokenId": 1537,
+    "rarityScore": 133.0953491078053,
+    "rank": 1021
+  },
+  {
+    "tokenId": 1358,
+    "rarityScore": 132.95258581164182,
+    "rank": 1022
+  },
+  {
+    "tokenId": 1389,
+    "rarityScore": 132.92039781991744,
+    "rank": 1023
+  },
+  {
+    "tokenId": 2053,
+    "rarityScore": 132.8835456040048,
+    "rank": 1024
+  },
+  {
+    "tokenId": 869,
+    "rarityScore": 132.77305114776894,
+    "rank": 1025
+  },
+  {
+    "tokenId": 834,
+    "rarityScore": 132.74488479906336,
+    "rank": 1026
+  },
+  {
+    "tokenId": 2169,
+    "rarityScore": 132.7256099480699,
+    "rank": 1027
+  },
+  {
+    "tokenId": 1141,
+    "rarityScore": 132.69425444135618,
+    "rank": 1028
+  },
+  {
+    "tokenId": 1891,
+    "rarityScore": 132.66526926049343,
+    "rank": 1029
+  },
+  {
+    "tokenId": 800,
+    "rarityScore": 132.6322510906283,
+    "rank": 1030
+  },
+  {
+    "tokenId": 1536,
+    "rarityScore": 132.57328864582422,
+    "rank": 1031
+  },
+  {
+    "tokenId": 1508,
+    "rarityScore": 132.49611569163304,
+    "rank": 1032
+  },
+  {
+    "tokenId": 103,
+    "rarityScore": 132.4650627483249,
+    "rank": 1033
+  },
+  {
+    "tokenId": 1085,
+    "rarityScore": 132.44000054983402,
+    "rank": 1034
+  },
+  {
+    "tokenId": 184,
+    "rarityScore": 132.4211426458502,
+    "rank": 1035
+  },
+  {
+    "tokenId": 2128,
+    "rarityScore": 132.324517064964,
+    "rank": 1036
+  },
+  {
+    "tokenId": 757,
+    "rarityScore": 132.307653649531,
+    "rank": 1037
+  },
+  {
+    "tokenId": 1639,
+    "rarityScore": 132.3075455783754,
+    "rank": 1038
+  },
+  {
+    "tokenId": 839,
+    "rarityScore": 132.1738139680716,
+    "rank": 1039
+  },
+  {
+    "tokenId": 567,
+    "rarityScore": 132.15509741359864,
+    "rank": 1040
+  },
+  {
+    "tokenId": 1725,
+    "rarityScore": 132.06439713887812,
+    "rank": 1041
+  },
+  {
+    "tokenId": 2057,
+    "rarityScore": 132.03829366115644,
+    "rank": 1042
+  },
+  {
+    "tokenId": 54,
+    "rarityScore": 131.87658366127368,
+    "rank": 1043
+  },
+  {
+    "tokenId": 1344,
+    "rarityScore": 131.8639012426568,
+    "rank": 1044
+  },
+  {
+    "tokenId": 1427,
+    "rarityScore": 131.85348435380607,
+    "rank": 1045
+  },
+  {
+    "tokenId": 401,
+    "rarityScore": 131.8514449926074,
+    "rank": 1046
+  },
+  {
+    "tokenId": 2130,
+    "rarityScore": 131.79653086143725,
+    "rank": 1047
+  },
+  {
+    "tokenId": 195,
+    "rarityScore": 131.75537774918652,
+    "rank": 1048
+  },
+  {
+    "tokenId": 350,
+    "rarityScore": 131.5733849337574,
+    "rank": 1049
+  },
+  {
+    "tokenId": 1752,
+    "rarityScore": 131.54474261661107,
+    "rank": 1050
+  },
+  {
+    "tokenId": 1906,
+    "rarityScore": 131.44595644963596,
+    "rank": 1051
+  },
+  {
+    "tokenId": 1516,
+    "rarityScore": 131.44482711017068,
+    "rank": 1052
+  },
+  {
+    "tokenId": 796,
+    "rarityScore": 131.41241904101528,
+    "rank": 1053
+  },
+  {
+    "tokenId": 494,
+    "rarityScore": 131.40357841054757,
+    "rank": 1054
+  },
+  {
+    "tokenId": 1174,
+    "rarityScore": 131.40311712642725,
+    "rank": 1055
+  },
+  {
+    "tokenId": 1067,
+    "rarityScore": 131.3682370086882,
+    "rank": 1056
+  },
+  {
+    "tokenId": 1863,
+    "rarityScore": 131.33855338062477,
+    "rank": 1057
+  },
+  {
+    "tokenId": 1451,
+    "rarityScore": 131.32532400318826,
+    "rank": 1058
+  },
+  {
+    "tokenId": 763,
+    "rarityScore": 131.31723857824124,
+    "rank": 1059
+  },
+  {
+    "tokenId": 2006,
+    "rarityScore": 131.3068253480831,
+    "rank": 1060
+  },
+  {
+    "tokenId": 1951,
+    "rarityScore": 131.27551500309085,
+    "rank": 1061
+  },
+  {
+    "tokenId": 78,
+    "rarityScore": 131.22381033442971,
+    "rank": 1062
+  },
+  {
+    "tokenId": 1577,
+    "rarityScore": 131.0562978376173,
+    "rank": 1063
+  },
+  {
+    "tokenId": 92,
+    "rarityScore": 130.89360935422985,
+    "rank": 1064
+  },
+  {
+    "tokenId": 1989,
+    "rarityScore": 130.863363115801,
+    "rank": 1065
+  },
+  {
+    "tokenId": 1217,
+    "rarityScore": 130.86085252200098,
+    "rank": 1066
+  },
+  {
+    "tokenId": 129,
+    "rarityScore": 130.80795273369213,
+    "rank": 1067
+  },
+  {
+    "tokenId": 679,
+    "rarityScore": 130.78066984054072,
+    "rank": 1068
+  },
+  {
+    "tokenId": 1166,
+    "rarityScore": 130.72284563658158,
+    "rank": 1069
+  },
+  {
+    "tokenId": 1182,
+    "rarityScore": 130.6704267047132,
+    "rank": 1070
+  },
+  {
+    "tokenId": 1916,
+    "rarityScore": 130.5880947359933,
+    "rank": 1071
+  },
+  {
+    "tokenId": 2220,
+    "rarityScore": 130.56664966236343,
+    "rank": 1072
+  },
+  {
+    "tokenId": 593,
+    "rarityScore": 130.5446243115468,
+    "rank": 1073
+  },
+  {
+    "tokenId": 135,
+    "rarityScore": 130.4525551012359,
+    "rank": 1074
+  },
+  {
+    "tokenId": 1958,
+    "rarityScore": 130.33634236785014,
+    "rank": 1075
+  },
+  {
+    "tokenId": 1123,
+    "rarityScore": 130.1078168474416,
+    "rank": 1076
+  },
+  {
+    "tokenId": 1092,
+    "rarityScore": 130.0912357763919,
+    "rank": 1077
+  },
+  {
+    "tokenId": 53,
+    "rarityScore": 130.08100096885005,
+    "rank": 1078
+  },
+  {
+    "tokenId": 1568,
+    "rarityScore": 130.01863433608025,
+    "rank": 1079
+  },
+  {
+    "tokenId": 950,
+    "rarityScore": 129.9190685844625,
+    "rank": 1080
+  },
+  {
+    "tokenId": 1703,
+    "rarityScore": 129.81762363776957,
+    "rank": 1081
+  },
+  {
+    "tokenId": 623,
+    "rarityScore": 129.80082972461452,
+    "rank": 1082
+  },
+  {
+    "tokenId": 1841,
+    "rarityScore": 129.75324786562237,
+    "rank": 1083
+  },
+  {
+    "tokenId": 4,
+    "rarityScore": 129.71501062589468,
+    "rank": 1084
+  },
+  {
+    "tokenId": 678,
+    "rarityScore": 129.63154711814963,
+    "rank": 1085
+  },
+  {
+    "tokenId": 1073,
+    "rarityScore": 129.50767615283928,
+    "rank": 1086
+  },
+  {
+    "tokenId": 1987,
+    "rarityScore": 129.502961550788,
+    "rank": 1087
+  },
+  {
+    "tokenId": 2063,
+    "rarityScore": 129.4769294590708,
+    "rank": 1088
+  },
+  {
+    "tokenId": 405,
+    "rarityScore": 129.45591501138685,
+    "rank": 1089
+  },
+  {
+    "tokenId": 1178,
+    "rarityScore": 129.43131687124227,
+    "rank": 1090
+  },
+  {
+    "tokenId": 1056,
+    "rarityScore": 129.4104610939468,
+    "rank": 1091
+  },
+  {
+    "tokenId": 1638,
+    "rarityScore": 129.37393176499663,
+    "rank": 1092
+  },
+  {
+    "tokenId": 320,
+    "rarityScore": 129.3042607143583,
+    "rank": 1093
+  },
+  {
+    "tokenId": 1279,
+    "rarityScore": 129.30344186547222,
+    "rank": 1094
+  },
+  {
+    "tokenId": 901,
+    "rarityScore": 129.27383958561649,
+    "rank": 1095
+  },
+  {
+    "tokenId": 887,
+    "rarityScore": 129.2517921967225,
+    "rank": 1096
+  },
+  {
+    "tokenId": 936,
+    "rarityScore": 129.1052617755373,
+    "rank": 1097
+  },
+  {
+    "tokenId": 1284,
+    "rarityScore": 129.0371532443316,
+    "rank": 1098
+  },
+  {
+    "tokenId": 799,
+    "rarityScore": 129.01976534980906,
+    "rank": 1099
+  },
+  {
+    "tokenId": 447,
+    "rarityScore": 128.98678462438147,
+    "rank": 1100
+  },
+  {
+    "tokenId": 684,
+    "rarityScore": 128.97528841723735,
+    "rank": 1101
+  },
+  {
+    "tokenId": 361,
+    "rarityScore": 128.93307871878184,
+    "rank": 1102
+  },
+  {
+    "tokenId": 1678,
+    "rarityScore": 128.90351002013412,
+    "rank": 1103
+  },
+  {
+    "tokenId": 1017,
+    "rarityScore": 128.89693167979678,
+    "rank": 1104
+  },
+  {
+    "tokenId": 1119,
+    "rarityScore": 128.84770374656944,
+    "rank": 1105
+  },
+  {
+    "tokenId": 230,
+    "rarityScore": 128.81222303060756,
+    "rank": 1106
+  },
+  {
+    "tokenId": 1667,
+    "rarityScore": 128.78605422494167,
+    "rank": 1107
+  },
+  {
+    "tokenId": 2216,
+    "rarityScore": 128.73611234681337,
+    "rank": 1108
+  },
+  {
+    "tokenId": 1550,
+    "rarityScore": 128.69952260800312,
+    "rank": 1109
+  },
+  {
+    "tokenId": 161,
+    "rarityScore": 128.68452481048053,
+    "rank": 1110
+  },
+  {
+    "tokenId": 2052,
+    "rarityScore": 128.68448185949143,
+    "rank": 1111
+  },
+  {
+    "tokenId": 165,
+    "rarityScore": 128.6542549690612,
+    "rank": 1112
+  },
+  {
+    "tokenId": 2033,
+    "rarityScore": 128.62940183885678,
+    "rank": 1113
+  },
+  {
+    "tokenId": 1065,
+    "rarityScore": 128.6127776678208,
+    "rank": 1114
+  },
+  {
+    "tokenId": 291,
+    "rarityScore": 128.601662403061,
+    "rank": 1115
+  },
+  {
+    "tokenId": 939,
+    "rarityScore": 128.56913686663393,
+    "rank": 1116
+  },
+  {
+    "tokenId": 2001,
+    "rarityScore": 128.5601453635902,
+    "rank": 1117
+  },
+  {
+    "tokenId": 549,
+    "rarityScore": 128.52223831579374,
+    "rank": 1118
+  },
+  {
+    "tokenId": 437,
+    "rarityScore": 128.515300294646,
+    "rank": 1119
+  },
+  {
+    "tokenId": 1438,
+    "rarityScore": 128.44137659704126,
+    "rank": 1120
+  },
+  {
+    "tokenId": 231,
+    "rarityScore": 128.42226343821358,
+    "rank": 1121
+  },
+  {
+    "tokenId": 931,
+    "rarityScore": 128.41467536093683,
+    "rank": 1122
+  },
+  {
+    "tokenId": 615,
+    "rarityScore": 128.40746739138714,
+    "rank": 1123
+  },
+  {
+    "tokenId": 1004,
+    "rarityScore": 128.363497860615,
+    "rank": 1124
+  },
+  {
+    "tokenId": 2153,
+    "rarityScore": 128.35335399680469,
+    "rank": 1125
+  },
+  {
+    "tokenId": 1043,
+    "rarityScore": 128.34606347691127,
+    "rank": 1126
+  },
+  {
+    "tokenId": 2117,
+    "rarityScore": 128.32930443716424,
+    "rank": 1127
+  },
+  {
+    "tokenId": 1076,
+    "rarityScore": 128.32012712935958,
+    "rank": 1128
+  },
+  {
+    "tokenId": 273,
+    "rarityScore": 128.31040249997977,
+    "rank": 1129
+  },
+  {
+    "tokenId": 1205,
+    "rarityScore": 128.2941487789743,
+    "rank": 1130
+  },
+  {
+    "tokenId": 1019,
+    "rarityScore": 128.24868447422665,
+    "rank": 1131
+  },
+  {
+    "tokenId": 1528,
+    "rarityScore": 128.2348486903168,
+    "rank": 1132
+  },
+  {
+    "tokenId": 1523,
+    "rarityScore": 128.2267083643611,
+    "rank": 1133
+  },
+  {
+    "tokenId": 435,
+    "rarityScore": 128.17858008291287,
+    "rank": 1134
+  },
+  {
+    "tokenId": 978,
+    "rarityScore": 128.10253268248567,
+    "rank": 1135
+  },
+  {
+    "tokenId": 1557,
+    "rarityScore": 128.04367954865535,
+    "rank": 1136
+  },
+  {
+    "tokenId": 36,
+    "rarityScore": 128.0352577252153,
+    "rank": 1137
+  },
+  {
+    "tokenId": 688,
+    "rarityScore": 127.86775593053623,
+    "rank": 1138
+  },
+  {
+    "tokenId": 744,
+    "rarityScore": 127.8570040524448,
+    "rank": 1139
+  },
+  {
+    "tokenId": 1503,
+    "rarityScore": 127.84313972494431,
+    "rank": 1140
+  },
+  {
+    "tokenId": 241,
+    "rarityScore": 127.76699766558396,
+    "rank": 1141
+  },
+  {
+    "tokenId": 1571,
+    "rarityScore": 127.75031460775163,
+    "rank": 1142
+  },
+  {
+    "tokenId": 603,
+    "rarityScore": 127.68754787320034,
+    "rank": 1143
+  },
+  {
+    "tokenId": 1697,
+    "rarityScore": 127.64804281194888,
+    "rank": 1144
+  },
+  {
+    "tokenId": 683,
+    "rarityScore": 127.59314558994933,
+    "rank": 1145
+  },
+  {
+    "tokenId": 1183,
+    "rarityScore": 127.59006961980036,
+    "rank": 1146
+  },
+  {
+    "tokenId": 1501,
+    "rarityScore": 127.57404368222973,
+    "rank": 1147
+  },
+  {
+    "tokenId": 386,
+    "rarityScore": 127.47340932103918,
+    "rank": 1148
+  },
+  {
+    "tokenId": 1489,
+    "rarityScore": 127.43812329949846,
+    "rank": 1149
+  },
+  {
+    "tokenId": 940,
+    "rarityScore": 127.4003690209504,
+    "rank": 1150
+  },
+  {
+    "tokenId": 1379,
+    "rarityScore": 127.38875706517106,
+    "rank": 1151
+  },
+  {
+    "tokenId": 170,
+    "rarityScore": 127.36449438930441,
+    "rank": 1152
+  },
+  {
+    "tokenId": 1565,
+    "rarityScore": 127.33474704684947,
+    "rank": 1153
+  },
+  {
+    "tokenId": 1402,
+    "rarityScore": 127.3236076265234,
+    "rank": 1154
+  },
+  {
+    "tokenId": 1780,
+    "rarityScore": 127.31797159110278,
+    "rank": 1155
+  },
+  {
+    "tokenId": 1658,
+    "rarityScore": 127.28455423276186,
+    "rank": 1156
+  },
+  {
+    "tokenId": 438,
+    "rarityScore": 127.25690021313379,
+    "rank": 1157
+  },
+  {
+    "tokenId": 1316,
+    "rarityScore": 127.1935722154197,
+    "rank": 1158
+  },
+  {
+    "tokenId": 2029,
+    "rarityScore": 127.1757732595132,
+    "rank": 1159
+  },
+  {
+    "tokenId": 1040,
+    "rarityScore": 127.15441453354802,
+    "rank": 1160
+  },
+  {
+    "tokenId": 1027,
+    "rarityScore": 127.10493172761343,
+    "rank": 1161
+  },
+  {
+    "tokenId": 1439,
+    "rarityScore": 127.07168576337132,
+    "rank": 1162
+  },
+  {
+    "tokenId": 202,
+    "rarityScore": 127.02596151899539,
+    "rank": 1163
+  },
+  {
+    "tokenId": 1472,
+    "rarityScore": 126.95904048396727,
+    "rank": 1164
+  },
+  {
+    "tokenId": 468,
+    "rarityScore": 126.91181628160497,
+    "rank": 1165
+  },
+  {
+    "tokenId": 657,
+    "rarityScore": 126.88746284615377,
+    "rank": 1166
+  },
+  {
+    "tokenId": 96,
+    "rarityScore": 126.86418161125896,
+    "rank": 1167
+  },
+  {
+    "tokenId": 431,
+    "rarityScore": 126.8596084303111,
+    "rank": 1168
+  },
+  {
+    "tokenId": 1878,
+    "rarityScore": 126.81112262297734,
+    "rank": 1169
+  },
+  {
+    "tokenId": 909,
+    "rarityScore": 126.78168971996375,
+    "rank": 1170
+  },
+  {
+    "tokenId": 1465,
+    "rarityScore": 126.77656120075162,
+    "rank": 1171
+  },
+  {
+    "tokenId": 1069,
+    "rarityScore": 126.75955486844232,
+    "rank": 1172
+  },
+  {
+    "tokenId": 1887,
+    "rarityScore": 126.57508463165132,
+    "rank": 1173
+  },
+  {
+    "tokenId": 1582,
+    "rarityScore": 126.43738715023886,
+    "rank": 1174
+  },
+  {
+    "tokenId": 597,
+    "rarityScore": 126.40177357237633,
+    "rank": 1175
+  },
+  {
+    "tokenId": 583,
+    "rarityScore": 126.37017533795887,
+    "rank": 1176
+  },
+  {
+    "tokenId": 1640,
+    "rarityScore": 126.3383218937843,
+    "rank": 1177
+  },
+  {
+    "tokenId": 464,
+    "rarityScore": 126.32363743991259,
+    "rank": 1178
+  },
+  {
+    "tokenId": 1428,
+    "rarityScore": 126.28840403971734,
+    "rank": 1179
+  },
+  {
+    "tokenId": 1264,
+    "rarityScore": 126.28811769297627,
+    "rank": 1180
+  },
+  {
+    "tokenId": 2139,
+    "rarityScore": 126.27653614179641,
+    "rank": 1181
+  },
+  {
+    "tokenId": 1447,
+    "rarityScore": 126.26814248863879,
+    "rank": 1182
+  },
+  {
+    "tokenId": 893,
+    "rarityScore": 126.24334143562331,
+    "rank": 1183
+  },
+  {
+    "tokenId": 203,
+    "rarityScore": 126.20943214761122,
+    "rank": 1184
+  },
+  {
+    "tokenId": 1554,
+    "rarityScore": 126.20872839445637,
+    "rank": 1185
+  },
+  {
+    "tokenId": 124,
+    "rarityScore": 126.18326153135483,
+    "rank": 1186
+  },
+  {
+    "tokenId": 1509,
+    "rarityScore": 126.04311032085529,
+    "rank": 1187
+  },
+  {
+    "tokenId": 1601,
+    "rarityScore": 126.01961202559013,
+    "rank": 1188
+  },
+  {
+    "tokenId": 385,
+    "rarityScore": 126.01173359609463,
+    "rank": 1189
+  },
+  {
+    "tokenId": 1660,
+    "rarityScore": 125.98036171851231,
+    "rank": 1190
+  },
+  {
+    "tokenId": 1478,
+    "rarityScore": 125.96019272154071,
+    "rank": 1191
+  },
+  {
+    "tokenId": 655,
+    "rarityScore": 125.82332855222967,
+    "rank": 1192
+  },
+  {
+    "tokenId": 1479,
+    "rarityScore": 125.78823855285442,
+    "rank": 1193
+  },
+  {
+    "tokenId": 626,
+    "rarityScore": 125.76019874447096,
+    "rank": 1194
+  },
+  {
+    "tokenId": 565,
+    "rarityScore": 125.71395462052712,
+    "rank": 1195
+  },
+  {
+    "tokenId": 1207,
+    "rarityScore": 125.68147279171524,
+    "rank": 1196
+  },
+  {
+    "tokenId": 1721,
+    "rarityScore": 125.5723649473626,
+    "rank": 1197
+  },
+  {
+    "tokenId": 1714,
+    "rarityScore": 125.54429378860382,
+    "rank": 1198
+  },
+  {
+    "tokenId": 1462,
+    "rarityScore": 125.48073952734977,
+    "rank": 1199
+  },
+  {
+    "tokenId": 7,
+    "rarityScore": 125.4419172222117,
+    "rank": 1200
+  },
+  {
+    "tokenId": 841,
+    "rarityScore": 125.44048580537353,
+    "rank": 1201
+  },
+  {
+    "tokenId": 279,
+    "rarityScore": 125.39103671995463,
+    "rank": 1202
+  },
+  {
+    "tokenId": 49,
+    "rarityScore": 125.30125159339832,
+    "rank": 1203
+  },
+  {
+    "tokenId": 1928,
+    "rarityScore": 125.24964523458182,
+    "rank": 1204
+  },
+  {
+    "tokenId": 346,
+    "rarityScore": 125.23598744122242,
+    "rank": 1205
+  },
+  {
+    "tokenId": 1656,
+    "rarityScore": 125.13412594213293,
+    "rank": 1206
+  },
+  {
+    "tokenId": 166,
+    "rarityScore": 125.1323488961468,
+    "rank": 1207
+  },
+  {
+    "tokenId": 31,
+    "rarityScore": 125.11883464914882,
+    "rank": 1208
+  },
+  {
+    "tokenId": 1224,
+    "rarityScore": 125.07822256200198,
+    "rank": 1209
+  },
+  {
+    "tokenId": 898,
+    "rarityScore": 125.0581714350459,
+    "rank": 1210
+  },
+  {
+    "tokenId": 983,
+    "rarityScore": 125.02039571280062,
+    "rank": 1211
+  },
+  {
+    "tokenId": 1021,
+    "rarityScore": 125.01133530371027,
+    "rank": 1212
+  },
+  {
+    "tokenId": 1062,
+    "rarityScore": 125.00996343073987,
+    "rank": 1213
+  },
+  {
+    "tokenId": 1437,
+    "rarityScore": 124.93760904799774,
+    "rank": 1214
+  },
+  {
+    "tokenId": 1564,
+    "rarityScore": 124.9367346254219,
+    "rank": 1215
+  },
+  {
+    "tokenId": 1575,
+    "rarityScore": 124.87794115308938,
+    "rank": 1216
+  },
+  {
+    "tokenId": 1047,
+    "rarityScore": 124.86225680897553,
+    "rank": 1217
+  },
+  {
+    "tokenId": 356,
+    "rarityScore": 124.85009619901115,
+    "rank": 1218
+  },
+  {
+    "tokenId": 1986,
+    "rarityScore": 124.79870803316558,
+    "rank": 1219
+  },
+  {
+    "tokenId": 1935,
+    "rarityScore": 124.684839757232,
+    "rank": 1220
+  },
+  {
+    "tokenId": 858,
+    "rarityScore": 124.57862163630023,
+    "rank": 1221
+  },
+  {
+    "tokenId": 1731,
+    "rarityScore": 124.46717856904158,
+    "rank": 1222
+  },
+  {
+    "tokenId": 471,
+    "rarityScore": 124.45983816080053,
+    "rank": 1223
+  },
+  {
+    "tokenId": 1946,
+    "rarityScore": 124.45545466500882,
+    "rank": 1224
+  },
+  {
+    "tokenId": 1324,
+    "rarityScore": 124.45460741757036,
+    "rank": 1225
+  },
+  {
+    "tokenId": 1126,
+    "rarityScore": 124.43949130882496,
+    "rank": 1226
+  },
+  {
+    "tokenId": 423,
+    "rarityScore": 124.41601832294374,
+    "rank": 1227
+  },
+  {
+    "tokenId": 301,
+    "rarityScore": 124.3842048548883,
+    "rank": 1228
+  },
+  {
+    "tokenId": 576,
+    "rarityScore": 124.37249300494437,
+    "rank": 1229
+  },
+  {
+    "tokenId": 880,
+    "rarityScore": 124.30949418963066,
+    "rank": 1230
+  },
+  {
+    "tokenId": 1310,
+    "rarityScore": 124.30775367694655,
+    "rank": 1231
+  },
+  {
+    "tokenId": 876,
+    "rarityScore": 124.30580740317501,
+    "rank": 1232
+  },
+  {
+    "tokenId": 1115,
+    "rarityScore": 124.29683248827217,
+    "rank": 1233
+  },
+  {
+    "tokenId": 505,
+    "rarityScore": 124.19566549600442,
+    "rank": 1234
+  },
+  {
+    "tokenId": 965,
+    "rarityScore": 124.15282103192331,
+    "rank": 1235
+  },
+  {
+    "tokenId": 1053,
+    "rarityScore": 124.0884253959496,
+    "rank": 1236
+  },
+  {
+    "tokenId": 1687,
+    "rarityScore": 124.08798000315029,
+    "rank": 1237
+  },
+  {
+    "tokenId": 569,
+    "rarityScore": 124.0824219228462,
+    "rank": 1238
+  },
+  {
+    "tokenId": 40,
+    "rarityScore": 124.07677174900799,
+    "rank": 1239
+  },
+  {
+    "tokenId": 1840,
+    "rarityScore": 124.02908693737844,
+    "rank": 1240
+  },
+  {
+    "tokenId": 61,
+    "rarityScore": 124.02495532727994,
+    "rank": 1241
+  },
+  {
+    "tokenId": 1988,
+    "rarityScore": 124.01881085947849,
+    "rank": 1242
+  },
+  {
+    "tokenId": 766,
+    "rarityScore": 124.0175816687059,
+    "rank": 1243
+  },
+  {
+    "tokenId": 2166,
+    "rarityScore": 123.94327588974572,
+    "rank": 1244
+  },
+  {
+    "tokenId": 24,
+    "rarityScore": 123.85755323853463,
+    "rank": 1245
+  },
+  {
+    "tokenId": 516,
+    "rarityScore": 123.83744417243051,
+    "rank": 1246
+  },
+  {
+    "tokenId": 419,
+    "rarityScore": 123.73046368349297,
+    "rank": 1247
+  },
+  {
+    "tokenId": 605,
+    "rarityScore": 123.71836727791413,
+    "rank": 1248
+  },
+  {
+    "tokenId": 1083,
+    "rarityScore": 123.65459640286633,
+    "rank": 1249
+  },
+  {
+    "tokenId": 1921,
+    "rarityScore": 123.63642739667557,
+    "rank": 1250
+  },
+  {
+    "tokenId": 874,
+    "rarityScore": 123.63601707270774,
+    "rank": 1251
+  },
+  {
+    "tokenId": 439,
+    "rarityScore": 123.52738530378912,
+    "rank": 1252
+  },
+  {
+    "tokenId": 971,
+    "rarityScore": 123.52095541225425,
+    "rank": 1253
+  },
+  {
+    "tokenId": 1193,
+    "rarityScore": 123.46779899565378,
+    "rank": 1254
+  },
+  {
+    "tokenId": 616,
+    "rarityScore": 123.41786169987594,
+    "rank": 1255
+  },
+  {
+    "tokenId": 821,
+    "rarityScore": 123.318993918313,
+    "rank": 1256
+  },
+  {
+    "tokenId": 1919,
+    "rarityScore": 123.27458555862158,
+    "rank": 1257
+  },
+  {
+    "tokenId": 168,
+    "rarityScore": 123.25714254429383,
+    "rank": 1258
+  },
+  {
+    "tokenId": 15,
+    "rarityScore": 123.24976843739076,
+    "rank": 1259
+  },
+  {
+    "tokenId": 1802,
+    "rarityScore": 123.18146135042807,
+    "rank": 1260
+  },
+  {
+    "tokenId": 1542,
+    "rarityScore": 123.17647103486597,
+    "rank": 1261
+  },
+  {
+    "tokenId": 614,
+    "rarityScore": 123.17563227520115,
+    "rank": 1262
+  },
+  {
+    "tokenId": 1707,
+    "rarityScore": 123.16158768639218,
+    "rank": 1263
+  },
+  {
+    "tokenId": 680,
+    "rarityScore": 123.11527247074672,
+    "rank": 1264
+  },
+  {
+    "tokenId": 1288,
+    "rarityScore": 123.11302716195631,
+    "rank": 1265
+  },
+  {
+    "tokenId": 1893,
+    "rarityScore": 123.10900152909696,
+    "rank": 1266
+  },
+  {
+    "tokenId": 1442,
+    "rarityScore": 123.09208720013692,
+    "rank": 1267
+  },
+  {
+    "tokenId": 46,
+    "rarityScore": 123.0890596456298,
+    "rank": 1268
+  },
+  {
+    "tokenId": 428,
+    "rarityScore": 123.03611764721356,
+    "rank": 1269
+  },
+  {
+    "tokenId": 2190,
+    "rarityScore": 122.98428905198993,
+    "rank": 1270
+  },
+  {
+    "tokenId": 1181,
+    "rarityScore": 122.95883523286318,
+    "rank": 1271
+  },
+  {
+    "tokenId": 562,
+    "rarityScore": 122.95276450266687,
+    "rank": 1272
+  },
+  {
+    "tokenId": 961,
+    "rarityScore": 122.9134294867216,
+    "rank": 1273
+  },
+  {
+    "tokenId": 181,
+    "rarityScore": 122.84312046479755,
+    "rank": 1274
+  },
+  {
+    "tokenId": 1629,
+    "rarityScore": 122.83985544782557,
+    "rank": 1275
+  },
+  {
+    "tokenId": 791,
+    "rarityScore": 122.79115772407306,
+    "rank": 1276
+  },
+  {
+    "tokenId": 2079,
+    "rarityScore": 122.78289610308182,
+    "rank": 1277
+  },
+  {
+    "tokenId": 1018,
+    "rarityScore": 122.76313735344549,
+    "rank": 1278
+  },
+  {
+    "tokenId": 1079,
+    "rarityScore": 122.68767094907321,
+    "rank": 1279
+  },
+  {
+    "tokenId": 233,
+    "rarityScore": 122.68085826380465,
+    "rank": 1280
+  },
+  {
+    "tokenId": 1549,
+    "rarityScore": 122.58059611383071,
+    "rank": 1281
+  },
+  {
+    "tokenId": 116,
+    "rarityScore": 122.57506446046645,
+    "rank": 1282
+  },
+  {
+    "tokenId": 1347,
+    "rarityScore": 122.55630993367646,
+    "rank": 1283
+  },
+  {
+    "tokenId": 2179,
+    "rarityScore": 122.55220259120816,
+    "rank": 1284
+  },
+  {
+    "tokenId": 497,
+    "rarityScore": 122.46535539572594,
+    "rank": 1285
+  },
+  {
+    "tokenId": 1849,
+    "rarityScore": 122.45971703050793,
+    "rank": 1286
+  },
+  {
+    "tokenId": 2170,
+    "rarityScore": 122.37235047925473,
+    "rank": 1287
+  },
+  {
+    "tokenId": 2184,
+    "rarityScore": 122.35770099925215,
+    "rank": 1288
+  },
+  {
+    "tokenId": 772,
+    "rarityScore": 122.31306828720675,
+    "rank": 1289
+  },
+  {
+    "tokenId": 867,
+    "rarityScore": 122.28374071753542,
+    "rank": 1290
+  },
+  {
+    "tokenId": 1696,
+    "rarityScore": 122.2446497976259,
+    "rank": 1291
+  },
+  {
+    "tokenId": 2103,
+    "rarityScore": 122.22924712603498,
+    "rank": 1292
+  },
+  {
+    "tokenId": 687,
+    "rarityScore": 122.20990011286696,
+    "rank": 1293
+  },
+  {
+    "tokenId": 793,
+    "rarityScore": 122.20872664605471,
+    "rank": 1294
+  },
+  {
+    "tokenId": 589,
+    "rarityScore": 122.14045264228218,
+    "rank": 1295
+  },
+  {
+    "tokenId": 896,
+    "rarityScore": 122.08895042497045,
+    "rank": 1296
+  },
+  {
+    "tokenId": 1273,
+    "rarityScore": 122.08059294603167,
+    "rank": 1297
+  },
+  {
+    "tokenId": 213,
+    "rarityScore": 122.02282125977335,
+    "rank": 1298
+  },
+  {
+    "tokenId": 1203,
+    "rarityScore": 122.00583297123146,
+    "rank": 1299
+  },
+  {
+    "tokenId": 842,
+    "rarityScore": 122.00577412387307,
+    "rank": 1300
+  },
+  {
+    "tokenId": 329,
+    "rarityScore": 122.0049312446691,
+    "rank": 1301
+  },
+  {
+    "tokenId": 1517,
+    "rarityScore": 121.99712673384788,
+    "rank": 1302
+  },
+  {
+    "tokenId": 1312,
+    "rarityScore": 121.94781299468445,
+    "rank": 1303
+  },
+  {
+    "tokenId": 1829,
+    "rarityScore": 121.93995572648289,
+    "rank": 1304
+  },
+  {
+    "tokenId": 1897,
+    "rarityScore": 121.91342893748875,
+    "rank": 1305
+  },
+  {
+    "tokenId": 1328,
+    "rarityScore": 121.88645251928114,
+    "rank": 1306
+  },
+  {
+    "tokenId": 2047,
+    "rarityScore": 121.8859847950201,
+    "rank": 1307
+  },
+  {
+    "tokenId": 645,
+    "rarityScore": 121.88350330290726,
+    "rank": 1308
+  },
+  {
+    "tokenId": 357,
+    "rarityScore": 121.82484115107883,
+    "rank": 1309
+  },
+  {
+    "tokenId": 1996,
+    "rarityScore": 121.78550019806065,
+    "rank": 1310
+  },
+  {
+    "tokenId": 2,
+    "rarityScore": 121.73582452009407,
+    "rank": 1311
+  },
+  {
+    "tokenId": 1454,
+    "rarityScore": 121.73017652834166,
+    "rank": 1312
+  },
+  {
+    "tokenId": 888,
+    "rarityScore": 121.67275331401459,
+    "rank": 1313
+  },
+  {
+    "tokenId": 1755,
+    "rarityScore": 121.65167764941293,
+    "rank": 1314
+  },
+  {
+    "tokenId": 1977,
+    "rarityScore": 121.63999535204576,
+    "rank": 1315
+  },
+  {
+    "tokenId": 932,
+    "rarityScore": 121.6374944457284,
+    "rank": 1316
+  },
+  {
+    "tokenId": 1785,
+    "rarityScore": 121.61038919548747,
+    "rank": 1317
+  },
+  {
+    "tokenId": 254,
+    "rarityScore": 121.47091086399922,
+    "rank": 1318
+  },
+  {
+    "tokenId": 1538,
+    "rarityScore": 121.46237131464531,
+    "rank": 1319
+  },
+  {
+    "tokenId": 1733,
+    "rarityScore": 121.46124302849162,
+    "rank": 1320
+  },
+  {
+    "tokenId": 781,
+    "rarityScore": 121.45535903597218,
+    "rank": 1321
+  },
+  {
+    "tokenId": 1786,
+    "rarityScore": 121.45313897357903,
+    "rank": 1322
+  },
+  {
+    "tokenId": 1464,
+    "rarityScore": 121.45284117518536,
+    "rank": 1323
+  },
+  {
+    "tokenId": 2065,
+    "rarityScore": 121.44578753122292,
+    "rank": 1324
+  },
+  {
+    "tokenId": 666,
+    "rarityScore": 121.40653771528453,
+    "rank": 1325
+  },
+  {
+    "tokenId": 1758,
+    "rarityScore": 121.40079154289177,
+    "rank": 1326
+  },
+  {
+    "tokenId": 121,
+    "rarityScore": 121.38223253800727,
+    "rank": 1327
+  },
+  {
+    "tokenId": 192,
+    "rarityScore": 121.37242816542924,
+    "rank": 1328
+  },
+  {
+    "tokenId": 1370,
+    "rarityScore": 121.3425908356013,
+    "rank": 1329
+  },
+  {
+    "tokenId": 2061,
+    "rarityScore": 121.31984448786585,
+    "rank": 1330
+  },
+  {
+    "tokenId": 2199,
+    "rarityScore": 121.30832412596759,
+    "rank": 1331
+  },
+  {
+    "tokenId": 981,
+    "rarityScore": 121.24974172344915,
+    "rank": 1332
+  },
+  {
+    "tokenId": 1621,
+    "rarityScore": 121.23984814525745,
+    "rank": 1333
+  },
+  {
+    "tokenId": 207,
+    "rarityScore": 121.21129871017891,
+    "rank": 1334
+  },
+  {
+    "tokenId": 1546,
+    "rarityScore": 121.16559503398875,
+    "rank": 1335
+  },
+  {
+    "tokenId": 64,
+    "rarityScore": 121.15661349875327,
+    "rank": 1336
+  },
+  {
+    "tokenId": 443,
+    "rarityScore": 121.13371952430484,
+    "rank": 1337
+  },
+  {
+    "tokenId": 935,
+    "rarityScore": 121.11670357679293,
+    "rank": 1338
+  },
+  {
+    "tokenId": 1448,
+    "rarityScore": 121.11374112526711,
+    "rank": 1339
+  },
+  {
+    "tokenId": 404,
+    "rarityScore": 121.1087821747178,
+    "rank": 1340
+  },
+  {
+    "tokenId": 771,
+    "rarityScore": 121.09026816832603,
+    "rank": 1341
+  },
+  {
+    "tokenId": 1597,
+    "rarityScore": 121.06863015228593,
+    "rank": 1342
+  },
+  {
+    "tokenId": 1098,
+    "rarityScore": 121.05368561868183,
+    "rank": 1343
+  },
+  {
+    "tokenId": 825,
+    "rarityScore": 121.00427246119206,
+    "rank": 1344
+  },
+  {
+    "tokenId": 779,
+    "rarityScore": 120.97628463393778,
+    "rank": 1345
+  },
+  {
+    "tokenId": 1108,
+    "rarityScore": 120.9576762160981,
+    "rank": 1346
+  },
+  {
+    "tokenId": 1112,
+    "rarityScore": 120.92801805909559,
+    "rank": 1347
+  },
+  {
+    "tokenId": 765,
+    "rarityScore": 120.77727944519869,
+    "rank": 1348
+  },
+  {
+    "tokenId": 1800,
+    "rarityScore": 120.7764351953168,
+    "rank": 1349
+  },
+  {
+    "tokenId": 845,
+    "rarityScore": 120.77267500014642,
+    "rank": 1350
+  },
+  {
+    "tokenId": 718,
+    "rarityScore": 120.72538422138214,
+    "rank": 1351
+  },
+  {
+    "tokenId": 1259,
+    "rarityScore": 120.71588767497181,
+    "rank": 1352
+  },
+  {
+    "tokenId": 1038,
+    "rarityScore": 120.70957110227423,
+    "rank": 1353
+  },
+  {
+    "tokenId": 1315,
+    "rarityScore": 120.697252218937,
+    "rank": 1354
+  },
+  {
+    "tokenId": 1890,
+    "rarityScore": 120.69384931351541,
+    "rank": 1355
+  },
+  {
+    "tokenId": 182,
+    "rarityScore": 120.65742747040521,
+    "rank": 1356
+  },
+  {
+    "tokenId": 1219,
+    "rarityScore": 120.65382441571484,
+    "rank": 1357
+  },
+  {
+    "tokenId": 758,
+    "rarityScore": 120.63850656214055,
+    "rank": 1358
+  },
+  {
+    "tokenId": 1684,
+    "rarityScore": 120.61487403499967,
+    "rank": 1359
+  },
+  {
+    "tokenId": 1530,
+    "rarityScore": 120.55920914773941,
+    "rank": 1360
+  },
+  {
+    "tokenId": 80,
+    "rarityScore": 120.43460492169507,
+    "rank": 1361
+  },
+  {
+    "tokenId": 1393,
+    "rarityScore": 120.35511967334891,
+    "rank": 1362
+  },
+  {
+    "tokenId": 510,
+    "rarityScore": 120.31440748463343,
+    "rank": 1363
+  },
+  {
+    "tokenId": 1913,
+    "rarityScore": 120.29648516544758,
+    "rank": 1364
+  },
+  {
+    "tokenId": 1745,
+    "rarityScore": 120.2392595741681,
+    "rank": 1365
+  },
+  {
+    "tokenId": 602,
+    "rarityScore": 120.22658338825406,
+    "rank": 1366
+  },
+  {
+    "tokenId": 1788,
+    "rarityScore": 120.22139710311207,
+    "rank": 1367
+  },
+  {
+    "tokenId": 2058,
+    "rarityScore": 120.18631434029993,
+    "rank": 1368
+  },
+  {
+    "tokenId": 397,
+    "rarityScore": 120.18266426476222,
+    "rank": 1369
+  },
+  {
+    "tokenId": 238,
+    "rarityScore": 120.16599343282002,
+    "rank": 1370
+  },
+  {
+    "tokenId": 2221,
+    "rarityScore": 120.16592238676162,
+    "rank": 1371
+  },
+  {
+    "tokenId": 1414,
+    "rarityScore": 120.07059984535996,
+    "rank": 1372
+  },
+  {
+    "tokenId": 820,
+    "rarityScore": 120.03155236839308,
+    "rank": 1373
+  },
+  {
+    "tokenId": 751,
+    "rarityScore": 120.0219324688169,
+    "rank": 1374
+  },
+  {
+    "tokenId": 1100,
+    "rarityScore": 120.01872107213643,
+    "rank": 1375
+  },
+  {
+    "tokenId": 367,
+    "rarityScore": 120.0116654580052,
+    "rank": 1376
+  },
+  {
+    "tokenId": 16,
+    "rarityScore": 119.99907613737744,
+    "rank": 1377
+  },
+  {
+    "tokenId": 2081,
+    "rarityScore": 119.98888355414621,
+    "rank": 1378
+  },
+  {
+    "tokenId": 908,
+    "rarityScore": 119.98609245568997,
+    "rank": 1379
+  },
+  {
+    "tokenId": 599,
+    "rarityScore": 119.94852268990009,
+    "rank": 1380
+  },
+  {
+    "tokenId": 1303,
+    "rarityScore": 119.91370552796181,
+    "rank": 1381
+  },
+  {
+    "tokenId": 1868,
+    "rarityScore": 119.87838620495141,
+    "rank": 1382
+  },
+  {
+    "tokenId": 2000,
+    "rarityScore": 119.84962052160145,
+    "rank": 1383
+  },
+  {
+    "tokenId": 1962,
+    "rarityScore": 119.73912487521824,
+    "rank": 1384
+  },
+  {
+    "tokenId": 1308,
+    "rarityScore": 119.72467627602707,
+    "rank": 1385
+  },
+  {
+    "tokenId": 2048,
+    "rarityScore": 119.68008068165832,
+    "rank": 1386
+  },
+  {
+    "tokenId": 1655,
+    "rarityScore": 119.66455363731757,
+    "rank": 1387
+  },
+  {
+    "tokenId": 1372,
+    "rarityScore": 119.66092375275079,
+    "rank": 1388
+  },
+  {
+    "tokenId": 334,
+    "rarityScore": 119.62708205287669,
+    "rank": 1389
+  },
+  {
+    "tokenId": 1086,
+    "rarityScore": 119.62391274196347,
+    "rank": 1390
+  },
+  {
+    "tokenId": 1367,
+    "rarityScore": 119.57869491021422,
+    "rank": 1391
+  },
+  {
+    "tokenId": 1382,
+    "rarityScore": 119.47481360343389,
+    "rank": 1392
+  },
+  {
+    "tokenId": 1819,
+    "rarityScore": 119.46335081139738,
+    "rank": 1393
+  },
+  {
+    "tokenId": 109,
+    "rarityScore": 119.43348440217801,
+    "rank": 1394
+  },
+  {
+    "tokenId": 1360,
+    "rarityScore": 119.39333684235514,
+    "rank": 1395
+  },
+  {
+    "tokenId": 145,
+    "rarityScore": 119.37034981722086,
+    "rank": 1396
+  },
+  {
+    "tokenId": 548,
+    "rarityScore": 119.36858328657817,
+    "rank": 1397
+  },
+  {
+    "tokenId": 962,
+    "rarityScore": 119.35990590654424,
+    "rank": 1398
+  },
+  {
+    "tokenId": 835,
+    "rarityScore": 119.33947310084967,
+    "rank": 1399
+  },
+  {
+    "tokenId": 1772,
+    "rarityScore": 119.30250436132955,
+    "rank": 1400
+  },
+  {
+    "tokenId": 560,
+    "rarityScore": 119.28742324507917,
+    "rank": 1401
+  },
+  {
+    "tokenId": 998,
+    "rarityScore": 119.28535319719683,
+    "rank": 1402
+  },
+  {
+    "tokenId": 1748,
+    "rarityScore": 119.28140032757992,
+    "rank": 1403
+  },
+  {
+    "tokenId": 466,
+    "rarityScore": 119.23653544830599,
+    "rank": 1404
+  },
+  {
+    "tokenId": 1547,
+    "rarityScore": 119.2324403639669,
+    "rank": 1405
+  },
+  {
+    "tokenId": 289,
+    "rarityScore": 119.19359724679605,
+    "rank": 1406
+  },
+  {
+    "tokenId": 1419,
+    "rarityScore": 119.16418774192302,
+    "rank": 1407
+  },
+  {
+    "tokenId": 1596,
+    "rarityScore": 119.16009922988775,
+    "rank": 1408
+  },
+  {
+    "tokenId": 564,
+    "rarityScore": 119.14470437096476,
+    "rank": 1409
+  },
+  {
+    "tokenId": 216,
+    "rarityScore": 119.14233469108004,
+    "rank": 1410
+  },
+  {
+    "tokenId": 2138,
+    "rarityScore": 119.1113515322898,
+    "rank": 1411
+  },
+  {
+    "tokenId": 1825,
+    "rarityScore": 119.1034500449569,
+    "rank": 1412
+  },
+  {
+    "tokenId": 1039,
+    "rarityScore": 119.0833092038937,
+    "rank": 1413
+  },
+  {
+    "tokenId": 1915,
+    "rarityScore": 118.93404115612788,
+    "rank": 1414
+  },
+  {
+    "tokenId": 525,
+    "rarityScore": 118.93317222868863,
+    "rank": 1415
+  },
+  {
+    "tokenId": 354,
+    "rarityScore": 118.93081185820785,
+    "rank": 1416
+  },
+  {
+    "tokenId": 402,
+    "rarityScore": 118.91250724155434,
+    "rank": 1417
+  },
+  {
+    "tokenId": 2152,
+    "rarityScore": 118.86661732676652,
+    "rank": 1418
+  },
+  {
+    "tokenId": 1396,
+    "rarityScore": 118.8284681214355,
+    "rank": 1419
+  },
+  {
+    "tokenId": 378,
+    "rarityScore": 118.8181405603087,
+    "rank": 1420
+  },
+  {
+    "tokenId": 628,
+    "rarityScore": 118.79270239982803,
+    "rank": 1421
+  },
+  {
+    "tokenId": 1116,
+    "rarityScore": 118.76786512578867,
+    "rank": 1422
+  },
+  {
+    "tokenId": 750,
+    "rarityScore": 118.76728354663882,
+    "rank": 1423
+  },
+  {
+    "tokenId": 566,
+    "rarityScore": 118.65465028857442,
+    "rank": 1424
+  },
+  {
+    "tokenId": 1652,
+    "rarityScore": 118.64156510405945,
+    "rank": 1425
+  },
+  {
+    "tokenId": 989,
+    "rarityScore": 118.59706555476646,
+    "rank": 1426
+  },
+  {
+    "tokenId": 237,
+    "rarityScore": 118.55243172449258,
+    "rank": 1427
+  },
+  {
+    "tokenId": 822,
+    "rarityScore": 118.54768649094864,
+    "rank": 1428
+  },
+  {
+    "tokenId": 1751,
+    "rarityScore": 118.54565615470233,
+    "rank": 1429
+  },
+  {
+    "tokenId": 2125,
+    "rarityScore": 118.5075056330799,
+    "rank": 1430
+  },
+  {
+    "tokenId": 296,
+    "rarityScore": 118.48631354278635,
+    "rank": 1431
+  },
+  {
+    "tokenId": 1272,
+    "rarityScore": 118.48052706288324,
+    "rank": 1432
+  },
+  {
+    "tokenId": 82,
+    "rarityScore": 118.40728841472608,
+    "rank": 1433
+  },
+  {
+    "tokenId": 1502,
+    "rarityScore": 118.38045439386293,
+    "rank": 1434
+  },
+  {
+    "tokenId": 380,
+    "rarityScore": 118.33467509092746,
+    "rank": 1435
+  },
+  {
+    "tokenId": 933,
+    "rarityScore": 118.3190280801163,
+    "rank": 1436
+  },
+  {
+    "tokenId": 928,
+    "rarityScore": 118.29233401701379,
+    "rank": 1437
+  },
+  {
+    "tokenId": 260,
+    "rarityScore": 118.2779058977726,
+    "rank": 1438
+  },
+  {
+    "tokenId": 2085,
+    "rarityScore": 118.23447917867261,
+    "rank": 1439
+  },
+  {
+    "tokenId": 1963,
+    "rarityScore": 118.16647988207568,
+    "rank": 1440
+  },
+  {
+    "tokenId": 840,
+    "rarityScore": 118.13278945333512,
+    "rank": 1441
+  },
+  {
+    "tokenId": 1514,
+    "rarityScore": 118.10661711254653,
+    "rank": 1442
+  },
+  {
+    "tokenId": 20,
+    "rarityScore": 118.06631182386829,
+    "rank": 1443
+  },
+  {
+    "tokenId": 1527,
+    "rarityScore": 118.01584949092464,
+    "rank": 1444
+  },
+  {
+    "tokenId": 1787,
+    "rarityScore": 117.97349400290916,
+    "rank": 1445
+  },
+  {
+    "tokenId": 276,
+    "rarityScore": 117.94051768454574,
+    "rank": 1446
+  },
+  {
+    "tokenId": 119,
+    "rarityScore": 117.93521871243902,
+    "rank": 1447
+  },
+  {
+    "tokenId": 521,
+    "rarityScore": 117.84780341617538,
+    "rank": 1448
+  },
+  {
+    "tokenId": 637,
+    "rarityScore": 117.77977627376795,
+    "rank": 1449
+  },
+  {
+    "tokenId": 1436,
+    "rarityScore": 117.72385061628506,
+    "rank": 1450
+  },
+  {
+    "tokenId": 713,
+    "rarityScore": 117.69092130111419,
+    "rank": 1451
+  },
+  {
+    "tokenId": 522,
+    "rarityScore": 117.66759976796112,
+    "rank": 1452
+  },
+  {
+    "tokenId": 1317,
+    "rarityScore": 117.63596435841103,
+    "rank": 1453
+  },
+  {
+    "tokenId": 948,
+    "rarityScore": 117.61723106296039,
+    "rank": 1454
+  },
+  {
+    "tokenId": 1322,
+    "rarityScore": 117.59744497376589,
+    "rank": 1455
+  },
+  {
+    "tokenId": 39,
+    "rarityScore": 117.57199992468969,
+    "rank": 1456
+  },
+  {
+    "tokenId": 1720,
+    "rarityScore": 117.532950053445,
+    "rank": 1457
+  },
+  {
+    "tokenId": 120,
+    "rarityScore": 117.5247791086104,
+    "rank": 1458
+  },
+  {
+    "tokenId": 1325,
+    "rarityScore": 117.51332128584804,
+    "rank": 1459
+  },
+  {
+    "tokenId": 2005,
+    "rarityScore": 117.50148321770457,
+    "rank": 1460
+  },
+  {
+    "tokenId": 643,
+    "rarityScore": 117.49533892426805,
+    "rank": 1461
+  },
+  {
+    "tokenId": 50,
+    "rarityScore": 117.32854946255064,
+    "rank": 1462
+  },
+  {
+    "tokenId": 2109,
+    "rarityScore": 117.28583029044528,
+    "rank": 1463
+  },
+  {
+    "tokenId": 1611,
+    "rarityScore": 117.26027042947369,
+    "rank": 1464
+  },
+  {
+    "tokenId": 285,
+    "rarityScore": 117.2483207581295,
+    "rank": 1465
+  },
+  {
+    "tokenId": 2171,
+    "rarityScore": 117.23326465043763,
+    "rank": 1466
+  },
+  {
+    "tokenId": 280,
+    "rarityScore": 117.21253368096882,
+    "rank": 1467
+  },
+  {
+    "tokenId": 1162,
+    "rarityScore": 117.21251122702743,
+    "rank": 1468
+  },
+  {
+    "tokenId": 148,
+    "rarityScore": 117.12338555846705,
+    "rank": 1469
+  },
+  {
+    "tokenId": 2180,
+    "rarityScore": 117.10254501233722,
+    "rank": 1470
+  },
+  {
+    "tokenId": 1364,
+    "rarityScore": 117.06657220359949,
+    "rank": 1471
+  },
+  {
+    "tokenId": 1513,
+    "rarityScore": 116.99492024439608,
+    "rank": 1472
+  },
+  {
+    "tokenId": 1715,
+    "rarityScore": 116.88481795003167,
+    "rank": 1473
+  },
+  {
+    "tokenId": 429,
+    "rarityScore": 116.84236465178225,
+    "rank": 1474
+  },
+  {
+    "tokenId": 573,
+    "rarityScore": 116.80062380686245,
+    "rank": 1475
+  },
+  {
+    "tokenId": 966,
+    "rarityScore": 116.75010886910196,
+    "rank": 1476
+  },
+  {
+    "tokenId": 735,
+    "rarityScore": 116.69144333950194,
+    "rank": 1477
+  },
+  {
+    "tokenId": 8,
+    "rarityScore": 116.66635415905509,
+    "rank": 1478
+  },
+  {
+    "tokenId": 972,
+    "rarityScore": 116.66099202016844,
+    "rank": 1479
+  },
+  {
+    "tokenId": 459,
+    "rarityScore": 116.64297869073674,
+    "rank": 1480
+  },
+  {
+    "tokenId": 715,
+    "rarityScore": 116.62763613092406,
+    "rank": 1481
+  },
+  {
+    "tokenId": 1453,
+    "rarityScore": 116.59343869537997,
+    "rank": 1482
+  },
+  {
+    "tokenId": 768,
+    "rarityScore": 116.58527937548745,
+    "rank": 1483
+  },
+  {
+    "tokenId": 1606,
+    "rarityScore": 116.46801320029054,
+    "rank": 1484
+  },
+  {
+    "tokenId": 1280,
+    "rarityScore": 116.45198826040729,
+    "rank": 1485
+  },
+  {
+    "tokenId": 682,
+    "rarityScore": 116.41236491670195,
+    "rank": 1486
+  },
+  {
+    "tokenId": 1291,
+    "rarityScore": 116.3709477713329,
+    "rank": 1487
+  },
+  {
+    "tokenId": 958,
+    "rarityScore": 116.36952182270312,
+    "rank": 1488
+  },
+  {
+    "tokenId": 1864,
+    "rarityScore": 116.35005242922449,
+    "rank": 1489
+  },
+  {
+    "tokenId": 883,
+    "rarityScore": 116.32417357370076,
+    "rank": 1490
+  },
+  {
+    "tokenId": 1237,
+    "rarityScore": 116.31847870715558,
+    "rank": 1491
+  },
+  {
+    "tokenId": 1057,
+    "rarityScore": 116.2761572323175,
+    "rank": 1492
+  },
+  {
+    "tokenId": 1290,
+    "rarityScore": 116.18934331603482,
+    "rank": 1493
+  },
+  {
+    "tokenId": 611,
+    "rarityScore": 116.17926185321504,
+    "rank": 1494
+  },
+  {
+    "tokenId": 2105,
+    "rarityScore": 116.11194173367633,
+    "rank": 1495
+  },
+  {
+    "tokenId": 1176,
+    "rarityScore": 116.04791447362739,
+    "rank": 1496
+  },
+  {
+    "tokenId": 1446,
+    "rarityScore": 116.03824847292813,
+    "rank": 1497
+  },
+  {
+    "tokenId": 2075,
+    "rarityScore": 115.93276089547209,
+    "rank": 1498
+  },
+  {
+    "tokenId": 980,
+    "rarityScore": 115.92673848438051,
+    "rank": 1499
+  },
+  {
+    "tokenId": 608,
+    "rarityScore": 115.91190156474326,
+    "rank": 1500
+  },
+  {
+    "tokenId": 1791,
+    "rarityScore": 115.85626795408521,
+    "rank": 1501
+  },
+  {
+    "tokenId": 18,
+    "rarityScore": 115.84781313699975,
+    "rank": 1502
+  },
+  {
+    "tokenId": 131,
+    "rarityScore": 115.8387711759221,
+    "rank": 1503
+  },
+  {
+    "tokenId": 201,
+    "rarityScore": 115.79045699703721,
+    "rank": 1504
+  },
+  {
+    "tokenId": 422,
+    "rarityScore": 115.78696797150899,
+    "rank": 1505
+  },
+  {
+    "tokenId": 448,
+    "rarityScore": 115.7833706676044,
+    "rank": 1506
+  },
+  {
+    "tokenId": 1871,
+    "rarityScore": 115.77353674378972,
+    "rank": 1507
+  },
+  {
+    "tokenId": 547,
+    "rarityScore": 115.75353812844048,
+    "rank": 1508
+  },
+  {
+    "tokenId": 846,
+    "rarityScore": 115.72344777368207,
+    "rank": 1509
+  },
+  {
+    "tokenId": 372,
+    "rarityScore": 115.70672700087579,
+    "rank": 1510
+  },
+  {
+    "tokenId": 2062,
+    "rarityScore": 115.68215281629662,
+    "rank": 1511
+  },
+  {
+    "tokenId": 809,
+    "rarityScore": 115.65106531106255,
+    "rank": 1512
+  },
+  {
+    "tokenId": 1233,
+    "rarityScore": 115.55183743549236,
+    "rank": 1513
+  },
+  {
+    "tokenId": 1540,
+    "rarityScore": 115.54151549174706,
+    "rank": 1514
+  },
+  {
+    "tokenId": 2045,
+    "rarityScore": 115.50729551232547,
+    "rank": 1515
+  },
+  {
+    "tokenId": 2031,
+    "rarityScore": 115.50407586413405,
+    "rank": 1516
+  },
+  {
+    "tokenId": 890,
+    "rarityScore": 115.46634732465341,
+    "rank": 1517
+  },
+  {
+    "tokenId": 1641,
+    "rarityScore": 115.39948956007225,
+    "rank": 1518
+  },
+  {
+    "tokenId": 1206,
+    "rarityScore": 115.36773946594951,
+    "rank": 1519
+  },
+  {
+    "tokenId": 934,
+    "rarityScore": 115.32203878194146,
+    "rank": 1520
+  },
+  {
+    "tokenId": 467,
+    "rarityScore": 115.22863422304357,
+    "rank": 1521
+  },
+  {
+    "tokenId": 1766,
+    "rarityScore": 115.2164812693752,
+    "rank": 1522
+  },
+  {
+    "tokenId": 990,
+    "rarityScore": 115.21389028732168,
+    "rank": 1523
+  },
+  {
+    "tokenId": 518,
+    "rarityScore": 115.16461382932275,
+    "rank": 1524
+  },
+  {
+    "tokenId": 622,
+    "rarityScore": 115.1613907959952,
+    "rank": 1525
+  },
+  {
+    "tokenId": 1094,
+    "rarityScore": 115.13453061757785,
+    "rank": 1526
+  },
+  {
+    "tokenId": 1522,
+    "rarityScore": 115.10426996522486,
+    "rank": 1527
+  },
+  {
+    "tokenId": 2030,
+    "rarityScore": 115.06656782792615,
+    "rank": 1528
+  },
+  {
+    "tokenId": 1999,
+    "rarityScore": 115.06071195116998,
+    "rank": 1529
+  },
+  {
+    "tokenId": 1519,
+    "rarityScore": 115.01903818738786,
+    "rank": 1530
+  },
+  {
+    "tokenId": 1627,
+    "rarityScore": 114.99742136581811,
+    "rank": 1531
+  },
+  {
+    "tokenId": 410,
+    "rarityScore": 114.98263675288219,
+    "rank": 1532
+  },
+  {
+    "tokenId": 1680,
+    "rarityScore": 114.8904014551678,
+    "rank": 1533
+  },
+  {
+    "tokenId": 2020,
+    "rarityScore": 114.77370141267022,
+    "rank": 1534
+  },
+  {
+    "tokenId": 303,
+    "rarityScore": 114.77027144786605,
+    "rank": 1535
+  },
+  {
+    "tokenId": 1407,
+    "rarityScore": 114.73789439798625,
+    "rank": 1536
+  },
+  {
+    "tokenId": 724,
+    "rarityScore": 114.73074023138449,
+    "rank": 1537
+  },
+  {
+    "tokenId": 1359,
+    "rarityScore": 114.62794547238528,
+    "rank": 1538
+  },
+  {
+    "tokenId": 1914,
+    "rarityScore": 114.62319353757111,
+    "rank": 1539
+  },
+  {
+    "tokenId": 1331,
+    "rarityScore": 114.61387656641952,
+    "rank": 1540
+  },
+  {
+    "tokenId": 815,
+    "rarityScore": 114.60522328794201,
+    "rank": 1541
+  },
+  {
+    "tokenId": 609,
+    "rarityScore": 114.57478817565735,
+    "rank": 1542
+  },
+  {
+    "tokenId": 425,
+    "rarityScore": 114.55893573360393,
+    "rank": 1543
+  },
+  {
+    "tokenId": 479,
+    "rarityScore": 114.54829843034747,
+    "rank": 1544
+  },
+  {
+    "tokenId": 1025,
+    "rarityScore": 114.49732163477687,
+    "rank": 1545
+  },
+  {
+    "tokenId": 197,
+    "rarityScore": 114.44515566488947,
+    "rank": 1546
+  },
+  {
+    "tokenId": 355,
+    "rarityScore": 114.41496967574923,
+    "rank": 1547
+  },
+  {
+    "tokenId": 1710,
+    "rarityScore": 114.41162618501708,
+    "rank": 1548
+  },
+  {
+    "tokenId": 1470,
+    "rarityScore": 114.32570564110739,
+    "rank": 1549
+  },
+  {
+    "tokenId": 1541,
+    "rarityScore": 114.31496143517181,
+    "rank": 1550
+  },
+  {
+    "tokenId": 502,
+    "rarityScore": 114.29557057262919,
+    "rank": 1551
+  },
+  {
+    "tokenId": 2119,
+    "rarityScore": 114.27117285492396,
+    "rank": 1552
+  },
+  {
+    "tokenId": 123,
+    "rarityScore": 114.26510935780814,
+    "rank": 1553
+  },
+  {
+    "tokenId": 1591,
+    "rarityScore": 114.25279095241393,
+    "rank": 1554
+  },
+  {
+    "tokenId": 1588,
+    "rarityScore": 114.19541126708206,
+    "rank": 1555
+  },
+  {
+    "tokenId": 1753,
+    "rarityScore": 114.16012453061062,
+    "rank": 1556
+  },
+  {
+    "tokenId": 528,
+    "rarityScore": 114.12920813027357,
+    "rank": 1557
+  },
+  {
+    "tokenId": 185,
+    "rarityScore": 114.12676621308718,
+    "rank": 1558
+  },
+  {
+    "tokenId": 1794,
+    "rarityScore": 114.11826709111143,
+    "rank": 1559
+  },
+  {
+    "tokenId": 1196,
+    "rarityScore": 114.09953540143024,
+    "rank": 1560
+  },
+  {
+    "tokenId": 107,
+    "rarityScore": 114.09788767690125,
+    "rank": 1561
+  },
+  {
+    "tokenId": 278,
+    "rarityScore": 114.08187095485683,
+    "rank": 1562
+  },
+  {
+    "tokenId": 1573,
+    "rarityScore": 113.91439014933995,
+    "rank": 1563
+  },
+  {
+    "tokenId": 377,
+    "rarityScore": 113.85270106504163,
+    "rank": 1564
+  },
+  {
+    "tokenId": 776,
+    "rarityScore": 113.84972509885174,
+    "rank": 1565
+  },
+  {
+    "tokenId": 418,
+    "rarityScore": 113.80929680563996,
+    "rank": 1566
+  },
+  {
+    "tokenId": 854,
+    "rarityScore": 113.77697975889535,
+    "rank": 1567
+  },
+  {
+    "tokenId": 1985,
+    "rarityScore": 113.7403378764423,
+    "rank": 1568
+  },
+  {
+    "tokenId": 65,
+    "rarityScore": 113.71451596137611,
+    "rank": 1569
+  },
+  {
+    "tokenId": 596,
+    "rarityScore": 113.68343779740309,
+    "rank": 1570
+  },
+  {
+    "tokenId": 647,
+    "rarityScore": 113.67794425190674,
+    "rank": 1571
+  },
+  {
+    "tokenId": 2037,
+    "rarityScore": 113.67701022425692,
+    "rank": 1572
+  },
+  {
+    "tokenId": 1810,
+    "rarityScore": 113.64321405122752,
+    "rank": 1573
+  },
+  {
+    "tokenId": 913,
+    "rarityScore": 113.6147179601319,
+    "rank": 1574
+  },
+  {
+    "tokenId": 1197,
+    "rarityScore": 113.56340646597982,
+    "rank": 1575
+  },
+  {
+    "tokenId": 227,
+    "rarityScore": 113.43669690662158,
+    "rank": 1576
+  },
+  {
+    "tokenId": 17,
+    "rarityScore": 113.42273509913414,
+    "rank": 1577
+  },
+  {
+    "tokenId": 2172,
+    "rarityScore": 113.40361989719227,
+    "rank": 1578
+  },
+  {
+    "tokenId": 1078,
+    "rarityScore": 113.34123432071033,
+    "rank": 1579
+  },
+  {
+    "tokenId": 1535,
+    "rarityScore": 113.29829419076631,
+    "rank": 1580
+  },
+  {
+    "tokenId": 1255,
+    "rarityScore": 113.29534761940319,
+    "rank": 1581
+  },
+  {
+    "tokenId": 1622,
+    "rarityScore": 113.27550938279298,
+    "rank": 1582
+  },
+  {
+    "tokenId": 2067,
+    "rarityScore": 113.25121571573223,
+    "rank": 1583
+  },
+  {
+    "tokenId": 1520,
+    "rarityScore": 113.25053403603559,
+    "rank": 1584
+  },
+  {
+    "tokenId": 1201,
+    "rarityScore": 113.20786515174379,
+    "rank": 1585
+  },
+  {
+    "tokenId": 1735,
+    "rarityScore": 113.18648730876521,
+    "rank": 1586
+  },
+  {
+    "tokenId": 2084,
+    "rarityScore": 113.15506016709861,
+    "rank": 1587
+  },
+  {
+    "tokenId": 504,
+    "rarityScore": 113.12105376602253,
+    "rank": 1588
+  },
+  {
+    "tokenId": 1853,
+    "rarityScore": 113.05884509656272,
+    "rank": 1589
+  },
+  {
+    "tokenId": 455,
+    "rarityScore": 113.01878367133331,
+    "rank": 1590
+  },
+  {
+    "tokenId": 339,
+    "rarityScore": 113.01507062600825,
+    "rank": 1591
+  },
+  {
+    "tokenId": 534,
+    "rarityScore": 112.87305262892892,
+    "rank": 1592
+  },
+  {
+    "tokenId": 1356,
+    "rarityScore": 112.84329901630949,
+    "rank": 1593
+  },
+  {
+    "tokenId": 1440,
+    "rarityScore": 112.83207893087015,
+    "rank": 1594
+  },
+  {
+    "tokenId": 712,
+    "rarityScore": 112.81956250566637,
+    "rank": 1595
+  },
+  {
+    "tokenId": 1648,
+    "rarityScore": 112.79473955375597,
+    "rank": 1596
+  },
+  {
+    "tokenId": 1718,
+    "rarityScore": 112.77895221925789,
+    "rank": 1597
+  },
+  {
+    "tokenId": 1357,
+    "rarityScore": 112.74536758310713,
+    "rank": 1598
+  },
+  {
+    "tokenId": 1180,
+    "rarityScore": 112.7055610012759,
+    "rank": 1599
+  },
+  {
+    "tokenId": 226,
+    "rarityScore": 112.68632856323748,
+    "rank": 1600
+  },
+  {
+    "tokenId": 1738,
+    "rarityScore": 112.68334955305053,
+    "rank": 1601
+  },
+  {
+    "tokenId": 330,
+    "rarityScore": 112.67244883187661,
+    "rank": 1602
+  },
+  {
+    "tokenId": 288,
+    "rarityScore": 112.64738938398676,
+    "rank": 1603
+  },
+  {
+    "tokenId": 1511,
+    "rarityScore": 112.58319887492226,
+    "rank": 1604
+  },
+  {
+    "tokenId": 1157,
+    "rarityScore": 112.56948177417993,
+    "rank": 1605
+  },
+  {
+    "tokenId": 1204,
+    "rarityScore": 112.56198555940107,
+    "rank": 1606
+  },
+  {
+    "tokenId": 1857,
+    "rarityScore": 112.55817653779803,
+    "rank": 1607
+  },
+  {
+    "tokenId": 778,
+    "rarityScore": 112.53856776928981,
+    "rank": 1608
+  },
+  {
+    "tokenId": 194,
+    "rarityScore": 112.53179707609091,
+    "rank": 1609
+  },
+  {
+    "tokenId": 904,
+    "rarityScore": 112.39438757451049,
+    "rank": 1610
+  },
+  {
+    "tokenId": 1839,
+    "rarityScore": 112.3231702876596,
+    "rank": 1611
+  },
+  {
+    "tokenId": 542,
+    "rarityScore": 112.29770189839172,
+    "rank": 1612
+  },
+  {
+    "tokenId": 2101,
+    "rarityScore": 112.27394521259802,
+    "rank": 1613
+  },
+  {
+    "tokenId": 198,
+    "rarityScore": 112.23794932102687,
+    "rank": 1614
+  },
+  {
+    "tokenId": 2132,
+    "rarityScore": 112.23343368571858,
+    "rank": 1615
+  },
+  {
+    "tokenId": 1401,
+    "rarityScore": 112.22586358808476,
+    "rank": 1616
+  },
+  {
+    "tokenId": 886,
+    "rarityScore": 112.22046857669403,
+    "rank": 1617
+  },
+  {
+    "tokenId": 1480,
+    "rarityScore": 112.19684769943288,
+    "rank": 1618
+  },
+  {
+    "tokenId": 606,
+    "rarityScore": 112.1761596162787,
+    "rank": 1619
+  },
+  {
+    "tokenId": 2206,
+    "rarityScore": 112.07942593830073,
+    "rank": 1620
+  },
+  {
+    "tokenId": 2102,
+    "rarityScore": 112.07367256567107,
+    "rank": 1621
+  },
+  {
+    "tokenId": 1431,
+    "rarityScore": 112.05612279291365,
+    "rank": 1622
+  },
+  {
+    "tokenId": 956,
+    "rarityScore": 111.8759848860792,
+    "rank": 1623
+  },
+  {
+    "tokenId": 23,
+    "rarityScore": 111.87335176062558,
+    "rank": 1624
+  },
+  {
+    "tokenId": 1089,
+    "rarityScore": 111.83817476279566,
+    "rank": 1625
+  },
+  {
+    "tokenId": 1692,
+    "rarityScore": 111.81006535452234,
+    "rank": 1626
+  },
+  {
+    "tokenId": 1730,
+    "rarityScore": 111.80034752562526,
+    "rank": 1627
+  },
+  {
+    "tokenId": 1666,
+    "rarityScore": 111.77532785239421,
+    "rank": 1628
+  },
+  {
+    "tokenId": 1318,
+    "rarityScore": 111.76460056702813,
+    "rank": 1629
+  },
+  {
+    "tokenId": 1657,
+    "rarityScore": 111.7568644974603,
+    "rank": 1630
+  },
+  {
+    "tokenId": 469,
+    "rarityScore": 111.7381292758391,
+    "rank": 1631
+  },
+  {
+    "tokenId": 44,
+    "rarityScore": 111.71921727412587,
+    "rank": 1632
+  },
+  {
+    "tokenId": 454,
+    "rarityScore": 111.6704713904051,
+    "rank": 1633
+  },
+  {
+    "tokenId": 1473,
+    "rarityScore": 111.62382262864261,
+    "rank": 1634
+  },
+  {
+    "tokenId": 90,
+    "rarityScore": 111.60956820605112,
+    "rank": 1635
+  },
+  {
+    "tokenId": 1529,
+    "rarityScore": 111.60549653128218,
+    "rank": 1636
+  },
+  {
+    "tokenId": 2106,
+    "rarityScore": 111.57912693489314,
+    "rank": 1637
+  },
+  {
+    "tokenId": 331,
+    "rarityScore": 111.55684247593321,
+    "rank": 1638
+  },
+  {
+    "tokenId": 582,
+    "rarityScore": 111.5493414094744,
+    "rank": 1639
+  },
+  {
+    "tokenId": 445,
+    "rarityScore": 111.47513068566371,
+    "rank": 1640
+  },
+  {
+    "tokenId": 1286,
+    "rarityScore": 111.46254451530982,
+    "rank": 1641
+  },
+  {
+    "tokenId": 654,
+    "rarityScore": 111.4476238082589,
+    "rank": 1642
+  },
+  {
+    "tokenId": 537,
+    "rarityScore": 111.37554096200589,
+    "rank": 1643
+  },
+  {
+    "tokenId": 557,
+    "rarityScore": 111.35847014497867,
+    "rank": 1644
+  },
+  {
+    "tokenId": 1441,
+    "rarityScore": 111.2956814446078,
+    "rank": 1645
+  },
+  {
+    "tokenId": 1232,
+    "rarityScore": 111.2582759615202,
+    "rank": 1646
+  },
+  {
+    "tokenId": 742,
+    "rarityScore": 111.25613565822506,
+    "rank": 1647
+  },
+  {
+    "tokenId": 1035,
+    "rarityScore": 111.2478388656182,
+    "rank": 1648
+  },
+  {
+    "tokenId": 2056,
+    "rarityScore": 111.16570700125912,
+    "rank": 1649
+  },
+  {
+    "tokenId": 321,
+    "rarityScore": 111.1173964343253,
+    "rank": 1650
+  },
+  {
+    "tokenId": 2070,
+    "rarityScore": 111.0960922424906,
+    "rank": 1651
+  },
+  {
+    "tokenId": 857,
+    "rarityScore": 111.06547945081823,
+    "rank": 1652
+  },
+  {
+    "tokenId": 2135,
+    "rarityScore": 111.02887704629221,
+    "rank": 1653
+  },
+  {
+    "tokenId": 719,
+    "rarityScore": 111.01013579806039,
+    "rank": 1654
+  },
+  {
+    "tokenId": 1139,
+    "rarityScore": 110.98952441684841,
+    "rank": 1655
+  },
+  {
+    "tokenId": 199,
+    "rarityScore": 110.96971214385161,
+    "rank": 1656
+  },
+  {
+    "tokenId": 1028,
+    "rarityScore": 110.78602582791457,
+    "rank": 1657
+  },
+  {
+    "tokenId": 1457,
+    "rarityScore": 110.7512559355204,
+    "rank": 1658
+  },
+  {
+    "tokenId": 264,
+    "rarityScore": 110.72292863484421,
+    "rank": 1659
+  },
+  {
+    "tokenId": 396,
+    "rarityScore": 110.695709427353,
+    "rank": 1660
+  },
+  {
+    "tokenId": 1771,
+    "rarityScore": 110.54050272036146,
+    "rank": 1661
+  },
+  {
+    "tokenId": 304,
+    "rarityScore": 110.51314053922054,
+    "rank": 1662
+  },
+  {
+    "tokenId": 539,
+    "rarityScore": 110.49436969030677,
+    "rank": 1663
+  },
+  {
+    "tokenId": 1876,
+    "rarityScore": 110.48620556829533,
+    "rank": 1664
+  },
+  {
+    "tokenId": 463,
+    "rarityScore": 110.44789935215523,
+    "rank": 1665
+  },
+  {
+    "tokenId": 1607,
+    "rarityScore": 110.42126131880391,
+    "rank": 1666
+  },
+  {
+    "tokenId": 1574,
+    "rarityScore": 110.42025842990279,
+    "rank": 1667
+  },
+  {
+    "tokenId": 1348,
+    "rarityScore": 110.40605740597017,
+    "rank": 1668
+  },
+  {
+    "tokenId": 1342,
+    "rarityScore": 110.40376600725617,
+    "rank": 1669
+  },
+  {
+    "tokenId": 476,
+    "rarityScore": 110.39983929143546,
+    "rank": 1670
+  },
+  {
+    "tokenId": 2168,
+    "rarityScore": 110.37723492263677,
+    "rank": 1671
+  },
+  {
+    "tokenId": 2094,
+    "rarityScore": 110.33331035516886,
+    "rank": 1672
+  },
+  {
+    "tokenId": 43,
+    "rarityScore": 110.28027034222507,
+    "rank": 1673
+  },
+  {
+    "tokenId": 2036,
+    "rarityScore": 110.27239587888945,
+    "rank": 1674
+  },
+  {
+    "tokenId": 1552,
+    "rarityScore": 110.23781977667701,
+    "rank": 1675
+  },
+  {
+    "tokenId": 1132,
+    "rarityScore": 110.1686511060946,
+    "rank": 1676
+  },
+  {
+    "tokenId": 1608,
+    "rarityScore": 110.16027393850305,
+    "rank": 1677
+  },
+  {
+    "tokenId": 1383,
+    "rarityScore": 110.14123288182167,
+    "rank": 1678
+  },
+  {
+    "tokenId": 156,
+    "rarityScore": 110.11153788371394,
+    "rank": 1679
+  },
+  {
+    "tokenId": 630,
+    "rarityScore": 110.08267582980615,
+    "rank": 1680
+  },
+  {
+    "tokenId": 590,
+    "rarityScore": 110.0560907528553,
+    "rank": 1681
+  },
+  {
+    "tokenId": 1036,
+    "rarityScore": 110.055698453359,
+    "rank": 1682
+  },
+  {
+    "tokenId": 1266,
+    "rarityScore": 110.0453310363296,
+    "rank": 1683
+  },
+  {
+    "tokenId": 1366,
+    "rarityScore": 110.00274881820138,
+    "rank": 1684
+  },
+  {
+    "tokenId": 1763,
+    "rarityScore": 109.98632010810141,
+    "rank": 1685
+  },
+  {
+    "tokenId": 1924,
+    "rarityScore": 109.84966592964831,
+    "rank": 1686
+  },
+  {
+    "tokenId": 1275,
+    "rarityScore": 109.80217322860354,
+    "rank": 1687
+  },
+  {
+    "tokenId": 856,
+    "rarityScore": 109.78345014463711,
+    "rank": 1688
+  },
+  {
+    "tokenId": 977,
+    "rarityScore": 109.75480267575571,
+    "rank": 1689
+  },
+  {
+    "tokenId": 2111,
+    "rarityScore": 109.75118056436015,
+    "rank": 1690
+  },
+  {
+    "tokenId": 907,
+    "rarityScore": 109.67710554797691,
+    "rank": 1691
+  },
+  {
+    "tokenId": 760,
+    "rarityScore": 109.66887564286259,
+    "rank": 1692
+  },
+  {
+    "tokenId": 338,
+    "rarityScore": 109.63668585035836,
+    "rank": 1693
+  },
+  {
+    "tokenId": 973,
+    "rarityScore": 109.50430630370313,
+    "rank": 1694
+  },
+  {
+    "tokenId": 74,
+    "rarityScore": 109.4696345608356,
+    "rank": 1695
+  },
+  {
+    "tokenId": 2016,
+    "rarityScore": 109.39151197005681,
+    "rank": 1696
+  },
+  {
+    "tokenId": 449,
+    "rarityScore": 109.34348839904587,
+    "rank": 1697
+  },
+  {
+    "tokenId": 1496,
+    "rarityScore": 109.26777292468101,
+    "rank": 1698
+  },
+  {
+    "tokenId": 1594,
+    "rarityScore": 109.2668020670396,
+    "rank": 1699
+  },
+  {
+    "tokenId": 540,
+    "rarityScore": 109.26012162841516,
+    "rank": 1700
+  },
+  {
+    "tokenId": 244,
+    "rarityScore": 109.1643308901614,
+    "rank": 1701
+  },
+  {
+    "tokenId": 335,
+    "rarityScore": 109.164323074546,
+    "rank": 1702
+  },
+  {
+    "tokenId": 1581,
+    "rarityScore": 109.14312606511952,
+    "rank": 1703
+  },
+  {
+    "tokenId": 176,
+    "rarityScore": 109.09944964285565,
+    "rank": 1704
+  },
+  {
+    "tokenId": 1456,
+    "rarityScore": 109.0597963232358,
+    "rank": 1705
+  },
+  {
+    "tokenId": 1631,
+    "rarityScore": 109.0186986206761,
+    "rank": 1706
+  },
+  {
+    "tokenId": 1654,
+    "rarityScore": 108.98179415902462,
+    "rank": 1707
+  },
+  {
+    "tokenId": 957,
+    "rarityScore": 108.68185359671571,
+    "rank": 1708
+  },
+  {
+    "tokenId": 179,
+    "rarityScore": 108.63773229293898,
+    "rank": 1709
+  },
+  {
+    "tokenId": 1584,
+    "rarityScore": 108.6273337801836,
+    "rank": 1710
+  },
+  {
+    "tokenId": 408,
+    "rarityScore": 108.61591268546188,
+    "rank": 1711
+  },
+  {
+    "tokenId": 631,
+    "rarityScore": 108.60269092425762,
+    "rank": 1712
+  },
+  {
+    "tokenId": 1512,
+    "rarityScore": 108.59481917766189,
+    "rank": 1713
+  },
+  {
+    "tokenId": 256,
+    "rarityScore": 108.5922327402543,
+    "rank": 1714
+  },
+  {
+    "tokenId": 1518,
+    "rarityScore": 108.57198674070237,
+    "rank": 1715
+  },
+  {
+    "tokenId": 850,
+    "rarityScore": 108.53788610795034,
+    "rank": 1716
+  },
+  {
+    "tokenId": 2217,
+    "rarityScore": 108.48578439514554,
+    "rank": 1717
+  },
+  {
+    "tokenId": 1484,
+    "rarityScore": 108.4129963315998,
+    "rank": 1718
+  },
+  {
+    "tokenId": 1812,
+    "rarityScore": 108.36373429286299,
+    "rank": 1719
+  },
+  {
+    "tokenId": 1686,
+    "rarityScore": 108.3611143916356,
+    "rank": 1720
+  },
+  {
+    "tokenId": 2018,
+    "rarityScore": 108.34653819315844,
+    "rank": 1721
+  },
+  {
+    "tokenId": 1378,
+    "rarityScore": 108.30727439835391,
+    "rank": 1722
+  },
+  {
+    "tokenId": 460,
+    "rarityScore": 108.29902427799145,
+    "rank": 1723
+  },
+  {
+    "tokenId": 1610,
+    "rarityScore": 108.29685585912141,
+    "rank": 1724
+  },
+  {
+    "tokenId": 305,
+    "rarityScore": 108.29221129137554,
+    "rank": 1725
+  },
+  {
+    "tokenId": 739,
+    "rarityScore": 108.19135529247869,
+    "rank": 1726
+  },
+  {
+    "tokenId": 905,
+    "rarityScore": 108.10067500424817,
+    "rank": 1727
+  },
+  {
+    "tokenId": 1214,
+    "rarityScore": 108.09715719063594,
+    "rank": 1728
+  },
+  {
+    "tokenId": 1250,
+    "rarityScore": 108.08315198647236,
+    "rank": 1729
+  },
+  {
+    "tokenId": 897,
+    "rarityScore": 108.07531697018548,
+    "rank": 1730
+  },
+  {
+    "tokenId": 2164,
+    "rarityScore": 107.8917749802473,
+    "rank": 1731
+  },
+  {
+    "tokenId": 1449,
+    "rarityScore": 107.86782420439916,
+    "rank": 1732
+  },
+  {
+    "tokenId": 2222,
+    "rarityScore": 107.85202362316139,
+    "rank": 1733
+  },
+  {
+    "tokenId": 1240,
+    "rarityScore": 107.79923948051902,
+    "rank": 1734
+  },
+  {
+    "tokenId": 1976,
+    "rarityScore": 107.75497063071114,
+    "rank": 1735
+  },
+  {
+    "tokenId": 658,
+    "rarityScore": 107.70567583966762,
+    "rank": 1736
+  },
+  {
+    "tokenId": 675,
+    "rarityScore": 107.60823280860625,
+    "rank": 1737
+  },
+  {
+    "tokenId": 1490,
+    "rarityScore": 107.55197711055192,
+    "rank": 1738
+  },
+  {
+    "tokenId": 746,
+    "rarityScore": 107.53060955516962,
+    "rank": 1739
+  },
+  {
+    "tokenId": 2118,
+    "rarityScore": 107.52916046250711,
+    "rank": 1740
+  },
+  {
+    "tokenId": 731,
+    "rarityScore": 107.48705991814545,
+    "rank": 1741
+  },
+  {
+    "tokenId": 141,
+    "rarityScore": 107.46614183739787,
+    "rank": 1742
+  },
+  {
+    "tokenId": 538,
+    "rarityScore": 107.45845230922272,
+    "rank": 1743
+  },
+  {
+    "tokenId": 1792,
+    "rarityScore": 107.36660339990127,
+    "rank": 1744
+  },
+  {
+    "tokenId": 1628,
+    "rarityScore": 107.34807333525934,
+    "rank": 1745
+  },
+  {
+    "tokenId": 761,
+    "rarityScore": 107.31915924342674,
+    "rank": 1746
+  },
+  {
+    "tokenId": 1226,
+    "rarityScore": 107.26293709270706,
+    "rank": 1747
+  },
+  {
+    "tokenId": 1965,
+    "rarityScore": 107.252127043944,
+    "rank": 1748
+  },
+  {
+    "tokenId": 3,
+    "rarityScore": 107.24003376450912,
+    "rank": 1749
+  },
+  {
+    "tokenId": 411,
+    "rarityScore": 107.2102304201934,
+    "rank": 1750
+  },
+  {
+    "tokenId": 1429,
+    "rarityScore": 107.17755817914501,
+    "rank": 1751
+  },
+  {
+    "tokenId": 232,
+    "rarityScore": 107.15454195576206,
+    "rank": 1752
+  },
+  {
+    "tokenId": 1892,
+    "rarityScore": 107.14869250013635,
+    "rank": 1753
+  },
+  {
+    "tokenId": 580,
+    "rarityScore": 107.14192689288237,
+    "rank": 1754
+  },
+  {
+    "tokenId": 1015,
+    "rarityScore": 107.0740413103425,
+    "rank": 1755
+  },
+  {
+    "tokenId": 55,
+    "rarityScore": 107.01888014152124,
+    "rank": 1756
+  },
+  {
+    "tokenId": 1013,
+    "rarityScore": 106.83009284343451,
+    "rank": 1757
+  },
+  {
+    "tokenId": 1335,
+    "rarityScore": 106.82060855202985,
+    "rank": 1758
+  },
+  {
+    "tokenId": 1623,
+    "rarityScore": 106.79301300706722,
+    "rank": 1759
+  },
+  {
+    "tokenId": 1365,
+    "rarityScore": 106.74446037994927,
+    "rank": 1760
+  },
+  {
+    "tokenId": 1664,
+    "rarityScore": 106.69590030172085,
+    "rank": 1761
+  },
+  {
+    "tokenId": 987,
+    "rarityScore": 106.66815712387113,
+    "rank": 1762
+  },
+  {
+    "tokenId": 2099,
+    "rarityScore": 106.60368092414552,
+    "rank": 1763
+  },
+  {
+    "tokenId": 1615,
+    "rarityScore": 106.54400158738915,
+    "rank": 1764
+  },
+  {
+    "tokenId": 2129,
+    "rarityScore": 106.5013322815031,
+    "rank": 1765
+  },
+  {
+    "tokenId": 1931,
+    "rarityScore": 106.47500665532291,
+    "rank": 1766
+  },
+  {
+    "tokenId": 462,
+    "rarityScore": 106.46901358089028,
+    "rank": 1767
+  },
+  {
+    "tokenId": 1955,
+    "rarityScore": 106.46327443468493,
+    "rank": 1768
+  },
+  {
+    "tokenId": 1091,
+    "rarityScore": 106.40953228905985,
+    "rank": 1769
+  },
+  {
+    "tokenId": 71,
+    "rarityScore": 106.3900888975805,
+    "rank": 1770
+  },
+  {
+    "tokenId": 2017,
+    "rarityScore": 106.25327524590367,
+    "rank": 1771
+  },
+  {
+    "tokenId": 764,
+    "rarityScore": 106.22156778404434,
+    "rank": 1772
+  },
+  {
+    "tokenId": 374,
+    "rarityScore": 106.21501731145933,
+    "rank": 1773
+  },
+  {
+    "tokenId": 1247,
+    "rarityScore": 106.20061997982795,
+    "rank": 1774
+  },
+  {
+    "tokenId": 1634,
+    "rarityScore": 106.1928562383237,
+    "rank": 1775
+  },
+  {
+    "tokenId": 579,
+    "rarityScore": 106.09736193865723,
+    "rank": 1776
+  },
+  {
+    "tokenId": 734,
+    "rarityScore": 106.07435434224422,
+    "rank": 1777
+  },
+  {
+    "tokenId": 1799,
+    "rarityScore": 106.06542650173391,
+    "rank": 1778
+  },
+  {
+    "tokenId": 298,
+    "rarityScore": 106.04303392880276,
+    "rank": 1779
+  },
+  {
+    "tokenId": 672,
+    "rarityScore": 106.04094385497204,
+    "rank": 1780
+  },
+  {
+    "tokenId": 1413,
+    "rarityScore": 105.97734536471005,
+    "rank": 1781
+  },
+  {
+    "tokenId": 527,
+    "rarityScore": 105.92588838985199,
+    "rank": 1782
+  },
+  {
+    "tokenId": 1136,
+    "rarityScore": 105.90930258934291,
+    "rank": 1783
+  },
+  {
+    "tokenId": 969,
+    "rarityScore": 105.86790284160355,
+    "rank": 1784
+  },
+  {
+    "tokenId": 186,
+    "rarityScore": 105.86050657230766,
+    "rank": 1785
+  },
+  {
+    "tokenId": 646,
+    "rarityScore": 105.700544250458,
+    "rank": 1786
+  },
+  {
+    "tokenId": 1376,
+    "rarityScore": 105.68968243744665,
+    "rank": 1787
+  },
+  {
+    "tokenId": 1045,
+    "rarityScore": 105.68334424698946,
+    "rank": 1788
+  },
+  {
+    "tokenId": 798,
+    "rarityScore": 105.62683332544698,
+    "rank": 1789
+  },
+  {
+    "tokenId": 773,
+    "rarityScore": 105.60863442044625,
+    "rank": 1790
+  },
+  {
+    "tokenId": 152,
+    "rarityScore": 105.59000925332565,
+    "rank": 1791
+  },
+  {
+    "tokenId": 1070,
+    "rarityScore": 105.56173582072704,
+    "rank": 1792
+  },
+  {
+    "tokenId": 1595,
+    "rarityScore": 105.49065882872989,
+    "rank": 1793
+  },
+  {
+    "tokenId": 1895,
+    "rarityScore": 105.48592513535046,
+    "rank": 1794
+  },
+  {
+    "tokenId": 1386,
+    "rarityScore": 105.46589769849884,
+    "rank": 1795
+  },
+  {
+    "tokenId": 311,
+    "rarityScore": 105.3891936190648,
+    "rank": 1796
+  },
+  {
+    "tokenId": 1679,
+    "rarityScore": 105.36543388052726,
+    "rank": 1797
+  },
+  {
+    "tokenId": 1299,
+    "rarityScore": 105.3554487929129,
+    "rank": 1798
+  },
+  {
+    "tokenId": 865,
+    "rarityScore": 105.35344896104442,
+    "rank": 1799
+  },
+  {
+    "tokenId": 709,
+    "rarityScore": 105.31608899039132,
+    "rank": 1800
+  },
+  {
+    "tokenId": 1749,
+    "rarityScore": 105.2955203818705,
+    "rank": 1801
+  },
+  {
+    "tokenId": 1167,
+    "rarityScore": 105.29095322313476,
+    "rank": 1802
+  },
+  {
+    "tokenId": 1064,
+    "rarityScore": 105.27994987416628,
+    "rank": 1803
+  },
+  {
+    "tokenId": 947,
+    "rarityScore": 105.25134058290601,
+    "rank": 1804
+  },
+  {
+    "tokenId": 387,
+    "rarityScore": 105.18525485341071,
+    "rank": 1805
+  },
+  {
+    "tokenId": 1000,
+    "rarityScore": 105.07431507359657,
+    "rank": 1806
+  },
+  {
+    "tokenId": 585,
+    "rarityScore": 105.03490973844492,
+    "rank": 1807
+  },
+  {
+    "tokenId": 1124,
+    "rarityScore": 105.02191464481905,
+    "rank": 1808
+  },
+  {
+    "tokenId": 826,
+    "rarityScore": 104.98827748131247,
+    "rank": 1809
+  },
+  {
+    "tokenId": 1375,
+    "rarityScore": 104.98474525662678,
+    "rank": 1810
+  },
+  {
+    "tokenId": 586,
+    "rarityScore": 104.96969904078946,
+    "rank": 1811
+  },
+  {
+    "tokenId": 1964,
+    "rarityScore": 104.9126790827006,
+    "rank": 1812
+  },
+  {
+    "tokenId": 810,
+    "rarityScore": 104.9115349401595,
+    "rank": 1813
+  },
+  {
+    "tokenId": 1908,
+    "rarityScore": 104.89873953653546,
+    "rank": 1814
+  },
+  {
+    "tokenId": 1630,
+    "rarityScore": 104.89193797974485,
+    "rank": 1815
+  },
+  {
+    "tokenId": 982,
+    "rarityScore": 104.8848133657076,
+    "rank": 1816
+  },
+  {
+    "tokenId": 1301,
+    "rarityScore": 104.85396659966486,
+    "rank": 1817
+  },
+  {
+    "tokenId": 775,
+    "rarityScore": 104.84627331654328,
+    "rank": 1818
+  },
+  {
+    "tokenId": 659,
+    "rarityScore": 104.8105316445953,
+    "rank": 1819
+  },
+  {
+    "tokenId": 1949,
+    "rarityScore": 104.80097723695837,
+    "rank": 1820
+  },
+  {
+    "tokenId": 710,
+    "rarityScore": 104.7662804626699,
+    "rank": 1821
+  },
+  {
+    "tokenId": 1309,
+    "rarityScore": 104.73076881015743,
+    "rank": 1822
+  },
+  {
+    "tokenId": 1278,
+    "rarityScore": 104.72973888780041,
+    "rank": 1823
+  },
+  {
+    "tokenId": 2050,
+    "rarityScore": 104.69093169318295,
+    "rank": 1824
+  },
+  {
+    "tokenId": 348,
+    "rarityScore": 104.65643721935473,
+    "rank": 1825
+  },
+  {
+    "tokenId": 2126,
+    "rarityScore": 104.6515257441181,
+    "rank": 1826
+  },
+  {
+    "tokenId": 951,
+    "rarityScore": 104.58428386561772,
+    "rank": 1827
+  },
+  {
+    "tokenId": 376,
+    "rarityScore": 104.56777311173809,
+    "rank": 1828
+  },
+  {
+    "tokenId": 1444,
+    "rarityScore": 104.49583379807895,
+    "rank": 1829
+  },
+  {
+    "tokenId": 209,
+    "rarityScore": 104.44832771448678,
+    "rank": 1830
+  },
+  {
+    "tokenId": 924,
+    "rarityScore": 104.44089069097114,
+    "rank": 1831
+  },
+  {
+    "tokenId": 919,
+    "rarityScore": 104.41032780430336,
+    "rank": 1832
+  },
+  {
+    "tokenId": 2148,
+    "rarityScore": 104.37054959178725,
+    "rank": 1833
+  },
+  {
+    "tokenId": 1323,
+    "rarityScore": 104.35940543046785,
+    "rank": 1834
+  },
+  {
+    "tokenId": 1052,
+    "rarityScore": 104.30312762471458,
+    "rank": 1835
+  },
+  {
+    "tokenId": 150,
+    "rarityScore": 104.29163896019168,
+    "rank": 1836
+  },
+  {
+    "tokenId": 767,
+    "rarityScore": 104.24589048696637,
+    "rank": 1837
+  },
+  {
+    "tokenId": 968,
+    "rarityScore": 104.21390813121579,
+    "rank": 1838
+  },
+  {
+    "tokenId": 117,
+    "rarityScore": 104.20668571459437,
+    "rank": 1839
+  },
+  {
+    "tokenId": 477,
+    "rarityScore": 104.19834151726101,
+    "rank": 1840
+  },
+  {
+    "tokenId": 1808,
+    "rarityScore": 104.16954695964317,
+    "rank": 1841
+  },
+  {
+    "tokenId": 1337,
+    "rarityScore": 104.15572548880155,
+    "rank": 1842
+  },
+  {
+    "tokenId": 1816,
+    "rarityScore": 103.99622354125808,
+    "rank": 1843
+  },
+  {
+    "tokenId": 2110,
+    "rarityScore": 103.98676596988527,
+    "rank": 1844
+  },
+  {
+    "tokenId": 482,
+    "rarityScore": 103.97010231381397,
+    "rank": 1845
+  },
+  {
+    "tokenId": 1238,
+    "rarityScore": 103.94755486921184,
+    "rank": 1846
+  },
+  {
+    "tokenId": 364,
+    "rarityScore": 103.93450629650948,
+    "rank": 1847
+  },
+  {
+    "tokenId": 1762,
+    "rarityScore": 103.91662772687017,
+    "rank": 1848
+  },
+  {
+    "tokenId": 1898,
+    "rarityScore": 103.91395131042512,
+    "rank": 1849
+  },
+  {
+    "tokenId": 211,
+    "rarityScore": 103.87240001465308,
+    "rank": 1850
+  },
+  {
+    "tokenId": 649,
+    "rarityScore": 103.86801624891427,
+    "rank": 1851
+  },
+  {
+    "tokenId": 1817,
+    "rarityScore": 103.82801459190777,
+    "rank": 1852
+  },
+  {
+    "tokenId": 485,
+    "rarityScore": 103.8247607517496,
+    "rank": 1853
+  },
+  {
+    "tokenId": 234,
+    "rarityScore": 103.81566745595427,
+    "rank": 1854
+  },
+  {
+    "tokenId": 1742,
+    "rarityScore": 103.74169640372853,
+    "rank": 1855
+  },
+  {
+    "tokenId": 391,
+    "rarityScore": 103.72682416904874,
+    "rank": 1856
+  },
+  {
+    "tokenId": 1199,
+    "rarityScore": 103.67855158484123,
+    "rank": 1857
+  },
+  {
+    "tokenId": 756,
+    "rarityScore": 103.67792707760253,
+    "rank": 1858
+  },
+  {
+    "tokenId": 1432,
+    "rarityScore": 103.65573048259326,
+    "rank": 1859
+  },
+  {
+    "tokenId": 759,
+    "rarityScore": 103.65220566374578,
+    "rank": 1860
+  },
+  {
+    "tokenId": 848,
+    "rarityScore": 103.64421191950584,
+    "rank": 1861
+  },
+  {
+    "tokenId": 175,
+    "rarityScore": 103.58782274408085,
+    "rank": 1862
+  },
+  {
+    "tokenId": 434,
+    "rarityScore": 103.57026375637925,
+    "rank": 1863
+  },
+  {
+    "tokenId": 1276,
+    "rarityScore": 103.53556916802656,
+    "rank": 1864
+  },
+  {
+    "tokenId": 1031,
+    "rarityScore": 103.47626225735843,
+    "rank": 1865
+  },
+  {
+    "tokenId": 2097,
+    "rarityScore": 103.40998979417513,
+    "rank": 1866
+  },
+  {
+    "tokenId": 1593,
+    "rarityScore": 103.3790001589397,
+    "rank": 1867
+  },
+  {
+    "tokenId": 323,
+    "rarityScore": 103.32313054360748,
+    "rank": 1868
+  },
+  {
+    "tokenId": 730,
+    "rarityScore": 103.22916808785216,
+    "rank": 1869
+  },
+  {
+    "tokenId": 544,
+    "rarityScore": 103.19420050367434,
+    "rank": 1870
+  },
+  {
+    "tokenId": 1739,
+    "rarityScore": 103.1711545833149,
+    "rank": 1871
+  },
+  {
+    "tokenId": 1368,
+    "rarityScore": 103.07753184654429,
+    "rank": 1872
+  },
+  {
+    "tokenId": 312,
+    "rarityScore": 103.0578087133054,
+    "rank": 1873
+  },
+  {
+    "tokenId": 242,
+    "rarityScore": 103.05568413637185,
+    "rank": 1874
+  },
+  {
+    "tokenId": 1874,
+    "rarityScore": 102.94121573334502,
+    "rank": 1875
+  },
+  {
+    "tokenId": 489,
+    "rarityScore": 102.92861689928348,
+    "rank": 1876
+  },
+  {
+    "tokenId": 210,
+    "rarityScore": 102.90293867467118,
+    "rank": 1877
+  },
+  {
+    "tokenId": 991,
+    "rarityScore": 102.89890118442874,
+    "rank": 1878
+  },
+  {
+    "tokenId": 1978,
+    "rarityScore": 102.89676288176967,
+    "rank": 1879
+  },
+  {
+    "tokenId": 2004,
+    "rarityScore": 102.89267036282516,
+    "rank": 1880
+  },
+  {
+    "tokenId": 1244,
+    "rarityScore": 102.83716213282653,
+    "rank": 1881
+  },
+  {
+    "tokenId": 88,
+    "rarityScore": 102.75169973951347,
+    "rank": 1882
+  },
+  {
+    "tokenId": 326,
+    "rarityScore": 102.70714777196885,
+    "rank": 1883
+  },
+  {
+    "tokenId": 456,
+    "rarityScore": 102.65261939609597,
+    "rank": 1884
+  },
+  {
+    "tokenId": 1,
+    "rarityScore": 102.58934006337932,
+    "rank": 1885
+  },
+  {
+    "tokenId": 1188,
+    "rarityScore": 102.5839456222973,
+    "rank": 1886
+  },
+  {
+    "tokenId": 60,
+    "rarityScore": 102.54983991711043,
+    "rank": 1887
+  },
+  {
+    "tokenId": 13,
+    "rarityScore": 102.53029282522596,
+    "rank": 1888
+  },
+  {
+    "tokenId": 371,
+    "rarityScore": 102.4970564170441,
+    "rank": 1889
+  },
+  {
+    "tokenId": 1095,
+    "rarityScore": 102.44730006492784,
+    "rank": 1890
+  },
+  {
+    "tokenId": 976,
+    "rarityScore": 102.40778476571555,
+    "rank": 1891
+  },
+  {
+    "tokenId": 1394,
+    "rarityScore": 102.34000496395603,
+    "rank": 1892
+  },
+  {
+    "tokenId": 1227,
+    "rarityScore": 102.32979022080319,
+    "rank": 1893
+  },
+  {
+    "tokenId": 1599,
+    "rarityScore": 102.23555552867039,
+    "rank": 1894
+  },
+  {
+    "tokenId": 1675,
+    "rarityScore": 102.2334179183909,
+    "rank": 1895
+  },
+  {
+    "tokenId": 1814,
+    "rarityScore": 102.19131121582599,
+    "rank": 1896
+  },
+  {
+    "tokenId": 802,
+    "rarityScore": 102.13533213399916,
+    "rank": 1897
+  },
+  {
+    "tokenId": 696,
+    "rarityScore": 102.11685231034812,
+    "rank": 1898
+  },
+  {
+    "tokenId": 144,
+    "rarityScore": 102.10165314564561,
+    "rank": 1899
+  },
+  {
+    "tokenId": 681,
+    "rarityScore": 101.96550356057041,
+    "rank": 1900
+  },
+  {
+    "tokenId": 336,
+    "rarityScore": 101.96171975491797,
+    "rank": 1901
+  },
+  {
+    "tokenId": 1585,
+    "rarityScore": 101.91201679270453,
+    "rank": 1902
+  },
+  {
+    "tokenId": 115,
+    "rarityScore": 101.90582815400319,
+    "rank": 1903
+  },
+  {
+    "tokenId": 1239,
+    "rarityScore": 101.8949825730368,
+    "rank": 1904
+  },
+  {
+    "tokenId": 177,
+    "rarityScore": 101.88702149424506,
+    "rank": 1905
+  },
+  {
+    "tokenId": 125,
+    "rarityScore": 101.87202330699789,
+    "rank": 1906
+  },
+  {
+    "tokenId": 1142,
+    "rarityScore": 101.73938350760791,
+    "rank": 1907
+  },
+  {
+    "tokenId": 415,
+    "rarityScore": 101.73559844234164,
+    "rank": 1908
+  },
+  {
+    "tokenId": 1135,
+    "rarityScore": 101.72856725314328,
+    "rank": 1909
+  },
+  {
+    "tokenId": 2174,
+    "rarityScore": 101.70257367306132,
+    "rank": 1910
+  },
+  {
+    "tokenId": 309,
+    "rarityScore": 101.67993542276997,
+    "rank": 1911
+  },
+  {
+    "tokenId": 1579,
+    "rarityScore": 101.65434223012667,
+    "rank": 1912
+  },
+  {
+    "tokenId": 1926,
+    "rarityScore": 101.64821993447478,
+    "rank": 1913
+  },
+  {
+    "tokenId": 1534,
+    "rarityScore": 101.62729948931062,
+    "rank": 1914
+  },
+  {
+    "tokenId": 881,
+    "rarityScore": 101.61741158723372,
+    "rank": 1915
+  },
+  {
+    "tokenId": 1831,
+    "rarityScore": 101.60240801895358,
+    "rank": 1916
+  },
+  {
+    "tokenId": 1373,
+    "rarityScore": 101.5760153731148,
+    "rank": 1917
+  },
+  {
+    "tokenId": 929,
+    "rarityScore": 101.55891488857417,
+    "rank": 1918
+  },
+  {
+    "tokenId": 1543,
+    "rarityScore": 101.46032636397855,
+    "rank": 1919
+  },
+  {
+    "tokenId": 877,
+    "rarityScore": 101.38232552026699,
+    "rank": 1920
+  },
+  {
+    "tokenId": 130,
+    "rarityScore": 101.2277338923322,
+    "rank": 1921
+  },
+  {
+    "tokenId": 1798,
+    "rarityScore": 101.21625107813607,
+    "rank": 1922
+  },
+  {
+    "tokenId": 2165,
+    "rarityScore": 101.19626000087487,
+    "rank": 1923
+  },
+  {
+    "tokenId": 1617,
+    "rarityScore": 101.1744175041036,
+    "rank": 1924
+  },
+  {
+    "tokenId": 2134,
+    "rarityScore": 101.16332467651661,
+    "rank": 1925
+  },
+  {
+    "tokenId": 823,
+    "rarityScore": 101.15080030508292,
+    "rank": 1926
+  },
+  {
+    "tokenId": 1329,
+    "rarityScore": 101.11666565053747,
+    "rank": 1927
+  },
+  {
+    "tokenId": 1093,
+    "rarityScore": 101.06527801705906,
+    "rank": 1928
+  },
+  {
+    "tokenId": 2181,
+    "rarityScore": 101.0475981063081,
+    "rank": 1929
+  },
+  {
+    "tokenId": 2089,
+    "rarityScore": 101.00375288921222,
+    "rank": 1930
+  },
+  {
+    "tokenId": 1321,
+    "rarityScore": 100.93677642254416,
+    "rank": 1931
+  },
+  {
+    "tokenId": 514,
+    "rarityScore": 100.89817281202015,
+    "rank": 1932
+  },
+  {
+    "tokenId": 875,
+    "rarityScore": 100.8889299853466,
+    "rank": 1933
+  },
+  {
+    "tokenId": 70,
+    "rarityScore": 100.85294693070836,
+    "rank": 1934
+  },
+  {
+    "tokenId": 1096,
+    "rarityScore": 100.85120744096245,
+    "rank": 1935
+  },
+  {
+    "tokenId": 1600,
+    "rarityScore": 100.83501696922842,
+    "rank": 1936
+  },
+  {
+    "tokenId": 245,
+    "rarityScore": 100.83073089294204,
+    "rank": 1937
+  },
+  {
+    "tokenId": 1782,
+    "rarityScore": 100.80004365407356,
+    "rank": 1938
+  },
+  {
+    "tokenId": 895,
+    "rarityScore": 100.74603166077108,
+    "rank": 1939
+  },
+  {
+    "tokenId": 1539,
+    "rarityScore": 100.70878134693208,
+    "rank": 1940
+  },
+  {
+    "tokenId": 45,
+    "rarityScore": 100.70029955053704,
+    "rank": 1941
+  },
+  {
+    "tokenId": 1185,
+    "rarityScore": 100.63371802138366,
+    "rank": 1942
+  },
+  {
+    "tokenId": 640,
+    "rarityScore": 100.60420344118404,
+    "rank": 1943
+  },
+  {
+    "tokenId": 1975,
+    "rarityScore": 100.59373462218137,
+    "rank": 1944
+  },
+  {
+    "tokenId": 1559,
+    "rarityScore": 100.50439841885378,
+    "rank": 1945
+  },
+  {
+    "tokenId": 1163,
+    "rarityScore": 100.50358604786645,
+    "rank": 1946
+  },
+  {
+    "tokenId": 457,
+    "rarityScore": 100.47573313961901,
+    "rank": 1947
+  },
+  {
+    "tokenId": 314,
+    "rarityScore": 100.41902606790725,
+    "rank": 1948
+  },
+  {
+    "tokenId": 1803,
+    "rarityScore": 100.40778824558228,
+    "rank": 1949
+  },
+  {
+    "tokenId": 32,
+    "rarityScore": 100.37737647186772,
+    "rank": 1950
+  },
+  {
+    "tokenId": 250,
+    "rarityScore": 100.3709040590359,
+    "rank": 1951
+  },
+  {
+    "tokenId": 1967,
+    "rarityScore": 100.2446389135739,
+    "rank": 1952
+  },
+  {
+    "tokenId": 937,
+    "rarityScore": 100.24203522270025,
+    "rank": 1953
+  },
+  {
+    "tokenId": 804,
+    "rarityScore": 100.06098039855698,
+    "rank": 1954
+  },
+  {
+    "tokenId": 1252,
+    "rarityScore": 100.05935074573048,
+    "rank": 1955
+  },
+  {
+    "tokenId": 676,
+    "rarityScore": 100.03805154549747,
+    "rank": 1956
+  },
+  {
+    "tokenId": 1790,
+    "rarityScore": 99.99372565464503,
+    "rank": 1957
+  },
+  {
+    "tokenId": 530,
+    "rarityScore": 99.98908194664031,
+    "rank": 1958
+  },
+  {
+    "tokenId": 1713,
+    "rarityScore": 99.9707124213564,
+    "rank": 1959
+  },
+  {
+    "tokenId": 1249,
+    "rarityScore": 99.93553830400924,
+    "rank": 1960
+  },
+  {
+    "tokenId": 366,
+    "rarityScore": 99.92544962837876,
+    "rank": 1961
+  },
+  {
+    "tokenId": 1650,
+    "rarityScore": 99.91355468416788,
+    "rank": 1962
+  },
+  {
+    "tokenId": 274,
+    "rarityScore": 99.74541760342505,
+    "rank": 1963
+  },
+  {
+    "tokenId": 988,
+    "rarityScore": 99.7324064068882,
+    "rank": 1964
+  },
+  {
+    "tokenId": 1060,
+    "rarityScore": 99.71213108709915,
+    "rank": 1965
+  },
+  {
+    "tokenId": 1663,
+    "rarityScore": 99.60080910260156,
+    "rank": 1966
+  },
+  {
+    "tokenId": 2080,
+    "rarityScore": 99.5961866248799,
+    "rank": 1967
+  },
+  {
+    "tokenId": 2154,
+    "rarityScore": 99.41221460054615,
+    "rank": 1968
+  },
+  {
+    "tokenId": 1856,
+    "rarityScore": 99.35645590269009,
+    "rank": 1969
+  },
+  {
+    "tokenId": 441,
+    "rarityScore": 99.30903780802143,
+    "rank": 1970
+  },
+  {
+    "tokenId": 1450,
+    "rarityScore": 99.30865321305406,
+    "rank": 1971
+  },
+  {
+    "tokenId": 571,
+    "rarityScore": 99.26422330391199,
+    "rank": 1972
+  },
+  {
+    "tokenId": 1144,
+    "rarityScore": 99.16812814785617,
+    "rank": 1973
+  },
+  {
+    "tokenId": 204,
+    "rarityScore": 99.07134585395971,
+    "rank": 1974
+  },
+  {
+    "tokenId": 946,
+    "rarityScore": 99.06550388395226,
+    "rank": 1975
+  },
+  {
+    "tokenId": 1466,
+    "rarityScore": 98.9711469654799,
+    "rank": 1976
+  },
+  {
+    "tokenId": 1392,
+    "rarityScore": 98.96364137177872,
+    "rank": 1977
+  },
+  {
+    "tokenId": 572,
+    "rarityScore": 98.95358600606697,
+    "rank": 1978
+  },
+  {
+    "tokenId": 98,
+    "rarityScore": 98.88069751635345,
+    "rank": 1979
+  },
+  {
+    "tokenId": 1302,
+    "rarityScore": 98.79067151658624,
+    "rank": 1980
+  },
+  {
+    "tokenId": 625,
+    "rarityScore": 98.7886918114192,
+    "rank": 1981
+  },
+  {
+    "tokenId": 736,
+    "rarityScore": 98.77053052389202,
+    "rank": 1982
+  },
+  {
+    "tokenId": 2161,
+    "rarityScore": 98.73664513075124,
+    "rank": 1983
+  },
+  {
+    "tokenId": 1673,
+    "rarityScore": 98.70913655547665,
+    "rank": 1984
+  },
+  {
+    "tokenId": 1620,
+    "rarityScore": 98.69689382661869,
+    "rank": 1985
+  },
+  {
+    "tokenId": 2104,
+    "rarityScore": 98.67902313524284,
+    "rank": 1986
+  },
+  {
+    "tokenId": 979,
+    "rarityScore": 98.66468591647408,
+    "rank": 1987
+  },
+  {
+    "tokenId": 473,
+    "rarityScore": 98.63441211371983,
+    "rank": 1988
+  },
+  {
+    "tokenId": 1492,
+    "rarityScore": 98.60225268310778,
+    "rank": 1989
+  },
+  {
+    "tokenId": 790,
+    "rarityScore": 98.49545414628614,
+    "rank": 1990
+  },
+  {
+    "tokenId": 2175,
+    "rarityScore": 98.48364231353148,
+    "rank": 1991
+  },
+  {
+    "tokenId": 2176,
+    "rarityScore": 98.43310630509072,
+    "rank": 1992
+  },
+  {
+    "tokenId": 884,
+    "rarityScore": 98.42594532685344,
+    "rank": 1993
+  },
+  {
+    "tokenId": 555,
+    "rarityScore": 98.30666103754285,
+    "rank": 1994
+  },
+  {
+    "tokenId": 1818,
+    "rarityScore": 98.30356908899223,
+    "rank": 1995
+  },
+  {
+    "tokenId": 1154,
+    "rarityScore": 98.29589686215276,
+    "rank": 1996
+  },
+  {
+    "tokenId": 1223,
+    "rarityScore": 98.12743192145116,
+    "rank": 1997
+  },
+  {
+    "tokenId": 261,
+    "rarityScore": 98.0971906967975,
+    "rank": 1998
+  },
+  {
+    "tokenId": 1313,
+    "rarityScore": 98.07211164292343,
+    "rank": 1999
+  },
+  {
+    "tokenId": 903,
+    "rarityScore": 98.0391867024326,
+    "rank": 2000
+  },
+  {
+    "tokenId": 487,
+    "rarityScore": 97.99251759904992,
+    "rank": 2001
+  },
+  {
+    "tokenId": 1544,
+    "rarityScore": 97.7790489608168,
+    "rank": 2002
+  },
+  {
+    "tokenId": 89,
+    "rarityScore": 97.63673339408889,
+    "rank": 2003
+  },
+  {
+    "tokenId": 1072,
+    "rarityScore": 97.6127846580377,
+    "rank": 2004
+  },
+  {
+    "tokenId": 2002,
+    "rarityScore": 97.59569279740423,
+    "rank": 2005
+  },
+  {
+    "tokenId": 1959,
+    "rarityScore": 97.54348026997685,
+    "rank": 2006
+  },
+  {
+    "tokenId": 1873,
+    "rarityScore": 97.49495753243077,
+    "rank": 2007
+  },
+  {
+    "tokenId": 1355,
+    "rarityScore": 97.48536543426161,
+    "rank": 2008
+  },
+  {
+    "tokenId": 644,
+    "rarityScore": 97.48317398777898,
+    "rank": 2009
+  },
+  {
+    "tokenId": 794,
+    "rarityScore": 97.44937014690323,
+    "rank": 2010
+  },
+  {
+    "tokenId": 147,
+    "rarityScore": 97.36858261655267,
+    "rank": 2011
+  },
+  {
+    "tokenId": 899,
+    "rarityScore": 97.31907633520811,
+    "rank": 2012
+  },
+  {
+    "tokenId": 690,
+    "rarityScore": 97.28219734381248,
+    "rank": 2013
+  },
+  {
+    "tokenId": 526,
+    "rarityScore": 97.25934540690683,
+    "rank": 2014
+  },
+  {
+    "tokenId": 862,
+    "rarityScore": 97.15687378161739,
+    "rank": 2015
+  },
+  {
+    "tokenId": 1253,
+    "rarityScore": 97.08455439930106,
+    "rank": 2016
+  },
+  {
+    "tokenId": 76,
+    "rarityScore": 97.05692635634989,
+    "rank": 2017
+  },
+  {
+    "tokenId": 452,
+    "rarityScore": 97.00041958135107,
+    "rank": 2018
+  },
+  {
+    "tokenId": 1945,
+    "rarityScore": 96.81956966689391,
+    "rank": 2019
+  },
+  {
+    "tokenId": 1848,
+    "rarityScore": 96.81095938215269,
+    "rank": 2020
+  },
+  {
+    "tokenId": 498,
+    "rarityScore": 96.77242308326005,
+    "rank": 2021
+  },
+  {
+    "tokenId": 2044,
+    "rarityScore": 96.72254601937185,
+    "rank": 2022
+  },
+  {
+    "tokenId": 164,
+    "rarityScore": 96.70805753641507,
+    "rank": 2023
+  },
+  {
+    "tokenId": 677,
+    "rarityScore": 96.68213570818413,
+    "rank": 2024
+  },
+  {
+    "tokenId": 963,
+    "rarityScore": 96.68011240696896,
+    "rank": 2025
+  },
+  {
+    "tokenId": 1643,
+    "rarityScore": 96.67530685401476,
+    "rank": 2026
+  },
+  {
+    "tokenId": 1807,
+    "rarityScore": 96.54043030679293,
+    "rank": 2027
+  },
+  {
+    "tokenId": 1005,
+    "rarityScore": 96.43950058049722,
+    "rank": 2028
+  },
+  {
+    "tokenId": 595,
+    "rarityScore": 96.33821175479784,
+    "rank": 2029
+  },
+  {
+    "tokenId": 1944,
+    "rarityScore": 96.15593786314115,
+    "rank": 2030
+  },
+  {
+    "tokenId": 629,
+    "rarityScore": 96.1487922440667,
+    "rank": 2031
+  },
+  {
+    "tokenId": 1642,
+    "rarityScore": 96.05588734858881,
+    "rank": 2032
+  },
+  {
+    "tokenId": 1211,
+    "rarityScore": 96.00631989985303,
+    "rank": 2033
+  },
+  {
+    "tokenId": 1103,
+    "rarityScore": 95.99898872243483,
+    "rank": 2034
+  },
+  {
+    "tokenId": 1054,
+    "rarityScore": 95.99628210601911,
+    "rank": 2035
+  },
+  {
+    "tokenId": 1150,
+    "rarityScore": 95.85829973953089,
+    "rank": 2036
+  },
+  {
+    "tokenId": 398,
+    "rarityScore": 95.81699154445836,
+    "rank": 2037
+  },
+  {
+    "tokenId": 1563,
+    "rarityScore": 95.77533879791804,
+    "rank": 2038
+  },
+  {
+    "tokenId": 345,
+    "rarityScore": 95.77329044468868,
+    "rank": 2039
+  },
+  {
+    "tokenId": 1712,
+    "rarityScore": 95.75475660309242,
+    "rank": 2040
+  },
+  {
+    "tokenId": 600,
+    "rarityScore": 95.75272135975658,
+    "rank": 2041
+  },
+  {
+    "tokenId": 1333,
+    "rarityScore": 95.73617798193484,
+    "rank": 2042
+  },
+  {
+    "tokenId": 1267,
+    "rarityScore": 95.57771181112422,
+    "rank": 2043
+  },
+  {
+    "tokenId": 2107,
+    "rarityScore": 95.53714613563788,
+    "rank": 2044
+  },
+  {
+    "tokenId": 2205,
+    "rarityScore": 95.48480554280671,
+    "rank": 2045
+  },
+  {
+    "tokenId": 183,
+    "rarityScore": 95.44942769346842,
+    "rank": 2046
+  },
+  {
+    "tokenId": 984,
+    "rarityScore": 95.44114421968894,
+    "rank": 2047
+  },
+  {
+    "tokenId": 1836,
+    "rarityScore": 95.30011289202042,
+    "rank": 2048
+  },
+  {
+    "tokenId": 1613,
+    "rarityScore": 95.2895991874795,
+    "rank": 2049
+  },
+  {
+    "tokenId": 1820,
+    "rarityScore": 95.23601987820092,
+    "rank": 2050
+  },
+  {
+    "tokenId": 421,
+    "rarityScore": 95.22876648333062,
+    "rank": 2051
+  },
+  {
+    "tokenId": 1521,
+    "rarityScore": 95.06398345970153,
+    "rank": 2052
+  },
+  {
+    "tokenId": 2059,
+    "rarityScore": 94.91376299115656,
+    "rank": 2053
+  },
+  {
+    "tokenId": 1143,
+    "rarityScore": 94.89124540042361,
+    "rank": 2054
+  },
+  {
+    "tokenId": 708,
+    "rarityScore": 94.87831616994112,
+    "rank": 2055
+  },
+  {
+    "tokenId": 1901,
+    "rarityScore": 94.86292573286892,
+    "rank": 2056
+  },
+  {
+    "tokenId": 1352,
+    "rarityScore": 94.83290525378955,
+    "rank": 2057
+  },
+  {
+    "tokenId": 1220,
+    "rarityScore": 94.79930588705982,
+    "rank": 2058
+  },
+  {
+    "tokenId": 1327,
+    "rarityScore": 94.72982465750648,
+    "rank": 2059
+  },
+  {
+    "tokenId": 587,
+    "rarityScore": 94.60421518083288,
+    "rank": 2060
+  },
+  {
+    "tokenId": 508,
+    "rarityScore": 94.57799595479692,
+    "rank": 2061
+  },
+  {
+    "tokenId": 93,
+    "rarityScore": 94.48455233143552,
+    "rank": 2062
+  },
+  {
+    "tokenId": 1246,
+    "rarityScore": 94.44413907265749,
+    "rank": 2063
+  },
+  {
+    "tokenId": 2078,
+    "rarityScore": 94.4095008538884,
+    "rank": 2064
+  },
+  {
+    "tokenId": 2072,
+    "rarityScore": 94.34022338636221,
+    "rank": 2065
+  },
+  {
+    "tokenId": 1488,
+    "rarityScore": 94.2503149605291,
+    "rank": 2066
+  },
+  {
+    "tokenId": 1424,
+    "rarityScore": 94.2472819770429,
+    "rank": 2067
+  },
+  {
+    "tokenId": 1778,
+    "rarityScore": 94.21861797234618,
+    "rank": 2068
+  },
+  {
+    "tokenId": 769,
+    "rarityScore": 94.17623096530916,
+    "rank": 2069
+  },
+  {
+    "tokenId": 1235,
+    "rarityScore": 94.17351159396705,
+    "rank": 2070
+  },
+  {
+    "tokenId": 249,
+    "rarityScore": 93.98714141263422,
+    "rank": 2071
+  },
+  {
+    "tokenId": 1747,
+    "rarityScore": 93.97991503346498,
+    "rank": 2072
+  },
+  {
+    "tokenId": 945,
+    "rarityScore": 93.940317572019,
+    "rank": 2073
+  },
+  {
+    "tokenId": 1661,
+    "rarityScore": 93.92008269161848,
+    "rank": 2074
+  },
+  {
+    "tokenId": 532,
+    "rarityScore": 93.91202079765388,
+    "rank": 2075
+  },
+  {
+    "tokenId": 486,
+    "rarityScore": 93.90753046208121,
+    "rank": 2076
+  },
+  {
+    "tokenId": 1034,
+    "rarityScore": 93.84234390263141,
+    "rank": 2077
+  },
+  {
+    "tokenId": 827,
+    "rarityScore": 93.777847959914,
+    "rank": 2078
+  },
+  {
+    "tokenId": 286,
+    "rarityScore": 93.67663421814107,
+    "rank": 2079
+  },
+  {
+    "tokenId": 219,
+    "rarityScore": 93.6274854695784,
+    "rank": 2080
+  },
+  {
+    "tokenId": 1649,
+    "rarityScore": 93.62130066198053,
+    "rank": 2081
+  },
+  {
+    "tokenId": 319,
+    "rarityScore": 93.60914967236138,
+    "rank": 2082
+  },
+  {
+    "tokenId": 395,
+    "rarityScore": 93.3684863786172,
+    "rank": 2083
+  },
+  {
+    "tokenId": 1883,
+    "rarityScore": 93.28058790463317,
+    "rank": 2084
+  },
+  {
+    "tokenId": 1081,
+    "rarityScore": 93.27930560596583,
+    "rank": 2085
+  },
+  {
+    "tokenId": 851,
+    "rarityScore": 93.27691910647573,
+    "rank": 2086
+  },
+  {
+    "tokenId": 433,
+    "rarityScore": 93.17263134772287,
+    "rank": 2087
+  },
+  {
+    "tokenId": 1793,
+    "rarityScore": 93.08220276241248,
+    "rank": 2088
+  },
+  {
+    "tokenId": 1618,
+    "rarityScore": 92.9690085620604,
+    "rank": 2089
+  },
+  {
+    "tokenId": 2073,
+    "rarityScore": 92.95848445653964,
+    "rank": 2090
+  },
+  {
+    "tokenId": 189,
+    "rarityScore": 92.8871336106628,
+    "rank": 2091
+  },
+  {
+    "tokenId": 770,
+    "rarityScore": 92.85790407879423,
+    "rank": 2092
+  },
+  {
+    "tokenId": 892,
+    "rarityScore": 92.7604795064347,
+    "rank": 2093
+  },
+  {
+    "tokenId": 1526,
+    "rarityScore": 92.70274797864151,
+    "rank": 2094
+  },
+  {
+    "tokenId": 217,
+    "rarityScore": 92.52467588675155,
+    "rank": 2095
+  },
+  {
+    "tokenId": 1587,
+    "rarityScore": 92.47075940556168,
+    "rank": 2096
+  },
+  {
+    "tokenId": 1410,
+    "rarityScore": 92.4453716962237,
+    "rank": 2097
+  },
+  {
+    "tokenId": 2034,
+    "rarityScore": 92.29816371828333,
+    "rank": 2098
+  },
+  {
+    "tokenId": 1242,
+    "rarityScore": 92.28320808351901,
+    "rank": 2099
+  },
+  {
+    "tokenId": 2219,
+    "rarityScore": 92.25703552526042,
+    "rank": 2100
+  },
+  {
+    "tokenId": 2010,
+    "rarityScore": 92.24373726557384,
+    "rank": 2101
+  },
+  {
+    "tokenId": 1665,
+    "rarityScore": 92.215382204565,
+    "rank": 2102
+  },
+  {
+    "tokenId": 1384,
+    "rarityScore": 92.19755226294811,
+    "rank": 2103
+  },
+  {
+    "tokenId": 316,
+    "rarityScore": 92.0251347939861,
+    "rank": 2104
+  },
+  {
+    "tokenId": 12,
+    "rarityScore": 91.94774201329268,
+    "rank": 2105
+  },
+  {
+    "tokenId": 671,
+    "rarityScore": 91.92017883399623,
+    "rank": 2106
+  },
+  {
+    "tokenId": 1229,
+    "rarityScore": 91.62694737271764,
+    "rank": 2107
+  },
+  {
+    "tokenId": 370,
+    "rarityScore": 91.5940889100012,
+    "rank": 2108
+  },
+  {
+    "tokenId": 470,
+    "rarityScore": 91.49340589246766,
+    "rank": 2109
+  },
+  {
+    "tokenId": 1781,
+    "rarityScore": 91.47444825721213,
+    "rank": 2110
+  },
+  {
+    "tokenId": 5,
+    "rarityScore": 91.45017242036697,
+    "rank": 2111
+  },
+  {
+    "tokenId": 786,
+    "rarityScore": 91.42059842969599,
+    "rank": 2112
+  },
+  {
+    "tokenId": 72,
+    "rarityScore": 91.30229596845503,
+    "rank": 2113
+  },
+  {
+    "tokenId": 1937,
+    "rarityScore": 91.21303987626641,
+    "rank": 2114
+  },
+  {
+    "tokenId": 545,
+    "rarityScore": 91.10208552139515,
+    "rank": 2115
+  },
+  {
+    "tokenId": 62,
+    "rarityScore": 91.02162465404754,
+    "rank": 2116
+  },
+  {
+    "tokenId": 1991,
+    "rarityScore": 91.01504611185152,
+    "rank": 2117
+  },
+  {
+    "tokenId": 138,
+    "rarityScore": 90.93128659620095,
+    "rank": 2118
+  },
+  {
+    "tokenId": 1420,
+    "rarityScore": 90.92400254081195,
+    "rank": 2119
+  },
+  {
+    "tokenId": 1354,
+    "rarityScore": 90.89198963261715,
+    "rank": 2120
+  },
+  {
+    "tokenId": 1149,
+    "rarityScore": 90.87568400896002,
+    "rank": 2121
+  },
+  {
+    "tokenId": 307,
+    "rarityScore": 90.83176090239455,
+    "rank": 2122
+  },
+  {
+    "tokenId": 1824,
+    "rarityScore": 90.71846233971789,
+    "rank": 2123
+  },
+  {
+    "tokenId": 1756,
+    "rarityScore": 90.64314760432728,
+    "rank": 2124
+  },
+  {
+    "tokenId": 225,
+    "rarityScore": 90.61188005146538,
+    "rank": 2125
+  },
+  {
+    "tokenId": 1957,
+    "rarityScore": 90.51932707051769,
+    "rank": 2126
+  },
+  {
+    "tokenId": 1911,
+    "rarityScore": 90.3347394815217,
+    "rank": 2127
+  },
+  {
+    "tokenId": 1830,
+    "rarityScore": 90.32652904895386,
+    "rank": 2128
+  },
+  {
+    "tokenId": 42,
+    "rarityScore": 90.29022895998142,
+    "rank": 2129
+  },
+  {
+    "tokenId": 795,
+    "rarityScore": 90.27003217730906,
+    "rank": 2130
+  },
+  {
+    "tokenId": 1426,
+    "rarityScore": 90.1502693247137,
+    "rank": 2131
+  },
+  {
+    "tokenId": 325,
+    "rarityScore": 90.13112174337518,
+    "rank": 2132
+  },
+  {
+    "tokenId": 1854,
+    "rarityScore": 90.12611477534657,
+    "rank": 2133
+  },
+  {
+    "tokenId": 2177,
+    "rarityScore": 90.12235622466477,
+    "rank": 2134
+  },
+  {
+    "tokenId": 1377,
+    "rarityScore": 90.02733532147913,
+    "rank": 2135
+  },
+  {
+    "tokenId": 267,
+    "rarityScore": 89.95066132109302,
+    "rank": 2136
+  },
+  {
+    "tokenId": 1340,
+    "rarityScore": 89.88542296737768,
+    "rank": 2137
+  },
+  {
+    "tokenId": 1350,
+    "rarityScore": 89.68662428521792,
+    "rank": 2138
+  },
+  {
+    "tokenId": 754,
+    "rarityScore": 89.6850933627338,
+    "rank": 2139
+  },
+  {
+    "tokenId": 313,
+    "rarityScore": 89.54688175967391,
+    "rank": 2140
+  },
+  {
+    "tokenId": 1435,
+    "rarityScore": 89.49159959055335,
+    "rank": 2141
+  },
+  {
+    "tokenId": 483,
+    "rarityScore": 89.48325959066605,
+    "rank": 2142
+  },
+  {
+    "tokenId": 1632,
+    "rarityScore": 89.471335064516,
+    "rank": 2143
+  },
+  {
+    "tokenId": 388,
+    "rarityScore": 89.45104443791271,
+    "rank": 2144
+  },
+  {
+    "tokenId": 2108,
+    "rarityScore": 89.3714420294829,
+    "rank": 2145
+  },
+  {
+    "tokenId": 2173,
+    "rarityScore": 89.31055704947214,
+    "rank": 2146
+  },
+  {
+    "tokenId": 126,
+    "rarityScore": 89.28400862582666,
+    "rank": 2147
+  },
+  {
+    "tokenId": 737,
+    "rarityScore": 89.05926535451353,
+    "rank": 2148
+  },
+  {
+    "tokenId": 1609,
+    "rarityScore": 89.0360931908138,
+    "rank": 2149
+  },
+  {
+    "tokenId": 1859,
+    "rarityScore": 88.95115125741971,
+    "rank": 2150
+  },
+  {
+    "tokenId": 1361,
+    "rarityScore": 88.91839744959263,
+    "rank": 2151
+  },
+  {
+    "tokenId": 1917,
+    "rarityScore": 88.53741233682781,
+    "rank": 2152
+  },
+  {
+    "tokenId": 1195,
+    "rarityScore": 88.48677624032507,
+    "rank": 2153
+  },
+  {
+    "tokenId": 105,
+    "rarityScore": 88.25981114084341,
+    "rank": 2154
+  },
+  {
+    "tokenId": 1545,
+    "rarityScore": 88.19985249478084,
+    "rank": 2155
+  },
+  {
+    "tokenId": 985,
+    "rarityScore": 88.17000197931426,
+    "rank": 2156
+  },
+  {
+    "tokenId": 2090,
+    "rarityScore": 88.06008452917649,
+    "rank": 2157
+  },
+  {
+    "tokenId": 2124,
+    "rarityScore": 88.02787091248936,
+    "rank": 2158
+  },
+  {
+    "tokenId": 1388,
+    "rarityScore": 88.00393863605515,
+    "rank": 2159
+  },
+  {
+    "tokenId": 272,
+    "rarityScore": 87.70894830875571,
+    "rank": 2160
+  },
+  {
+    "tokenId": 1305,
+    "rarityScore": 87.52033990325342,
+    "rank": 2161
+  },
+  {
+    "tokenId": 1032,
+    "rarityScore": 87.37182598418778,
+    "rank": 2162
+  },
+  {
+    "tokenId": 2068,
+    "rarityScore": 87.33952425610791,
+    "rank": 2163
+  },
+  {
+    "tokenId": 916,
+    "rarityScore": 87.18316547456757,
+    "rank": 2164
+  },
+  {
+    "tokenId": 52,
+    "rarityScore": 87.15761555573603,
+    "rank": 2165
+  },
+  {
+    "tokenId": 1037,
+    "rarityScore": 87.02933441631384,
+    "rank": 2166
+  },
+  {
+    "tokenId": 1002,
+    "rarityScore": 86.95238991592201,
+    "rank": 2167
+  },
+  {
+    "tokenId": 208,
+    "rarityScore": 86.8729325993188,
+    "rank": 2168
+  },
+  {
+    "tokenId": 1603,
+    "rarityScore": 86.7420561009996,
+    "rank": 2169
+  },
+  {
+    "tokenId": 340,
+    "rarityScore": 86.71584389617075,
+    "rank": 2170
+  },
+  {
+    "tokenId": 302,
+    "rarityScore": 86.68527762909453,
+    "rank": 2171
+  },
+  {
+    "tokenId": 169,
+    "rarityScore": 86.45261483719958,
+    "rank": 2172
+  },
+  {
+    "tokenId": 993,
+    "rarityScore": 86.21511363575429,
+    "rank": 2173
+  },
+  {
+    "tokenId": 2092,
+    "rarityScore": 85.92517265097322,
+    "rank": 2174
+  },
+  {
+    "tokenId": 327,
+    "rarityScore": 85.79945878222712,
+    "rank": 2175
+  },
+  {
+    "tokenId": 1048,
+    "rarityScore": 85.54984966747391,
+    "rank": 2176
+  },
+  {
+    "tokenId": 694,
+    "rarityScore": 85.41146013120012,
+    "rank": 2177
+  },
+  {
+    "tokenId": 1307,
+    "rarityScore": 85.27668263030016,
+    "rank": 2178
+  },
+  {
+    "tokenId": 1164,
+    "rarityScore": 85.2026581959173,
+    "rank": 2179
+  },
+  {
+    "tokenId": 1131,
+    "rarityScore": 85.17947793611637,
+    "rank": 2180
+  },
+  {
+    "tokenId": 633,
+    "rarityScore": 85.08277630256953,
+    "rank": 2181
+  },
+  {
+    "tokenId": 1570,
+    "rarityScore": 84.9758847436409,
+    "rank": 2182
+  },
+  {
+    "tokenId": 2042,
+    "rarityScore": 84.76305732744538,
+    "rank": 2183
+  },
+  {
+    "tokenId": 206,
+    "rarityScore": 84.5111673415309,
+    "rank": 2184
+  },
+  {
+    "tokenId": 2198,
+    "rarityScore": 84.48658567063109,
+    "rank": 2185
+  },
+  {
+    "tokenId": 743,
+    "rarityScore": 84.17838922314283,
+    "rank": 2186
+  },
+  {
+    "tokenId": 755,
+    "rarityScore": 84.16418833963012,
+    "rank": 2187
+  },
+  {
+    "tokenId": 1105,
+    "rarityScore": 83.98529008899794,
+    "rank": 2188
+  },
+  {
+    "tokenId": 1071,
+    "rarityScore": 83.9781624136334,
+    "rank": 2189
+  },
+  {
+    "tokenId": 2096,
+    "rarityScore": 83.96307530107225,
+    "rank": 2190
+  },
+  {
+    "tokenId": 200,
+    "rarityScore": 83.71959433024763,
+    "rank": 2191
+  },
+  {
+    "tokenId": 1362,
+    "rarityScore": 83.46666804400644,
+    "rank": 2192
+  },
+  {
+    "tokenId": 293,
+    "rarityScore": 83.37934869201023,
+    "rank": 2193
+  },
+  {
+    "tokenId": 6,
+    "rarityScore": 82.15154691687947,
+    "rank": 2194
+  },
+  {
+    "tokenId": 2026,
+    "rarityScore": 82.05467073778226,
+    "rank": 2195
+  },
+  {
+    "tokenId": 507,
+    "rarityScore": 82.03251323980638,
+    "rank": 2196
+  },
+  {
+    "tokenId": 664,
+    "rarityScore": 81.23804352163455,
+    "rank": 2197
+  },
+  {
+    "tokenId": 1586,
+    "rarityScore": 81.17613241855464,
+    "rank": 2198
+  },
+  {
+    "tokenId": 1265,
+    "rarityScore": 81.03700112745119,
+    "rank": 2199
+  },
+  {
+    "tokenId": 2021,
+    "rarityScore": 80.90218220214021,
+    "rank": 2200
+  },
+  {
+    "tokenId": 2015,
+    "rarityScore": 80.72274176355353,
+    "rank": 2201
+  },
+  {
+    "tokenId": 2025,
+    "rarityScore": 80.63859045092389,
+    "rank": 2202
+  },
+  {
+    "tokenId": 1886,
+    "rarityScore": 80.62531585339524,
+    "rank": 2203
+  },
+  {
+    "tokenId": 47,
+    "rarityScore": 80.5479158232009,
+    "rank": 2204
+  },
+  {
+    "tokenId": 328,
+    "rarityScore": 80.54398113468818,
+    "rank": 2205
+  },
+  {
+    "tokenId": 1681,
+    "rarityScore": 80.24482788496766,
+    "rank": 2206
+  },
+  {
+    "tokenId": 1994,
+    "rarityScore": 79.96975729433811,
+    "rank": 2207
+  },
+  {
+    "tokenId": 641,
+    "rarityScore": 79.87637282154128,
+    "rank": 2208
+  },
+  {
+    "tokenId": 1943,
+    "rarityScore": 79.81628435042194,
+    "rank": 2209
+  },
+  {
+    "tokenId": 2133,
+    "rarityScore": 79.54405442710166,
+    "rank": 2210
+  },
+  {
+    "tokenId": 828,
+    "rarityScore": 79.18933923993384,
+    "rank": 2211
+  },
+  {
+    "tokenId": 1884,
+    "rarityScore": 79.14105165567761,
+    "rank": 2212
+  },
+  {
+    "tokenId": 1016,
+    "rarityScore": 79.13664918155591,
+    "rank": 2213
+  },
+  {
+    "tokenId": 1024,
+    "rarityScore": 78.88387132721195,
+    "rank": 2214
+  },
+  {
+    "tokenId": 399,
+    "rarityScore": 78.7533417052945,
+    "rank": 2215
+  },
+  {
+    "tokenId": 1110,
+    "rarityScore": 78.43729584575975,
+    "rank": 2216
+  },
+  {
+    "tokenId": 188,
+    "rarityScore": 78.39983371150116,
+    "rank": 2217
+  },
+  {
+    "tokenId": 2191,
+    "rarityScore": 78.2844490234182,
+    "rank": 2218
+  },
+  {
+    "tokenId": 229,
+    "rarityScore": 77.60052042755875,
+    "rank": 2219
+  },
+  {
+    "tokenId": 1672,
+    "rarityScore": 76.70467879648925,
+    "rank": 2220
+  },
+  {
+    "tokenId": 424,
+    "rarityScore": 75.29605605964925,
+    "rank": 2221
+  },
+  {
+    "tokenId": 1287,
+    "rarityScore": 71.56200928685753,
+    "rank": 2222
+  }
+]

@@ -163,6 +163,38 @@ section#gallery {
   margin-bottom: 5px;
 }
 
+.card .rank {
+  font-weight: bold;
+  color: #060340;
+  margin-top: 5px;
+}
+
+.card .score {
+  font-size: 0.9rem;
+  color: #060340;
+  margin-bottom: 5px;
+}
+
+.sort-container {
+  margin: 20px;
+  text-align: right;
+}
+
+.sort-container label {
+  margin-right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+#sort-options {
+  padding: 5px 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 /* Load More Button */
 #load-more-container {
   text-align: center;
