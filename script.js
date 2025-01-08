@@ -172,7 +172,21 @@ document.addEventListener("DOMContentLoaded", async () => {
       item.attributes.forEach((attr) => {
         const attrBox = document.createElement("div");
         attrBox.className = "attribute";
-        attrBox.textContent = `${attr.trait_type}: ${attr.value}`;
+
+        const trait = document.createElement("span");
+        trait.className = "trait";
+        trait.textContent = `${attr.value}`;
+
+        // Calculate percentage
+        const count = traitCounts[attr.trait_type]?.[attr.value] || 0;
+        const percentage = ((count / 2222) * 100).toFixed(1);
+
+        const percentageSpan = document.createElement("span");
+        percentageSpan.className = "percentage";
+        percentageSpan.textContent = `${percentage}%`;
+
+        attrBox.appendChild(trait);
+        attrBox.appendChild(percentageSpan);
         attributes.appendChild(attrBox);
       });
 
