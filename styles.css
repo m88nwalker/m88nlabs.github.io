@@ -182,20 +182,42 @@ section#gallery {
   padding: 10px;
 }
 
+/* Card Styles */
 .card {
+  position: relative;
   width: calc(25% - 20px);
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #5f5c92, #8e7cc3, #e7d4f1);
+  background-size: 300% 300%;
+  border: 2px solid #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
   overflow: hidden;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform 0.3s, background-position 1s;
   height: auto;
 }
 
 .card:hover {
   transform: scale(1.05);
+  background-position: right center;
+}
+
+/* Holographic Shine */
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -75%;
+  width: 150%;
+  height: 100%;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0.2), transparent 60%);
+  transform: skewX(-25deg);
+  transition: left 0.7s ease-in-out;
+  pointer-events: none;
+}
+
+.card:hover::before {
+  left: 100%;
 }
 
 .card img {
@@ -203,32 +225,65 @@ section#gallery {
   height: auto;
 }
 
+/* Text Effects */
 .card .name {
   font-weight: bold;
   padding: 10px;
-  background-color: #f5f5f5;
-}
-
-.card .attributes {
-  padding: 10px;
-  font-size: 0.9rem;
-  color: #666;
-}
-
-.card .attribute {
-  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #060340;
+  font-size: 1.2rem;
+  text-transform: uppercase;
 }
 
 .card .rank {
   font-weight: bold;
-  color: #060340;
+  color: gold;
+  font-size: 1rem;
+  text-shadow: 0 0 5px rgba(255, 215, 0, 0.8);
   margin-top: 5px;
 }
 
 .card .score {
   font-size: 0.9rem;
-  color: #060340;
+  color: #8e7cc3;
   margin-bottom: 5px;
+  text-shadow: 0 0 5px rgba(142, 124, 195, 0.8);
+}
+
+/* Attribute Styles */
+.card .attributes {
+  padding: 10px;
+  font-size: 0.9rem;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.card .attribute {
+  margin-bottom: 5px;
+  text-shadow: 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Sparkle Overlay */
+.card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('images/sparkles.png') repeat;
+  opacity: 0.5;
+  pointer-events: none;
+  animation: sparkle 2s linear infinite;
+}
+
+@keyframes sparkle {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
 }
 
 /* Sort Section */
