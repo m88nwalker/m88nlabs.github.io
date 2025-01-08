@@ -1,17 +1,13 @@
-// Script.js - Final and verified version with rarity integration
-
 document.addEventListener("DOMContentLoaded", async () => {
   const gallery = document.getElementById("gallery");
   const filters = document.getElementById("filters");
-  const sortOptions = document.getElementById("sort-options");
   let jsonData = [];
-  const pageSize = 50; // Number of images to load per page
+  const pageSize = 50;
   let currentPage = 0;
   let manifestFiles = [];
   let traitCounts = {};
   let rarityData = [];
 
-  // Helper function to determine the folder for an image
   const getImageFolder = (id) => {
     const tokenId = parseInt(id);
     if (tokenId <= 500) return "1-500";
@@ -21,7 +17,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return "2001-2222";
   };
 
-  // Load manifest file
   async function loadManifest() {
     try {
       const response = await fetch("metadata/manifest.json");
@@ -31,7 +26,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Load precomputed trait counts
   async function loadTraitCounts() {
     try {
       const response = await fetch("metadata/trait_counts.json");
@@ -41,7 +35,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Load rarity data
   async function loadRarityData() {
     try {
       const response = await fetch("metadata/rarity.json");
@@ -51,7 +44,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Load metadata for the current page
   async function loadMetadataChunk() {
     const start = currentPage * pageSize;
     const end = start + pageSize;
@@ -73,7 +65,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
   }
 
-  // Merge rarity data with metadata
   const mergeRarityData = () => {
     const rarityMap = new Map(rarityData.map((item) => [item.tokenId, item]));
     jsonData = jsonData.map((item) => ({
@@ -83,10 +74,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     }));
   };
 
-  // Render filters using precomputed counts
   const renderFilters = () => {
-    filters.innerHTML = ""; // Clear filters before rendering
-
+    filters.innerHTML = "";
     Object.keys(traitCounts).forEach((trait) => {
       const accordionItem = document.createElement("div");
       accordionItem.className = "accordion-item";
@@ -131,9 +120,8 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Render gallery with lazy-loaded images
   const renderGallery = (data) => {
-    gallery.innerHTML = ""; // Clear gallery before rendering
+    gallery.innerHTML = "";
     data.forEach((item) => {
       const card = document.createElement("div");
       card.className = "card";
@@ -144,7 +132,6 @@ document.addEventListener("DOMContentLoaded", async () => {
       img.alt = item.name;
       img.classList.add("lazy");
 
-      // Fallback to placeholder if image fails to load
       img.onerror = () => {
         img.src = "images/0.png";
       };
@@ -194,7 +181,23 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
   };
 
-  // Load the next chunk of metadata when "Load More" is clicked
+  const sortGallery = (sortOption) => {
+    let sortedData = [...jsonData];
+
+    if (sortOption === "rank") {
+      sortedData.sort((a, b) => a.rank - b.rank);
+    } else if (sortOption === "score") {
+      sortedData.sort((a, b) => b.rarityScore - a.rarityScore);
+    }
+
+    renderGallery(sortedData.slice(0, pageSize * (currentPage + 1)));
+  };
+
+  document.getElementById("sort-options").addEventListener("change", (event) => {
+    const sortOption = event.target.value;
+    sortGallery(sortOption);
+  });
+
   document.getElementById("load-more").addEventListener("click", async () => {
     currentPage++;
     await loadMetadataChunk();
@@ -224,7 +227,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderGallery(filteredData.slice(0, pageSize * (currentPage + 1)));
   });
 
-  // Initial load
   await loadManifest();
   await loadTraitCounts();
   await loadRarityData();

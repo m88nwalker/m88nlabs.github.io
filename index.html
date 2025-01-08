@@ -11,10 +11,28 @@
 </head>
 <body>
     <!-- Banner Section -->
-    <div id="banner">
-        <h1>Townie Gallery</h1>
+    <div id="banner"></div>
+
+    <!-- Info Section -->
+    <div class="info-section">
+        <h1 class="collection-title">Welcome to the Townie Gallery</h1>
+        <p class="collection-description">
+            Explore our exclusive NFT collection. <br>
+            Own a piece of the unique and quirky world of Townies!
+        </p>
+        <a href="https://on.mintpad.co/townies" target="_blank" class="buy-button">Mint Townies</a>
     </div>
 
+    <!-- Sort Section -->
+    <div class="sort-section">
+        <label for="sort-options">Sort By:</label>
+        <select id="sort-options">
+            <option value="default">Default</option>
+            <option value="rank">Rarity Rank (Most Rare First)</option>
+            <option value="score">Rarity Score (Highest First)</option>
+        </select>
+    </div>
+    
     <!-- Main Content -->
     <div class="main-container">
         <!-- Filter Sidebar -->
@@ -27,16 +45,6 @@
             <!-- Gallery cards will be dynamically rendered here -->
         </section>
     </div>
-
-    <div class="sort-container">
-        <label for="sort-options">Sort By:</label>
-        <select id="sort-options">
-            <option value="default">Default</option>
-            <option value="rank">Rarity Rank (Most Rare First)</option>
-            <option value="score">Rarity Score (Highest First)</option>
-        </select>
-    </div>
-    
 
     <!-- Load More Button -->
     <div id="load-more-container">
