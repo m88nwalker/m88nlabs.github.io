@@ -63,8 +63,24 @@ header h1 {
 .button-group {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  margin-top: 20px;
+  gap: 10px;
+  margin-top: 20px 0;
+}
+
+.button-group a {
+  text-decoration: none;
+  color: white;
+  background-color: #e81899;
+  padding: 15px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.button-group a:hover {
+  background-color: #b5006f;
+  transform: scale(1.05);
 }
 
 .buy-button {
@@ -425,5 +441,18 @@ footer p {
     font-size: 0.8rem;
     margin-top: 10px;
     margin-bottom: 10px;
+  }
+}
+
+/* Mobile-friendly button group */
+@media (max-width: 768px) {
+  .button-group {
+    flex-direction: column; /* Stack buttons vertically */
+    align-items: center;
+  }
+
+  .button-group a {
+    width: 90%; /* Make buttons fill most of the width */
+    text-align: center; /* Center text */
   }
 }
