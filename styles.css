@@ -54,14 +54,20 @@ header h1 {
 
 .info-section .collection-description {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.8;
   margin-bottom: 20px;
   margin-top: 20px;
   font-family: 'Press Start 2P', cursive;
 }
 
-.info-section .buy-button {
-  display: inline-block;
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.buy-button {
   background-color: #e81899;
   color: white;
   text-decoration: none;
@@ -73,7 +79,7 @@ header h1 {
   transition: background-color 0.3s, transform 0.2s;
 }
 
-.info-section .buy-button:hover {
+.buy-button:hover {
   background-color: #b5006f;
   color: white;
   transform: scale(1.05);
