@@ -1,0 +1,306 @@
+/* =======================
+   Wenmoon Brainometer — Responsive Styles
+   ======================= */
+
+* { box-sizing: border-box; }
+:root{
+  --bg:#0c0c0c;
+  --panel:#121212;
+  --border:#222;
+  --muted:#9aa0a6;
+  --accent:#f7931a;
+  --text:#fff;
+
+  /* Fluid type scales */
+  --h1: clamp(1.25rem, 1rem + 2vw, 1.75rem);
+  --body: clamp(0.95rem, 0.9rem + 0.2vw, 1rem);
+  --small: clamp(0.85rem, 0.8rem + 0.2vw, 0.95rem);
+
+  /* Card width */
+  --maxw: 900px;
+}
+
+html, body { height: 100%; }
+body{
+  margin:0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Inter, Arial, sans-serif;
+  font-size: var(--body);
+  color:var(--text);
+  background:var(--bg);
+  display:grid;
+  place-items:center;
+  padding: clamp(12px, 2.5vw, 24px);
+  padding-left: max(env(safe-area-inset-left), clamp(12px, 2.5vw, 24px));
+  padding-right:max(env(safe-area-inset-right), clamp(12px, 2.5vw, 24px));
+}
+
+.app{
+  width:min(var(--maxw), 100%);
+  background:var(--panel);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding: clamp(16px, 2.5vw, 24px);
+  box-shadow:0 10px 30px rgba(0,0,0,.35);
+}
+
+h1{
+  margin:0 0 12px;
+  font-size:var(--h1);
+  line-height:1.2;
+  letter-spacing:.2px;
+}
+
+/* -------------------------
+   Controls
+   ------------------------- */
+
+.controls{
+  display:grid;
+  grid-template-columns: repeat(5, minmax(150px, 1fr));
+  gap:12px;
+  margin-bottom:12px;
+}
+
+label{ display:grid; gap:6px; font-size:var(--small); color:#d6d6d6; }
+
+input, select, button{
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:#1a1a1a;
+  color:var(--text);
+  outline:none;
+  min-height:44px;               /* larger tap target */
+}
+
+select{ appearance:none; background-image: linear-gradient(45deg, transparent 50%, #666 50%), linear-gradient(135deg, #666 50%, transparent 50%); background-position: calc(100% - 18px) 50%, calc(100% - 12px) 50%; background-size:6px 6px, 6px 6px; background-repeat:no-repeat; }
+
+/* --- Updated Submit Button (Green + Rocket Emoji) --- */
+/* --- Clean, Always-Black Start Button --- */
+button {
+  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
+  color: #ffffff;
+  font-weight: 700;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+button::before {
+  content: "🚀";
+  font-size: 1.1rem;
+}
+
+button:hover {
+  background: linear-gradient(145deg, #1a1a1a, #222);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.7);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Responsive controls */
+@media (max-width: 980px){
+  .controls{ grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 720px){
+  .controls{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  .controls{ grid-template-columns: 1fr; }
+  button{ width:100%; }
+}
+
+/* -------------------------
+   Readout
+   ------------------------- */
+
+.readout{
+  display:flex;
+  gap: clamp(10px, 2.5vw, 18px);
+  flex-wrap: wrap;
+  margin: 6px 0 14px;
+  color:var(--muted);
+  align-items:center;
+}
+.readout strong{ color:#dcdcdc; }
+
+/* Let ATH line (if present) sit nicely on mobile */
+#athOut{ margin-top:4px; color:var(--muted); font-size:var(--small); }
+
+/* -------------------------
+   Image stack
+   ------------------------- */
+
+.image-wrap{
+  position:relative;
+  width: min(520px, 100%);
+  aspect-ratio: 1 / 1;
+  display:grid;
+  place-items:center;
+  border:1px dashed var(--border);
+  border-radius:12px;
+  background:#0f0f0f;
+  margin-inline:auto;
+  overflow:hidden; /* prevent aura overflow on tiny screens */
+}
+
+.image-wrap img{
+  position:absolute;
+  inset:0;
+  width:100%; height:100%;
+  object-fit:contain;
+  -webkit-user-drag:none;
+  user-select:none;
+}
+
+.bg   { z-index:1; transition:opacity .35s ease-in-out; }
+.face { z-index:2; }
+.overlay{
+  z-index:3;
+  transition: opacity .5s ease-in-out, transform .5s ease-in-out, filter .5s ease-in-out;
+  transform-origin:center;
+}
+
+/* Aura around whole stack using pseudo-element */
+.image-wrap::after{
+  content:"";
+  position:absolute;
+  inset: -8px;
+  border-radius:16px;
+  pointer-events:none;
+  opacity:0;
+}
+
+/* Put the background below everything else so we can slide a glow between bg and face */
+.bg { z-index: 0 !important; }
+
+/* Inner glow layer (auto-inserted by JS if missing) */
+.inner-glow {
+  position: absolute;
+  inset: 0;
+  z-index: 1;                /* between bg (0) and face (2) */
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity .25s ease-in-out, filter .25s ease-in-out, transform .25s ease-in-out;
+  transform: scale(1.10);   /* push outside silhouette */
+  filter: blur(18px);       /* big, soft bloom */
+}
+
+/* When green pulse is active, show a soft green radial glow behind the face */
+.image-wrap.pulse-green .inner-glow {
+  opacity: 1;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(0,255,128,0.55) 0%,
+    rgba(0,255,128,0.35) 32%,
+    rgba(0,255,128,0.18) 55%,
+    rgba(0,0,0,0) 75%
+  );
+  animation: auraGreen 1.2s ease-in-out infinite;
+}
+
+/* When red tremor is active, show a red radial glow behind the face */
+.image-wrap.tremor-red .inner-glow {
+  opacity: 1;
+  background: radial-gradient(
+    circle at 50% 45%,
+    rgba(255,65,65,0.50) 0%,
+    rgba(255,65,65,0.32) 32%,
+    rgba(255,65,65,0.16) 55%,
+    rgba(0,0,0,0) 75%
+  );
+  animation: auraRed .9s ease-in-out infinite;
+}
+
+/* Add a matching glow ON the face for extra punch */
+.image-wrap.pulse-green .face{
+  filter: drop-shadow(0 0 22px rgba(0,255,128,0.55))
+          drop-shadow(0 0 36px rgba(0,255,128,0.35));
+}
+
+.image-wrap.tremor-red .face{
+  filter: drop-shadow(0 0 20px rgba(255,65,65,0.50))
+          drop-shadow(0 0 34px rgba(255,65,65,0.32));
+}
+
+/* If both classes accidentally exist at once, kill the glow to avoid clash */
+.image-wrap.pulse-green.tremor-red .inner-glow { opacity: 0; animation: none; }
+
+
+/* -------- Green Pulse (> +20%) -------- */
+@keyframes auraGreen{
+  0%{ box-shadow:0 0 0 rgba(0,255,128,0); }
+  50%{ box-shadow:0 0 30px rgba(0,255,128,.75); }
+  100%{ box-shadow:0 0 0 rgba(0,255,128,0); }
+}
+@keyframes greenScale{
+  0%{ transform:scale(1); }
+  50%{ transform:scale(1.04); }
+  100%{ transform:scale(1); }
+}
+.image-wrap.pulse-green::after{ opacity:1; animation:auraGreen 1.2s ease-in-out infinite; }
+.image-wrap.pulse-green .face,
+.image-wrap.pulse-green .overlay{ animation:greenScale 1.2s ease-in-out infinite; }
+
+/* -------- Red Tremor (< -20%) -------- */
+@keyframes auraRed{
+  0%{ box-shadow:0 0 0 rgba(255,65,65,0); }
+  50%{ box-shadow:0 0 26px rgba(255,65,65,.7); }
+  100%{ box-shadow:0 0 0 rgba(255,65,65,0); }
+}
+@keyframes tremorRed{
+  0%{ transform:translateX(0); }
+  20%{ transform:translateX(-2px); }
+  40%{ transform:translateX(2px); }
+  60%{ transform:translateX(-1.5px); }
+  80%{ transform:translateX(1.5px); }
+  100%{ transform:translateX(0); }
+}
+.image-wrap.tremor-red::after{ opacity:1; animation:auraRed .9s ease-in-out infinite; }
+.image-wrap.tremor-red .face,
+.image-wrap.tremor-red .overlay{ animation:tremorRed .9s ease-in-out infinite; }
+
+/* Ensure only one effect at a time */
+.image-wrap.pulse-green.tremor-red::after,
+.image-wrap.pulse-green.tremor-red .face,
+.image-wrap.pulse-green.tremor-red .overlay{ animation:none; opacity:0; }
+
+/* -------------------------
+   Small-screen refinements
+   ------------------------- */
+
+@media (max-width: 560px){
+  .app{ border-radius:14px; }
+  .image-wrap{ border-radius:10px; }
+  .readout{ gap:10px; }
+}
+
+/* Large screens polish */
+@media (min-width: 1100px){
+  .app{ border-radius:18px; }
+}
+
+/* -------------------------
+   Motion & prefers-reduced-motion
+   ------------------------- */
+@media (prefers-reduced-motion: reduce){
+  *{ animation: none !important; transition: none !important; }
+}
+
+/* -------------------------
+   Utility
+   ------------------------- */
+.hint{ margin-top:10px; color:var(--muted); font-size:var(--small); text-align: center; }
