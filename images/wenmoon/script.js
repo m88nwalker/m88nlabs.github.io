@@ -1,4 +1,4 @@
-// ====== Wenmoon Dynamic Price Checker ======
+// ====== Wenmoon Dynamic Price Checker V4.20 ======
 
 const REFRESH_BY_TF = { "24h": 60_000, "7d": 120_000, "30d": 300_000, "1y": 600_000, "max": 600_000 };
 const HIDDEN_MULTIPLIER = 3;
@@ -174,3 +174,58 @@ presetId.addEventListener("change", ()=>{ updateOnce(); restartTimer(); });
 if(customId) customId.addEventListener("change", ()=>{ updateOnce(); restartTimer(); });
 
 updateOnce(); restartTimer();
+
+// === Settings Drawer Positioning ===
+const fab = document.getElementById("settingsFab");
+const drawer = document.getElementById("drawer");
+
+// Position drawer under the button when opened
+function positionDrawer() {
+  const rect = fab.getBoundingClientRect();
+  const gap = 10; // space between the button and the drawer
+  
+  // Calculate drawer position
+  const top = rect.bottom + gap + window.scrollY;
+  const left = rect.right - drawer.offsetWidth + window.scrollX;
+
+  // Keep drawer inside screen width on mobile
+  const maxLeft = window.scrollX + document.documentElement.clientWidth - drawer.offsetWidth - 12;
+  const safeLeft = Math.max(window.scrollX + 12, Math.min(left, maxLeft));
+
+  drawer.style.top = `${top}px`;
+  drawer.style.left = `${safeLeft}px`;
+}
+
+// When settings button is clicked
+fab.addEventListener("click", (e) => {
+  e.stopPropagation();
+  const willOpen = !drawer.classList.contains("open");
+  
+  if (willOpen) {
+    drawer.classList.add("open");
+    // temporary show for accurate width/height
+    drawer.style.opacity = "0";
+    drawer.style.pointerEvents = "none";
+    void drawer.offsetWidth; // force layout
+    positionDrawer();
+    drawer.style.opacity = "";
+    drawer.style.pointerEvents = "";
+  } else {
+    drawer.classList.remove("open");
+  }
+});
+
+// Close drawer if clicking anywhere else
+document.addEventListener("click", (e) => {
+  if (!drawer.contains(e.target) && e.target !== fab) {
+    drawer.classList.remove("open");
+  }
+});
+
+// Reposition drawer when page moves
+window.addEventListener("scroll", () => {
+  if (drawer.classList.contains("open")) positionDrawer();
+});
+window.addEventListener("resize", () => {
+  if (drawer.classList.contains("open")) positionDrawer();
+});

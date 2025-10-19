@@ -1,161 +1,138 @@
-/* wenmoon Dynamic Price Checker UI */
-
+/* ========= Wenmoon Dynamic Price Checker V4.20 ========= */
 * { box-sizing: border-box; }
 :root{
   --bg:#0c0c0c; --panel:#121212; --border:#222; --muted:#9aa0a6; --text:#fff;
-  --accent:#f7931a;
   --h1: clamp(1.25rem, 1rem + 2vw, 1.5rem);
   --body: clamp(0.95rem, 0.9rem + 0.2vw, 1rem);
   --small: clamp(0.82rem, 0.8rem + 0.2vw, 0.95rem);
   --maxw: 960px;
 }
-
 html, body { height: 100%; }
 body{
   margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  font-size: var(--body); color:var(--text); background:var(--bg);
-  display:grid; place-items:center;
-  padding: clamp(12px, 2.5vw, 24px);
-  padding-left: max(env(safe-area-inset-left), clamp(12px, 2.5vw, 24px));
-  padding-right:max(env(safe-area-inset-right), clamp(12px, 2.5vw, 24px));
+  font-size: var(--body); color: var(--text); background: var(--bg);
+  display:grid; place-items:center; padding: clamp(12px, 2.5vw, 24px);
 }
-
 .app{
   width:min(var(--maxw), 100%);
-  background:var(--panel);
+  background: var(--panel);
   border:1px solid var(--border);
   border-radius:16px;
   padding: clamp(14px, 2.2vw, 20px);
   box-shadow:0 10px 30px rgba(0,0,0,.35);
 }
+.topbar{ display:flex; align-items:center; justify-content:space-between; margin-bottom:10px; }
+.topbar h1{ margin:0; font-size:var(--h1); font-weight:800; }
 
-/* Topbar: tiny, to keep focus on image */
-.topbar{
-  display:flex; align-items:center; justify-content:space-between;
-  margin-bottom: 8px;
-}
-.topbar h1{ margin:0; font-size:var(--h1); letter-spacing:.2px; font-weight:800; }
-
-/* Floating settings button (opens the drawer) */
-.fab{
-  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
-  color:#fff; border:1px solid #333; border-radius:12px;
-  padding:10px 14px; min-height: 40px; cursor:pointer;
-  box-shadow:0 6px 16px rgba(0,0,0,.6);
-}
-.fab:hover{ filter:brightness(1.05); transform: translateY(-1px); }
-.fab:active{ transform: translateY(0); }
-
-/* Image stack */
+/* ========= Image Stack ========= */
 .image-wrap{
-  position:relative;
-  width: min(760px, 100%); /* bigger canvas, still responsive */
+  position: relative !important;         /* <-- critical */
+  width:min(760px, 100%);
   aspect-ratio: 1 / 1;
+  margin:0 auto;
   display:grid; place-items:center;
-  border: 1px solid var(--border);
-  border-radius:14px; background:#0f0f0f; margin-inline:auto;
-  overflow:hidden;
+  border-radius:14px; overflow:hidden;
+  background:#0f0f0f; border:1px dashed var(--border);
 }
-
 .image-wrap img{
   position:absolute; inset:0; width:100%; height:100%;
   object-fit:contain; -webkit-user-drag:none; user-select:none;
 }
-
 .bg{ z-index:0; transition:opacity .35s ease-in-out; }
 .face{ z-index:2; }
-.overlay{ z-index:3; transition: opacity .5s ease-in-out, transform .5s ease-in-out, filter .5s ease-in-out; transform-origin:center; }
+.overlay{ z-index:3; transition: opacity .5s, transform .5s, filter .5s; transform-origin:center; }
 
-/* Inner glow (auto-inserted via JS) */
+/* Inner glow (inserted by JS) */
 .inner-glow{
   position:absolute; inset:0; z-index:1; pointer-events:none;
-  opacity:0; transform: scale(1.10); filter: blur(18px);
-  transition: opacity .25s ease-in-out, filter .25s ease-in-out, transform .25s ease-in-out;
+  opacity:0; transform:scale(1.10); filter:blur(18px);
+  transition:opacity .25s, filter .25s, transform .25s;
 }
-
-/* Face glow kickers */
 .image-wrap.pulse-green .inner-glow{
-  opacity:1; background: radial-gradient(circle at 50% 45%, rgba(0,255,128,0.55) 0%, rgba(0,255,128,0.35) 32%, rgba(0,255,128,0.18) 55%, rgba(0,0,0,0) 75%);
+  opacity:1; background:radial-gradient(circle at 50% 45%, rgba(0,255,128,0.55) 0%, rgba(0,255,128,0.35) 32%, rgba(0,255,128,0.18) 55%, rgba(0,0,0,0) 75%);
 }
 .image-wrap.tremor-red .inner-glow{
-  opacity:1; background: radial-gradient(circle at 50% 45%, rgba(255,65,65,0.50) 0%, rgba(255,65,65,0.32) 32%, rgba(255,65,65,0.16) 55%, rgba(0,0,0,0) 75%);
+  opacity:1; background:radial-gradient(circle at 50% 45%, rgba(255,65,65,0.50) 0%, rgba(255,65,65,0.32) 32%, rgba(255,65,65,0.16) 55%, rgba(0,0,0,0) 75%);
 }
-.image-wrap.pulse-green .face{
-  filter: drop-shadow(0 0 22px rgba(0,255,128,0.55)) drop-shadow(0 0 36px rgba(0,255,128,0.35));
-}
-.image-wrap.tremor-red .face{
-  filter: drop-shadow(0 0 20px rgba(255,65,65,0.50)) drop-shadow(0 0 34px rgba(255,65,65,0.32));
-}
+.image-wrap.pulse-green .face{ filter: drop-shadow(0 0 22px rgba(0,255,128,0.55)) drop-shadow(0 0 36px rgba(0,255,128,0.35)); }
+.image-wrap.tremor-red .face{ filter: drop-shadow(0 0 20px rgba(255,65,65,0.50)) drop-shadow(0 0 34px rgba(255,65,65,0.32)); }
 
-/* Aura ring outside the stack */
-.image-wrap::after{
-  content:""; position:absolute; inset:-8px; border-radius:16px; pointer-events:none; opacity:0;
-}
+/* Outer aura around card */
+.image-wrap::after{ content:""; position:absolute; inset:-8px; border-radius:16px; pointer-events:none; opacity:0; }
 @keyframes auraGreen{0%{box-shadow:0 0 0 rgba(0,255,128,0);}50%{box-shadow:0 0 30px rgba(0,255,128,.75);}100%{box-shadow:0 0 0 rgba(0,255,128,0);}}
 @keyframes greenScale{0%{transform:scale(1);}50%{transform:scale(1.04);}100%{transform:scale(1);}}
 .image-wrap.pulse-green::after{ opacity:1; animation:auraGreen 1.2s ease-in-out infinite; }
 .image-wrap.pulse-green .face, .image-wrap.pulse-green .overlay{ animation:greenScale 1.2s ease-in-out infinite; }
-
 @keyframes auraRed{0%{box-shadow:0 0 0 rgba(255,65,65,0);}50%{box-shadow:0 0 26px rgba(255,65,65,.7);}100%{box-shadow:0 0 0 rgba(255,65,65,0);}}
 @keyframes tremorRed{0%{transform:translateX(0);}20%{transform:translateX(-2px);}40%{transform:translateX(2px);}60%{transform:translateX(-1.5px);}80%{transform:translateX(1.5px);}100%{transform:translateX(0);}}
 .image-wrap.tremor-red::after{ opacity:1; animation:auraRed .9s ease-in-out infinite; }
 .image-wrap.tremor-red .face, .image-wrap.tremor-red .overlay{ animation:tremorRed .9s ease-in-out infinite; }
 
-/* HUD overlay (info on top of image) */
-.hud{
-  position:absolute; inset:auto 0 0 0; /* bottom overlay */
-  padding: 12px;
-  display:flex; flex-direction:column; gap:6px;
-  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0));
-  z-index: 4;
-}
+/* ========= HUD (on-image stats) ========= */
+.hud{ position:absolute; inset:auto 0 0 0; padding:12px; display:flex; flex-direction:column; gap:6px; background:linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,0)); z-index:4; }
 .hud-row{ display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
-.chip{
-  background: rgba(18,18,18,.7);
-  border:1px solid rgba(255,255,255,.08);
-  color:#e6e6e6;
-  padding:6px 10px; border-radius:999px; font-size: var(--small);
-}
+.chip{ background:rgba(18,18,18,.7); border:1px solid rgba(255,255,255,.08); color:#e6e6e6; padding:6px 10px; border-radius:999px; font-size:var(--small);}
 .chip.strong{ color:#fff; font-weight:800; }
+.ath-line{ color:var(--muted); font-size:var(--small); }
 
-/* ATH line */
-.ath-line{ color:#9aa0a6; font-size: var(--small); }
+/* ========= Settings button ON image ========= */
+.fab-on-image{
+  position:absolute !important;         /* <-- enforce absolute */
+  top:max(10px, env(safe-area-inset-top)) !important;
+  right:max(10px, env(safe-area-inset-right)) !important;
+  z-index: 999 !important;              /* above everything */
+  background: rgba(18,18,18,0.78);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  color:#fff; border:1px solid rgba(255,255,255,0.14);
+  border-radius:12px; padding:8px 10px; min-height:36px; line-height:1;
+  box-shadow:0 8px 20px rgba(0,0,0,.45); cursor:pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+.fab-on-image:hover{ filter:brightness(1.06); transform:translateY(-1px); }
 
-/* Hidden drawer for compact controls */
+/* ========= Drawer ========= */
+/* Drawer anchored to the settings button */
 .drawer{
-  position: fixed; right: 16px; top: 64px;
+  position: fixed;                 /* anchor to viewport, not clipped by image */
   width: min(360px, 92vw);
   max-height: 60vh;
-  background: #121212; border: 1px solid #2a2a2a; border-radius: 14px;
+  overflow: auto;
+
+  background: #121212;
+  border: 1px solid #2a2a2a;
+  border-radius: 14px;
   box-shadow: 0 18px 42px rgba(0,0,0,.55);
-  transform: translateY(-12px) scale(.98);
-  opacity: 0; pointer-events: none;
-  transition: transform .18s ease, opacity .18s ease;
+
+  /* start hidden; JS will set top/left each time */
+  top: -9999px;
+  left: -9999px;
+
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(6px) scale(.98);
+  transition: opacity .16s ease, transform .16s ease;
   padding: 12px;
-  z-index: 20;
+  z-index: 10000;                  /* above image + hud + button */
 }
-.drawer.open{ transform: translateY(0) scale(1); opacity: 1; pointer-events: auto; }
 
-.controls{
-  display:grid; grid-template-columns: 1fr 1fr; gap: 10px;
+.drawer.open{
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
 }
-.controls label{ display:grid; gap:6px; font-size: var(--small); color:#d6d6d6; }
-input, select{
-  padding:10px 12px; border-radius:10px; border:1px solid #2a2a2a; background:#1a1a1a; color:#fff; outline:none; min-height:40px;
-}
-.submit{
-  grid-column: 1 / -1;
-  background: linear-gradient(145deg, #0d0d0d, #1a1a1a);
-  color:#fff; font-weight:800; border:1px solid #333; border-radius:12px;
-  padding:12px 16px; cursor:pointer;
-}
-.submit:hover{ filter:brightness(1.05); }
 
-/* Responsive tweaks */
-@media (max-width: 560px){
+.controls{ display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.controls label{ display:grid; gap:6px; font-size:var(--small); color:#d6d6d6; }
+input, select{ padding:10px 12px; border-radius:10px; border:1px solid #2a2a2a; background:#1a1a1a; color:#fff; outline:none; min-height:40px; }
+.submit{ grid-column:1/-1; background:linear-gradient(145deg, #0d0d0d, #1a1a1a); color:#fff; font-weight:800; border:1px solid #333; border-radius:12px; padding:12px 16px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,0.5); }
+.submit:hover{ filter:brightness(1.05); transform:translateY(-1px); }
+
+/* ========= Responsive ========= */
+@media (max-width:560px){
+  .controls{ grid-template-columns:1fr; }
   .image-wrap{ border-radius:12px; }
-  .controls{ grid-template-columns: 1fr; }
 }
 @media (prefers-reduced-motion: reduce){
-  *{ animation: none !important; transition: none !important; }
+  *{ animation:none !important; transition:none !important; }
 }
