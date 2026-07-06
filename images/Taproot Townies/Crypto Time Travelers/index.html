@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Crypto Time Travelers</title>
+
+  <!-- <link rel="icon" href="https://ordinals.com/preview/a7757eb05782aa7784d6c25b4b4291da370af19de23d9175613d1efe988ed59ei0"> -->
+  <link rel="icon" href="assets/townies/townie1.gif" type="image/gif">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <section id="titleScreen" class="title-screen">
+    <div class="title-card">
+      <p class="eyebrow">Taproot Townies Present</p>
+      <h1>Crypto Time Travelers</h1>
+      <p class="title-subtitle">A blockchain glitch has opened the timeline.</p>
+
+<div id="missionBriefing" class="mission-briefing cinematic-briefing">
+  <div id="matrixRain" class="matrix-rain"></div>
+
+  <div class="briefing-terminal">
+    <p class="eyebrow">Mission Briefing</p>
+
+    <h2>Timeline connection established...</h2>
+
+    <div class="briefing-lines">
+      <p class="briefing-line">The Taproot Townies have discovered a glitch inside the blockchain.</p>
+      <p class="briefing-line">They can jump through future timelines while reporting back to you.</p>
+      <p class="briefing-line">You begin with a $2,000 stimulus.</p>
+      <p class="briefing-line">Your Townie can survive only 30 timeline jumps.</p>
+      <p class="briefing-line">Each jump reveals new prices, global events, opportunities, and scams.</p>
+      <p class="briefing-line">Grow your net worth to unlock more Townies along the way.</p>
+      <p class="briefing-line">Your mission: build as much wealth as possible before time collapses.</p>
+    </div>
+
+    <div class="mission-actions">
+      <button id="beginMissionBtn" class="start-run-btn">Begin Mission</button>
+    </div>
+  </div>
+</div>
+
+<div id="townieSelectionArea" class="townie-selection-area hidden">
+  <p class="eyebrow">Choose Your First Traveler</p>
+
+  <div class="character-carousel">
+    <button id="prevTownieBtn" class="carousel-btn">‹</button>
+
+    <div class="character-card">
+      <div id="titleTowniePreview" class="townie-canvas title-townie-preview"></div>
+      <div id="titleRarity" class="rarity-pill">Common</div>
+      <h2 id="titleTownieName">Taproot Townie #1</h2>
+      <h3 id="titleTownieClass">Cool Hand</h3>
+      <p id="titleTownieBio">Unbothered and confident.</p>
+      <ul id="titleTownieTraits" class="trait-list"></ul>
+    </div>
+
+    <button id="nextTownieBtn" class="carousel-btn">›</button>
+  </div>
+
+  <button id="startRunBtn" class="start-run-btn">Start Run</button>
+</div>
+
+<button id="viewLeaderboardBtn" class="secondary-title-btn">
+    View Leaderboard
+</button>
+
+</div>
+</section>
+
+<!-- ================= LEADERBOARD SCREEN ================= -->
+
+<section id="leaderboardScreen" class="leaderboard-screen hidden">
+
+    <div class="leaderboard-card">
+
+        <p class="eyebrow">Local Legends</p>
+
+        <h1>Leaderboard</h1>
+
+        <div id="finalScoreBox" class="final-score-box hidden">
+
+            <div id="finalTowniePreview" class="townie-canvas"></div>
+
+            <div>
+
+                <p>Your Final Net Worth</p>
+
+                <strong id="finalScoreValue">$0</strong>
+
+                <label>Enter Initials</label>
+
+                <input
+                    id="initialsInput"
+                    maxlength="3"
+                    placeholder="AAA"
+                >
+
+                <button id="saveScoreBtn">
+                    Save Score
+                </button>
+
+            </div>
+
+        </div>
+
+        <div id="leaderboardList" class="leaderboard-list"></div>
+
+        <button
+            id="leaderboardHomeBtn"
+            class="start-run-btn">
+
+            Back to Start
+
+        </button>
+
+    </div>
+
+</section>
+
+<!-- ====================================================== -->
+
+<main id="gameShell" class="game-shell hidden">
+    <header class="game-header">
+      <div>
+        <h1>Crypto Time Traveler</h1>
+        <p class="tagline">Travel through time. Trade the future. Beat the market.</p>
+      </div>
+
+      <button id="newGameBtn" class="small-btn">New Run</button>
+    </header>
+
+    <section class="traveler-panel">
+      <div>
+        <span class="panel-label">Current Traveler</span>
+        <h2 id="travelerName">Taproot Townie #1</h2>
+        <p id="travelerClass">Class: Cool Hand</p>
+      </div>
+
+      <div id="travelerPreview" class="townie-canvas"></div>
+    </section>
+
+    <section class="status-grid">
+      <article class="status-card">
+        <span>Wallet</span>
+        <strong id="wallet">$2,000.00</strong>
+      </article>
+
+      <article class="status-card danger">
+        <span>Loan</span>
+        <strong id="loan">$0.00</strong>
+      </article>
+
+      <article class="status-card">
+        <span>Day</span>
+        <strong id="day">1 / 30</strong>
+      </article>
+
+      <article class="status-card">
+        <span>Location</span>
+        <strong id="location">Present Day</strong>
+      </article>
+
+      <article class="status-card">
+        <span>Timeline Era</span>
+        <strong id="era">Present Day</strong>
+      </article>
+
+      <article class="status-card">
+        <span>Market Mood</span>
+        <strong id="sentiment">Live Market</strong>
+      </article>
+    </section>
+
+    <section class="time-panel">
+      <span>Current Timeline</span>
+      <strong id="timeline">Loading...</strong>
+    </section>
+
+    <nav class="tab-bar">
+      <button class="tab-btn active" data-tab="market">Market</button>
+      <button class="tab-btn" data-tab="portfolio">Portfolio</button>
+      <button class="tab-btn" data-tab="travel">Travel</button>
+      <button class="tab-btn" data-tab="broker">Time Broker</button>
+      <button class="tab-btn" data-tab="townies">Townies</button>
+    </nav>
+
+    <section id="market" class="tab-panel active">
+      <div class="section-heading">
+        <h2>Market</h2>
+        <p>Buy low, jump through time, sell high.</p>
+      </div>
+
+      <div id="marketList" class="market-list"></div>
+
+      <div id="tradeBox" class="trade-box hidden">
+        <h3 id="tradeTitle">Trade</h3>
+
+        <div class="trade-info">
+          <p>Price</p>
+          <strong id="tradePrice">$0.00</strong>
+        </div>
+
+        <p id="tradeHelper" class="trade-helper"></p>
+
+        <label for="tradeAmount">Amount</label>
+        <input
+          id="tradeAmount"
+          type="number"
+          min="0"
+          step="0.00000001"
+          placeholder="Enter amount"
+        />
+
+        <div class="quick-trade-buttons">
+          <button data-percent="0.25">25%</button>
+          <button data-percent="0.5">50%</button>
+          <button data-percent="0.75">75%</button>
+          <button data-percent="1">100%</button>
+        </div>
+
+        <div class="trade-total">
+          <span>Total</span>
+          <strong id="tradeTotal">$0.00</strong>
+        </div>
+
+        <div class="trade-actions">
+          <button id="confirmTradeBtn">Confirm</button>
+          <button id="cancelTradeBtn" class="secondary-btn">Cancel</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="portfolio" class="tab-panel">
+      <div class="section-heading">
+        <h2>Portfolio</h2>
+        <p>Your current crypto holdings.</p>
+      </div>
+
+      <div class="portfolio-chart-card">
+        <h3>Allocation</h3>
+        <div id="allocationBar" class="allocation-bar"></div>
+        <div id="allocationLegend" class="allocation-legend"></div>
+      </div>
+
+      <div id="portfolioList" class="portfolio-list"></div>
+    </section>
+
+    <section id="travel" class="tab-panel">
+      <div class="section-heading">
+        <h2>Time Travel</h2>
+        <p>Jump to a new place and future date. Prices change every jump.</p>
+      </div>
+
+      <div class="travel-card">
+        <div class="traveler-stage">
+          <div class="stars-orbit"></div>
+          <div class="mini-portal"></div>
+          <div id="stageTownie" class="townie-canvas"></div>
+        </div>
+
+        <p>Each jump uses one day and may trigger a fictional crypto history event, hidden opportunity, or scam.</p>
+
+        <button id="timeJumpBtn">Random Time Jump</button>
+      </div>
+    </section>
+
+    <section id="broker" class="tab-panel">
+      <div class="section-heading">
+        <h2>Time Broker</h2>
+        <p id="brokerDescription">Borrow $5,000, owe $5,500, then pay interest every jump.</p>
+      </div>
+
+      <div class="broker-grid">
+        <button id="takeLoanBtn">Take Loan</button>
+        <button id="payLoanBtn" class="danger-btn">Pay Full Loan</button>
+      </div>
+    </section>
+
+    <section id="townies" class="tab-panel">
+      <div class="section-heading">
+        <h2>Townie Collection</h2>
+        <p>Each Townie has a different class, rarity, and passive traits.</p>
+      </div>
+
+      <div id="townieSelectList" class="townie-select-list"></div>
+    </section>
+
+    <section class="event-log">
+      <div class="section-heading">
+        <h2>Activity Log</h2>
+      </div>
+
+      <div id="eventLog" class="log-box"></div>
+    </section>
+  </main>
+
+  <div id="jumpOverlay" class="jump-overlay hidden">
+    <div class="jump-stars"></div>
+    <div class="jump-warp"></div>
+
+    <div class="portal-scene">
+      <div id="portalLeft" class="portal-ring"></div>
+      <div id="jumpTownie" class="townie-canvas jump-townie"></div>
+      <div id="portalRight" class="portal-ring hidden"></div>
+    </div>
+
+    <div id="jumpReveal" class="jump-reveal hidden"></div>
+  </div>
+
+  <div id="encounterOverlay" class="encounter-overlay hidden">
+    <div class="encounter-card">
+      <p class="eyebrow">Timeline Encounter</p>
+      <h2 id="encounterTitle">Beware of Scams</h2>
+      <p id="encounterScenario">A suspicious opportunity appears.</p>
+
+      <div class="encounter-actions">
+        <button id="encounterChoiceA"></button>
+        <button id="encounterChoiceB"></button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
