@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Owls vs. Space Invaders</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="game-container">
+    <canvas id="game" width="960" height="600"></canvas>
+
+    <div id="ui">
+      <div id="score">SCORE: 0</div>
+      <div id="level">LEVEL: 1</div>
+      <div id="lives">LIVES: —</div>
+      <div id="coins">COINS: 0</div>
+      <div id="powerup">POWER: —</div>
+    </div>
+
+    <div id="overlay">
+      <div id="mainMenuPanel" class="panel">
+        <h1 class="arcade-title">🦉 OWLS VS SPACE INVADERS 👾</h1>
+
+        <div class="menu-field owl-picker-field">
+  <label>CHOOSE OWL</label>
+
+  <div class="owl-slider-row">
+    <button id="owlPrevBtn" class="btn owl-nav-btn" type="button">◀</button>
+    <canvas id="owlPreview" width="160" height="160"></canvas>
+    <button id="owlNextBtn" class="btn owl-nav-btn" type="button">▶</button>
+  </div>
+
+  <div id="owlName" class="owl-name">OWL 0</div>
+</div>
+
+<div class="menu-field">
+  <label for="playerName">PLAYER NAME</label>
+  <input id="playerName" type="text" maxlength="16" placeholder="PLAYER 1" />
+</div>
+        <div class="help">
+          <p>← → MOVE</p>
+          <p>SPACE: SHOOT</p>
+        </div>
+
+        <div class="sub flicker">PRESS ENTER OR CLICK TO START</div>
+
+        <div class="button-row">
+          <button id="startBtn" class="btn">START</button>
+          <button id="leaderboardBtn" class="btn secondary-btn">LEADERBOARD</button>
+        </div>
+      </div>
+
+      <div id="leaderboardPanel" class="panel leaderboard-panel hidden">
+        <h2 class="arcade-title">🏆 LEADERBOARD 🏆</h2>
+        <div id="leaderboardList" class="leaderboard-list"></div>
+        <div class="button-row">
+          <button id="clearLeaderboardBtn" class="btn secondary-btn">CLEAR</button>
+          <button id="closeLeaderboardBtn" class="btn">BACK</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Owl Asset Definitions -->
+  <data id="owl-json" value="assets/owl0.json"></data>
+  <data id="owl-img" value="assets/owl0.png"></data>
+
+  <script src="script.js"></script>
+</body>
+</html>
