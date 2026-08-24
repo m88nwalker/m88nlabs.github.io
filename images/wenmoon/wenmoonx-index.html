@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>wenmoon?</title>
+  <link rel="stylesheet" href="https://m88nwalker.github.io/m88nlabs.github.io/images/wenmoon/styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <div class="topbar">
+    </div>
+
+    <div class="image-wrap">
+      <!-- ⚙️ SETTINGS BUTTON: must be inside .image-wrap -->
+      <button id="settingsFab" class="fab-on-image" aria-label="Open settings" type="button">⚙️</button>
+
+      <img id="bgImg" class="bg" src="https://m88nwalker.github.io/m88nlabs.github.io/images/wenmoon/bg-neutral.png" alt="Background" />
+      <img id="faceImg" class="face" src="https://m88nwalker.github.io/m88nlabs.github.io/images/wenmoon/face-x.png" alt="Wenmoon Face" />
+      <img id="brainImg" class="overlay" src="https://m88nwalker.github.io/m88nlabs.github.io/images/wenmoon/pink-neutral-pos.png" alt="Dynamic Brain" />
+
+      <!-- HUD over image -->
+      <div class="hud">
+        <div class="hud-row">
+          <span id="assetOut" class="chip">bitcoin (24h)</span>
+          <span id="priceOut" class="chip strong">—</span>
+          <span id="changeOut" class="chip">—</span>
+          <span id="timeOut" class="chip">—</span>
+        </div>
+        <div id="athOut" class="ath-line"></div>
+      </div>
+    </div>
+
+    <!-- Slide-out drawer -->
+    <aside id="drawer" class="drawer" aria-hidden="true">
+      <form id="form" class="controls">
+        <label>
+          Cryptocurrency
+          <select id="presetId">
+            <option value="bitcoin" selected>Bitcoin (BTC)</option>
+            <option value="ethereum">Ethereum (ETH)</option>
+            <option value="dogecoin">Dogecoin (DOGE)</option>
+            <option value="solana">Solana (SOL)</option>
+            <option value="custom">Custom…</option>
+          </select>
+        </label>
+
+        <label id="customWrap" style="display:none">
+          CoinGecko ID
+          <input id="customId" placeholder="e.g. pepe, shiba-inu" />
+        </label>
+
+        <label>
+          Currency
+          <select id="vsCurrency">
+            <option value="usd" selected>USD</option>
+            <option value="eur">EUR</option>
+          </select>
+        </label>
+
+        <label>
+          Timeframe
+          <select id="timeframe">
+            <option value="24h" selected>24h</option>
+            <option value="7d">7d</option>
+            <option value="30d">30d</option>
+            <option value="1y">1y</option>
+            <option value="max">ATH</option>
+          </select>
+        </label>
+
+        <button type="submit" class="submit">wenmoon?</button>
+      </form>
+    </aside>
+  </div>
+
+  <script src="https://m88nwalker.github.io/m88nlabs.github.io/images/wenmoon/script.js"></script>
+  <script>
+    // Drawer toggle
+    const fab = document.getElementById('settingsFab');
+    const drawer = document.getElementById('drawer');
+
+    fab.addEventListener('click', (e) => {
+      e.stopPropagation();
+      drawer.classList.toggle('open');
+      drawer.setAttribute('aria-hidden', drawer.classList.contains('open') ? 'false' : 'true');
+    });
+    document.addEventListener('click', (e) => {
+      if (!drawer.contains(e.target) && e.target !== fab) {
+        drawer.classList.remove('open');
+        drawer.setAttribute('aria-hidden', 'true');
+      }
+    });
+  </script>
+</body>
+</html>
