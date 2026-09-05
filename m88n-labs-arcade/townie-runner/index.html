@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Townie Runner | m88n Labs Arcade</title>
+  <link rel="icon" href="assets/townies/townie1.gif" type="image/gif">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="arcade-page">
+    <section class="arcade-square" aria-label="Townie Runner arcade cabinet">
+      <header class="cabinet-header">
+        <a class="back-link" href="../arcade-lobby.html">← ARCADE LOBBY</a>
+        <div class="cabinet-brand">M88N LABS <span>ARCADE</span></div>
+        <div class="cabinet-status"><i></i> ONLINE</div>
+      </header>
+
+      <div class="cabinet-screen">
+        <section id="homePage" class="page visible home-page" aria-labelledby="gameTitle">
+          <div class="home-sky" aria-hidden="true">
+            <div class="home-stars"></div>
+            <div class="home-moon"></div>
+          </div>
+
+          <div class="home-shell">
+            <div class="home-copy">
+             <!-- <p class="eyebrow">EXPERIMENT_01 // RUNNER</p> -->
+              <h1 id="gameTitle">Townie<br><span>Runner</span></h1>
+              <p class="home-tagline">Collect the Bitcoins. Save the Townies.</p>
+
+              <div id="homeRules" class="mission-card" aria-live="polite">
+                <div class="mission-heading"><span>MISSION BRIEFING</span><i></i></div>
+                <p data-rule="🏃 Rescue the other Townies"></p>
+                <p data-icon="bitcoin" data-rule="Carry 10 coins for each rescue"></p>
+                <p data-rule="🚪 Extract crews of 5 or more"></p>
+                <p data-rule="⭐ Larger crews earn bigger bonuses"></p>
+                <p data-rule="🏆 Save all 20 Townies at once to win"></p>
+              </div>
+
+              <div class="home-actions">
+                <button id="playBtn" class="primary home-start" type="button">
+                  <span>START RUN</span>
+                </button>
+                <button id="homeLeaderboardBtn" class="secondary" type="button">LEADERBOARD</button>
+              </div>
+            </div>
+
+            <div class="home-visual" aria-label="Townie 1 walking beneath the moon">
+              <div class="home-orbit"></div>
+              <canvas id="homeTownieCanvas" class="home-townie" width="96" height="96" role="img" aria-label="Townie 1 walking downward"></canvas>
+              <div class="home-ground"></div>
+              <div class="home-coin coin-one" aria-hidden="true"><span class="floating-bitcoin-coin">₿</span></div>
+              <div class="home-coin coin-two" aria-hidden="true"><span class="floating-bitcoin-coin">₿</span></div>
+            </div>
+          </div>
+
+          <div class="home-utility-panel">
+            <div class="mode-panel" aria-label="Game and difficulty selectors">
+              <div class="selector-block">
+                <div class="utility-heading">GAME MODE</div>
+                <div class="mode-toggle" role="group" aria-label="Choose Townie Runner game mode">
+                  <button id="normalModeBtn" class="mode-btn selected" type="button" aria-pressed="true">
+                    <strong>■ NORMAL</strong>
+                    <small>Square arcade mode</small>
+                  </button>
+                  <button id="landscapeModeBtn" class="mode-btn" type="button" aria-pressed="false">
+                    <strong>▭ LANDSCAPE</strong>
+                    <small>Original wide mode</small>
+                  </button>
+                </div>
+              </div>
+
+              <div class="selector-block difficulty-block">
+                <div class="utility-heading">DIFFICULTY</div>
+                <div class="difficulty-toggle" role="group" aria-label="Choose Townie Runner difficulty">
+                  <button id="easyDifficultyBtn" class="difficulty-btn selected" type="button" aria-pressed="true">
+                    <strong>⛓ EASY // CHAIN</strong>
+                    <small>Followers break away on impact</small>
+                  </button>
+                  <button id="hardDifficultyBtn" class="difficulty-btn" type="button" aria-pressed="false">
+                    <strong>💀 HARD // CREW</strong>
+                    <small>Any crew collision costs a life</small>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="legend-panel">
+              <div class="utility-heading">POWERUPS &amp; ITEMS</div>
+              <div class="home-legend">
+                <span><b class="legend-icon bitcoin-coin">₿</b><em>Coins</em></span>
+                <span><b class="legend-icon">❤️</b><em>Extra Life</em></span>
+                <span><b class="legend-icon">🛡️</b><em>Shield</em></span>
+                <span><b class="legend-icon">🧲</b><em>Magnet</em></span>
+                <span><b class="legend-icon">⚡</b><em>2× Score</em></span>
+                <span><b class="legend-icon">👯</b><em>Double Jump</em></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="home-stat-strip" aria-label="Local game statistics">
+            <div><span>HIGH SCORE</span><strong id="homeBestScore">0</strong></div>
+            <div><span>TOTAL COINS</span><strong id="homeTotalCoins">0</strong></div>
+            <div><span>RUNS PLAYED</span><strong id="homeGamesPlayed">0</strong></div>
+          </div>
+        </section>
+
+        <section id="leaderboardPage" class="page leaderboard-page" aria-labelledby="leaderboardTitle">
+          <div class="leaderboard-copy">
+            <p class="eyebrow">LOCAL HIGH SCORES</p>
+            <h2 id="leaderboardTitle">Top 10 Leaderboard</h2>
+            <p class="description">Scores are saved only in this browser.</p>
+          </div>
+
+          <div id="leaderboardRunnerStage" class="leaderboard-runner-stage" aria-hidden="true"></div>
+          <div id="leaderboard" class="leaderboard"></div>
+
+          <div class="page-actions">
+            <button id="leaderboardHomeBtn" class="secondary" type="button">Home</button>
+            <button id="leaderboardPlayBtn" class="primary" type="button">Start Run</button>
+          </div>
+        </section>
+
+        <section id="gameDialog" class="page game-page normal-mode" hidden aria-label="Townie Runner game">
+          <div class="game-topbar">
+            <button id="closeBtn" class="close" type="button" aria-label="Close game">← HOME</button>
+            <div class="game-title-mini">TOWNIE RUNNER <span id="modeLabel">// NORMAL · EASY CHAIN</span></div>
+          </div>
+
+          <div class="scoreboard" aria-label="Current run statistics">
+            <span><strong id="score">⭐ 0</strong></span>
+            <span><strong id="runCoins">💰 0</strong></span>
+            <span><strong id="streak">🔥 ×0</strong></span>
+            <span><strong id="followers">🏃 0</strong></span>
+            <span><strong id="savedTownies">🚪 0</strong></span>
+            <span><strong id="lives">❤️ 3</strong></span>
+          </div>
+
+          <div class="game-stage-shell">
+            <div class="canvas-wrap">
+              <canvas id="gameCanvas" width="720" height="720" aria-label="Townie Runner game"></canvas>
+              <div id="powerHud" class="power-hud" hidden><strong id="powerName">🛡️ SHIELD</strong><span class="power-track"><i id="powerBar"></i></span></div>
+              <div id="toast" class="toast" aria-live="polite"></div>
+              <div id="overlay">
+                <div id="preRunInfo" class="pre-run-info">
+                  <div class="pre-run-controls">
+                    <strong>HOW TO PLAY</strong>
+                    <span>Space · Up · Click · Tap to jump</span>
+                  </div>
+                  <div class="pre-run-items pre-run-items-inline" aria-label="Powerups and items">
+                    <span><b class="pre-run-bitcoin">₿</b><em>Coins</em></span>
+                    <span><b>❤️</b><em>Extra Life</em></span>
+                    <span><b>🛡️</b><em>Shield</em></span>
+                    <span><b>🧲</b><em>Magnet</em></span>
+                    <span><b>⚡</b><em>2× Score</em></span>
+                    <span><b>👯</b><em>Double Jump</em></span>
+                  </div>
+                </div>
+
+                <div class="pre-run-ready-block">
+                  <h3 id="overlayTitle">Ready?</h3>
+                  <p id="overlayText">Enter your leaderboard name, then start your run.</p>
+                </div>
+
+                <div id="nameEntry" class="name-entry">
+                  <label for="playerName">Leaderboard name</label>
+                  <input id="playerName" type="text" maxlength="12" value="TOWNIE" autocomplete="off">
+                </div>
+
+                <div class="overlay-actions">
+                  <button id="startBtn" class="primary" type="button">Start Run</button>
+                  <button id="overlayLeaderboardBtn" class="secondary" type="button" hidden>Leaderboard</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

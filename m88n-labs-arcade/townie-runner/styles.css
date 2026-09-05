@@ -1,0 +1,1489 @@
+*{box-sizing:border-box}
+:root{--bg:#070913;--panel:#0d1020;--panel2:#14182b;--border:#ffffff1c;--text:#fff;--muted:#aeb5cf;--orange:#ff9d20;--cyan:#61f5ff;--pink:#ff4fd8}
+html{background:#05060a}
+body{margin:0;min-width:320px;color:var(--text);background:radial-gradient(circle at 50% 0,#261336,#05060a 54%);font-family:Arial,sans-serif}
+button,input{font:inherit}button{cursor:pointer}
+.arcade-page{min-height:100vh;display:grid;place-items:start center;padding:20px}
+.arcade-square{width:min(960px,calc(100vw - 40px));aspect-ratio:1/1;display:grid;grid-template-rows:58px 1fr 48px;overflow:hidden;border:1px solid #ffffff22;border-radius:24px;background:#0a0c16;box-shadow:0 28px 80px #0009}
+.cabinet-header,.cabinet-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:0 18px;background:#090b14;border-color:var(--border);position:relative;z-index:20}
+.cabinet-header{border-bottom:1px solid var(--border)}.cabinet-footer{border-top:1px solid var(--border);color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.12em}
+.back-link{color:#fff;text-decoration:none;font-size:.68rem;font-weight:900;letter-spacing:.12em}.cabinet-brand{font-size:.7rem;font-weight:900;letter-spacing:.18em;color:#fff}.cabinet-brand span{color:var(--orange)}
+.cabinet-status{display:flex;align-items:center;gap:7px;color:#8edca6;font-size:.58rem;font-weight:900;letter-spacing:.12em}.cabinet-status i{width:7px;height:7px;border-radius:50%;background:#75dc96;box-shadow:0 0 10px #75dc96}
+.cabinet-screen{min-height:0;position:relative;overflow:hidden}.page{display:none;width:100%;height:100%}.page.visible{display:block}.eyebrow{margin:0;color:var(--orange);font-size:.64rem;font-weight:900;letter-spacing:.16em}
+.primary,.secondary{border-radius:10px;padding:11px 16px;font-weight:900;letter-spacing:.04em}.primary{border:0;color:#111;background:var(--orange);box-shadow:0 8px 28px #ff9d2035}.secondary{color:#fff;border:1px solid #ffffff25;background:#111426}.primary:hover,.secondary:hover{filter:brightness(1.08)}
+
+/* HOME */
+.home-page{position:relative;overflow:hidden;padding:clamp(22px,3.8vw,42px) clamp(24px,4.2vw,46px) 228px;background:linear-gradient(180deg,#0c1234 0%,#351858 54%,#c75d33 55%,#2d1b25 100%)}
+.home-sky,.home-stars{position:absolute;inset:0;pointer-events:none}.home-stars{opacity:.75;background-image:radial-gradient(circle at 8% 17%,#fff 0 1px,transparent 2px),radial-gradient(circle at 18% 34%,#fff 0 1px,transparent 2px),radial-gradient(circle at 31% 12%,#fff 0 1px,transparent 2px),radial-gradient(circle at 43% 28%,#fff 0 1px,transparent 2px),radial-gradient(circle at 57% 10%,#fff 0 1px,transparent 2px),radial-gradient(circle at 69% 31%,#fff 0 1px,transparent 2px),radial-gradient(circle at 82% 14%,#fff 0 1px,transparent 2px),radial-gradient(circle at 93% 38%,#fff 0 1px,transparent 2px)}
+.home-moon{position:absolute;width:15%;min-width:78px;aspect-ratio:1;border-radius:50%;right:7%;top:7%;background:#ffe5a8;box-shadow:0 0 52px #ffcb6c88}
+.home-shell{height:100%;display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(22px,4vw,50px);position:relative;z-index:2}.home-copy{min-width:0}.home-copy h1{margin:8px 0 12px;font-size:clamp(3.4rem,7.2vw,6.25rem);line-height:.78;letter-spacing:-.075em;text-transform:uppercase;text-shadow:0 6px 0 #311436,0 0 35px #ff9d2055}.home-copy h1 span{color:var(--orange)}.home-tagline{margin:0 0 14px;color:#fff;font-size:clamp(.82rem,1.55vw,1.02rem);font-weight:700}
+.mission-card{min-height:178px;padding:13px 15px;border:1px solid #ff9d2050;border-radius:15px;background:#090c19d9;box-shadow:inset 0 0 25px #0006}.mission-heading{display:flex;align-items:center;gap:10px;margin-bottom:8px;color:var(--orange);font-size:.6rem;font-weight:900;letter-spacing:.15em}.mission-heading i{height:1px;flex:1;background:linear-gradient(90deg,#ff9d20,transparent)}.mission-card p{min-height:18px;margin:3px 0;color:#e9ebf6;font-size:clamp(.65rem,1.12vw,.8rem);line-height:1.32}.mission-card p.typing::after{content:"▌";color:var(--orange);animation:blink .65s steps(1) infinite}@keyframes blink{50%{opacity:0}}
+.home-actions{display:flex;gap:9px;margin-top:12px;flex-wrap:wrap}.home-start{min-width:185px;display:flex;align-items:center;justify-content:space-between;gap:16px;text-align:left}.home-start small{font-size:.52rem;opacity:.7}.home-controls{margin:7px 0 0;color:#d5d9ea;font-size:.6rem;letter-spacing:.07em;text-transform:uppercase}
+.home-visual{min-height:250px;position:relative;display:grid;place-items:center}.home-orbit{position:absolute;width:min(300px,30vw);aspect-ratio:1;border:1px solid #ffffff18;border-radius:50%;box-shadow:inset 0 0 70px #5e2e8055,0 0 80px #ff9d201c}.home-townie{width:clamp(115px,15vw,165px);height:auto;image-rendering:pixelated;position:relative;z-index:4;filter:drop-shadow(0 18px 10px #0008)}.home-ground{position:absolute;bottom:18%;width:88%;height:4px;background:#ffe2aa;box-shadow:0 0 18px #ffe2aa}.home-coin{position:absolute;font-size:27px;filter:drop-shadow(0 0 9px #ffd84d);animation:coinFloat 2.3s ease-in-out infinite}.coin-one{left:4%;top:30%}.coin-two{right:3%;top:47%;animation-delay:-1.1s}@keyframes coinFloat{50%{transform:translateY(-10px) rotate(7deg)}}
+
+.home-utility-panel{position:absolute;left:0;right:0;bottom:66px;z-index:4;min-height:148px;display:grid;grid-template-columns:minmax(250px,.75fr) minmax(0,1.25fr);gap:16px;padding:14px 24px;background:linear-gradient(180deg,#241422d9,#130f18f4);border-top:1px solid #ffffff19}
+.mode-panel,.legend-panel{min-width:0}.utility-heading{margin-bottom:8px;color:var(--orange);font-size:.56rem;font-weight:900;letter-spacing:.15em}
+.mode-toggle{display:grid;grid-template-columns:1fr 1fr;gap:8px}.mode-btn{min-width:0;padding:10px;border:1px solid #ffffff20;border-radius:10px;color:#c9cede;background:#0a0d18;text-align:left;transition:.16s}.mode-btn strong{display:block;font-size:.67rem;letter-spacing:.06em}.mode-btn small{display:block;margin-top:4px;color:#81889f;font-size:.52rem}.mode-btn.selected{border-color:#ff9d2088;background:#2b1b12;color:#fff;box-shadow:inset 0 0 0 1px #ff9d202c}.mode-btn.selected strong{color:var(--orange)}
+.home-legend{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.home-legend span{min-width:0;padding:7px 8px;border:1px solid #ffffff11;border-radius:8px;background:#090b15cc;color:#d6daea;font-size:.57rem;text-align:center;white-space:nowrap}
+.home-stat-strip{height:66px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;position:absolute;left:0;right:0;bottom:0;z-index:5;padding:10px 24px;border-top:1px solid #ffffff25;background:#080a15ed}.home-stat-strip div{text-align:center}.home-stat-strip span{display:block;color:#c5cadc;font-size:.54rem;font-weight:900;letter-spacing:.11em}.home-stat-strip strong{display:block;margin-top:3px;color:#fff;font-size:1rem}
+
+/* LEADERBOARD */
+.leaderboard-page{padding:28px 34px;background:radial-gradient(circle at 50% 0,#1c1640,#090b16 57%)}.leaderboard-copy{text-align:center}.leaderboard-copy h2{margin:6px 0;font-size:clamp(2.1rem,5vw,4.2rem)}.description{margin:0;color:var(--muted);font-size:.75rem}.leaderboard-runner-stage{height:140px;position:relative;overflow:hidden;margin:14px 0;border:5px solid #02030a;border-radius:15px;background:radial-gradient(circle at 8% 17%,#fff 0 1.5px,transparent 2px),radial-gradient(circle at 18% 34%,#fff 0 1px,transparent 1.8px),radial-gradient(circle at 31% 12%,#fff 0 1.5px,transparent 2px),radial-gradient(circle at 43% 28%,#fff 0 1px,transparent 1.8px),radial-gradient(circle at 57% 10%,#fff 0 1.5px,transparent 2px),radial-gradient(circle at 69% 31%,#fff 0 1px,transparent 1.8px),radial-gradient(circle at 82% 14%,#fff 0 1.5px,transparent 2px),radial-gradient(circle at 93% 38%,#fff 0 1px,transparent 1.8px),linear-gradient(180deg,#0b153d 0%,#321d59 58%,#6a315d 78%,#c76843 100%);box-shadow:inset 0 0 55px #0007}.leaderboard-runner-stage::before{content:"";position:absolute;width:52px;height:52px;right:45px;top:22px;border-radius:50%;background:#ffe3a0;box-shadow:0 0 30px #ffbd54}.leaderboard-runner-stage::after{content:"";position:absolute;left:0;right:0;bottom:29px;height:3px;background:#ffe2aa;box-shadow:0 0 10px #ffe2aa}.lb-crew{position:absolute;bottom:31px;display:flex;gap:0;align-items:end;z-index:3}.lb-townie{width:42px;height:42px;margin-left:-11px;image-rendering:pixelated}.lb-townie:first-child{margin-left:0}.lb-crew.to-right{left:calc(-1 * var(--crew-width));flex-direction:row-reverse;animation:crewRight linear forwards}.lb-crew.to-left{right:calc(-1 * var(--crew-width));flex-direction:row;animation:crewLeft linear forwards}@keyframes crewRight{to{left:calc(100% + var(--crew-width))}}@keyframes crewLeft{to{right:calc(100% + var(--crew-width))}}
+.leaderboard{border:1px solid var(--border);border-radius:13px;overflow:hidden;background:#0e1121}.leaderboard-row{display:grid;grid-template-columns:38px minmax(90px,1.2fr) repeat(4,minmax(65px,.8fr));gap:7px;padding:9px 11px;border-bottom:1px solid #ffffff10;align-items:center;font-size:.72rem}.leaderboard-head{color:var(--muted);font-size:.58rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em}.page-actions,.overlay-actions{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:12px}
+
+/* GAME */
+.game-page{padding:10px 14px 14px;background:#0d1020}.game-page.visible{display:flex;flex-direction:column}.game-topbar{height:30px;flex:0 0 30px;display:flex;align-items:center;justify-content:space-between}.close{padding:0;border:0;background:none;color:var(--muted);font-size:.62rem;font-weight:900;letter-spacing:.1em}.game-title-mini{font-size:.68rem;font-weight:900;letter-spacing:.14em;color:var(--orange)}.game-title-mini span{color:#8e95aa}.scoreboard{height:50px;flex:0 0 50px;display:grid;grid-template-columns:repeat(6,1fr);gap:6px;align-items:center}.scoreboard span{min-width:0;text-align:center;color:var(--muted);font-size:.62rem;font-weight:800}.scoreboard strong{display:block;color:#fff;font-size:.84rem;white-space:nowrap}
+.game-stage-shell{flex:1;min-height:0;display:grid;place-items:center;overflow:hidden}.canvas-wrap{position:relative;overflow:hidden;border:5px solid #02030a;border-radius:14px;background:#02030a;max-width:100%;max-height:100%}.game-page.normal-mode .canvas-wrap{height:100%;aspect-ratio:1/1}.game-page.landscape-mode .canvas-wrap{width:100%;aspect-ratio:8/3}
+.canvas-wrap canvas{display:block;touch-action:none}#gameCanvas{width:100%;height:100%;image-rendering:pixelated}
+#overlay{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:18px;text-align:center;background:#050611c9}#overlay.hidden{display:none}#overlay h3{margin:0;font-size:clamp(1.8rem,5vw,3.5rem)}#overlay p{margin:8px 0;color:var(--muted);line-height:1.45;font-size:.8rem}.name-entry{display:grid;gap:6px;margin:8px auto;width:min(260px,100%)}.name-entry input{width:100%;padding:9px;border:1px solid #ffffff22;border-radius:9px;background:#090b16;color:#fff;text-align:center;text-transform:uppercase}.power-hud{position:absolute;top:8px;left:8px;padding:7px 9px;border-radius:9px;background:#080a15dd;font-size:.65rem}.power-track{display:block;width:130px;height:5px;margin-top:4px;overflow:hidden;border-radius:999px;background:#ffffff1c}.power-track i{display:block;height:100%;background:var(--orange)}.toast{position:absolute;top:50px;left:50%;padding:7px 11px;border-radius:999px;background:#080a15e6;opacity:0;transform:translate(-50%,-8px);transition:.2s;font-size:.68rem;white-space:nowrap}.toast.visible{opacity:1;transform:translate(-50%,0)}
+.header-stats{display:flex;gap:12px}.header-stats span{display:flex;gap:4px;align-items:center}.header-stats strong{color:#fff}
+
+@media(max-width:700px){
+  .arcade-page{padding:10px}.arcade-square{width:calc(100vw - 20px);border-radius:16px;grid-template-rows:44px 1fr 38px}.cabinet-header,.cabinet-footer{padding:0 10px}.cabinet-brand{font-size:.56rem}.cabinet-status{display:none}.back-link{font-size:.58rem}
+  .home-page{padding:14px 12px 202px}.home-shell{height:100%;grid-template-columns:1fr;display:block}.home-copy{text-align:center}.home-copy h1{font-size:clamp(2.55rem,14vw,3.85rem);margin:4px 0 7px}.home-tagline{font-size:.68rem;margin-bottom:7px}.mission-card{min-height:0;padding:8px 10px;text-align:left}.mission-heading{margin-bottom:4px}.mission-card p{min-height:14px;margin:1px 0;font-size:.55rem}.home-actions{justify-content:center;margin-top:7px}.home-actions .primary,.home-actions .secondary{padding:8px 10px;font-size:.62rem}.home-start{min-width:138px}.home-controls{margin-top:4px;font-size:.47rem}.home-visual{display:none}
+  .home-utility-panel{bottom:50px;min-height:152px;grid-template-columns:1fr;gap:8px;padding:8px 10px}.utility-heading{margin-bottom:5px;font-size:.48rem}.mode-toggle{gap:6px}.mode-btn{padding:7px 8px;text-align:center}.mode-btn strong{font-size:.57rem}.mode-btn small{font-size:.45rem}.home-legend{grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.home-legend span{padding:5px 3px;font-size:.45rem;white-space:normal}
+  .home-stat-strip{height:50px;padding:7px 8px}.home-stat-strip span{font-size:.43rem}.home-stat-strip strong{font-size:.78rem}
+  .leaderboard-page{padding:16px 12px}.leaderboard-copy h2{font-size:1.8rem}.description{font-size:.62rem}.leaderboard-runner-stage{height:85px;margin:8px 0}.leaderboard-runner-stage::before{width:34px;height:34px;right:28px;top:12px}.leaderboard-runner-stage::after{bottom:19px}.lb-crew{bottom:21px}.lb-townie{width:30px;height:30px;margin-left:-8px}.leaderboard-row{grid-template-columns:28px 1fr 1fr;padding:6px 8px;font-size:.62rem}.leaderboard-row span:nth-child(n+4){display:none}.page-actions{margin-top:8px}.page-actions button{padding:8px 11px;font-size:.64rem}
+  .game-page{padding:7px}.game-topbar{height:24px;flex-basis:24px}.scoreboard{height:38px;flex-basis:38px;gap:2px}.scoreboard span{font-size:.46rem}.scoreboard strong{font-size:.58rem}.canvas-wrap{border-width:3px;border-radius:10px}.game-page.normal-mode .canvas-wrap{height:100%;width:auto;max-width:100%}.game-page.landscape-mode .canvas-wrap{width:100%;height:auto}.overlay-actions{margin-top:7px}.overlay-actions button{padding:8px 10px;font-size:.65rem}#overlay h3{font-size:1.65rem}#overlay p{font-size:.62rem;margin:5px 0}.power-track{width:90px}.toast{top:34px;font-size:.55rem}.cabinet-footer{font-size:.5rem}.header-stats{gap:7px}
+}
+@media(max-width:390px){.cabinet-brand{display:none}.mission-card p{font-size:.52rem}.home-copy h1{font-size:2.5rem}.scoreboard strong{font-size:.54rem}.home-legend{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+
+/* =========================================================
+   MOBILE HOME-SCREEN REBUILD
+   Keeps the arcade cabinet square while reflowing the entire
+   Townie Runner landing screen to fit inside the square.
+========================================================= */
+@media (max-width: 700px) {
+  .arcade-page {
+    padding: 6px;
+  }
+
+  .arcade-square {
+    width: min(calc(100vw - 12px), 700px);
+    grid-template-rows: 34px minmax(0, 1fr) 28px;
+    border-radius: 13px;
+  }
+
+  .cabinet-header,
+  .cabinet-footer {
+    padding: 0 8px;
+  }
+
+  .back-link {
+    font-size: .48rem;
+  }
+
+  .cabinet-brand {
+    font-size: .48rem;
+    letter-spacing: .11em;
+  }
+
+  .cabinet-footer {
+    font-size: .42rem;
+  }
+
+  .cabinet-footer .header-stats {
+    gap: 6px;
+  }
+
+  .cabinet-footer .header-stats span,
+  .cabinet-footer .header-stats strong {
+    font-size: .44rem;
+  }
+
+  .home-page {
+    display: none;
+    padding: 8px 9px 112px;
+  }
+
+  .home-page.visible {
+    display: block;
+  }
+
+  .home-shell {
+    display: block;
+    height: auto;
+  }
+
+  .home-copy {
+    width: 100%;
+    max-width: none;
+    text-align: center;
+  }
+
+  .home-copy .eyebrow {
+    font-size: .42rem;
+    letter-spacing: .11em;
+  }
+
+  .home-copy h1 {
+    margin: 2px 0 3px;
+    font-size: clamp(2rem, 11vw, 2.8rem);
+    line-height: .78;
+    text-shadow: 0 3px 0 #311436, 0 0 18px #ff9d2045;
+  }
+
+  .home-tagline {
+    margin: 0 0 5px;
+    font-size: .56rem;
+    line-height: 1.2;
+  }
+
+  .mission-card {
+    width: min(100%, 330px);
+    min-height: 0;
+    margin: 0 auto;
+    padding: 5px 8px;
+    border-radius: 9px;
+  }
+
+  .mission-heading {
+    gap: 6px;
+    margin-bottom: 2px;
+    font-size: .42rem;
+  }
+
+  .mission-card p {
+    min-height: 10px;
+    margin: 0;
+    font-size: .45rem;
+    line-height: 1.22;
+  }
+
+  .home-actions {
+    margin-top: 5px;
+    gap: 5px;
+    flex-wrap: nowrap;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary {
+    min-height: 30px;
+    padding: 5px 8px;
+    border-radius: 7px;
+    font-size: .5rem;
+  }
+
+  .home-start {
+    min-width: 0;
+    flex: 1 1 58%;
+    gap: 6px;
+  }
+
+  .home-actions .secondary {
+    flex: 1 1 42%;
+  }
+
+  .home-start small {
+    font-size: .36rem;
+  }
+
+  .home-controls {
+    margin-top: 3px;
+    font-size: .38rem;
+  }
+
+  .home-visual {
+    display: none;
+  }
+
+  .home-moon {
+    width: 52px;
+    min-width: 0;
+    right: 8px;
+    top: 8px;
+    opacity: .72;
+  }
+
+  .home-utility-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px;
+    min-height: 0;
+    height: 70px;
+    grid-template-columns: .8fr 1.2fr;
+    gap: 6px;
+    padding: 5px 7px;
+  }
+
+  .utility-heading {
+    margin-bottom: 3px;
+    font-size: .37rem;
+    letter-spacing: .1em;
+  }
+
+  .mode-toggle {
+    gap: 3px;
+  }
+
+  .mode-btn {
+    min-height: 43px;
+    padding: 4px;
+    border-radius: 6px;
+    text-align: center;
+  }
+
+  .mode-btn strong {
+    font-size: .43rem;
+  }
+
+  .mode-btn small {
+    display: none;
+  }
+
+  .home-legend {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2px;
+  }
+
+  .home-legend span {
+    min-height: 20px;
+    display: grid;
+    place-items: center;
+    padding: 2px;
+    border-radius: 5px;
+    font-size: .35rem;
+    line-height: 1.1;
+    white-space: normal;
+  }
+
+  .home-stat-strip {
+    height: 42px;
+    bottom: 0;
+    padding: 5px 6px;
+    gap: 4px;
+  }
+
+  .home-stat-strip span {
+    font-size: .34rem;
+    letter-spacing: .07em;
+  }
+
+  .home-stat-strip strong {
+    margin-top: 1px;
+    font-size: .65rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .cabinet-brand {
+    display: block;
+  }
+
+  .home-copy h1 {
+    font-size: 2.1rem;
+  }
+
+  .mission-card p {
+    font-size: .42rem;
+  }
+
+  .home-utility-panel {
+    grid-template-columns: .78fr 1.22fr;
+  }
+
+  .home-legend span {
+    font-size: .32rem;
+  }
+}
+
+/* =========================================================
+   HOME SCREEN POLISH — FOOTER REMOVAL + LEGEND REWORK
+========================================================= */
+
+/* The duplicate EXPERIMENT_01 / run / coin / score footer is gone. */
+.arcade-square {
+  grid-template-rows: 58px minmax(0, 1fr);
+}
+
+/* Six larger, clearer power-up/item tiles: 3 columns x 2 rows on desktop. */
+.home-legend {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+
+.home-legend span {
+  min-height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 10px;
+  white-space: normal;
+  font-size: .66rem;
+  font-weight: 800;
+}
+
+.home-legend em {
+  font-style: normal;
+  line-height: 1.15;
+}
+
+.legend-icon {
+  flex: 0 0 auto;
+  display: grid;
+  place-items: center;
+  min-width: 24px;
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Match the actual in-game Bitcoin coin instead of using the money-bag emoji. */
+.bitcoin-coin {
+  width: 27px;
+  height: 27px;
+  min-width: 27px;
+  border: 2px solid #fff29a;
+  border-radius: 50%;
+  background: #f7b928;
+  color: #7b4b00;
+  font: 900 16px/1 Arial, sans-serif;
+  box-shadow: 0 0 8px #ffd84d88;
+}
+
+/* =========================================================
+   MOBILE HOME COMPOSITION
+========================================================= */
+@media (max-width: 700px) {
+  .arcade-square {
+    grid-template-rows: 34px minmax(0, 1fr);
+  }
+
+  /* Reserve the bottom for the mode/items panel + local stats. */
+  .home-page {
+    padding: 7px 9px 150px;
+  }
+
+  .home-copy h1 {
+    margin: 2px 0 4px;
+    font-size: clamp(2.1rem, 11.5vw, 2.95rem);
+  }
+
+  .home-tagline {
+    margin-bottom: 6px;
+    font-size: .6rem;
+  }
+
+  /* Larger mission briefing now that the action buttons no longer consume flow space. */
+  .mission-card {
+    width: min(100%, 350px);
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  .mission-heading {
+    margin-bottom: 4px;
+    font-size: .48rem;
+  }
+
+  .mission-card p {
+    min-height: 14px;
+    margin: 1px 0;
+    font-size: .54rem;
+    line-height: 1.3;
+  }
+
+  /* Put both actions down in the brown ground area and make them exactly equal. */
+  .home-actions {
+    position: absolute;
+    left: 9px;
+    right: 9px;
+    bottom: 154px;
+    z-index: 7;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 7px;
+    margin: 0;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: 100%;
+    min-width: 0;
+    min-height: 36px;
+    padding: 7px 8px;
+    justify-content: center;
+    text-align: center;
+    font-size: .58rem;
+  }
+
+  .home-start small {
+    display: none;
+  }
+
+  .home-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 142px;
+    z-index: 7;
+    margin: 0;
+    text-align: center;
+    font-size: .4rem;
+  }
+
+  /* Mode chooser stays beside the items so we can keep the item tiles large. */
+  .home-utility-panel {
+    bottom: 42px;
+    height: 98px;
+    min-height: 98px;
+    grid-template-columns: .72fr 1.28fr;
+    gap: 7px;
+    padding: 7px 8px;
+  }
+
+  .utility-heading {
+    margin-bottom: 5px;
+    font-size: .42rem;
+  }
+
+  .mode-panel,
+  .legend-panel {
+    min-height: 0;
+  }
+
+  .mode-toggle {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .mode-btn {
+    min-height: 33px;
+    padding: 5px 4px;
+  }
+
+  .mode-btn strong {
+    font-size: .47rem;
+  }
+
+  .mode-btn small {
+    display: none;
+  }
+
+  /* 2 columns x 3 rows on phones. */
+  .home-legend {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .home-legend span {
+    min-height: 23px;
+    gap: 4px;
+    padding: 3px 4px;
+    border-radius: 6px;
+    font-size: .44rem;
+    line-height: 1.08;
+  }
+
+  .legend-icon {
+    min-width: 16px;
+    font-size: .8rem;
+  }
+
+  .bitcoin-coin {
+    width: 18px;
+    height: 18px;
+    min-width: 18px;
+    border-width: 1px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page {
+    padding-bottom: 148px;
+  }
+
+  .home-copy h1 {
+    font-size: 2.15rem;
+  }
+
+  .mission-card p {
+    font-size: .5rem;
+  }
+
+  .home-actions {
+    bottom: 152px;
+  }
+
+  .home-controls {
+    bottom: 140px;
+  }
+
+  .home-legend span {
+    font-size: .4rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE POLISH — MISSION BITCOIN + ACTION/ITEM LAYOUT
+========================================================= */
+
+/* Use the same visual language as the in-game Bitcoin coin. */
+.mission-card p[data-icon="bitcoin"] {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.mission-bitcoin-coin {
+  flex: 0 0 auto;
+  width: 17px;
+  height: 17px;
+  display: inline-grid;
+  place-items: center;
+  border: 1.5px solid #fff29a;
+  border-radius: 50%;
+  background: #f7b928;
+  color: #7b4b00;
+  font: 900 10px/1 Arial, sans-serif;
+  box-shadow: 0 0 6px #ffd84d80;
+}
+
+.mission-rule-text {
+  min-width: 0;
+}
+
+/* Keep the blinking typewriter cursor after the actual rule text. */
+.mission-card p[data-icon="bitcoin"].typing::after {
+  margin-left: 1px;
+}
+
+@media (max-width: 700px) {
+  /*
+     Mobile cabinet composition:
+     - title + mission in the sky
+     - buttons in the brown ground
+     - mode + items below the play field
+     - stats at the very bottom
+  */
+  .home-page {
+    padding: 7px 9px 168px;
+  }
+
+  .mission-card {
+    width: min(100%, 370px);
+    padding: 9px 11px;
+  }
+
+  .mission-heading {
+    font-size: .5rem;
+  }
+
+  .mission-card p {
+    min-height: 15px;
+    font-size: .55rem;
+    line-height: 1.32;
+  }
+
+  .mission-bitcoin-coin {
+    width: 15px;
+    height: 15px;
+    font-size: 9px;
+  }
+
+  /* Anchor the two equal buttons to the brown ground itself. */
+  .home-actions {
+    top: 57%;
+    bottom: auto;
+    left: 12px;
+    right: 12px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    min-height: 38px;
+    font-size: .61rem;
+  }
+
+  .home-controls {
+    top: calc(57% + 43px);
+    bottom: auto;
+    font-size: .4rem;
+  }
+
+  /* Give the mode selector and power-up grid the full cabinet width. */
+  .home-utility-panel {
+    bottom: 42px;
+    height: 120px;
+    min-height: 120px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    gap: 6px;
+    padding: 7px 9px 8px;
+  }
+
+  .mode-panel {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mode-panel .utility-heading {
+    margin: 0;
+    white-space: nowrap;
+  }
+
+  .mode-toggle {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .mode-btn {
+    min-height: 27px;
+    padding: 4px 6px;
+  }
+
+  .mode-btn strong {
+    font-size: .47rem;
+  }
+
+  .legend-panel {
+    min-width: 0;
+  }
+
+  .legend-panel .utility-heading {
+    margin-bottom: 4px;
+  }
+
+  /* Six items = 3 columns x 2 rows on phones too. */
+  .home-legend {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 5px;
+  }
+
+  .home-legend span {
+    min-height: 29px;
+    gap: 5px;
+    padding: 4px 5px;
+    font-size: .46rem;
+  }
+
+  .legend-icon {
+    min-width: 18px;
+    font-size: .86rem;
+  }
+
+  .bitcoin-coin {
+    width: 19px;
+    height: 19px;
+    min-width: 19px;
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page {
+    padding-bottom: 166px;
+  }
+
+  .mission-card p {
+    font-size: .51rem;
+  }
+
+  .home-actions {
+    left: 9px;
+    right: 9px;
+  }
+
+  .home-utility-panel {
+    height: 118px;
+    min-height: 118px;
+    padding-left: 7px;
+    padding-right: 7px;
+  }
+
+  .home-legend {
+    gap: 4px;
+  }
+
+  .home-legend span {
+    padding: 3px 4px;
+    font-size: .41rem;
+  }
+}
+
+
+/* =========================================================
+   DESKTOP FLOATING BITCOINS + FINAL MOBILE ACTION POSITION
+========================================================= */
+
+/* Replace the old floating money-bag emoji with the same Bitcoin coin language
+   used by the in-game collectibles and the Power Ups & Items panel. */
+.home-coin {
+  font-size: 0;
+  filter: none;
+}
+
+.floating-bitcoin-coin {
+  width: 29px;
+  height: 29px;
+  display: inline-grid;
+  place-items: center;
+  border: 2.5px solid #fff29a;
+  border-radius: 50%;
+  background: #f7b928;
+  color: #7b4b00;
+  font: 900 17px/1 Arial, sans-serif;
+  box-shadow: 0 0 10px #ffd84daa;
+}
+
+@media (max-width: 700px) {
+  /*
+     FINAL mobile placement:
+     sky/title/mission -> brown ground with actions -> game mode/items -> stats.
+     Explicitly clear the earlier top rule so these cannot jump back over the mission.
+  */
+  .home-actions {
+    top: auto !important;
+    bottom: 169px !important;
+    left: 14px;
+    right: 14px;
+    z-index: 12;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 9px;
+    margin: 0;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: 100%;
+    min-width: 0;
+    min-height: 39px;
+    padding: 8px 8px;
+    justify-content: center;
+    text-align: center;
+    font-size: .62rem;
+  }
+
+  .home-controls {
+    top: auto !important;
+    bottom: 157px !important;
+    left: 0;
+    right: 0;
+    z-index: 12;
+    margin: 0;
+    text-align: center;
+  }
+
+  /* Keep the utility panel directly below the buttons. */
+  .home-utility-panel {
+    bottom: 42px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-actions {
+    bottom: 167px !important;
+    left: 10px;
+    right: 10px;
+    gap: 7px;
+  }
+
+  .home-controls {
+    bottom: 155px !important;
+  }
+}
+
+
+/* =========================================================
+   TRUE MOBILE ACTION ANCHOR FIX
+   The action buttons are children of .home-shell. Earlier
+   mobile rules positioned them absolutely, but .home-shell
+   was still position:relative, so "bottom" was measured from
+   the short title/mission container instead of the full
+   Townie Runner screen.
+
+   On mobile we deliberately remove .home-shell as the
+   positioning containing block. The nearest positioned
+   ancestor then becomes .home-page, so the buttons anchor
+   to the full square exactly where intended.
+========================================================= */
+
+@media (max-width: 700px) {
+  .home-shell {
+    position: static !important;
+  }
+
+  .home-actions {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 169px !important;
+    left: 14px !important;
+    right: 14px !important;
+    z-index: 12 !important;
+    margin: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  .home-controls {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 156px !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 12 !important;
+    margin: 0 !important;
+    text-align: center !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-actions {
+    bottom: 167px !important;
+    left: 10px !important;
+    right: 10px !important;
+    gap: 7px !important;
+  }
+
+  .home-controls {
+    bottom: 154px !important;
+  }
+}
+
+
+/* =========================================================
+   MISSION BRIEFING BITCOIN SIZE
+   Intentionally smaller than the Power Ups & Items coin.
+========================================================= */
+
+.mission-bitcoin-coin {
+  width: 14px !important;
+  height: 14px !important;
+  min-width: 14px !important;
+  border-width: 1.25px !important;
+  font-size: 8px !important;
+  box-shadow: 0 0 5px #ffd84d70 !important;
+}
+
+.mission-card p[data-icon="bitcoin"] {
+  gap: 5px !important;
+}
+
+@media (max-width: 700px) {
+  .mission-bitcoin-coin {
+    width: 13px !important;
+    height: 13px !important;
+    min-width: 13px !important;
+    border-width: 1px !important;
+    font-size: 7.5px !important;
+  }
+}
+
+
+/* =========================================================
+   MISSION BRIEFING READABILITY UPDATE
+   Larger rule text so the briefing fills the card more
+   naturally and is easier to scan at a glance.
+========================================================= */
+
+.mission-card p {
+  min-height: 21px;
+  margin: 4px 0;
+  font-size: clamp(.74rem, 1.22vw, .9rem);
+  line-height: 1.42;
+}
+
+.mission-heading {
+  margin-bottom: 9px;
+  font-size: .64rem;
+}
+
+@media (max-width: 700px) {
+  .mission-card {
+    padding: 10px 12px;
+  }
+
+  .mission-heading {
+    margin-bottom: 5px;
+    font-size: .53rem;
+  }
+
+  .mission-card p {
+    min-height: 16px;
+    margin: 1.5px 0;
+    font-size: .59rem;
+    line-height: 1.36;
+  }
+}
+
+@media (max-width: 390px) {
+  .mission-card p {
+    font-size: .55rem;
+  }
+}
+
+
+/* =========================================================
+   MOBILE HOME = SCALED-DOWN DESKTOP COMPOSITION
+   Keep the same visual hierarchy as desktop instead of using
+   a separate stacked/anchored mobile redesign.
+========================================================= */
+
+@media (max-width: 700px) {
+  .arcade-page {
+    padding: 6px;
+  }
+
+  .arcade-square {
+    width: min(calc(100vw - 12px), 700px);
+    grid-template-rows: 34px minmax(0, 1fr);
+    border-radius: 13px;
+  }
+
+  .cabinet-header {
+    padding: 0 8px;
+  }
+
+  .back-link {
+    font-size: .48rem;
+  }
+
+  .cabinet-brand {
+    display: block;
+    font-size: .48rem;
+    letter-spacing: .11em;
+  }
+
+  .home-page,
+  .home-page.visible {
+    display: block;
+    padding: 10px 12px 151px;
+  }
+
+  /* Restore the same left-copy / right-visual layout as desktop. */
+  .home-shell {
+    position: relative !important;
+    height: 100%;
+    display: grid !important;
+    grid-template-columns: 1.08fr .92fr !important;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .home-copy {
+    min-width: 0;
+    width: auto;
+    max-width: none;
+    text-align: left;
+  }
+
+  .home-copy h1 {
+    margin: 2px 0 5px;
+    font-size: clamp(2rem, 9vw, 3.05rem);
+    line-height: .78;
+    letter-spacing: -.075em;
+    text-align: left;
+    text-shadow: 0 3px 0 #311436, 0 0 18px #ff9d2045;
+  }
+
+  .home-tagline {
+    margin: 0 0 6px;
+    font-size: clamp(.48rem, 2.2vw, .64rem);
+    line-height: 1.22;
+    text-align: left;
+  }
+
+  .mission-card {
+    width: 100%;
+    min-height: 0;
+    margin: 0;
+    padding: 7px 8px;
+    border-radius: 9px;
+  }
+
+  .mission-heading {
+    gap: 6px;
+    margin-bottom: 3px;
+    font-size: .42rem;
+  }
+
+  .mission-card p {
+    min-height: 12px;
+    margin: 1px 0;
+    font-size: clamp(.45rem, 1.8vw, .54rem);
+    line-height: 1.28;
+  }
+
+  .mission-bitcoin-coin {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    font-size: 7px !important;
+  }
+
+  /* Buttons return to normal document flow just like desktop. */
+  .home-actions {
+    position: static !important;
+    display: flex !important;
+    grid-template-columns: none !important;
+    justify-content: flex-start;
+    gap: 5px !important;
+    margin: 6px 0 0 !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: auto;
+    min-width: 0;
+    min-height: 29px;
+    padding: 5px 7px;
+    border-radius: 7px;
+    font-size: .48rem;
+  }
+
+  .home-start {
+    flex: 1 1 58%;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+    text-align: left;
+  }
+
+  .home-actions .secondary {
+    flex: 1 1 42%;
+  }
+
+  .home-start small {
+    display: block;
+    font-size: .32rem;
+  }
+
+  .home-controls {
+    position: static !important;
+    margin: 3px 0 0 !important;
+    font-size: .34rem;
+    text-align: left !important;
+  }
+
+  /* Bring back the Townie / moon visual on mobile. */
+  .home-visual {
+    display: grid !important;
+    min-height: 150px;
+    place-items: center;
+  }
+
+  .home-orbit {
+    width: min(145px, 34vw);
+  }
+
+  .home-townie {
+    width: clamp(78px, 19vw, 108px);
+  }
+
+  .home-ground {
+    bottom: 20%;
+    width: 90%;
+    height: 3px;
+  }
+
+  .home-coin {
+    display: block;
+  }
+
+  .floating-bitcoin-coin {
+    width: 20px;
+    height: 20px;
+    border-width: 1.5px;
+    font-size: 12px;
+  }
+
+  .coin-one {
+    left: 2%;
+    top: 30%;
+  }
+
+  .coin-two {
+    right: 1%;
+    top: 48%;
+  }
+
+  .home-moon {
+    width: 54px;
+    min-width: 0;
+    right: 7px;
+    top: 7px;
+    opacity: .78;
+  }
+
+  /* Same two-column utility strip as desktop, simply scaled down. */
+  .home-utility-panel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 42px !important;
+    height: 104px;
+    min-height: 104px;
+    display: grid;
+    grid-template-columns: minmax(116px, .75fr) minmax(0, 1.25fr) !important;
+    grid-template-rows: 1fr !important;
+    gap: 7px;
+    padding: 7px 8px;
+  }
+
+  .mode-panel {
+    display: block !important;
+  }
+
+  .utility-heading {
+    margin-bottom: 4px;
+    font-size: .38rem;
+  }
+
+  .mode-toggle {
+    display: grid;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 4px;
+  }
+
+  .mode-btn {
+    min-height: 62px;
+    padding: 5px 4px;
+    text-align: center;
+  }
+
+  .mode-btn strong {
+    font-size: .42rem;
+  }
+
+  .mode-btn small {
+    display: block;
+    margin-top: 3px;
+    font-size: .31rem;
+    line-height: 1.1;
+  }
+
+  .home-legend {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 4px;
+  }
+
+  .home-legend span {
+    min-height: 34px;
+    gap: 3px;
+    padding: 3px;
+    border-radius: 5px;
+    font-size: .37rem;
+    line-height: 1.05;
+  }
+
+  .legend-icon {
+    min-width: 14px;
+    font-size: .7rem;
+  }
+
+  .bitcoin-coin {
+    width: 16px;
+    height: 16px;
+    min-width: 16px;
+    border-width: 1px;
+    font-size: 9px;
+  }
+
+  .home-stat-strip {
+    height: 42px;
+    bottom: 0;
+    padding: 5px 6px;
+    gap: 4px;
+  }
+
+  .home-stat-strip span {
+    font-size: .32rem;
+    letter-spacing: .07em;
+  }
+
+  .home-stat-strip strong {
+    margin-top: 1px;
+    font-size: .63rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page,
+  .home-page.visible {
+    padding: 8px 9px 145px;
+  }
+
+  .home-shell {
+    grid-template-columns: 1.1fr .9fr !important;
+    gap: 6px;
+  }
+
+  .home-copy h1 {
+    font-size: 1.9rem;
+  }
+
+  .home-tagline {
+    font-size: .46rem;
+  }
+
+  .mission-card {
+    padding: 6px 7px;
+  }
+
+  .mission-heading {
+    font-size: .37rem;
+  }
+
+  .mission-card p {
+    font-size: .42rem;
+    line-height: 1.22;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    padding: 4px 5px;
+    font-size: .43rem;
+  }
+
+  .home-start small {
+    display: none;
+  }
+
+  .home-controls {
+    font-size: .3rem;
+  }
+
+  .home-visual {
+    min-height: 135px;
+  }
+
+  .home-townie {
+    width: 72px;
+  }
+
+  .home-orbit {
+    width: 112px;
+  }
+
+  .home-utility-panel {
+    height: 100px;
+    min-height: 100px;
+    grid-template-columns: 108px 1fr !important;
+    padding: 6px;
+  }
+
+  .mode-btn {
+    min-height: 58px;
+  }
+
+  .mode-btn strong {
+    font-size: .38rem;
+  }
+
+  .mode-btn small {
+    font-size: .28rem;
+  }
+
+  .home-legend span {
+    min-height: 31px;
+    font-size: .33rem;
+  }
+}
+\n\n/* START SCREEN CLEANUP + PRE-RUN INSTRUCTIONS */\n.home-start{min-width:150px;justify-content:center;padding-left:22px;padding-right:22px;text-align:center}.home-start small,.home-controls{display:none!important}\n.pre-run-info{width:min(500px,94%);margin:4px auto 8px}.pre-run-controls{display:flex;justify-content:center;align-items:baseline;gap:10px;margin-bottom:8px;color:#d9ddeb;font-size:.7rem}.pre-run-controls strong{color:var(--orange);font-size:.58rem;letter-spacing:.12em}.pre-run-items{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px}.pre-run-items span{min-width:0;min-height:38px;display:flex;align-items:center;justify-content:center;gap:6px;padding:6px 7px;border:1px solid #ffffff18;border-radius:8px;background:#090b16c9;color:#e4e7f2;font-size:.62rem}.pre-run-items b{flex:0 0 auto;font-size:1rem;line-height:1}.pre-run-items em{min-width:0;font-style:normal;line-height:1.08}.pre-run-bitcoin{width:20px;height:20px;display:inline-grid;place-items:center;border:1.5px solid #fff29a;border-radius:50%;background:#f7b928;color:#7b4b00;font:900 12px/1 Arial,sans-serif!important;box-shadow:0 0 6px #ffd84d88}#overlay .name-entry{margin-top:7px}#overlay .name-entry label{color:#d9ddeb;font-size:.62rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}\n@media(max-width:700px){.home-start{padding-left:9px;padding-right:9px}#overlay{padding:10px}#overlay h3{font-size:1.5rem}#overlay p{margin:4px 0 6px;font-size:.58rem}.pre-run-info{width:min(390px,98%);margin:2px auto 5px}.pre-run-controls{gap:6px;margin-bottom:5px;font-size:.5rem}.pre-run-controls strong{font-size:.44rem}.pre-run-items{gap:4px}.pre-run-items span{min-height:29px;gap:4px;padding:4px;border-radius:6px;font-size:.45rem}.pre-run-items b{font-size:.76rem}.pre-run-bitcoin{width:16px;height:16px;font-size:9px!important}#overlay .name-entry{width:min(230px,92%);margin:5px auto 0}#overlay .name-entry label{font-size:.48rem}#overlay .name-entry input{padding:6px;font-size:.7rem}}\n@media(max-width:390px){.pre-run-items span{min-height:26px;font-size:.4rem}.pre-run-controls{font-size:.45rem}}\n
+/* =========================================================
+   PRE-RUN SCREEN ORDER + INLINE ITEMS
+   HOW TO PLAY -> item row -> READY -> name -> START RUN
+========================================================= */
+#overlay { justify-content: center; }
+
+.pre-run-info {
+  width: min(760px, 96%);
+  margin: 0 auto 28px;
+}
+
+.pre-run-controls {
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.pre-run-items-inline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 7px 12px;
+}
+
+.pre-run-items-inline span {
+  min-height: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  gap: 5px;
+  font-size: .68rem;
+}
+
+.pre-run-items-inline b { font-size: 1rem; }
+
+.pre-run-ready-block {
+  margin: 4px auto 10px;
+  text-align: center;
+}
+
+.pre-run-ready-block #overlayTitle { margin: 0; }
+.pre-run-ready-block #overlayText { margin: 8px 0 0; }
+#overlay .name-entry { margin: 8px auto 0; }
+#overlay .overlay-actions { margin-top: 14px; }
+
+@media (max-width: 700px) {
+  .pre-run-info {
+    width: min(430px, 98%);
+    margin-bottom: 18px;
+  }
+
+  .pre-run-controls { margin-bottom: 8px; }
+  .pre-run-items-inline { gap: 5px 8px; }
+  .pre-run-items-inline span { font-size: .48rem; }
+  .pre-run-items-inline b { font-size: .76rem; }
+  .pre-run-ready-block { margin-bottom: 6px; }
+}
+
+
+/* =========================================================
+   EASY CHAIN / HARD CREW DIFFICULTY SELECTOR
+========================================================= */
+
+.mode-panel {
+  display: grid;
+  gap: 10px;
+}
+
+.selector-block {
+  min-width: 0;
+}
+
+.difficulty-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.difficulty-btn {
+  min-width: 0;
+  padding: 9px 10px;
+  border: 1px solid #ffffff20;
+  border-radius: 10px;
+  color: #c9cede;
+  background: #0a0d18;
+  text-align: left;
+  transition: .16s;
+}
+
+.difficulty-btn strong {
+  display: block;
+  font-size: .61rem;
+  letter-spacing: .04em;
+}
+
+.difficulty-btn small {
+  display: block;
+  margin-top: 4px;
+  color: #81889f;
+  font-size: .48rem;
+  line-height: 1.15;
+}
+
+.difficulty-btn.selected {
+  border-color: #61f5ff88;
+  background: #102129;
+  color: #fff;
+  box-shadow: inset 0 0 0 1px #61f5ff2c;
+}
+
+.difficulty-btn.selected strong {
+  color: var(--cyan);
+}
+
+.difficulty-btn:hover {
+  filter: brightness(1.08);
+}
+
+/* The extra selector needs a little more room in the utility strip. */
+.home-utility-panel {
+  min-height: 172px;
+}
+
+.home-page {
+  padding-bottom: 252px;
+}
+
+@media (max-width: 700px) {
+  .home-page,
+  .home-page.visible {
+    padding-bottom: 171px;
+  }
+
+  .home-utility-panel {
+    height: 124px;
+    min-height: 124px;
+    grid-template-columns: minmax(142px, .9fr) minmax(0, 1.1fr) !important;
+  }
+
+  .mode-panel {
+    gap: 5px;
+  }
+
+  .mode-panel .utility-heading {
+    margin-bottom: 3px;
+    font-size: .34rem;
+  }
+
+  .mode-toggle,
+  .difficulty-toggle {
+    gap: 4px;
+  }
+
+  .mode-btn,
+  .difficulty-btn {
+    min-height: 36px;
+    padding: 4px;
+    text-align: center;
+  }
+
+  .mode-btn strong,
+  .difficulty-btn strong {
+    font-size: .36rem;
+  }
+
+  .mode-btn small,
+  .difficulty-btn small {
+    display: none;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page,
+  .home-page.visible {
+    padding-bottom: 168px;
+  }
+
+  .home-utility-panel {
+    height: 122px;
+    min-height: 122px;
+    grid-template-columns: 132px 1fr !important;
+  }
+
+  .mode-btn strong,
+  .difficulty-btn strong {
+    font-size: .33rem;
+  }
+}
