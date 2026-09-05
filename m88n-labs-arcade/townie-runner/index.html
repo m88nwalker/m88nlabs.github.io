@@ -55,7 +55,13 @@
             </div>
           </div>
 
-          <div class="home-utility-panel">
+          <button id="mobileSetupToggle" class="mobile-setup-toggle" type="button" aria-expanded="false" aria-controls="homeUtilityPanel">
+            <span class="mobile-setup-plus mobile-setup-plus-left" aria-hidden="true">+</span>
+            <span class="mobile-setup-label">GAME SETUP</span>
+            <span class="mobile-setup-plus mobile-setup-plus-right" aria-hidden="true">+</span>
+          </button>
+
+          <div id="homeUtilityPanel" class="home-utility-panel mobile-collapsed">
             <div class="mode-panel" aria-label="Game and difficulty selectors">
               <div class="selector-block">
                 <div class="utility-heading">GAME MODE</div>

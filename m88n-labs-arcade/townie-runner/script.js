@@ -271,6 +271,7 @@
     }
 
     if (save) localStorage.setItem(STORAGE.mode, modeKey);
+    updateMobileSetupSummary();
     draw();
   }
 
@@ -290,6 +291,21 @@
     }
 
     if (save) localStorage.setItem(STORAGE.difficulty, difficultyKey);
+    updateMobileSetupSummary();
+  }
+
+  function updateMobileSetupSummary() {
+    // Mobile setup bar is intentionally label-only.
+  }
+
+  function setMobileSetupExpanded(expanded) {
+    const toggle = $("mobileSetupToggle");
+    const panel = $("homeUtilityPanel");
+    if (!toggle || !panel) return;
+
+    toggle.setAttribute("aria-expanded", String(expanded));
+    toggle.classList.toggle("expanded", expanded);
+    panel.classList.toggle("mobile-collapsed", !expanded);
   }
 
   function updateStats() {
@@ -1735,6 +1751,9 @@ function showPage(pageId) {
       .forEach((crew) => crew.remove());
 
     startHomeTyping();
+    if (window.matchMedia("(max-width: 700px)").matches) {
+      setMobileSetupExpanded(false);
+    }
   }
 }
   let leaderboardRunnerTimer = 0;
@@ -1842,6 +1861,11 @@ function scheduleLeaderboardRunner(immediate = false) {
     }
   });
 
+  $("mobileSetupToggle")?.addEventListener("click", () => {
+    const expanded = $("mobileSetupToggle").getAttribute("aria-expanded") === "true";
+    setMobileSetupExpanded(!expanded);
+  });
+
   $("normalModeBtn").addEventListener("click", () => {
     if (!game.running) {
       applyMode("normal");
@@ -1895,6 +1919,10 @@ function scheduleLeaderboardRunner(immediate = false) {
   renderLeaderboard();
   applyDifficulty(initialDifficulty, false);
   applyMode(initialMode, false);
+  updateMobileSetupSummary();
+  if (window.matchMedia("(max-width: 700px)").matches) {
+    setMobileSetupExpanded(false);
+  }
   resetGame();
   decorativeSprites.animationId = requestAnimationFrame(animateDecorativeSprites);
   startHomeTyping();
