@@ -28,6 +28,21 @@
   ctx.imageSmoothingEnabled = false;
 
   const TOWNIE_COUNT = 21;
+
+  // In-game runner sizes.
+  // Leader and followers are enlarged by about the same percentage
+  // so their visual proportion stays consistent.
+  // The leader remains short enough to run under the floating drone.
+  const RUNNER_SIZE = {
+    // Larger crew sprites while preserving the same leader:follower ratio.
+    // The leader is 88px tall in base game units, which lines up with the
+    // underside of the floating hazard so it can just barely run beneath it.
+    leaderWidth: 77,
+    leaderHeight: 88,
+    followerWidth: 60,
+    followerHeight: 69
+  };
+
   const townieImages = Array.from({ length: TOWNIE_COUNT }, (_, index) => {
     const image = new Image();
     image.src = `assets/townies/townie${index + 1}.png`;
@@ -112,10 +127,138 @@
   };
 
   const environments = [
-    { name: "Lunar Sunset", sky1: "#101a45", sky2: "#512766", horizon: "#ee7a35", ground: "#402315", accent: "#ffe2aa" },
-    { name: "Neon Night", sky1: "#080b2c", sky2: "#291451", horizon: "#16a4b8", ground: "#101b32", accent: "#61f5ff" },
-    { name: "Crimson Rift", sky1: "#1c071b", sky2: "#651a35", horizon: "#f24e3d", ground: "#35121c", accent: "#ffb56b" },
-    { name: "Dream Clouds", sky1: "#392b76", sky2: "#8b68bc", horizon: "#f1b7d2", ground: "#503463", accent: "#fff0ff" }
+    {
+      name: "Twilight Ruins",
+      speedStar: 6,
+      speedMoon: 2.5,
+      speedScenery: 22,
+      skyTop: "#140c22",
+      skyMid: "#241438",
+      skyLow: "#3b2242",
+      horizon: "#522b3f",
+      haze1: "#4a2640",
+      haze2: "#5a3047",
+      haze3: "#4a2640",
+      moon: "#eed997",
+      moonShade: "#c29f62",
+      star: "#f7f0ff",
+      mountainFar: "#211326",
+      mountainMid: "#29182f",
+      mountainNear: "#341d36",
+      cityFar: "#22142a",
+      cityNear: "#2a1930",
+      cityWindow: "#8e4d69",
+      groundDark: "#151015",
+      groundMid: "#23171d",
+      groundTop: "#49303a",
+      grass1: "#5d3740",
+      grass2: "#734048",
+      platformDark: "#241721",
+      platformMid: "#4a2a39",
+      platformTop: "#d56d50",
+      platformWalk: "#f0ab73",
+      platformGlow: "#f7d48a",
+      platformMark: "#f6c663"
+    },
+    {
+      name: "Moon Harbor",
+      speedStar: 7,
+      speedMoon: 3,
+      speedScenery: 25,
+      skyTop: "#101828",
+      skyMid: "#16304a",
+      skyLow: "#20445b",
+      horizon: "#2a5460",
+      haze1: "#25515f",
+      haze2: "#2f6577",
+      haze3: "#25515f",
+      moon: "#d5edf7",
+      moonShade: "#84b7cd",
+      star: "#edfaff",
+      mountainFar: "#122233",
+      mountainMid: "#173046",
+      mountainNear: "#1e3c50",
+      cityFar: "#132534",
+      cityNear: "#183042",
+      cityWindow: "#54b8d4",
+      groundDark: "#10151d",
+      groundMid: "#18222e",
+      groundTop: "#325162",
+      grass1: "#355d66",
+      grass2: "#4a7c7f",
+      platformDark: "#14212a",
+      platformMid: "#204857",
+      platformTop: "#4eaac3",
+      platformWalk: "#95dae8",
+      platformGlow: "#cbf2f7",
+      platformMark: "#82d9e7"
+    },
+    {
+      name: "Toxic Works",
+      speedStar: 5.5,
+      speedMoon: 2.2,
+      speedScenery: 20,
+      skyTop: "#101814",
+      skyMid: "#16261f",
+      skyLow: "#21372b",
+      horizon: "#304436",
+      haze1: "#34493b",
+      haze2: "#455d4c",
+      haze3: "#34493b",
+      moon: "#d9f1cc",
+      moonShade: "#88b07d",
+      star: "#efffed",
+      mountainFar: "#17221b",
+      mountainMid: "#1e2c23",
+      mountainNear: "#26382d",
+      cityFar: "#18241c",
+      cityNear: "#203128",
+      cityWindow: "#6fb574",
+      groundDark: "#121713",
+      groundMid: "#1b241d",
+      groundTop: "#405744",
+      grass1: "#48694a",
+      grass2: "#608664",
+      platformDark: "#1c241d",
+      platformMid: "#345038",
+      platformTop: "#6ba85d",
+      platformWalk: "#b8dd81",
+      platformGlow: "#dff0b6",
+      platformMark: "#aede69"
+    },
+    {
+      name: "Ember Wasteland",
+      speedStar: 5,
+      speedMoon: 2,
+      speedScenery: 30,
+      skyTop: "#21100f",
+      skyMid: "#391c18",
+      skyLow: "#582923",
+      horizon: "#6a352c",
+      haze1: "#612e25",
+      haze2: "#7b4132",
+      haze3: "#612e25",
+      moon: "#f0c68f",
+      moonShade: "#ca834c",
+      star: "#fff2e6",
+      mountainFar: "#251614",
+      mountainMid: "#301d1a",
+      mountainNear: "#3b2420",
+      cityFar: "#281715",
+      cityNear: "#341f1b",
+      cityWindow: "#d38d58",
+      groundDark: "#18100e",
+      groundMid: "#241714",
+      groundTop: "#633a2e",
+      grass1: "#7a4131",
+      grass2: "#9b5a44",
+      platformDark: "#261711",
+      platformMid: "#5d2d21",
+      platformTop: "#d87543",
+      platformWalk: "#f2bb81",
+      platformGlow: "#f6d6a7",
+      platformMark: "#e9a653"
+    }
   ];
 
   const GAME_MODES = {
@@ -218,9 +361,9 @@
     chainHitCooldown: 0,
     player: {
       x: GAME_MODES[initialMode].playerX,
-      y: GAME_MODES[initialMode].groundY - 62 * GAME_MODES[initialMode].scale,
-      width: 54 * GAME_MODES[initialMode].scale,
-      height: 62 * GAME_MODES[initialMode].scale,
+      y: GAME_MODES[initialMode].groundY - RUNNER_SIZE.leaderHeight * GAME_MODES[initialMode].scale,
+      width: RUNNER_SIZE.leaderWidth * GAME_MODES[initialMode].scale,
+      height: RUNNER_SIZE.leaderHeight * GAME_MODES[initialMode].scale,
       velocityY: 0,
       onGround: true,
       frame: 0,
@@ -254,8 +397,8 @@
     game.gravity = config.gravity;
     game.speed = config.baseSpeed;
 
-    game.player.width = 54 * config.scale;
-    game.player.height = 62 * config.scale;
+    game.player.width = RUNNER_SIZE.leaderWidth * config.scale;
+    game.player.height = RUNNER_SIZE.leaderHeight * config.scale;
     game.player.x = config.playerX;
     game.player.y = game.groundY - game.player.height;
 
@@ -427,8 +570,8 @@
       frameTimer: 0,
       jumped: false,
       x: config.playerX,
-      width: 54 * config.scale,
-      height: 62 * config.scale
+      width: RUNNER_SIZE.leaderWidth * config.scale,
+      height: RUNNER_SIZE.leaderHeight * config.scale
     });
 
     $("nameEntry").hidden = true;
@@ -814,9 +957,9 @@
     const spacing = config.followerSpacing;
     return {
       x: game.player.x - (index + 1) * spacing,
-      y: snapshot.y + 7 * config.scale,
-      width: 42 * config.scale,
-      height: 48 * config.scale,
+      y: snapshot.y + 8 * config.scale,
+      width: RUNNER_SIZE.followerWidth * config.scale,
+      height: RUNNER_SIZE.followerHeight * config.scale,
       frame: snapshot.frame
     };
   }
@@ -1336,56 +1479,414 @@
     updateHud();
   }
 
-  function drawBackground() {
-    const env = environments[game.environmentIndex];
-    const width = canvas.width;
-    const height = canvas.height;
-    const horizon = clamp(game.groundY / height, 0.45, 0.88);
-    const sky = ctx.createLinearGradient(0, 0, 0, height);
-    sky.addColorStop(0, env.sky1);
-    sky.addColorStop(Math.max(0.2, horizon - 0.08), env.sky2);
-    sky.addColorStop(Math.max(0.21, horizon - 0.07), env.horizon);
-    sky.addColorStop(1, env.ground);
-    ctx.fillStyle = sky;
-    ctx.fillRect(0, 0, width, height);
+  function pixelRect(x, y, width, height, color) {
+    ctx.fillStyle = color;
+    ctx.fillRect(
+      Math.round(x),
+      Math.round(y),
+      Math.max(1, Math.round(width)),
+      Math.max(1, Math.round(height))
+    );
+  }
 
-    const moonRadius = Math.min(width, height) * (game.mode === "normal" ? 0.07 : 0.115);
-    ctx.fillStyle = "#ffe3a0";
-    ctx.beginPath();
-    ctx.arc(width * 0.82, height * (game.mode === "normal" ? 0.14 : 0.22), moonRadius, 0, Math.PI * 2);
-    ctx.fill();
+  function wrapOffset(value, size) {
+    return ((value % size) + size) % size;
+  }
 
-    ctx.fillStyle = "#ffffff";
-    const offset = (game.elapsed * game.speed * 0.025) % width;
-    const stars = [[.10,.12],[.20,.24],[.31,.08],[.44,.19],[.57,.07],[.69,.28],[.83,.11],[.93,.31],[.15,.43],[.53,.37],[.76,.48]];
-    stars.forEach(([nx, ny]) => {
-      const x = ((nx * width) - offset + width) % width;
-      const y = ny * Math.min(game.groundY, height * 0.8);
-      ctx.fillRect(x, y, game.mode === "normal" ? 3 : 2, game.mode === "normal" ? 3 : 2);
-    });
+  function sceneMetrics() {
+    // The approved demo was authored at 760 x 428 with groundY 360.
+    // We preserve that coordinate system and scale/crop it into the live canvas.
+    const refW = 760;
+    const refH = 428;
+    const refGround = 360;
 
-    if (game.mode === "normal") {
-      ctx.save();
-      ctx.globalAlpha = 0.16;
-      ctx.fillStyle = env.accent;
-      ctx.beginPath();
-      ctx.moveTo(0, game.groundY - 72);
-      for (let x = 0; x <= width; x += 90) {
-        ctx.lineTo(x, game.groundY - 72 - Math.sin((x / width) * Math.PI * 4) * 24);
-      }
-      ctx.lineTo(width, game.groundY);
-      ctx.lineTo(0, game.groundY);
-      ctx.closePath();
-      ctx.fill();
-      ctx.restore();
+    if (game.mode === "landscape") {
+      // Landscape is close to the demo's wide aspect ratio.
+      const scale = canvas.height / refH;
+      const visibleRefW = canvas.width / scale;
+      return {
+        refW,
+        refH,
+        refGround,
+        scale,
+        offsetX: (canvas.width - refW * scale) / 2,
+        offsetY: game.groundY - refGround * scale,
+        tileWidth: refW * scale,
+        visibleRefW
+      };
     }
 
-    ctx.strokeStyle = env.accent;
-    ctx.lineWidth = game.mode === "normal" ? 5 : 4;
-    ctx.beginPath();
-    ctx.moveTo(0, game.groundY + 2);
-    ctx.lineTo(width, game.groundY + 2);
-    ctx.stroke();
+    // Normal mode: preserve demo proportions by fitting width, then crop vertically.
+    const scale = canvas.width / refW;
+    return {
+      refW,
+      refH,
+      refGround,
+      scale,
+      offsetX: 0,
+      offsetY: game.groundY - refGround * scale,
+      tileWidth: refW * scale,
+      visibleRefW: refW
+    };
+  }
+
+  function sx(x, m) { return m.offsetX + x * m.scale; }
+  function sy(y, m) { return m.offsetY + y * m.scale; }
+  function ss(v, m) { return v * m.scale; }
+
+  function drawDemoMoonAt(env, x, y, m) {
+    pixelRect(sx(x + 20, m), sy(y, m), ss(44, m), ss(8, m), env.moon);
+    pixelRect(sx(x + 8, m), sy(y + 8, m), ss(68, m), ss(8, m), env.moon);
+    pixelRect(sx(x, m), sy(y + 16, m), ss(84, m), ss(52, m), env.moon);
+    pixelRect(sx(x + 8, m), sy(y + 68, m), ss(68, m), ss(8, m), env.moon);
+    pixelRect(sx(x + 20, m), sy(y + 76, m), ss(44, m), ss(8, m), env.moon);
+
+    pixelRect(sx(x + 14, m), sy(y + 22, m), ss(10, m), ss(10, m), env.moonShade);
+    pixelRect(sx(x + 49, m), sy(y + 15, m), ss(12, m), ss(12, m), env.moonShade);
+    pixelRect(sx(x + 57, m), sy(y + 40, m), ss(14, m), ss(14, m), env.moonShade);
+    pixelRect(sx(x + 29, m), sy(y + 52, m), ss(12, m), ss(8, m), env.moonShade);
+  }
+
+  function drawDemoStars(env, m) {
+    const stars = [
+      [78,66,4],[122,132,3],[176,58,3],[234,104,4],[308,50,3],
+      [356,150,4],[438,80,3],[502,116,4],[566,45,3],[626,175,3],
+      [690,112,4],[726,57,3],[734,170,3],[54,200,3],[274,194,3],
+      [468,214,3],[630,208,3]
+    ];
+
+    const tile = m.refW;
+    const shift = wrapOffset(game.elapsed * env.speedStar, tile);
+
+    [-shift, tile - shift, tile * 2 - shift].forEach((tileX) => {
+      stars.forEach(([x, y, size], i) => {
+        const px = sx(tileX + x, m);
+        const py = sy(y, m);
+        const ps = ss(size, m);
+        pixelRect(px, py, ps, ps, env.star);
+        if (i % 3 === 0) {
+          pixelRect(px - ps, py, ps, ps, "#ffffff66");
+          pixelRect(px + ps, py, ps, ps, "#ffffff66");
+          pixelRect(px, py - ps, ps, ps, "#ffffff66");
+          pixelRect(px, py + ps, ps, ps, "#ffffff66");
+        }
+      });
+    });
+  }
+
+  function drawDemoMoon(env, m) {
+    const tile = m.refW + 180;
+    const base = m.refW - 150;
+    const shift = wrapOffset(game.elapsed * env.speedMoon, tile);
+
+    drawDemoMoonAt(env, base - shift, 56, m);
+    drawDemoMoonAt(env, base - shift + tile, 56, m);
+  }
+
+  function steppedMountain(env, baseX, baseY, steps, color, m) {
+    steps.forEach(([dx, dy, w, h]) => {
+      pixelRect(
+        sx(baseX + dx, m),
+        sy(baseY + dy, m),
+        ss(w, m),
+        ss(h, m),
+        color
+      );
+    });
+  }
+
+  function drawDemoMountainCluster(env, offsetX, m) {
+    steppedMountain(env, offsetX + 0, 214, [
+      [0,50,120,96],[28,30,92,116],[56,12,58,134],[78,0,28,146]
+    ], env.mountainFar, m);
+
+    steppedMountain(env, offsetX + 102, 238, [
+      [0,44,132,78],[32,26,88,96],[60,10,52,112],[80,0,24,122]
+    ], env.mountainMid, m);
+
+    steppedMountain(env, offsetX + 250, 226, [
+      [0,52,144,88],[28,34,108,106],[62,18,66,122],[86,0,30,140]
+    ], env.mountainFar, m);
+
+    steppedMountain(env, offsetX + 426, 236, [
+      [0,46,116,82],[24,28,84,100],[48,12,56,116],[76,0,26,128]
+    ], env.mountainMid, m);
+
+    steppedMountain(env, offsetX + 564, 244, [
+      [0,40,180,74],[42,24,138,90],[84,10,92,104],[120,0,48,114]
+    ], env.mountainNear, m);
+  }
+
+  function drawDemoBuilding(env, x, baseY, w, h, phase, m) {
+    pixelRect(sx(x, m), sy(baseY - h, m), ss(w, m), ss(h, m), phase % 2 ? env.cityNear : env.cityFar);
+
+    if (phase % 3 === 0) {
+      pixelRect(sx(x + Math.floor(w * 0.30), m), sy(baseY - h - 8, m), ss(Math.max(8, Math.floor(w * 0.28)), m), ss(8, m), phase % 2 ? env.cityNear : env.cityFar);
+      pixelRect(sx(x + Math.floor(w * 0.45), m), sy(baseY - h - 18, m), ss(4, m), ss(10, m), phase % 2 ? env.cityNear : env.cityFar);
+    } else if (phase % 3 === 1) {
+      pixelRect(sx(x + 6, m), sy(baseY - h - 5, m), ss(w - 12, m), ss(5, m), phase % 2 ? env.cityNear : env.cityFar);
+    }
+
+    for (let wy = baseY - h + 10, row = 0; wy < baseY - 8; wy += 15, row += 1) {
+      for (let wx = x + 8, col = 0; wx < x + w - 6; wx += 15, col += 1) {
+        if ((row + col + phase) % 3 !== 0) {
+          pixelRect(sx(wx, m), sy(wy, m), ss(4, m), ss(5, m), env.cityWindow);
+        }
+      }
+    }
+  }
+
+  function drawDemoCityCluster(env, offsetX, m) {
+    // Lift the skyline slightly so the Townies have a dedicated road surface
+    // between the city and the darker lower ground.
+    const base = 308;
+    const buildings = [
+      [24,52,68,0],[92,38,96,1],[144,66,60,2],[234,44,112,3],[300,60,78,4],
+      [386,34,104,5],[440,72,64,6],[534,46,90,7],[598,58,76,8],[680,40,102,9]
+    ];
+
+    buildings.forEach(([dx, w, h, phase]) => {
+      drawDemoBuilding(env, offsetX + dx, base, w, h, phase, m);
+    });
+  }
+
+
+
+  function hexToRgb(hex) {
+    const value = hex.replace("#", "");
+    const full = value.length === 3
+      ? value.split("").map((c) => c + c).join("")
+      : value;
+    const int = parseInt(full, 16);
+    return {
+      r: (int >> 16) & 255,
+      g: (int >> 8) & 255,
+      b: int & 255
+    };
+  }
+
+  function rgbToHex(r, g, b) {
+    const clampChannel = (n) => Math.max(0, Math.min(255, Math.round(n)));
+    return "#" + [clampChannel(r), clampChannel(g), clampChannel(b)]
+      .map((n) => n.toString(16).padStart(2, "0"))
+      .join("");
+  }
+
+  function darkenHex(hex, amount = 0.12) {
+    const { r, g, b } = hexToRgb(hex);
+    return rgbToHex(
+      r * (1 - amount),
+      g * (1 - amount),
+      b * (1 - amount)
+    );
+  }
+
+  function drawUpperSkyBands(env, m) {
+    const scenicTop = Math.max(0, sy(0, m));
+    if (scenicTop <= 1) return;
+
+    const colors = [
+      darkenHex(env.skyTop, 0.44),
+      darkenHex(env.skyTop, 0.31),
+      darkenHex(env.skyTop, 0.19),
+      darkenHex(env.skyTop, 0.08)
+    ];
+
+    const bandHeight = scenicTop / colors.length;
+    colors.forEach((color, i) => {
+      const y = Math.floor(i * bandHeight);
+      const h = (i === colors.length - 1)
+        ? Math.ceil(scenicTop - y)
+        : Math.ceil(bandHeight);
+      pixelRect(0, y, canvas.width, h, color);
+    });
+  }
+
+  function drawUpperSkyStars(env, m) {
+    const scenicTop = Math.max(0, sy(0, m));
+    if (scenicTop <= 18) return;
+
+    const tile = canvas.width;
+    const shift = wrapOffset(game.elapsed * env.speedStar * 0.85, tile);
+
+    const stars = [
+      [0.05, 0.12, 4],[0.11, 0.26, 3],[0.17, 0.08, 3],[0.23, 0.18, 4],[0.31, 0.11, 3],
+      [0.38, 0.32, 4],[0.46, 0.09, 3],[0.54, 0.22, 4],[0.62, 0.13, 3],[0.70, 0.34, 3],
+      [0.78, 0.08, 4],[0.85, 0.24, 3],[0.92, 0.15, 3],[0.98, 0.29, 3],[0.15, 0.43, 3],
+      [0.34, 0.49, 3],[0.57, 0.44, 3],[0.80, 0.48, 3]
+    ];
+
+    [-shift, tile - shift].forEach((tileX) => {
+      stars.forEach(([nx, ny, size], i) => {
+        const ps = Math.max(2, Math.round(ss(size, m)));
+        const x = Math.round(tileX + nx * canvas.width);
+        const y = Math.round(10 + ny * Math.max(28, scenicTop - 18));
+        pixelRect(x, y, ps, ps, env.star);
+
+        if (i % 3 === 0) {
+          pixelRect(x - ps, y, ps, ps, "#ffffff66");
+          pixelRect(x + ps, y, ps, ps, "#ffffff66");
+          pixelRect(x, y - ps, ps, ps, "#ffffff66");
+          pixelRect(x, y + ps, ps, ps, "#ffffff66");
+        }
+      });
+    });
+  }
+
+
+  function drawBridgeSkyStars(env, m) {
+    const scenicTop = Math.max(0, sy(0, m));
+    if (scenicTop <= 18) return;
+
+    // In square mode the approved demo starts lower on the screen,
+    // which can create a visual gap between the upper extension stars
+    // and the demo's own stars. Fill that transition band.
+    const bandTop = Math.max(20, scenicTop - Math.max(70, ss(76, m)));
+    const bandBottom = Math.max(bandTop + 20, sy(135, m));
+
+    const tile = canvas.width;
+    const shift = wrapOffset(game.elapsed * env.speedStar * 0.88, tile);
+
+    const stars = [
+      [0.07, 0.14, 3],[0.15, 0.33, 4],[0.24, 0.22, 3],[0.33, 0.10, 4],
+      [0.42, 0.30, 3],[0.50, 0.17, 3],[0.59, 0.36, 4],[0.68, 0.12, 3],
+      [0.77, 0.27, 4],[0.86, 0.18, 3],[0.94, 0.34, 3],[0.12, 0.52, 3],
+      [0.40, 0.58, 3],[0.71, 0.55, 3]
+    ];
+
+    [-shift, tile - shift].forEach((tileX) => {
+      stars.forEach(([nx, ny, size], i) => {
+        const ps = Math.max(2, Math.round(ss(size, m)));
+        const x = Math.round(tileX + nx * canvas.width);
+        const y = Math.round(bandTop + ny * Math.max(26, bandBottom - bandTop));
+        pixelRect(x, y, ps, ps, env.star);
+
+        if (i % 3 === 0) {
+          pixelRect(x - ps, y, ps, ps, "#ffffff66");
+          pixelRect(x + ps, y, ps, ps, "#ffffff66");
+          pixelRect(x, y - ps, ps, ps, "#ffffff66");
+          pixelRect(x, y + ps, ps, ps, "#ffffff66");
+        }
+      });
+    });
+  }
+
+  function drawPixelCloud(x, y, scale) {
+    const c1 = "#e7edf2cc";
+    const c2 = "#c8d3dbb8";
+
+    pixelRect(x + 12 * scale, y, 34 * scale, 8 * scale, c1);
+    pixelRect(x + 2 * scale, y + 8 * scale, 60 * scale, 12 * scale, c1);
+    pixelRect(x + 10 * scale, y - 6 * scale, 20 * scale, 12 * scale, c1);
+    pixelRect(x + 30 * scale, y - 8 * scale, 18 * scale, 12 * scale, c1);
+    pixelRect(x + 44 * scale, y + 4 * scale, 16 * scale, 10 * scale, c1);
+
+    pixelRect(x + 14 * scale, y + 14 * scale, 30 * scale, 6 * scale, c2);
+    pixelRect(x + 8 * scale, y + 10 * scale, 18 * scale, 8 * scale, c2);
+    pixelRect(x + 40 * scale, y + 8 * scale, 12 * scale, 8 * scale, c2);
+  }
+
+  function drawUpperSkyClouds(env, m) {
+    const scenicTop = Math.max(0, sy(0, m));
+    if (scenicTop <= 22) return;
+
+    const tile = canvas.width + 240 * m.scale;
+    const shift = wrapOffset(game.elapsed * env.speedStar * 0.55, tile);
+    const cloudScale = Math.max(0.78, m.scale * (game.mode === "normal" ? 0.94 : 0.80));
+
+    const maxY = Math.max(26, scenicTop - 34);
+    const clouds = [
+      [80, Math.min(26, maxY * 0.20), 0.95],
+      [310, Math.min(56, maxY * 0.42), 1.06],
+      [560, Math.min(38, maxY * 0.30), 0.88]
+    ];
+
+    [-shift, tile - shift].forEach((tileX) => {
+      clouds.forEach(([x, y, localScale]) => {
+        drawPixelCloud(
+          tileX + x * m.scale,
+          Math.max(8, y),
+          cloudScale * localScale
+        );
+      });
+    });
+  }
+
+  function drawBackground() {
+    const env = environments[game.environmentIndex];
+    const m = sceneMetrics();
+
+    // Extend the original pixel scene upward with the same stepped logic.
+    // This avoids the "old scene stops / new area starts" look.
+    drawUpperSkyBands(env, m);
+
+    // Preserve the approved demo look in the original scenic band.
+    // Slight overlap prevents hairline seams at fractional scaling.
+    pixelRect(0, sy(0, m) - 1, canvas.width, ss(80, m) + 2, env.skyTop);
+    pixelRect(0, sy(80, m) - 1, canvas.width, ss(85, m) + 2, env.skyMid);
+    pixelRect(0, sy(165, m) - 1, canvas.width, ss(95, m) + 2, env.skyLow);
+    pixelRect(0, sy(260, m) - 1, canvas.width, sy(360, m) - sy(260, m) + 2, env.horizon);
+
+    pixelRect(0, sy(226, m), canvas.width, ss(8, m), env.haze1);
+    pixelRect(0, sy(236, m), canvas.width, ss(6, m), env.haze2);
+    pixelRect(0, sy(248, m), canvas.width, ss(4, m), env.haze3);
+
+    // Upper extension uses the same star language plus clouds.
+    // Add a bridge layer so the sky feels continuous in square mode,
+    // then render the original demo stars + moon in the scene below.
+    drawUpperSkyStars(env, m);
+    drawBridgeSkyStars(env, m);
+    drawUpperSkyClouds(env, m);
+    drawDemoStars(env, m);
+    drawDemoMoon(env, m);
+
+    // Mountains + buildings: keep the approved demo geometry.
+    const tile = m.refW;
+    const sceneryShift = wrapOffset(game.elapsed * env.speedScenery, tile);
+    [-sceneryShift, tile - sceneryShift, tile * 2 - sceneryShift].forEach((tileX) => {
+      drawDemoMountainCluster(env, tileX, m);
+      drawDemoCityCluster(env, tileX, m);
+
+      for (let x = 0; x < tile; x += 20) {
+        const h = 18 + ((x / 20) % 5) * 6;
+        pixelRect(
+          sx(tileX + x, m),
+          sy(360 - h, m),
+          ss(20, m),
+          ss(h, m),
+          "#1a121555"
+        );
+      }
+    });
+
+    // Stationary road + darker lower base.
+    // The Townies' feet still land at game.groundY, but visually they now
+    // run on a gray roadway instead of hovering above the old grass edge.
+    const roadHeight = ss(52, m);
+    const roadTop = game.groundY - roadHeight;
+
+    // Dark base below the road.
+    pixelRect(0, game.groundY, canvas.width, canvas.height - game.groundY, env.groundDark);
+
+    // Road body.
+    pixelRect(0, roadTop, canvas.width, roadHeight, "#505661");
+    pixelRect(0, roadTop, canvas.width, ss(4, m), "#6f7682");
+    pixelRect(0, game.groundY - ss(4, m), canvas.width, ss(4, m), "#343942");
+
+    // Subtle darker curb just below the Townies' feet.
+    pixelRect(0, game.groundY, canvas.width, ss(5, m), "#20242b");
+
+    // Intermittent horizontal road markings.
+    const dashY = roadTop + ss(24, m);
+    const dashWidth = ss(28, m);
+    const dashGap = ss(58, m);
+	  
+	// Move the road markings left at the same pace as the game world.
+    const roadScroll = (game.elapsed * game.speed) % dashGap;
+
+    for (let x = ss(12, m) - roadScroll; x < canvas.width; x += dashGap) {
+    pixelRect(x, dashY, dashWidth, ss(3, m), "#d6d9df");
+    }
   }
 
   function drawTownie(imageIndex, x, y, width, height, frame, alpha = 1, mirror = false) {
@@ -1413,76 +1914,102 @@
   }
 
   function drawObstacle(obstacle) {
+    const pulse = Math.floor((game.elapsed * 1000) / 260) % 2 === 0;
+    const body = pulse ? "#ff404a" : "#ffd44d";
+    const stripe = pulse ? "#ffd44d" : "#ff404a";
+    const glow = pulse ? "#ff9aa0" : "#fff0a3";
+
+    const x = obstacle.x;
+    const y = obstacle.y;
+    const w = obstacle.width;
+    const h = obstacle.height;
+
+    ctx.save();
+
     if (obstacle.type === "drone") {
-      const pulse = 0.65 + Math.sin(game.elapsed * 12 + obstacle.x * 0.03) * 0.35;
-      ctx.save();
-      ctx.shadowBlur = 12;
-      ctx.shadowColor = `rgba(255, 48, 74, ${pulse})`;
+      // Demo-faithful floating warning box, fit inside the existing drone hitbox.
+      pixelRect(x + w * 0.16, y + h * 0.32, w * 0.68, h * 0.68, "#171315");
+      pixelRect(x + w * 0.22, y + h * 0.40, w * 0.56, h * 0.46, body);
+      pixelRect(x + w * 0.30, y + h * 0.48, w * 0.40, h * 0.28, stripe);
 
-      // Angular red hazard body—deliberately unlike the flat cyan platforms.
-      ctx.fillStyle = "#300913";
-      ctx.strokeStyle = "#ff304a";
-      ctx.lineWidth = 3;
-      ctx.beginPath();
-      ctx.moveTo(obstacle.x + 8, obstacle.y + 5);
-      ctx.lineTo(obstacle.x + obstacle.width - 8, obstacle.y + 5);
-      ctx.lineTo(obstacle.x + obstacle.width, obstacle.y + obstacle.height / 2);
-      ctx.lineTo(obstacle.x + obstacle.width - 8, obstacle.y + obstacle.height - 5);
-      ctx.lineTo(obstacle.x + 8, obstacle.y + obstacle.height - 5);
-      ctx.lineTo(obstacle.x, obstacle.y + obstacle.height / 2);
-      ctx.closePath();
-      ctx.fill();
-      ctx.stroke();
+      pixelRect(x + w * 0.06, y + h * 0.50, w * 0.10, h * 0.24, "#171315");
+      pixelRect(x + w * 0.84, y + h * 0.50, w * 0.10, h * 0.24, "#171315");
+      pixelRect(x + w * 0.37, y + h * 0.10, w * 0.26, h * 0.24, "#171315");
 
-      // Warning stripe and pulsing danger lights.
-      ctx.fillStyle = "#ffd13d";
-      for (let x = obstacle.x + 10; x < obstacle.x + obstacle.width - 8; x += 12) {
-        ctx.save();
-        ctx.translate(x, obstacle.y + 12);
-        ctx.rotate(-0.55);
-        ctx.fillRect(0, 0, 5, 14);
-        ctx.restore();
-      }
-      ctx.fillStyle = `rgba(255, 48, 74, ${pulse})`;
-      ctx.beginPath();
-      ctx.arc(obstacle.x + 9, obstacle.y + obstacle.height / 2, 4, 0, Math.PI * 2);
-      ctx.arc(obstacle.x + obstacle.width - 9, obstacle.y + obstacle.height / 2, 4, 0, Math.PI * 2);
-      ctx.fill();
+      pixelRect(x + w * 0.25, y + h * 0.44, w * 0.08, h * 0.16, glow);
+      pixelRect(x + w * 0.67, y + h * 0.44, w * 0.08, h * 0.16, glow);
+      pixelRect(x + w * 0.46, y + h * 0.16, w * 0.08, h * 0.16, glow);
 
-      // Downward spikes make the silhouette unmistakably dangerous.
-      ctx.fillStyle = "#ff304a";
-      for (let x = obstacle.x + 8; x < obstacle.x + obstacle.width - 4; x += 14) {
-        ctx.beginPath();
-        ctx.moveTo(x, obstacle.y + obstacle.height - 4);
-        ctx.lineTo(x + 6, obstacle.y + obstacle.height + 8);
-        ctx.lineTo(x + 12, obstacle.y + obstacle.height - 4);
-        ctx.closePath();
-        ctx.fill();
-      }
+      // Very subtle hover shadow like the demo.
+      pixelRect(x + w * 0.22, y + h * 1.04, w * 0.56, Math.max(2, h * 0.10), "#00000028");
       ctx.restore();
       return;
     }
 
-    ctx.fillStyle = obstacle.type === "crystal" ? "#552a75" : "#27131f";
-    ctx.beginPath();
-    ctx.moveTo(obstacle.x + obstacle.width / 2, obstacle.y);
-    ctx.lineTo(obstacle.x + obstacle.width, obstacle.y + obstacle.height);
-    ctx.lineTo(obstacle.x, obstacle.y + obstacle.height);
-    ctx.closePath();
-    ctx.fill();
-    ctx.strokeStyle = obstacle.type === "crystal" ? "#61f5ff" : "#ff4fd8";
-    ctx.lineWidth = 2;
-    ctx.stroke();
+    // Ground warning boxes use the exact red/yellow blinking language.
+    pixelRect(x + w * 0.03, y + h * 0.86, w * 0.94, Math.max(2, h * 0.12), "#00000035");
+    pixelRect(x, y + h * 0.18, w, h * 0.72, "#1b1517");
+    pixelRect(x + w * 0.05, y + h * 0.24, w * 0.90, h * 0.56, body);
+    pixelRect(x + w * 0.10, y + h * 0.34, w * 0.80, h * 0.36, stripe);
+
+    const stripes = obstacle.type === "crystal" ? 3 : 4;
+    for (let i = 0; i < stripes; i += 1) {
+      const step = (w * 0.72) / stripes;
+      pixelRect(
+        x + w * 0.14 + i * step,
+        y + h * 0.34,
+        step * 0.48,
+        h * 0.36,
+        i % 2 === 0 ? body : stripe
+      );
+    }
+
+    const mw = Math.max(3, w * 0.12);
+    const mh = Math.max(3, h * 0.10);
+    pixelRect(x + w * 0.05, y + h * 0.24, mw, mh, glow);
+    pixelRect(x + w * 0.83, y + h * 0.24, mw, mh, glow);
+    pixelRect(x + w * 0.05, y + h * 0.68, mw, mh, glow);
+    pixelRect(x + w * 0.83, y + h * 0.68, mw, mh, glow);
+
+    ctx.restore();
   }
 
   function draw() {
     drawBackground();
 
+    const env = environments[game.environmentIndex];
     game.platforms.forEach((platform) => {
-      ctx.fillStyle = "#2a3150";
-      ctx.fillRect(platform.x, platform.y, platform.width, platform.height);
-      ctx.fillStyle = "#61f5ff";
-      ctx.fillRect(platform.x, platform.y, platform.width, 3);
+      const m = sceneMetrics();
+
+      // Preserve the approved demo's 8 / 6 / 10 / 9 pixel platform stack.
+      const topH = ss(8, m);
+      const lipH = ss(6, m);
+      const midH = ss(10, m);
+      const darkH = ss(9, m);
+
+      pixelRect(platform.x + ss(8, m), platform.y + ss(34, m), platform.width - ss(16, m), ss(5, m), "#0000002c");
+      pixelRect(platform.x, platform.y, platform.width, topH, env.platformWalk);
+      pixelRect(platform.x, platform.y + topH, platform.width, lipH, env.platformTop);
+
+      for (let x = platform.x + ss(8, m); x < platform.x + platform.width - ss(10, m); x += ss(22, m)) {
+        pixelRect(x, platform.y + ss(2, m), ss(10, m), ss(3, m), env.platformGlow);
+      }
+
+      for (let x = platform.x + ss(14, m); x < platform.x + platform.width - ss(16, m); x += ss(28, m)) {
+        pixelRect(x, platform.y + ss(8, m), ss(7, m), ss(4, m), env.platformMark);
+        pixelRect(x + ss(8, m), platform.y + ss(8, m), ss(7, m), ss(4, m), env.platformMark);
+      }
+
+      pixelRect(platform.x + ss(6, m), platform.y + topH + lipH, platform.width - ss(12, m), midH, env.platformMid);
+      pixelRect(platform.x + ss(14, m), platform.y + topH + lipH + midH, platform.width - ss(28, m), darkH, env.platformDark);
+
+      for (let x = platform.x + ss(10, m); x < platform.x + platform.width - ss(12, m); x += ss(24, m)) {
+        const depth = ((Math.floor(x / Math.max(1, ss(24, m)))) % 2 === 0) ? ss(12, m) : ss(7, m);
+        pixelRect(x, platform.y + topH + lipH + midH + darkH, ss(7, m), depth, env.platformDark);
+      }
+
+      pixelRect(platform.x, platform.y + ss(8, m), ss(6, m), ss(16, m), env.platformTop);
+      pixelRect(platform.x + platform.width - ss(6, m), platform.y + ss(8, m), ss(6, m), ss(16, m), env.platformTop);
     });
 
     game.coins.forEach((coin) => {

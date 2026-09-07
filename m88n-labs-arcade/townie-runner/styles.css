@@ -2160,3 +2160,1038 @@ button,input{font:inherit}button{cursor:pointer}
     font-size: .52rem !important;
   }
 }
+
+
+/* Pixel-world renderer: preserve hard canvas edges at every display size. */
+#gameCanvas {
+  image-rendering: pixelated !important;
+  image-rendering: crisp-edges;
+}
+
+
+/* =========================================================
+   Cover / Mission Briefing background update
+   Match the in-game pixel scene direction more closely.
+   ========================================================= */
+.home-page,
+.home-page.visible {
+  background:
+    linear-gradient(
+      180deg,
+      #140c22 0%,
+      #241438 22%,
+      #3b2242 49%,
+      #522b3f 76%,
+      #2d1b25 100%
+    ) !important;
+}
+
+.home-sky {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.home-stars {
+  position: absolute;
+  inset: 0;
+  opacity: .90;
+  background-image:
+    radial-gradient(circle at 4% 9%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 10% 18%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 16% 7%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 23% 14%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 29% 10%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 36% 23%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 43% 8%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 50% 18%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 58% 11%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 64% 25%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 72% 8%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 78% 19%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 85% 13%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 92% 22%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 97% 9%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 13% 31%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 31% 34%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 54% 29%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 73% 33%, #ffffff 0 1px, transparent 2px),
+    radial-gradient(circle at 90% 30%, #ffffff 0 1px, transparent 2px);
+  animation: homeStarsDrift 44s linear infinite;
+}
+
+.home-clouds {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.home-cloud {
+  position: absolute;
+  display: block;
+  width: 80px;
+  height: 30px;
+  background: #e7edf2cc;
+  box-shadow:
+    12px -6px 0 0 #e7edf2cc,
+    28px -8px 0 0 #e7edf2cc,
+    44px 0 0 0 #e7edf2cc,
+    10px 13px 0 -2px #c8d3dbb8,
+    36px 10px 0 -2px #c8d3dbb8;
+  image-rendering: pixelated;
+  filter: drop-shadow(0 0 8px #ffffff16);
+  animation: homeCloudFloat 26s linear infinite;
+}
+
+.home-cloud.cloud-a {
+  top: 8%;
+  left: 10%;
+  transform: scale(0.9);
+}
+
+.home-cloud.cloud-b {
+  top: 14%;
+  left: 46%;
+  transform: scale(1.05);
+  animation-duration: 31s;
+  animation-delay: -7s;
+}
+
+.home-cloud.cloud-c {
+  top: 11%;
+  right: 8%;
+  transform: scale(0.95);
+  animation-duration: 28s;
+  animation-delay: -13s;
+}
+
+.home-moon {
+  z-index: 1;
+  background: #eed997 !important;
+  box-shadow: 0 0 52px #eed99755, 0 0 18px #c29f6266 !important;
+}
+
+.home-shell,
+.home-copy,
+.home-visual,
+.mobile-setup-toggle,
+.home-utility-panel,
+.home-stat-strip {
+  position: relative;
+  z-index: 2;
+}
+
+/* subtle lower silhouette hint so the cover feels more like the game world */
+.home-page::before {
+  content: "";
+  position: absolute;
+  inset: auto 0 66px 0;
+  height: clamp(86px, 19vw, 150px);
+  pointer-events: none;
+  opacity: .55;
+  background:
+    linear-gradient(180deg, transparent 0%, transparent 22%, #211326 22%, #211326 100%);
+  clip-path: polygon(
+    0% 100%, 0% 74%, 7% 74%, 10% 64%, 13% 74%, 18% 74%, 22% 58%, 26% 74%,
+    35% 74%, 39% 66%, 42% 74%, 49% 74%, 54% 54%, 60% 74%, 72% 74%, 77% 61%,
+    82% 74%, 100% 74%, 100% 100%
+  );
+  z-index: 0;
+}
+
+@keyframes homeStarsDrift {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-70px); }
+}
+
+@keyframes homeCloudFloat {
+  0% { transform: translateX(0) scale(var(--cloudScale, 1)); }
+  100% { transform: translateX(-90px) scale(var(--cloudScale, 1)); }
+}
+
+.home-cloud.cloud-a { --cloudScale: .9; }
+.home-cloud.cloud-b { --cloudScale: 1.05; }
+.home-cloud.cloud-c { --cloudScale: .95; }
+
+@media (max-width: 700px) {
+  .home-cloud {
+    width: 62px;
+    height: 24px;
+  }
+
+  .home-cloud.cloud-a { top: 7%; left: 8%; }
+  .home-cloud.cloud-b { top: 12%; left: 42%; }
+  .home-cloud.cloud-c { top: 9%; right: 7%; }
+}
+
+
+/* =========================================================
+   Pixel-stepped cover sky continuity update
+   ========================================================= */
+.home-page,
+.home-page.visible {
+  background:
+    linear-gradient(
+      180deg,
+      #090612 0%,
+      #090612 10%,
+      #0e0817 10%,
+      #0e0817 21%,
+      #140c22 21%,
+      #140c22 35%,
+      #241438 35%,
+      #241438 52%,
+      #3b2242 52%,
+      #3b2242 71%,
+      #522b3f 71%,
+      #522b3f 86%,
+      #2d1b25 86%,
+      #2d1b25 100%
+    ) !important;
+}
+
+.home-stars {
+  position: absolute;
+  inset: 0;
+  opacity: .92;
+  background: none !important;
+  animation: homeStarsDrift 44s linear infinite;
+}
+
+.home-stars::before,
+.home-stars::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 4px;
+  height: 4px;
+  background: #f7f0ff;
+  border-radius: 0;
+}
+
+.home-stars::before {
+  top: 0;
+  left: 0;
+  box-shadow:
+    38px 44px 0 #f7f0ff,
+    84px 102px 0 #f7f0ff,
+    126px 32px 0 #f7f0ff,
+    178px 76px 0 #f7f0ff,
+    232px 48px 0 #f7f0ff,
+    292px 118px 0 #f7f0ff,
+    348px 40px 0 #f7f0ff,
+    410px 94px 0 #f7f0ff,
+    474px 56px 0 #f7f0ff,
+    538px 138px 0 #f7f0ff,
+    608px 34px 0 #f7f0ff,
+    668px 104px 0 #f7f0ff,
+    726px 62px 0 #f7f0ff,
+    788px 122px 0 #f7f0ff,
+    846px 52px 0 #f7f0ff,
+    138px 174px 0 #f7f0ff,
+    304px 186px 0 #f7f0ff,
+    496px 168px 0 #f7f0ff,
+    682px 182px 0 #f7f0ff;
+}
+
+.home-stars::after {
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 3px;
+  background: #ffffff66;
+  box-shadow:
+    34px 44px 0 #ffffff66, 42px 44px 0 #ffffff66, 38px 40px 0 #ffffff66, 38px 48px 0 #ffffff66,
+    174px 76px 0 #ffffff66, 182px 76px 0 #ffffff66, 178px 72px 0 #ffffff66, 178px 80px 0 #ffffff66,
+    344px 40px 0 #ffffff66, 352px 40px 0 #ffffff66, 348px 36px 0 #ffffff66, 348px 44px 0 #ffffff66,
+    534px 138px 0 #ffffff66, 542px 138px 0 #ffffff66, 538px 134px 0 #ffffff66, 538px 142px 0 #ffffff66,
+    604px 34px 0 #ffffff66, 612px 34px 0 #ffffff66, 608px 30px 0 #ffffff66, 608px 38px 0 #ffffff66,
+    784px 122px 0 #ffffff66, 792px 122px 0 #ffffff66, 788px 118px 0 #ffffff66, 788px 126px 0 #ffffff66;
+  opacity: .95;
+}
+
+.home-moon {
+  position: absolute;
+  right: 7%;
+  top: 7%;
+  width: 96px !important;
+  min-width: 96px !important;
+  height: 88px !important;
+  aspect-ratio: auto !important;
+  background: transparent !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  overflow: visible;
+}
+
+.home-moon::before,
+.home-moon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 0;
+}
+
+.home-moon::before {
+  top: 0;
+  left: 0;
+  background: #eed997;
+  box-shadow:
+    24px 0 0 #eed997, 32px 0 0 #eed997, 40px 0 0 #eed997, 48px 0 0 #eed997, 56px 0 0 #eed997,
+    12px 8px 0 #eed997, 20px 8px 0 #eed997, 28px 8px 0 #eed997, 36px 8px 0 #eed997, 44px 8px 0 #eed997, 52px 8px 0 #eed997, 60px 8px 0 #eed997, 68px 8px 0 #eed997,
+    4px 16px 0 #eed997, 12px 16px 0 #eed997, 20px 16px 0 #eed997, 28px 16px 0 #eed997, 36px 16px 0 #eed997, 44px 16px 0 #eed997, 52px 16px 0 #eed997, 60px 16px 0 #eed997, 68px 16px 0 #eed997, 76px 16px 0 #eed997,
+    4px 24px 0 #eed997, 12px 24px 0 #eed997, 20px 24px 0 #eed997, 28px 24px 0 #eed997, 36px 24px 0 #eed997, 44px 24px 0 #eed997, 52px 24px 0 #eed997, 60px 24px 0 #eed997, 68px 24px 0 #eed997, 76px 24px 0 #eed997,
+    4px 32px 0 #eed997, 12px 32px 0 #eed997, 20px 32px 0 #eed997, 28px 32px 0 #eed997, 36px 32px 0 #eed997, 44px 32px 0 #eed997, 52px 32px 0 #eed997, 60px 32px 0 #eed997, 68px 32px 0 #eed997, 76px 32px 0 #eed997,
+    4px 40px 0 #eed997, 12px 40px 0 #eed997, 20px 40px 0 #eed997, 28px 40px 0 #eed997, 36px 40px 0 #eed997, 44px 40px 0 #eed997, 52px 40px 0 #eed997, 60px 40px 0 #eed997, 68px 40px 0 #eed997, 76px 40px 0 #eed997,
+    12px 48px 0 #eed997, 20px 48px 0 #eed997, 28px 48px 0 #eed997, 36px 48px 0 #eed997, 44px 48px 0 #eed997, 52px 48px 0 #eed997, 60px 48px 0 #eed997, 68px 48px 0 #eed997,
+    24px 56px 0 #eed997, 32px 56px 0 #eed997, 40px 56px 0 #eed997, 48px 56px 0 #eed997, 56px 56px 0 #eed997;
+  filter: drop-shadow(0 0 18px #eed99744);
+}
+
+.home-moon::after {
+  top: 0;
+  left: 0;
+  background: #c29f62;
+  box-shadow:
+    24px 16px 0 #c29f62,
+    56px 12px 0 #c29f62,
+    60px 28px 0 #c29f62,
+    36px 40px 0 #c29f62;
+}
+
+@media (max-width: 700px) {
+  .home-moon {
+    width: 72px !important;
+    min-width: 72px !important;
+    height: 64px !important;
+    right: 6%;
+    top: 6%;
+    transform: scale(.82);
+    transform-origin: top right;
+  }
+
+  .home-stars::before {
+    transform: scale(.86);
+    transform-origin: top left;
+  }
+
+  .home-stars::after {
+    transform: scale(.86);
+    transform-origin: top left;
+  }
+}
+
+
+/* =========================================================
+   Cover gradient + moon removal fix
+   ========================================================= */
+.home-page,
+.home-page.visible {
+  background:
+    linear-gradient(
+      180deg,
+      #0c1234 0%,
+      #351858 54%,
+      #c75d33 55%,
+      #2d1b25 100%
+    ) !important;
+}
+
+.home-moon {
+  display: none !important;
+}
+
+
+/* =========================================================
+   HOME LAYOUT RESTORATION + RUN BUTTON POLISH
+   Restores the accepted full-width desktop utility/stats bars
+   and the accepted mobile button/stats composition.
+   ========================================================= */
+
+/* Desktop: utility strip and stats bar span the entire cabinet again. */
+.home-utility-panel {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  bottom: 66px !important;
+}
+
+.home-stat-strip {
+  position: absolute !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: auto !important;
+  bottom: 0 !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  display: grid !important;
+}
+
+/* Keep START RUN padding visually balanced. */
+.home-start {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* The art layers stay behind all interactive home content. */
+.home-shell,
+.home-copy,
+.home-visual {
+  z-index: 2;
+}
+
+@media (max-width: 700px) {
+  /*
+     Mobile composition:
+     title / mission + Townie
+     then START RUN / LEADERBOARD
+     then GAME SETUP
+     then local stats.
+  */
+  .home-page,
+  .home-page.visible {
+    padding-bottom: 92px !important;
+  }
+
+  .home-shell {
+    position: static !important;
+  }
+
+  .home-actions {
+    position: absolute !important;
+    top: auto !important;
+    bottom: 88px !important;
+    left: 14px !important;
+    right: 14px !important;
+    z-index: 30 !important;
+    margin: 0 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: 100% !important;
+    min-width: 0 !important;
+    min-height: 40px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    font-size: .58rem !important;
+  }
+
+  /* Explicitly restore the bottom statistics strip on phones. */
+  .home-stat-strip {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    z-index: 44 !important;
+    width: 100% !important;
+    height: 42px !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    align-items: stretch !important;
+    padding: 5px 6px !important;
+  }
+
+  .home-stat-strip > div {
+    min-height: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .home-stat-strip span {
+    font-size: .32rem !important;
+  }
+
+  .home-stat-strip strong {
+    margin-top: 1px !important;
+    font-size: .63rem !important;
+  }
+
+  /* GAME SETUP sits directly above the restored stats strip. */
+  .mobile-setup-toggle {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 42px !important;
+    z-index: 42 !important;
+  }
+
+  /* Expanded setup panel remains above the action buttons. */
+  .home-utility-panel {
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    bottom: 82px !important;
+    z-index: 40 !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-actions {
+    bottom: 87px !important;
+    left: 10px !important;
+    right: 10px !important;
+    gap: 7px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
+
+
+/* =========================================================
+   HOME ACTION ROW — STRUCTURAL RESPONSIVE FIX
+   START RUN / LEADERBOARD now live beneath BOTH hero columns.
+   They remain in normal grid flow instead of being absolutely
+   positioned on mobile, so they cannot cover Mission Briefing.
+   ========================================================= */
+
+.home-shell {
+  display: grid !important;
+  grid-template-columns: 1.08fr .92fr !important;
+  grid-template-rows: auto auto !important;
+  align-items: center !important;
+  align-content: start !important;
+}
+
+.home-copy {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+}
+
+.home-visual {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+}
+
+.home-actions {
+  grid-column: 1 / -1 !important;
+  grid-row: 2 !important;
+  position: static !important;
+  inset: auto !important;
+  width: auto !important;
+  display: flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  gap: 12px !important;
+  margin: 16px 0 0 !important;
+  z-index: 3 !important;
+}
+
+/* Balanced interior spacing: same padding in both buttons. */
+.home-actions .primary,
+.home-actions .secondary,
+.home-start {
+  width: auto !important;
+  min-width: 0 !important;
+  min-height: 52px !important;
+  padding: 12px 28px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  flex: 0 0 auto !important;
+}
+
+.home-start {
+  justify-content: center !important;
+}
+
+@media (max-width: 700px) {
+  .home-shell {
+    position: relative !important;
+    height: auto !important;
+    grid-template-columns: 1.08fr .92fr !important;
+    grid-template-rows: auto auto !important;
+    align-items: center !important;
+    column-gap: 8px !important;
+    row-gap: 0 !important;
+  }
+
+  .home-actions {
+    position: static !important;
+    inset: auto !important;
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+    justify-content: flex-start !important;
+    gap: 8px !important;
+    margin: 8px 0 0 !important;
+    padding: 0 !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: auto !important;
+    min-width: 0 !important;
+    min-height: 36px !important;
+    padding: 7px 16px !important;
+    font-size: .55rem !important;
+    flex: 0 1 auto !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-actions {
+    gap: 7px !important;
+    margin-top: 6px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    min-height: 34px !important;
+    padding: 6px 12px !important;
+    font-size: .50rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-actions {
+    gap: 6px !important;
+    margin-top: 5px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    min-height: 32px !important;
+    padding: 5px 9px !important;
+    font-size: .45rem !important;
+  }
+}
+
+
+/* =========================================================
+   HOME HERO VERTICAL CENTERING
+   Center title / briefing / Townie / actions in the area
+   above Game Setup, and tighten the action-row gap.
+   ========================================================= */
+
+.home-shell {
+  align-content: center !important;
+  row-gap: 0 !important;
+}
+
+/* Keep both halves sitting toward the bottom of hero row 1,
+   bringing Mission Briefing closer to the buttons beneath it. */
+.home-copy,
+.home-visual {
+  align-self: end !important;
+}
+
+/* Reduce the open space between hero row and buttons. */
+.home-actions {
+  margin-top: 7px !important;
+}
+
+@media (max-width: 700px) {
+  /*
+     The bottom 82px is occupied by GAME SETUP + local stats.
+     Center the hero composition in everything above that area.
+  */
+  .home-shell {
+    height: calc(100% - 82px) !important;
+    min-height: 0 !important;
+    align-content: center !important;
+    row-gap: 0 !important;
+  }
+
+  .home-copy,
+  .home-visual {
+    align-self: end !important;
+  }
+
+  .home-actions {
+    margin-top: 4px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-actions {
+    margin-top: 3px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-shell {
+    height: calc(100% - 82px) !important;
+  }
+
+  .home-actions {
+    margin-top: 2px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL MOBILE HERO CENTERING — AUTHORITATIVE
+   Force the mobile hero lower into the available space above
+   GAME SETUP. This block intentionally comes last.
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .home-page,
+  .home-page.visible {
+    padding-top: 18px !important;
+    padding-bottom: 92px !important;
+  }
+
+  .home-shell {
+    position: relative !important;
+    height: calc(100% - 82px) !important;
+    min-height: 0 !important;
+
+    display: grid !important;
+    grid-template-columns: 1.08fr .92fr !important;
+    grid-template-rows: auto auto !important;
+
+    align-content: center !important;
+    align-items: end !important;
+
+    column-gap: 8px !important;
+    row-gap: 0 !important;
+
+    /* Nudge the whole hero composition downward inside its centered area. */
+    transform: translateY(22px) !important;
+  }
+
+  .home-copy,
+  .home-visual {
+    align-self: end !important;
+  }
+
+  .home-actions {
+    grid-column: 1 / -1 !important;
+    grid-row: 2 !important;
+
+    position: static !important;
+    inset: auto !important;
+
+    margin: 2px 0 0 !important;
+    padding: 0 !important;
+
+    display: flex !important;
+    justify-content: flex-start !important;
+    align-items: center !important;
+
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-shell {
+    transform: translateY(18px) !important;
+  }
+
+  .home-actions {
+    margin-top: 1px !important;
+    gap: 7px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-page,
+  .home-page.visible {
+    padding-top: 14px !important;
+  }
+
+  .home-shell {
+    transform: translateY(14px) !important;
+  }
+
+  .home-actions {
+    margin-top: 0 !important;
+    gap: 6px !important;
+  }
+}
+
+
+/* =========================================================
+   FINAL UI / LANDSCAPE / LEADERBOARD POLISH
+   ========================================================= */
+
+/* Mobile action row: grow equally to the Mission Briefing width. */
+@media (max-width: 700px) {
+  .home-actions {
+    width: 100% !important;
+    grid-column: 1 / -1 !important;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 9px !important;
+    margin-top: 6px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: 100% !important;
+    min-width: 0 !important;
+    padding-left: 14px !important;
+    padding-right: 14px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-actions { gap: 8px !important; }
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    padding-left: 11px !important;
+    padding-right: 11px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-actions { gap: 7px !important; }
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    padding-left: 9px !important;
+    padding-right: 9px !important;
+  }
+}
+
+/* Lower the cover clouds slightly. */
+.home-cloud.cloud-a { top: 12% !important; }
+.home-cloud.cloud-b { top: 18% !important; }
+.home-cloud.cloud-c { top: 15% !important; }
+
+@media (max-width: 700px) {
+  .home-cloud.cloud-a { top: 11% !important; }
+  .home-cloud.cloud-b { top: 16% !important; }
+  .home-cloud.cloud-c { top: 13% !important; }
+}
+
+/* Leaderboard preview: new pixel scene language, no obstacles/platforms. */
+.leaderboard-runner-stage {
+  border-color: #02030a !important;
+  background:
+    linear-gradient(#f7f0ff 0 0) 8% 18% / 3px 3px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 17% 31% / 2px 2px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 29% 13% / 3px 3px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 42% 25% / 2px 2px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 56% 10% / 3px 3px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 68% 32% / 2px 2px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 81% 15% / 3px 3px no-repeat,
+    linear-gradient(#f7f0ff 0 0) 92% 27% / 2px 2px no-repeat,
+    linear-gradient(#dfe6ee 0 0) 13% 28% / 48px 8px no-repeat,
+    linear-gradient(#c8d0db 0 0) 15% 33% / 60px 10px no-repeat,
+    linear-gradient(#dfe6ee 0 0) 46% 18% / 52px 8px no-repeat,
+    linear-gradient(#c8d0db 0 0) 48% 24% / 65px 10px no-repeat,
+    linear-gradient(
+      180deg,
+      #140c22 0%, #140c22 25%,
+      #241438 25%, #241438 50%,
+      #3b2242 50%, #3b2242 72%,
+      #522b3f 72%, #522b3f 100%
+    ) !important;
+  box-shadow: inset 0 0 55px #0005 !important;
+}
+
+.leaderboard-runner-stage::before {
+  display: none !important;
+}
+
+.leaderboard-runner-stage::after {
+  bottom: 25px !important;
+  height: 4px !important;
+  background: #f0ab73 !important;
+  box-shadow: 0 0 8px #f0ab7355 !important;
+}
+
+/* Gameplay HUD: put score / coins / streak / crew / saved / lives below canvas. */
+.game-page.visible {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.game-topbar { order: 1 !important; }
+.game-stage-shell {
+  order: 2 !important;
+  flex: 1 1 auto !important;
+}
+.scoreboard {
+  order: 3 !important;
+  margin-top: 6px !important;
+  border-top: 1px solid #ffffff16;
+  padding-top: 4px;
+}
+
+/* Mobile Landscape: fit full play area and keep pre-run controls accessible. */
+@media (max-width: 700px) {
+  .game-page {
+    padding: 4px 6px 6px !important;
+  }
+
+  .game-topbar {
+    height: 23px !important;
+    flex-basis: 23px !important;
+  }
+
+  .scoreboard {
+    height: 34px !important;
+    flex-basis: 34px !important;
+    margin-top: 4px !important;
+    padding-top: 2px !important;
+  }
+
+  .game-stage-shell {
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .game-page.landscape-mode .canvas-wrap {
+    width: 100% !important;
+    height: auto !important;
+    max-height: calc(100% - 2px) !important;
+    aspect-ratio: 8 / 3 !important;
+  }
+
+  .game-page.landscape-mode #gameCanvas {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  .game-page.landscape-mode #overlay {
+    padding: 4px 7px !important;
+    overflow-y: auto !important;
+    justify-content: center !important;
+  }
+
+  .game-page.landscape-mode .pre-run-info {
+    width: min(520px, 96%) !important;
+    margin: 0 auto 4px !important;
+  }
+
+  .game-page.landscape-mode .pre-run-controls {
+    margin-bottom: 3px !important;
+  }
+
+  .game-page.landscape-mode .pre-run-items-inline {
+    gap: 2px 7px !important;
+  }
+
+  .game-page.landscape-mode .pre-run-ready-block {
+    margin: 1px auto 2px !important;
+  }
+
+  .game-page.landscape-mode #overlay h3 {
+    font-size: 1.2rem !important;
+  }
+
+  .game-page.landscape-mode #overlay p {
+    margin: 1px 0 2px !important;
+    font-size: .50rem !important;
+  }
+
+  .game-page.landscape-mode #overlay .name-entry {
+    width: min(220px, 82%) !important;
+    margin: 2px auto 0 !important;
+    gap: 3px !important;
+  }
+
+  .game-page.landscape-mode #overlay .name-entry label {
+    font-size: .42rem !important;
+  }
+
+  .game-page.landscape-mode #overlay .name-entry input {
+    padding: 4px !important;
+    font-size: .62rem !important;
+  }
+
+  .game-page.landscape-mode #overlay .overlay-actions {
+    margin-top: 4px !important;
+  }
+
+  .game-page.landscape-mode #overlay .overlay-actions button {
+    min-height: 28px !important;
+    padding: 4px 9px !important;
+    font-size: .54rem !important;
+  }
+}
+
+/* Desktop landscape seam guard. */
+.game-page.landscape-mode .canvas-wrap {
+  background: #140c22 !important;
+}
+
+#gameCanvas {
+  vertical-align: top;
+}
+
+
+/* =========================================================
+   MOBILE HOME BUTTONS — KEEP PAIR AT ~HALF WIDTH
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .home-actions {
+    width: 52% !important;
+    max-width: 360px !important;
+    min-width: 240px !important;
+    grid-column: 1 / -1 !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    justify-self: start !important;
+    gap: 8px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    width: 100% !important;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-actions {
+    width: 54% !important;
+    max-width: 310px !important;
+    min-width: 220px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .home-actions {
+    width: 56% !important;
+    max-width: 280px !important;
+    min-width: 205px !important;
+    gap: 7px !important;
+  }
+
+  .home-actions .primary,
+  .home-actions .secondary,
+  .home-start {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+}
