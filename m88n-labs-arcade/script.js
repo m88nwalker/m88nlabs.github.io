@@ -28,7 +28,7 @@ const games = [
     status: "PLAYABLE",
     statusClass: "status-playable",
     playable: true,
-    url: "./owls-vs-invaders/index.html"
+    url: "./space-owls/index.html"
   },
   {
     id: "crypto-time-travellers",
