@@ -914,7 +914,7 @@
 
   function addDoor() {
     const scale = modeConfig().scale;
-    const door = { x: canvas.width + 50 * scale, y: game.groundY - 92 * scale, width: 58 * scale, height: 92 * scale, pulse: 0 };
+    const door = { x: canvas.width + 50 * scale, y: game.groundY - 128 * scale, width: 58 * scale, height: 92 * scale, pulse: 0 };
     if (isAreaClear(door, 42)) game.doors.push(door);
     game.nextDoor = rand(15, 24);
   }
