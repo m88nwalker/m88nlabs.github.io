@@ -1048,3 +1048,29 @@ button,input{font:inherit}button{cursor:pointer}
     animation: none !important;
   }
 }
+
+
+/* =========================================================
+   SPACE OWLS — HOME MISSION TYPEWRITER
+   ========================================================= */
+
+#homeMission p {
+  min-height: 1.45em;
+}
+
+#homeMission p.typing::after {
+  content: "▌";
+  margin-left: 2px;
+  color: var(--orange);
+  animation: owlMissionCursor .65s steps(1) infinite;
+}
+
+@keyframes owlMissionCursor {
+  50% { opacity: 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #homeMission p.typing::after {
+    animation: none !important;
+  }
+}

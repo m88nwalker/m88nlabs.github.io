@@ -237,9 +237,75 @@ function randBonusDelay() {
     }
   }
 
+  // ---------- Home Mission Typewriter ----------
+  let missionTypingTimer = null;
+  let missionTypingToken = 0;
+
+  function stopMissionTyping() {
+    missionTypingToken += 1;
+
+    if (missionTypingTimer) {
+      clearTimeout(missionTypingTimer);
+      missionTypingTimer = null;
+    }
+
+    document.querySelectorAll("#homeMission [data-rule]").forEach((line) => {
+      line.classList.remove("typing");
+    });
+  }
+
+  function startMissionTyping() {
+    stopMissionTyping();
+
+    const token = missionTypingToken;
+    const lines = [...document.querySelectorAll("#homeMission [data-rule]")];
+    if (!lines.length) return;
+
+    lines.forEach((line) => {
+      line.textContent = "";
+      line.classList.remove("typing");
+    });
+
+    let lineIndex = 0;
+    let charIndex = 0;
+
+    function typeNextCharacter() {
+      if (token !== missionTypingToken) return;
+
+      const line = lines[lineIndex];
+      if (!line) return;
+
+      const text = line.dataset.rule || "";
+      line.classList.add("typing");
+
+      if (charIndex < text.length) {
+        line.textContent += text.charAt(charIndex);
+        charIndex += 1;
+        missionTypingTimer = setTimeout(typeNextCharacter, 28);
+        return;
+      }
+
+      line.classList.remove("typing");
+      lineIndex += 1;
+      charIndex = 0;
+
+      if (lineIndex < lines.length) {
+        missionTypingTimer = setTimeout(typeNextCharacter, 220);
+      } else {
+        missionTypingTimer = null;
+      }
+    }
+
+    missionTypingTimer = setTimeout(typeNextCharacter, 180);
+  }
+
   // ---------- Load & Preview ----------
   populateOwlSelector();
   applySelectedOwl(selectedOwlId);
+
+  // Start the Mission Briefing immediately on the very first home-screen load.
+  // This intentionally does not depend on Owl JSON/image fetch timing.
+  requestAnimationFrame(() => startMissionTyping());
 
   loadOwl().then(() => {
   startPreviewLoop();
@@ -444,6 +510,7 @@ drawLeaderboardOwls();
 }
 
 function showLeaderboard() {
+  stopMissionTyping();
   setGameChrome("hidden");
 
   if (preRunPanel) {
@@ -502,6 +569,7 @@ function hideLeaderboard() {
 
   function showPreRun() {
     cancelAllLoops();
+    stopMissionTyping();
     running = false;
     gameOver = false;
     setGameChrome("prerun");
@@ -647,6 +715,9 @@ function buildBunkers(force = false) {
     }
 
     overlay.style.display = "grid";
+
+    // Replay the Mission Briefing every time the player returns Home.
+    requestAnimationFrame(() => startMissionTyping());
 
     // Keep the animated owl preview alive on the home screen.
     if (owlSprite) {
