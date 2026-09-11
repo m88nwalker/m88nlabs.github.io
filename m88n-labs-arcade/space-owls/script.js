@@ -303,8 +303,7 @@ function randBonusDelay() {
   populateOwlSelector();
   applySelectedOwl(selectedOwlId);
 
-  // Start the Mission Briefing immediately on the very first home-screen load.
-  // This intentionally does not depend on Owl JSON/image fetch timing.
+  // Start the briefing immediately on first load, independent of asset loading.
   requestAnimationFrame(() => startMissionTyping());
 
   loadOwl().then(() => {
@@ -609,6 +608,15 @@ function hideLeaderboard() {
 
   // ---------- Input ----------
   window.addEventListener("keydown", e=>{
+    const typingField = e.target && (
+      e.target.tagName === "INPUT" ||
+      e.target.tagName === "TEXTAREA"
+    );
+
+    if (running && !typingField && (e.code === "ArrowLeft" || e.code === "ArrowRight")) {
+      e.preventDefault();
+    }
+
     if (e.code==="ArrowLeft") keys.ArrowLeft=true;
     if (e.code==="ArrowRight") keys.ArrowRight=true;
     if (e.code==="Space"){ keys.Space=true; e.preventDefault(); }
@@ -716,7 +724,7 @@ function buildBunkers(force = false) {
 
     overlay.style.display = "grid";
 
-    // Replay the Mission Briefing every time the player returns Home.
+    // Replay the briefing whenever the player returns Home.
     requestAnimationFrame(() => startMissionTyping());
 
     // Keep the animated owl preview alive on the home screen.
@@ -1296,15 +1304,28 @@ function backToStartScreen() {
     // step horizontally
     if (now - invLastStep >= invStepEvery) {
       invLastStep = now;
-      let hitEdge = false;
-      for (const v of invaders) {
-        if (!v.alive) continue;
-        v.x += invDx * invDir;
-        if (v.x < 10 || v.x + v.w > WIDTH - 10) hitEdge = true;
-      }
-      if (hitEdge) {
-        invDir *= -1;
-        for (const v of invaders) { if (v.alive) v.y += invDrop; }
+
+      const EDGE_PADDING = 28;
+      const aliveInvaders = invaders.filter(v => v.alive);
+
+      if (aliveInvaders.length) {
+        const stepX = invDx * invDir;
+        const minX = Math.min(...aliveInvaders.map(v => v.x));
+        const maxX = Math.max(...aliveInvaders.map(v => v.x + v.w));
+
+        const wouldHitLeft  = minX + stepX < EDGE_PADDING;
+        const wouldHitRight = maxX + stepX > WIDTH - EDGE_PADDING;
+
+        if (wouldHitLeft || wouldHitRight) {
+          invDir *= -1;
+          for (const v of aliveInvaders) {
+            v.y += invDrop;
+          }
+        } else {
+          for (const v of aliveInvaders) {
+            v.x += stepX;
+          }
+        }
       }
     }
 
