@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Crypto Time Travelers</title>
+<!-- <link rel="icon" href="https://ordinals.com/preview/a7757eb05782aa7784d6c25b4b4291da370af19de23d9175613d1efe988ed59ei0"> -->
+<link href="assets/townies/townie1.gif" rel="icon" type="image/gif"/>
+<link href="styles.css" rel="stylesheet"/>
+</head>
+<body>
+<main class="arcade-page">
+<section aria-label="Crypto Time Travelers arcade cabinet" class="arcade-square">
+<header class="cabinet-header">
+<a class="back-link" href="../arcade-lobby.html">← ARCADE LOBBY</a>
+<div class="cabinet-brand">M88N LABS <span>ARCADE</span></div>
+<div class="cabinet-status"><i></i> ONLINE</div>
+</header>
+<div class="cabinet-screen" id="cabinetScreen"><div class="game-subheader hidden" id="gameSubheader"><button class="game-home-btn" id="arcadeHomeBtn" type="button">← HOME</button><div class="game-name">CRYPTO TIME TRAVELERS <span>// TIME MARKET</span></div></div>
+<section class="title-screen" id="titleScreen">
+<div class="title-card">
+<p class="eyebrow">Taproot Townies Present</p>
+<h1>Crypto Time Travelers</h1>
+<p class="title-subtitle">A blockchain glitch has opened the timeline.</p>
+<div class="mission-briefing cinematic-briefing" id="missionBriefing">
+<div class="matrix-rain" id="matrixRain"></div>
+<div class="briefing-terminal">
+<p class="eyebrow">Mission Briefing</p>
+<h2>Timeline link established...</h2>
+<div class="briefing-lines">
+<p class="briefing-line" data-full-text="A blockchain glitch has fractured the future timeline.">A blockchain glitch has fractured the future timeline.</p>
+<p class="briefing-line" data-full-text="Your Townie has 30 jumps to trade the future.">Your Townie has 30 jumps to trade the future.</p>
+<p class="briefing-line" data-full-text="Start with $2,000. Buy, sell, borrow, and adapt.">Start with $2,000. Buy, sell, borrow, and adapt.</p>
+<p class="briefing-line" data-full-text="Each jump reveals new prices, events, opportunities, and scams.">Each jump reveals new prices, events, opportunities, and scams.</p>
+<p class="briefing-line" data-full-text="Build the highest net worth before time collapses.">Build the highest net worth before time collapses.</p>
+</div>
+<div class="mission-actions">
+<button class="start-run-btn" id="beginMissionBtn">Begin Mission</button>
+<button class="secondary-title-btn" id="viewLeaderboardBtn">Leaderboard</button></div>
+</div>
+</div>
+<div class="townie-selection-area hidden" id="townieSelectionArea">
+<p class="eyebrow">Choose Your First Traveler</p>
+<div class="character-carousel">
+<button class="carousel-btn" id="prevTownieBtn">‹</button>
+<div class="character-card">
+<div class="townie-canvas title-townie-preview" id="titleTowniePreview"></div>
+<div class="rarity-pill" id="titleRarity">Common</div>
+<h2 id="titleTownieName">Taproot Townie #1</h2>
+<h3 id="titleTownieClass">Cool Hand</h3>
+<p id="titleTownieBio">Unbothered and confident.</p>
+<ul class="trait-list" id="titleTownieTraits"></ul>
+</div>
+<button class="carousel-btn" id="nextTownieBtn">›</button>
+</div>
+<button class="start-run-btn" id="startRunBtn">Start Run</button>
+</div>
+</div>
+</section>
+<!-- ================= LEADERBOARD SCREEN ================= -->
+<section class="leaderboard-screen hidden" id="leaderboardScreen">
+<div class="leaderboard-card">
+<p class="eyebrow">Local Legends</p>
+<h1>Leaderboard</h1>
+<div class="final-score-box hidden" id="finalScoreBox">
+<div class="townie-canvas" id="finalTowniePreview"></div>
+<div>
+<p>Your Final Net Worth</p>
+<strong id="finalScoreValue">$0</strong>
+<label>Enter Initials</label>
+<input id="initialsInput" maxlength="3" placeholder="AAA"/>
+<button id="saveScoreBtn">
+                    Save Score
+                </button>
+</div>
+</div>
+<div class="leaderboard-list" id="leaderboardList"></div><div class="screen-pager" id="leaderboardPager"><button id="leaderboardPrevPage">‹</button><span id="leaderboardPageLabel">1 / 1</span><button id="leaderboardNextPage">›</button></div>
+<button class="start-run-btn" id="leaderboardPlayBtn">PLAY</button>
+</div>
+</section>
+<!-- ====================================================== -->
+<main class="game-shell hidden" id="gameShell">
+<header class="game-header">
+<div>
+<h1>Crypto Time Traveler</h1>
+<p class="tagline">Travel through time. Trade the future. Beat the market.</p>
+</div>
+<button class="small-btn" id="newGameBtn">New Run</button>
+</header>
+<div class="game-dashboard"><section class="traveler-panel">
+<div>
+<span class="panel-label">Current Traveler</span>
+<h2 id="travelerName">Taproot Townie #1</h2>
+<p id="travelerClass">Class: Cool Hand</p>
+</div>
+<div class="townie-canvas" id="travelerPreview"></div>
+</section><section class="net-worth-hero" id="netWorthHero"><div class="net-worth-copy"><span>NET WORTH</span><strong id="netWorthHeroValue">$2,000.00</strong><small>Cash + crypto holdings − loan balance.</small></div><div aria-hidden="true" class="net-worth-signal"><i></i><i></i><i></i><i></i><i></i></div></section><section class="status-grid">
+<article class="status-card status-wallet">
+<span>Cash Wallet</span>
+<strong id="wallet">$2,000.00</strong>
+</article>
+<article class="status-card danger status-loan">
+<span>Loan</span>
+<strong id="loan">$0.00</strong>
+</article>
+<article class="status-card status-day">
+<span>Day</span>
+<strong id="day">1 / 30</strong>
+</article>
+<article class="status-card status-location">
+<span>Location</span>
+<strong id="location">Present Day</strong>
+</article>
+<article class="status-card status-timeline-era">
+<span>Timeline Era</span>
+<strong id="era">Present Day</strong>
+</article>
+<article class="status-card status-market-mood">
+<span>Market Mood</span>
+<strong id="sentiment">Live Market</strong>
+</article>
+</section><section class="time-panel">
+<span>Current Timeline</span>
+<strong id="timeline">Loading...</strong>
+</section><nav class="tab-bar">
+<button class="tab-btn" data-tab="market">Market</button>
+<button class="tab-btn" data-tab="portfolio">Portfolio</button>
+<button class="tab-btn" data-tab="travel">Travel</button>
+<button class="tab-btn" data-tab="broker">Time Broker</button>
+<button class="tab-btn" data-tab="townies">Townies</button>
+</nav><section class="event-log dashboard-log">
+<div class="section-heading">
+<h2>Activity Log</h2>
+</div>
+<div class="log-box" id="eventLog"></div>
+</section></div>
+<section class="tab-panel" id="market"><div class="overlay-screen-header"><button class="overlay-close-btn" type="button">← DASHBOARD</button><strong>MARKET</strong></div>
+<div class="section-heading">
+<h2>Market</h2>
+<p>Buy low, jump through time, sell high.</p>
+</div>
+<div class="market-list" id="marketList"></div><div class="screen-pager" id="marketPager"><button id="marketPrevPage">‹</button><span id="marketPageLabel">1 / 1</span><button id="marketNextPage">›</button></div>
+</section>
+<section class="tab-panel" id="portfolio"><div class="overlay-screen-header"><button class="overlay-close-btn" type="button">← DASHBOARD</button><strong>PORTFOLIO</strong></div>
+<div class="section-heading">
+<h2>Portfolio</h2>
+<p>Your current crypto holdings.</p>
+</div>
+<div class="portfolio-chart-card">
+<h3>Allocation</h3>
+<div class="allocation-bar" id="allocationBar"></div>
+<div class="allocation-legend" id="allocationLegend"></div>
+</div>
+<div class="portfolio-list" id="portfolioList"></div><div class="screen-pager" id="portfolioPager"><button id="portfolioPrevPage">‹</button><span id="portfolioPageLabel">1 / 1</span><button id="portfolioNextPage">›</button></div>
+</section>
+<section class="tab-panel" id="travel"><div class="overlay-screen-header"><button class="overlay-close-btn" type="button">← DASHBOARD</button><strong>TRAVEL</strong></div>
+<div class="section-heading">
+<h2>Time Travel</h2>
+<p>Jump to a new place and future date. Prices change every jump.</p>
+</div>
+<div class="travel-card">
+<div class="traveler-stage">
+<div class="stars-orbit"></div>
+<div class="mini-portal"></div>
+<div class="townie-canvas" id="stageTownie"></div>
+</div>
+<p>Each jump uses one day and may trigger a fictional crypto history event, hidden opportunity, or scam.</p>
+<button id="timeJumpBtn">Random Time Jump</button>
+</div><div class="travel-last-jump" id="lastJumpCard"><div class="travel-last-jump-heading"><span>LAST JUMP</span><strong id="lastJumpBadge">WAITING</strong></div><div class="travel-last-jump-content" id="lastJumpContent"><p>Your latest timeline destination, event, and market reaction will stay here after you jump.</p></div></div><button class="last-jump-toggle" id="lastJumpToggle" type="button">LAST JUMP INFO</button>
+</section>
+<section class="tab-panel" id="broker"><div class="overlay-screen-header"><button class="overlay-close-btn" type="button">← DASHBOARD</button><strong>TIME BROKER</strong></div>
+<div class="section-heading">
+<h2>Time Broker</h2>
+<p id="brokerDescription">Borrow $5,000, owe $5,500, then pay interest every jump.</p>
+</div>
+<div class="broker-account" id="brokerAccount">
+<div class="broker-balance-card">
+<span>CURRENT LOAN BALANCE</span>
+<strong id="brokerLoanBalance">$0.00</strong>
+<small id="brokerLoanCount">0 / 1 loans active</small>
+</div>
+<div class="broker-account-mini">
+<div><span>CASH AVAILABLE</span><strong id="brokerCashAvailable">$2,000.00</strong></div>
+<div><span>INTEREST / JUMP</span><strong id="brokerInterestRate">$50.00</strong></div>
+</div>
+</div><div class="broker-terms">
+<div class="broker-terms-heading"><span>LOAN TERMS</span><strong>TIME BROKER CREDIT</strong></div>
+<ul>
+<li><b id="brokerPayoutTerm">Receive $5,000.00 cash immediately.</b></li>
+<li><b id="brokerPaybackTerm">Opening debt balance: $5,500.00.</b></li>
+<li><b id="brokerInterestTerm">Interest is added after every time jump.</b></li>
+<li>Loans reduce Net Worth until repaid. Full repayment must come from your Cash Wallet.</li>
+</ul>
+</div><div class="broker-grid">
+<button id="takeLoanBtn">Take Loan</button>
+<button class="danger-btn" id="payLoanBtn">Pay Full Loan</button>
+</div><div class="broker-status neutral" id="brokerStatus"><span>BROKER STATUS</span><strong id="brokerStatusTitle">No active loan</strong><p id="brokerStatusMessage">Borrow only when the extra liquidity is worth the debt.</p></div>
+</section>
+<section class="tab-panel" id="townies"><div class="overlay-screen-header"><button class="overlay-close-btn" type="button">← DASHBOARD</button><strong>TOWNIES</strong></div>
+<div class="section-heading">
+<h2>Townie Collection</h2>
+<p>Each Townie has a different class, rarity, and passive traits.</p>
+</div>
+<div class="townie-select-list" id="townieSelectList"></div><div class="screen-pager" id="towniePager"><button id="towniePrevPage">‹</button><span id="towniePageLabel">1 / 1</span><button id="townieNextPage">›</button></div>
+</section>
+<div class="trade-box hidden trade-sheet" id="tradeBox">
+<h3 id="tradeTitle">Trade</h3><div class="trade-side-toggle"><button class="active" id="tradeBuyMode" type="button">BUY</button><button id="tradeSellMode" type="button">SELL</button></div>
+<div class="trade-info">
+<p>Price</p>
+<strong id="tradePrice">$0.00</strong>
+</div>
+<p class="trade-helper" id="tradeHelper"></p>
+<label for="tradeAmount">Amount</label>
+<input id="tradeAmount" min="0" placeholder="Enter amount" step="0.00000001" type="number"/>
+<div class="quick-trade-buttons">
+<button data-percent="0.25">25%</button>
+<button data-percent="0.5">50%</button>
+<button data-percent="0.75">75%</button>
+<button data-percent="1">100%</button>
+</div>
+<div class="trade-total">
+<span>Total</span>
+<strong id="tradeTotal">$0.00</strong>
+</div>
+<div class="trade-actions">
+<button id="confirmTradeBtn">Confirm</button>
+<button class="secondary-btn" id="cancelTradeBtn">Cancel</button>
+</div>
+</div></main>
+<div class="jump-overlay hidden" id="jumpOverlay">
+<div class="jump-stars"></div>
+<div class="jump-warp"></div>
+<div class="portal-scene">
+<div class="portal-ring" id="portalLeft"></div>
+<div class="townie-canvas jump-townie" id="jumpTownie"></div>
+<div class="portal-ring hidden" id="portalRight"></div>
+</div>
+<div class="jump-reveal hidden" id="jumpReveal"></div>
+</div>
+<div class="encounter-overlay hidden" id="encounterOverlay">
+<div class="encounter-card">
+<p class="eyebrow">Timeline Encounter</p>
+<h2 id="encounterTitle">Beware of Scams</h2>
+<p id="encounterScenario">A suspicious opportunity appears.</p>
+<div class="encounter-actions">
+<button id="encounterChoiceA"></button>
+<button id="encounterChoiceB"></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>

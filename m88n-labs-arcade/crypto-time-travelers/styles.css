@@ -1,0 +1,5134 @@
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
+html { 
+  font-size: 16px; 
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(56, 189, 248, 0.22), transparent 22%),
+    radial-gradient(circle at 80% 10%, rgba(139, 92, 246, 0.18), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(34, 197, 94, 0.08), transparent 28%),
+    linear-gradient(135deg, #050816 0%, #0a0f18 45%, #111827 100%);
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding: 14px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    radial-gradient(#ffffff 1px, transparent 1px),
+    radial-gradient(#93c5fd 1px, transparent 1px);
+  background-size: 80px 80px, 130px 130px;
+  background-position: 0 0, 40px 60px;
+  opacity: 0.18;
+  animation: starDrift 24s linear infinite;
+}
+
+@keyframes starDrift {
+  from { transform: translateY(0); }
+  to { transform: translateY(80px); }
+}
+
+.hidden { 
+  display: none !important; 
+}
+
+/* Title screen */
+
+.title-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: grid;
+  place-items: start center;
+  padding: 18px;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+  background:
+    radial-gradient(circle at center, rgba(139, 92, 246, 0.22), transparent 34%),
+    radial-gradient(circle at 20% 20%, rgba(56, 189, 248, 0.22), transparent 28%),
+    linear-gradient(180deg, #020617, #0f172a);
+}
+
+.title-card {
+  width: min(94vw, 720px);
+  text-align: center;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 26px;
+  padding: 24px;
+  margin: 24px 0;
+  box-shadow: 0 0 70px rgba(56,189,248,.18);
+}
+
+.eyebrow {
+  color: #38bdf8;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.72rem;
+}
+
+.title-card h1 {
+  margin-top: 8px;
+  font-size: clamp(2rem, 9vw, 4rem);
+  line-height: 0.95;
+  font-weight: 1000;
+}
+
+.title-subtitle {
+  color: #cbd5e1;
+  margin: 14px auto 22px;
+  max-width: 520px;
+  line-height: 1.45;
+}
+
+.mission-briefing {
+  margin-top: 20px;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(247,147,26,.16), transparent 34%),
+    #111827;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 22px;
+  padding: 20px;
+  text-align: left;
+}
+
+.mission-briefing h2 {
+  font-size: clamp(1.45rem, 6vw, 2.25rem);
+  line-height: 1.05;
+  margin: 10px 0 14px;
+}
+
+.mission-briefing p {
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+.mission-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.mission-grid div {
+  background: #0f172a;
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.mission-grid strong {
+  display: block;
+  color: #22c55e;
+  font-size: 1.25rem;
+}
+
+.mission-grid span {
+  color: #94a3b8;
+  font-size: .82rem;
+}
+
+.mission-list {
+  display: grid;
+  gap: 8px;
+  margin: 16px 0 0;
+  padding-left: 18px;
+  color: #dbeafe;
+  line-height: 1.4;
+}
+
+.townie-selection-area {
+  margin-top: 20px;
+}
+
+.cinematic-briefing {
+  position: relative;
+  overflow: hidden;
+  min-height: 540px;
+  display: grid;
+  place-items: center;
+  text-align: left;
+  background: #020617;
+}
+
+.matrix-rain {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: .32;
+  pointer-events: none;
+}
+
+.matrix-column {
+  position: absolute;
+  top: -120px;
+  color: #22c55e;
+  font-family: monospace;
+  font-size: 14px;
+  line-height: 1.2;
+  animation: matrixFall linear infinite;
+  text-shadow: 0 0 8px rgba(34,197,94,.85);
+}
+
+@keyframes matrixFall {
+  from { transform: translateY(-120px); }
+  to { transform: translateY(760px); }
+}
+
+.briefing-terminal {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  background: rgba(2, 6, 23, .84);
+  border: 1px solid rgba(34,197,94,.28);
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 0 45px rgba(34,197,94,.12);
+}
+
+.briefing-terminal h2 {
+  color: #22c55e;
+  margin: 10px 0 18px;
+}
+
+.briefing-line {
+  opacity: 0;
+  transform: translateY(8px);
+  color: #dbeafe;
+  margin-bottom: 10px;
+  line-height: 1.45;
+  animation: briefingReveal .55s ease forwards;
+}
+
+.briefing-line:nth-child(1) { animation-delay: .4s; }
+.briefing-line:nth-child(2) { animation-delay: 1.1s; }
+.briefing-line:nth-child(3) { animation-delay: 1.8s; }
+.briefing-line:nth-child(4) { animation-delay: 2.5s; }
+.briefing-line:nth-child(5) { animation-delay: 3.2s; }
+.briefing-line:nth-child(6) { animation-delay: 3.9s; }
+.briefing-line:nth-child(7) { animation-delay: 4.6s; }
+
+@keyframes briefingReveal {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mission-actions {
+    opacity:0;
+    pointer-events:none;
+}
+
+.mission-actions.ready{
+    opacity:1;
+    pointer-events:auto;
+    animation: briefingReveal .6s ease forwards;
+}
+
+.character-carousel {
+  display: grid;
+  grid-template-columns: 48px 1fr 48px;
+  gap: 10px;
+  align-items: center;
+}
+
+.carousel-btn {
+  background: #1f2937;
+  color: white;
+  font-size: 2rem;
+  border-radius: 999px;
+}
+
+.character-card {
+  background:
+    radial-gradient(circle at 50% 25%, rgba(56,189,248,.2), transparent 28%),
+    #111827;
+  border-radius: 22px;
+  padding: 18px;
+  margin-top: 10px;
+  border: 1px solid rgba(255,255,255,.1);
+}
+
+.title-townie-preview {
+  margin: 0 auto 12px;
+}
+
+.rarity-pill {
+  display: inline-flex;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #334155;
+  color: white;
+  font-weight: 900;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.rarity-common { 
+  background: #475569; 
+}
+
+.rarity-rare { 
+  background: #2563eb; 
+}
+
+.rarity-epic { 
+  background: #7c3aed; 
+}
+
+.rarity-legendary { 
+  background: #f7931a; 
+  color: #111827; 
+}
+
+#titleTownieClass {
+  color: #22c55e;
+  margin-top: 6px;
+}
+
+#titleTownieBio {
+  color: #cbd5e1;
+  margin-top: 8px;
+}
+
+.trait-list {
+  display: grid;
+  gap: 8px;
+  text-align: center;
+  font-style: italic;
+  margin: 16px auto 0;
+  max-width: 460px;
+  list-style: none;
+}
+
+.trait-list li {
+  background: #0f172a;
+  padding: 10px 12px;
+  border-radius: 12px;
+  color: #dbeafe;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.start-run-btn {
+  margin-top: 22px;
+  width: 100%;
+  background: #22c55e;
+  color: #06130a;
+  padding: 16px;
+  font-size: 1.1rem;
+}
+
+.secondary-title-btn {
+  margin-top: 10px;
+  width: 100%;
+  background: #334155;
+  color: white;
+  padding: 14px;
+}
+
+.leaderboard-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 2100;
+  display: grid;
+  place-items: start center;
+  padding: 18px;
+  overflow-y: auto;
+  background:
+    radial-gradient(circle at center, rgba(247,147,26,.18), transparent 34%),
+    linear-gradient(180deg, #020617, #0f172a);
+}
+
+.leaderboard-card {
+  width: min(94vw, 720px);
+  margin: 24px 0;
+  background: rgba(15, 23, 42, 0.92);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 26px;
+  padding: 24px;
+  box-shadow: 0 0 70px rgba(247,147,26,.16);
+}
+
+.leaderboard-card .eyebrow,
+.leaderboard-card h1 {
+  text-align: center;
+}
+
+.leaderboard-card h1 {
+  font-size: clamp(2rem, 8vw, 3.5rem);
+  margin: 8px 0 20px;
+}
+
+.final-score-box {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 18px;
+  align-items: center;
+  background: #111827;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 18px;
+}
+
+.final-score-box p,
+.final-score-box label {
+  color: #94a3b8;
+  font-size: .9rem;
+}
+
+.final-score-box strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #22c55e;
+  margin: 4px 0 12px;
+}
+
+.final-score-box input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  margin: 8px 0 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+}
+
+.final-score-box button {
+  width: 100%;
+  background: #22c55e;
+  color: #06130a;
+  padding: 12px;
+}
+
+.leaderboard-list {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.leaderboard-entry {
+  display: grid;
+  grid-template-columns: 52px 70px 1fr 86px;
+  gap: 12px;
+  align-items: center;
+  background: #111827;
+  border-radius: 16px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.leaderboard-entry .rank {
+  font-size: 1.15rem;
+  font-weight: 900;
+  color: #f7931a;
+}
+
+.leaderboard-initials {
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: white;
+}
+
+.leaderboard-score {
+  text-align: right;
+  font-weight: 900;
+  color: #22c55e;
+  white-space: nowrap;
+  overflow-wrap: anywhere;
+}
+
+.leaderboard-entry .mini-townie {
+  width: 54px;
+  height: 54px;
+  justify-self: end;
+}
+
+.leaderboard-entry small,
+.empty-leaderboard {
+  color: #94a3b8;
+}
+
+@media (max-width: 460px) {
+  .leaderboard-entry {
+    grid-template-columns: 42px 50px 1fr 62px;
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .leaderboard-score {
+    font-size: 0.86rem;
+  }
+
+  .leaderboard-entry .mini-townie {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* Victory ceremony leaderboard upgrades */
+
+.leaderboard-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.leaderboard-list {
+  order: 1;
+}
+
+.final-score-box {
+  order: 2;
+  margin-top: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+#leaderboardHomeBtn {
+  order: 3;
+}
+
+.final-score-box.score-saving {
+  animation: scoreBoxPulse 0.7s ease infinite alternate;
+}
+
+@keyframes scoreBoxPulse {
+  from { box-shadow: 0 0 20px rgba(34,197,94,.18); }
+  to { box-shadow: 0 0 36px rgba(247,147,26,.35); }
+}
+
+.leaderboard-entry {
+  position: relative;
+  overflow: visible;
+}
+
+.leaderboard-entry.new-score-row {
+  animation: scoreRiseIntoPlace 0.7s ease;
+  border-color: rgba(247,147,26,.8);
+  box-shadow: 0 0 26px rgba(247,147,26,.28);
+}
+
+.leaderboard-entry.score-bumped {
+  animation: scoreBumpDown 0.45s ease;
+}
+
+@keyframes scoreRiseIntoPlace {
+  0% { transform: translateY(76px) scale(.98); opacity: .75; }
+  100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+@keyframes scoreBumpDown {
+  0% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.leaderboard-rank-medal {
+  font-size: 1.45rem;
+}
+
+.victory-banner {
+  order: 0;
+  text-align: center;
+  margin-bottom: 14px;
+  padding: 12px;
+  border-radius: 16px;
+  background: rgba(247,147,26,.13);
+  border: 1px solid rgba(247,147,26,.28);
+  color: #fde68a;
+  font-weight: 900;
+  letter-spacing: .06em;
+  animation: victoryBannerPop .8s ease;
+}
+
+@keyframes victoryBannerPop {
+  from { transform: scale(.92); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.celebration-particle {
+  position: fixed;
+  z-index: 4000;
+  pointer-events: none;
+  font-size: 1.4rem;
+  animation: coinFly 1.25s ease-out forwards;
+}
+
+@keyframes coinFly {
+  0% { transform: translate(0,0) scale(.6) rotate(0deg); opacity: 0; }
+  15% { opacity: 1; }
+  100% { transform: translate(var(--x), var(--y)) scale(1.25) rotate(360deg); opacity: 0; }
+}
+
+.firework-dot {
+  position: fixed;
+  z-index: 3999;
+  pointer-events: none;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #f7931a;
+  box-shadow: 0 0 14px #f7931a;
+  animation: fireworkPop .8s ease-out forwards;
+}
+
+@keyframes fireworkPop {
+  from { transform: translate(0,0) scale(.7); opacity: 1; }
+  to { transform: translate(var(--x), var(--y)) scale(.15); opacity: 0; }
+}
+
+/* Main shell */
+
+.game-shell {
+  position: relative;
+  width: 100%;
+  max-width: 920px;
+  background: rgba(20, 25, 38, 0.78);
+  backdrop-filter: blur(12px);
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 0 0 60px rgba(0, 255, 255, 0.08);
+  z-index: 1;
+}
+
+.game-shell.time-jump-active { 
+  animation: timePulse 0.9s ease; 
+}
+
+@keyframes timePulse {
+  0% { 
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.08); 
+    transform: scale(1); 
+  }
+
+  45% {
+    box-shadow: 
+      0 0 45px rgba(56, 189, 248, 0.45), 
+      0 0 90px rgba(139, 92, 246, 0.35);
+    transform: scale(1.01);
+  }
+
+  100% { 
+    box-shadow: 0 0 60px rgba(0, 255, 255, 0.08); 
+    transform: scale(1); 
+  }
+}
+
+.game-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.game-header h1 {
+  font-size: clamp(1.45rem, 6vw, 2.2rem);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.tagline { 
+  color: #94a3b8; 
+  margin-top: 8px; 
+  font-size: 0.9rem; 
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.2s ease;
+  font-size: 1rem;
+  font-weight: 700;
+  min-height: 44px;
+}
+
+button:hover { 
+  transform: translateY(-2px); 
+}
+
+button:active { 
+  transform: scale(0.98); 
+}
+
+.small-btn { 
+  background: #3b82f6; 
+  color: white; 
+  padding: 10px 14px; 
+  white-space: nowrap; 
+}
+
+.secondary-btn { 
+  background: #334155; 
+  color: white; 
+}
+
+.danger-btn { 
+  background: #dc2626; 
+  color: white; 
+}
+
+.traveler-panel {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 14px;
+  margin: 16px;
+  padding: 16px;
+  background: radial-gradient(circle at 80% 50%, rgba(139, 92, 246, 0.24), transparent 32%), #111827;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.panel-label { 
+  display: block; 
+  color: #94a3b8; 
+  font-size: 0.78rem; 
+  margin-bottom: 5px; 
+}
+
+.traveler-panel h2 { 
+  font-size: 1.15rem; 
+}
+
+.traveler-panel p { 
+  color: #cbd5e1; 
+  font-size: 0.88rem; 
+  margin-top: 4px; 
+}
+
+.status-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  padding: 16px;
+}
+
+.status-card {
+  background: #162030;
+  border-radius: 18px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.status-card span { 
+  color: #94a3b8; 
+  font-size: 0.82rem; 
+}
+
+.status-card strong { 
+  margin-top: 7px; 
+  font-size: clamp(1rem, 5vw, 1.35rem); 
+  overflow-wrap: anywhere; 
+}
+
+.status-card.danger strong { 
+  color: #ff7070; 
+}
+
+.time-panel {
+  margin: 0 16px;
+  padding: 16px;
+  background: #111827;
+  border-radius: 18px;
+}
+
+.time-panel span { 
+  color: #94a3b8; 
+  display: block; 
+  margin-bottom: 8px; 
+  font-size: 0.85rem; 
+}
+
+.time-panel strong { 
+  font-size: 1rem; 
+}
+
+.tab-bar {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 16px;
+  scrollbar-width: none;
+}
+
+.tab-bar::-webkit-scrollbar { 
+  display: none; 
+}
+
+.tab-btn {
+  white-space: nowrap;
+  padding: 11px 18px;
+  background: #1f2937;
+  color: white;
+  flex: 0 0 auto;
+}
+
+.tab-btn.active { 
+  background: #22c55e; 
+  color: #06130a; 
+}
+
+.tab-panel { 
+  display: none; 
+  padding: 16px; 
+}
+
+.tab-panel.active { 
+  display: block; 
+}
+
+.section-heading { 
+  margin-bottom: 16px; 
+}
+
+.section-heading h2 { 
+  font-size: 1.35rem; 
+  margin-bottom: 6px; 
+}
+
+.section-heading p { 
+  color: #94a3b8; 
+  line-height: 1.45; 
+}
+
+.market-list, 
+.portfolio-list, 
+.townie-select-list { 
+  display: grid; 
+  gap: 12px; 
+}
+
+.coin-card, 
+.portfolio-row, 
+.townie-select-card {
+  background: #182434;
+  border-radius: 16px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.coin-top, 
+.coin-name-block {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.coin-top { 
+  justify-content: space-between; 
+}
+
+.coin-symbol { 
+  font-size: 1.1rem; 
+  font-weight: 900; 
+}
+
+.coin-symbol small, 
+.portfolio-row small {
+  display: block;
+  color: #94a3b8;
+  font-size: 0.76rem;
+  font-weight: 500;
+  margin-top: 3px;
+}
+
+.coin-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 36px;
+  border-radius: 50%;
+  background: #0f172a;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+.coin-icon img { 
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+}
+
+.coin-icon-SOL { 
+  background: #7c3aed; 
+}
+
+.coin-icon-XRP { 
+  background: #374151; 
+}
+
+.coin-price { 
+  font-weight: 900; 
+  text-align: right; 
+  overflow-wrap: anywhere; 
+}
+
+.price-up { 
+  color: #22c55e; 
+}
+
+.price-down { 
+  color: #ef4444; 
+}
+
+.coin-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.buy-btn { 
+  background: #16a34a; 
+  color: white; 
+  padding: 10px 14px; 
+}
+
+.sell-btn { 
+  background: #dc2626; 
+  color: white; 
+  padding: 10px 14px; 
+}
+
+.trade-box {
+  margin-top: 20px;
+  background: #111827;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.trade-box h3 { 
+  margin-bottom: 16px; 
+}
+
+.trade-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: #0f172a;
+  padding: 12px;
+  border-radius: 14px;
+  margin-bottom: 14px;
+}
+
+.trade-info p, 
+.trade-box label { 
+  color: #94a3b8; 
+}
+
+.trade-helper { 
+  color: #cbd5e1; 
+  font-size: 0.92rem; 
+  margin-bottom: 14px; 
+}
+
+.trade-box input {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 12px;
+  margin: 10px 0 14px;
+  font-size: 1rem;
+  background: #e2e8f0;
+  color: #0f172a;
+}
+
+.quick-trade-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.quick-trade-buttons button { 
+  padding: 10px; 
+  background: #334155; 
+  color: white; 
+  font-size: 0.92rem; 
+}
+
+.trade-total, 
+.trade-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.trade-total { 
+  margin-bottom: 18px; 
+  font-size: 1.05rem; 
+}
+
+.trade-actions button { 
+  flex: 1; 
+  padding: 14px; 
+}
+
+.portfolio-chart-card, 
+.travel-card {
+  background: #182434;
+  border-radius: 18px;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.allocation-bar {
+  display: flex;
+  height: 18px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #0f172a;
+  margin: 14px 0;
+}
+
+.allocation-segment { 
+  min-width: 2px; 
+  height: 100%; 
+}
+
+.allocation-legend { 
+  display: grid; 
+  gap: 8px; 
+}
+
+.legend-row, 
+.legend-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-row { 
+  justify-content: space-between; 
+  color: #cbd5e1; 
+  font-size: 0.9rem; 
+}
+
+.legend-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.portfolio-actions {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 10px;
+}
+
+.portfolio-actions strong { 
+  color: #38bdf8; 
+}
+
+.travel-card { 
+  text-align: center; 
+}
+
+.travel-card p { 
+  color: #cbd5e1; 
+  line-height: 1.45; 
+}
+
+.travel-card button {
+  margin-top: 20px;
+  background: #8b5cf6;
+  color: white;
+  padding: 15px 28px;
+  width: 100%;
+}
+
+.broker-grid { 
+  display: grid; 
+  gap: 14px; 
+}
+
+.broker-grid button { 
+  padding: 16px; 
+}
+
+.event-log { 
+  padding: 16px; 
+}
+
+.log-box {
+  background: #0f172a;
+  border-radius: 18px;
+  padding: 16px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.log-box p { 
+  margin-bottom: 12px; 
+  color: #cbd5e1; 
+  line-height: 1.4; 
+}
+
+/* Townies */
+
+.townie-canvas {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  overflow: visible;
+  image-rendering: pixelated;
+}
+
+.townie-frame {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-repeat: no-repeat;
+  image-rendering: pixelated;
+  transform-origin: center;
+}
+
+.traveler-stage {
+  position: relative;
+  height: 170px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at center, rgba(139, 92, 246, 0.2), transparent 30%),
+    linear-gradient(180deg, #0f172a, #111827);
+}
+
+.stars-orbit {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(#fff 1px, transparent 1px),
+    radial-gradient(#38bdf8 1px, transparent 1px);
+  background-size: 34px 34px, 58px 58px;
+  opacity: 0.28;
+  animation: starDrift 8s linear infinite;
+}
+
+.mini-portal {
+  position: absolute;
+  right: 23%;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.9) 0%, rgba(56,189,248,.9) 20%, rgba(139,92,246,.7) 45%, transparent 70%);
+  box-shadow: 0 0 30px rgba(139,92,246,.8);
+  animation: portalSpin 2s linear infinite;
+}
+
+@keyframes portalSpin {
+  from { transform: rotate(0deg) scale(1); }
+  50% { transform: rotate(180deg) scale(1.08); }
+  to { transform: rotate(360deg) scale(1); }
+}
+
+.townie-select-card {
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+}
+
+.townie-select-card.selected {
+  outline: 2px solid #22c55e;
+  box-shadow: 0 0 24px rgba(34, 197, 94, 0.22);
+}
+
+.townie-select-card.locked {
+  opacity: 0.5;
+  filter: grayscale(0.75);
+}
+
+.townie-select-info h3 { 
+  font-size: 1.05rem; 
+}
+
+.townie-select-info p { 
+  color: #94a3b8; 
+  margin-top: 4px; 
+  font-size: 0.88rem; 
+}
+
+.townie-select-card button {
+  background: #8b5cf6;
+  color: white;
+  padding: 10px 14px;
+}
+
+.townie-select-card.locked {
+  opacity: 0.52;
+  filter: grayscale(0.85);
+}
+
+.townie-select-card.locked button {
+  background: #475569;
+  color: #cbd5e1;
+  cursor: not-allowed;
+}
+
+.unlock-note {
+  margin-top: 7px;
+  color: #f7931a !important;
+  font-size: 0.8rem !important;
+  font-weight: 800;
+}
+
+/* Time jump */
+
+.jump-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  background:
+    radial-gradient(circle at center, rgba(56,189,248,.18), transparent 24%),
+    radial-gradient(circle at 30% 20%, rgba(139,92,246,.22), transparent 28%),
+    linear-gradient(180deg, #020617, #0f172a 55%, #020617);
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+
+.jump-stars {
+  position: absolute;
+  inset: -20%;
+  background-image:
+    radial-gradient(#ffffff 1px, transparent 1px),
+    radial-gradient(#93c5fd 1px, transparent 1px),
+    radial-gradient(#c084fc 1px, transparent 1px);
+  background-size: 36px 36px, 72px 72px, 120px 120px;
+  animation: warpStars 1.2s linear infinite;
+  opacity: 0.45;
+}
+
+@keyframes warpStars {
+  from { transform: translateY(0) scale(1); }
+  to { transform: translateY(120px) scale(1.15); }
+}
+
+.jump-warp {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, #38bdf8, #8b5cf6, #22c55e, #f7931a, #38bdf8);
+  filter: blur(20px);
+  opacity: 0.3;
+  animation: portalSpin 1.1s linear infinite;
+}
+
+.portal-scene {
+  position: relative;
+  width: min(90vw, 620px);
+  height: 260px;
+}
+
+.portal-ring {
+  position: absolute;
+  top: 82px;
+  right: 70px;
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,.95) 0%, rgba(56,189,248,.85) 18%, rgba(139,92,246,.8) 45%, transparent 70%);
+  box-shadow: 0 0 35px rgba(56,189,248,.8), 0 0 80px rgba(139,92,246,.7);
+  animation: portalSpin 1.2s linear infinite;
+}
+
+#portalRight { 
+  left: 70px; 
+  right: auto; 
+}
+
+.jump-townie {
+  position: absolute;
+  top: 92px;
+  left: 70px;
+  z-index: 3;
+  animation: townieRunPortal 1.2s ease-in-out forwards;
+}
+
+@keyframes townieRunPortal {
+  0% { left: 70px; opacity: 1; transform: scale(1); }
+  70% { left: calc(100% - 170px); opacity: 1; transform: scale(1); }
+  100% { left: calc(100% - 125px); opacity: 0; transform: scale(0.45); }
+}
+
+.jump-overlay.arrive .jump-townie {
+  left: auto;
+  right: 100px;
+  opacity: 0;
+  animation: townieArrive 0.9s ease-out forwards;
+}
+
+@keyframes townieArrive {
+  0% { right: 90px; opacity: 0; transform: scale(0.45); }
+  35% { right: 130px; opacity: 1; transform: scale(1); }
+  100% { right: calc(100% - 185px); opacity: 1; transform: scale(1); }
+}
+
+.jump-reveal {
+  position: absolute;
+  bottom: 26px;
+  width: min(92vw, 620px);
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.88);
+  border: 1px solid rgba(255,255,255,.12);
+  box-shadow: 0 0 40px rgba(56,189,248,.25);
+}
+
+.jump-reveal h2 { 
+  font-size: 1.1rem; 
+  margin-bottom: 8px; 
+}
+
+.jump-reveal p { 
+  color: #cbd5e1; 
+  margin-top: 5px; 
+  font-size: 0.92rem; 
+}
+
+/* Scam / opportunity encounter */
+
+.encounter-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2500;
+  display: grid;
+  place-items: center;
+  padding: 18px;
+  background:
+    radial-gradient(circle at center, rgba(248, 113, 113, 0.18), transparent 34%),
+    radial-gradient(circle at 20% 20%, rgba(250, 204, 21, 0.12), transparent 26%),
+    rgba(2, 6, 23, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.encounter-card {
+  width: min(94vw, 560px);
+  background:
+    radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.22), transparent 32%),
+    #111827;
+  border-radius: 22px;
+  border: 1px solid rgba(255,255,255,.12);
+  padding: 22px;
+  box-shadow:
+    0 0 50px rgba(248, 113, 113, 0.16),
+    0 0 80px rgba(56, 189, 248, 0.08);
+}
+
+.encounter-card h2 {
+  font-size: 1.45rem;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
+
+#encounterScenario {
+  color: #dbeafe;
+  line-height: 1.5;
+  margin-bottom: 18px;
+}
+
+.encounter-actions {
+  display: grid;
+  gap: 10px;
+}
+
+.encounter-actions button {
+  background: #1f2937;
+  color: white;
+  padding: 14px;
+  text-align: left;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+.encounter-actions button:hover {
+  background: #334155;
+}
+
+.encounter-actions button:first-child {
+  border-left: 4px solid #f7931a;
+}
+
+.encounter-actions button:last-child {
+  border-left: 4px solid #22c55e;
+}
+
+@media (min-width: 760px) {
+  body { 
+    padding: 24px; 
+  }
+
+  .game-header { 
+    padding: 25px; 
+  }
+
+  .traveler-panel { 
+    margin: 20px; 
+    padding: 18px; 
+  }
+
+  .status-grid { 
+    grid-template-columns: repeat(3, 1fr); 
+    padding: 20px; 
+    gap: 15px; 
+  }
+
+  .time-panel { 
+    margin: 0 20px; 
+  }
+
+  .tab-bar, 
+  .tab-panel { 
+    padding: 20px; 
+  }
+
+  .coin-card { 
+    grid-template-columns: 1.5fr 1fr auto; 
+    align-items: center; 
+  }
+
+  .coin-buttons { 
+    grid-template-columns: repeat(2, auto); 
+  }
+
+  .portfolio-row { 
+    grid-template-columns: 1fr auto; 
+    align-items: center; 
+  }
+
+  .broker-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .event-log { 
+    padding: 20px; 
+  }
+
+  .encounter-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* =========================================================
+   M88N LABS ARCADE INTEGRATION — CRYPTO TIME TRAVELERS
+   Authoritative arcade-shell overrides
+   ========================================================= */
+
+html,
+body {
+  min-width: 320px;
+  min-height: 100%;
+}
+
+body {
+  display: block !important;
+  justify-content: initial !important;
+  padding: 0 !important;
+  overflow: auto;
+  background:
+    radial-gradient(circle at 50% 0, rgba(88, 28, 135, .18), transparent 40%),
+    #05060a !important;
+}
+
+body::before {
+  z-index: 0;
+}
+
+.arcade-page {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: grid;
+  place-items: start center;
+  padding: 20px;
+}
+
+.arcade-square {
+  width: min(960px, calc(100vw - 40px));
+  aspect-ratio: 1 / 1;
+  display: grid;
+  grid-template-rows: 58px minmax(0, 1fr);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,.14);
+  border-radius: 24px;
+  background: #090b14;
+  box-shadow: 0 28px 80px rgba(0,0,0,.6);
+}
+
+.cabinet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 0 18px;
+  border-bottom: 1px solid rgba(255,255,255,.10);
+  background: #090b14;
+  position: relative;
+  z-index: 50;
+}
+
+.back-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .10em;
+}
+
+.cabinet-brand {
+  color: #fff;
+  font-size: .78rem;
+  font-weight: 900;
+  letter-spacing: .14em;
+}
+
+.cabinet-brand span {
+  color: #f7931a;
+}
+
+.cabinet-status {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  color: #8edca6;
+  font-size: .66rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.cabinet-status i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #75dc96;
+  box-shadow: 0 0 10px #75dc96;
+}
+
+.cabinet-screen {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 50% 10%, rgba(56,189,248,.08), transparent 26%),
+    linear-gradient(180deg, #070a13 0%, #0a0e18 100%);
+}
+
+/* Title and leaderboard are now contained within the square cabinet. */
+.cabinet-screen .title-screen,
+.cabinet-screen .leaderboard-screen {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  padding: 18px !important;
+  overflow-y: auto !important;
+  overscroll-behavior: contain;
+}
+
+.cabinet-screen .title-screen {
+  z-index: 20;
+}
+
+.cabinet-screen .leaderboard-screen {
+  z-index: 25;
+}
+
+/* Keep the title content centered within the arcade field. */
+.cabinet-screen .title-card {
+  width: min(92%, 720px) !important;
+  margin: 20px auto !important;
+}
+
+/* Main gameplay becomes the scrollable interior of the cabinet. */
+.cabinet-screen .game-shell {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  max-width: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  overscroll-behavior: contain;
+  background: rgba(10, 14, 24, .95) !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Make the original inner game header feel like the game-level bar. */
+.cabinet-screen .game-header {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+  min-height: 58px;
+  padding: 14px 18px !important;
+  background: rgba(9,11,20,.96);
+  backdrop-filter: blur(10px);
+}
+
+.cabinet-screen .game-header h1 {
+  color: #f7931a;
+  font-size: 1rem !important;
+  letter-spacing: .06em;
+}
+
+.cabinet-screen .game-header .tagline {
+  font-size: .72rem;
+}
+
+/* Constrain overlays to the arcade field rather than the whole browser. */
+.cabinet-screen .jump-overlay,
+.cabinet-screen .encounter-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+/* Match arcade button language a little more closely. */
+.cabinet-screen button {
+  border-radius: 9px;
+}
+
+.cabinet-screen .start-run-btn,
+.cabinet-screen #timeJumpBtn,
+.cabinet-screen #confirmTradeBtn {
+  background: #f7931a;
+  color: #111827;
+}
+
+/* Preserve the existing green as a secondary interaction color. */
+.cabinet-screen .tab-btn.active,
+.cabinet-screen .buy-btn,
+.cabinet-screen #saveScoreBtn {
+  background: #22c55e;
+}
+
+/* Slightly tighter vertical rhythm inside the square field. */
+.cabinet-screen .traveler-panel,
+.cabinet-screen .status-grid,
+.cabinet-screen .tab-bar,
+.cabinet-screen .tab-panel,
+.cabinet-screen .event-log {
+  scroll-margin-top: 70px;
+}
+
+/* Custom cabinet scrollbars */
+.cabinet-screen .title-screen,
+.cabinet-screen .leaderboard-screen,
+.cabinet-screen .game-shell {
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #090b14;
+}
+
+.cabinet-screen .title-screen::-webkit-scrollbar,
+.cabinet-screen .leaderboard-screen::-webkit-scrollbar,
+.cabinet-screen .game-shell::-webkit-scrollbar {
+  width: 8px;
+}
+
+.cabinet-screen .title-screen::-webkit-scrollbar-track,
+.cabinet-screen .leaderboard-screen::-webkit-scrollbar-track,
+.cabinet-screen .game-shell::-webkit-scrollbar-track {
+  background: #090b14;
+}
+
+.cabinet-screen .title-screen::-webkit-scrollbar-thumb,
+.cabinet-screen .leaderboard-screen::-webkit-scrollbar-thumb,
+.cabinet-screen .game-shell::-webkit-scrollbar-thumb {
+  background: #475569;
+  border-radius: 999px;
+}
+
+@media (max-width: 700px) {
+  .arcade-page {
+    padding: 6px;
+  }
+
+  .arcade-square {
+    width: min(calc(100vw - 12px), 700px);
+    border-radius: 13px;
+    grid-template-rows: 34px minmax(0, 1fr);
+  }
+
+  .cabinet-header {
+    padding: 0 8px;
+  }
+
+  .back-link,
+  .cabinet-brand {
+    font-size: .50rem;
+  }
+
+  .cabinet-status {
+    display: none;
+  }
+
+  .cabinet-screen .title-screen,
+  .cabinet-screen .leaderboard-screen {
+    padding: 8px !important;
+  }
+
+  .cabinet-screen .title-card,
+  .cabinet-screen .leaderboard-card {
+    width: 96% !important;
+    margin: 8px auto !important;
+    padding: 14px !important;
+    border-radius: 14px;
+  }
+
+  .cabinet-screen .game-header {
+    min-height: 44px;
+    padding: 9px 10px !important;
+  }
+
+  .cabinet-screen .game-header h1 {
+    font-size: .78rem !important;
+  }
+
+  .cabinet-screen .game-header .tagline {
+    font-size: .52rem;
+  }
+
+  .cabinet-screen .small-btn {
+    padding: 7px 9px;
+    font-size: .68rem;
+  }
+
+  .cabinet-screen .status-grid {
+    gap: 8px;
+    padding: 10px;
+  }
+
+  .cabinet-screen .traveler-panel,
+  .cabinet-screen .time-panel,
+  .cabinet-screen .tab-bar,
+  .cabinet-screen .tab-panel,
+  .cabinet-screen .event-log {
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .cabinet-screen .traveler-panel {
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 390px) {
+  .back-link,
+  .cabinet-brand {
+    font-size: .44rem;
+    letter-spacing: .05em;
+  }
+
+  .cabinet-screen .title-card h1 {
+    font-size: 1.7rem;
+  }
+
+  .cabinet-screen .mission-briefing {
+    padding: 12px;
+  }
+
+  .cabinet-screen .briefing-terminal {
+    padding: 12px;
+  }
+}
+
+
+/* =========================================================
+   CTT ARCADE V2 — NO SCROLL / SCREEN-BASED ARCHITECTURE
+   ========================================================= */
+
+.cabinet-screen,
+.cabinet-screen .title-screen,
+.cabinet-screen .leaderboard-screen,
+.cabinet-screen .game-shell,
+.cabinet-screen .tab-panel {
+  overflow: hidden !important;
+  overscroll-behavior: none !important;
+  scrollbar-width: none !important;
+}
+.cabinet-screen *::-webkit-scrollbar { display:none !important; }
+
+.game-subheader {
+  position:absolute;
+  left:0; right:0; top:0;
+  height:48px;
+  z-index:80;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 18px;
+  background:#0b0e1a;
+  border-bottom:1px solid rgba(255,255,255,.10);
+}
+.game-home-btn {
+  border:0;
+  background:transparent;
+  color:#aeb5cf;
+  padding:0;
+  min-height:0;
+  font-size:.72rem;
+  letter-spacing:.08em;
+  font-weight:900;
+}
+.game-name { color:#f7931a; font-size:.72rem; font-weight:900; letter-spacing:.08em; }
+.game-name span { color:#8e95aa; }
+
+.cabinet-screen.has-game-subheader .game-shell,
+.cabinet-screen.has-game-subheader .leaderboard-screen {
+  top:48px !important;
+  height:calc(100% - 48px) !important;
+}
+
+/* ---------- HOME: compact cinematic briefing ---------- */
+.cabinet-screen .title-screen { padding:10px !important; place-items:center; }
+.cabinet-screen .title-card {
+  width:min(94%,760px) !important;
+  height:calc(100% - 12px);
+  max-height:100%;
+  margin:6px auto !important;
+  padding:14px 18px !important;
+  border-radius:18px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+.title-card > .eyebrow { font-size:.62rem; }
+.title-card > h1 { font-size:clamp(1.8rem,5vw,3rem) !important; margin-top:5px; }
+.title-subtitle { margin:7px auto 10px !important; font-size:.78rem; }
+.cinematic-briefing {
+  min-height:0 !important;
+  height:390px;
+  margin-top:6px !important;
+  padding:10px !important;
+  border-radius:14px !important;
+}
+.briefing-terminal { padding:13px 15px !important; border-radius:14px !important; }
+.briefing-terminal h2 { font-size:1.08rem !important; margin:5px 0 10px !important; }
+.briefing-lines { display:grid; gap:5px; }
+.briefing-line {
+  opacity:1 !important;
+  transform:none !important;
+  animation:none !important;
+  min-height:1.35em;
+  margin:0 !important;
+  font-size:.72rem;
+  line-height:1.35 !important;
+}
+.briefing-line.typing::after {
+  content:'▌';
+  color:#22c55e;
+  margin-left:3px;
+  animation:cttCursor .65s steps(1) infinite;
+}
+@keyframes cttCursor { 50%{opacity:0;} }
+.mission-actions { margin-top:10px; }
+.mission-actions .start-run-btn { margin-top:0; padding:10px 14px; min-height:38px; font-size:.82rem; }
+.secondary-title-btn { margin-top:7px !important; padding:9px !important; min-height:38px; font-size:.78rem; }
+
+/* Traveler selection is a second compact Home state. */
+.townie-selection-area { margin-top:4px !important; }
+.character-carousel { grid-template-columns:42px 1fr 42px; gap:8px; }
+.character-card { padding:10px !important; margin-top:5px !important; border-radius:14px !important; }
+.title-townie-preview { width:74px !important; height:74px !important; margin-bottom:5px !important; }
+.rarity-pill { padding:4px 8px !important; font-size:.62rem !important; margin-bottom:4px !important; }
+.character-card h2 { font-size:1rem !important; }
+#titleTownieClass { font-size:.82rem; margin-top:3px !important; }
+#titleTownieBio { font-size:.72rem; margin-top:4px !important; }
+.trait-list { gap:4px !important; margin-top:7px !important; }
+.trait-list li { padding:6px 8px !important; font-size:.65rem; }
+.townie-selection-area .start-run-btn { margin-top:8px !important; padding:10px !important; min-height:38px; font-size:.82rem; }
+
+/* ---------- LEADERBOARD: fixed, paginated ---------- */
+.cabinet-screen .leaderboard-screen { padding:10px !important; place-items:center; }
+.cabinet-screen .leaderboard-card {
+  width:min(94%,760px) !important;
+  height:calc(100% - 14px);
+  margin:7px auto !important;
+  padding:14px !important;
+  border-radius:18px;
+  overflow:hidden;
+}
+.leaderboard-card h1 { font-size:2rem !important; margin:4px 0 8px !important; }
+.leaderboard-list { gap:6px !important; margin-bottom:6px !important; }
+.leaderboard-entry { min-height:54px; padding:6px 10px !important; border-radius:10px !important; }
+.leaderboard-entry .mini-townie { width:42px !important; height:42px !important; }
+.final-score-box { padding:9px !important; margin:4px 0 6px !important; gap:10px !important; }
+.final-score-box strong { font-size:1.15rem !important; margin:2px 0 5px !important; }
+.final-score-box input { padding:7px !important; margin:4px 0 !important; }
+.final-score-box button { padding:7px !important; min-height:34px; }
+#leaderboardPlayBtn { order:3; margin-top:5px !important; padding:8px !important; min-height:36px; }
+
+/* ---------- MAIN DASHBOARD ---------- */
+.cabinet-screen .game-shell { background:#080c15 !important; }
+.game-header { display:none !important; }
+.game-dashboard {
+  height:100%;
+  padding:16px 20px 18px;
+  display:grid;
+  grid-template-rows:110px 1fr 72px 62px;
+  gap:12px;
+}
+.game-dashboard .traveler-panel {
+  margin:0 !important;
+  padding:12px 16px !important;
+  min-height:0;
+}
+.game-dashboard .traveler-panel .townie-canvas { width:76px; height:76px; }
+.game-dashboard .status-grid {
+  padding:0 !important;
+  grid-template-columns:repeat(3,1fr) !important;
+  grid-template-rows:repeat(2,1fr);
+  gap:10px !important;
+}
+.game-dashboard .status-card { padding:11px 13px !important; border-radius:13px !important; justify-content:center; }
+.game-dashboard .status-card span { font-size:.70rem; }
+.game-dashboard .status-card strong { margin-top:4px; font-size:1rem !important; }
+.game-dashboard .time-panel { margin:0 !important; padding:11px 14px !important; border-radius:13px !important; }
+.game-dashboard .time-panel span { margin-bottom:4px; font-size:.70rem; }
+.game-dashboard .time-panel strong { font-size:.86rem; }
+.game-dashboard .tab-bar {
+  padding:0 !important;
+  display:grid !important;
+  grid-template-columns:repeat(5,1fr);
+  gap:8px !important;
+  overflow:visible !important;
+}
+.game-dashboard .tab-btn { padding:7px 4px !important; min-width:0; font-size:.72rem; border-radius:9px; }
+.dashboard-log-hidden { display:none !important; }
+
+/* ---------- TAB SCREENS: slide-in overlays ---------- */
+.cabinet-screen .tab-panel {
+  position:absolute !important;
+  inset:0 !important;
+  z-index:40;
+  display:grid !important;
+  grid-template-rows:46px auto minmax(0,1fr) auto;
+  padding:12px 18px 14px !important;
+  background:
+    radial-gradient(circle at 85% 10%, rgba(139,92,246,.13), transparent 24%),
+    #090e18;
+  opacity:0;
+  visibility:hidden;
+  pointer-events:none;
+  transform:translateX(105%);
+  transition:transform .28s ease, opacity .2s ease;
+}
+.cabinet-screen .tab-panel.active {
+  opacity:1;
+  visibility:visible;
+  pointer-events:auto;
+  transform:translateX(0);
+}
+.overlay-screen-header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid rgba(255,255,255,.09);
+  margin:-2px 0 8px;
+  padding-bottom:8px;
+}
+.overlay-close-btn { background:transparent !important; color:#aeb5cf !important; padding:0 !important; min-height:0 !important; font-size:.72rem; }
+.overlay-screen-header strong { color:#f7931a; font-size:.78rem; letter-spacing:.08em; }
+.tab-panel .section-heading { margin:0 0 8px !important; }
+.tab-panel .section-heading h2 { font-size:1.15rem !important; margin-bottom:2px !important; }
+.tab-panel .section-heading p { font-size:.70rem; line-height:1.3; }
+
+.screen-pager {
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:12px;
+  min-height:38px;
+  margin-top:7px;
+}
+.screen-pager button { width:42px; min-height:32px; padding:4px; background:#1f2937; color:#fff; font-size:1.1rem; }
+.screen-pager button:disabled { opacity:.3; cursor:default; transform:none; }
+.screen-pager span { color:#94a3b8; min-width:64px; text-align:center; font-size:.72rem; }
+
+/* Market: four cards per screen */
+#market { grid-template-rows:46px auto minmax(0,1fr) 40px !important; }
+#market .market-list { grid-template-columns:repeat(2,1fr); grid-template-rows:repeat(2,1fr); gap:10px !important; min-height:0; }
+#market .coin-card { padding:11px !important; border-radius:12px !important; display:grid !important; grid-template-columns:1fr auto !important; grid-template-rows:auto auto; gap:7px !important; align-items:center; }
+#market .coin-price { font-size:.78rem; }
+#market .coin-buttons { grid-column:1/-1; }
+#market .coin-buttons button { padding:7px 9px; min-height:34px; font-size:.75rem; }
+
+/* Trade becomes a modal within Market instead of increasing page height. */
+#market .trade-box {
+  position:absolute;
+  left:50%; top:50%;
+  transform:translate(-50%,-50%);
+  z-index:80;
+  width:min(90%,470px);
+  margin:0 !important;
+  padding:14px !important;
+  box-shadow:0 24px 70px #000b;
+  border:1px solid rgba(247,147,26,.35);
+}
+
+/* Portfolio: allocation + four rows */
+#portfolio { grid-template-rows:46px auto 105px minmax(0,1fr) 40px !important; }
+#portfolio .portfolio-chart-card { margin:0 0 7px !important; padding:9px 12px !important; }
+#portfolio .portfolio-chart-card h3 { font-size:.78rem; }
+#portfolio .allocation-bar { margin:7px 0 !important; height:12px; }
+#portfolio .allocation-legend { display:flex; flex-wrap:wrap; gap:5px 12px; }
+#portfolio .legend-row { font-size:.60rem; gap:4px; }
+#portfolio .portfolio-list { gap:7px !important; }
+#portfolio .portfolio-row { padding:9px 11px !important; border-radius:11px !important; grid-template-columns:1fr auto !important; align-items:center; }
+#portfolio .portfolio-actions button { padding:6px 8px; min-height:32px; font-size:.70rem; }
+
+/* Travel / Broker centered and self-contained */
+#travel, #broker { grid-template-rows:46px auto minmax(0,1fr) !important; }
+#travel .travel-card { margin:0 !important; padding:12px !important; align-self:center; }
+#travel .traveler-stage { height:200px !important; margin-bottom:10px !important; }
+#travel .travel-card p { font-size:.72rem; }
+#travel .travel-card button { margin-top:10px; padding:11px; }
+#broker .broker-grid { align-self:center; width:min(90%,600px); margin:auto; grid-template-columns:1fr 1fr !important; }
+#broker .broker-grid button { padding:15px; }
+
+/* Townies: four cards per screen */
+#townies { grid-template-rows:46px auto minmax(0,1fr) 40px !important; }
+#townies .townie-select-list { grid-template-columns:repeat(2,1fr); grid-template-rows:repeat(2,1fr); gap:9px !important; min-height:0; }
+#townies .townie-select-card { padding:8px !important; border-radius:11px !important; grid-template-columns:58px 1fr !important; grid-template-rows:1fr auto; gap:6px !important; }
+#townies .townie-select-card .townie-canvas { width:58px; height:58px; }
+#townies .townie-select-info h3 { font-size:.72rem !important; }
+#townies .townie-select-info p { font-size:.58rem !important; margin-top:2px !important; }
+#townies .unlock-note { font-size:.55rem !important; margin-top:3px !important; }
+#townies .townie-select-card button { grid-column:1/-1; padding:6px 8px; min-height:31px; font-size:.68rem; }
+
+/* Prevent fixed overlays from escaping the cabinet. */
+.cabinet-screen .jump-overlay,
+.cabinet-screen .encounter-overlay { position:absolute !important; inset:0 !important; }
+
+@media (max-width:700px) {
+  .game-subheader { height:34px; padding:0 8px; }
+  .game-home-btn, .game-name { font-size:.44rem; }
+  .game-name span { display:none; }
+  .cabinet-screen.has-game-subheader .game-shell,
+  .cabinet-screen.has-game-subheader .leaderboard-screen { top:34px !important; height:calc(100% - 34px) !important; }
+
+  .cabinet-screen .title-card { padding:9px 10px !important; }
+  .title-card > h1 { font-size:1.45rem !important; }
+  .title-subtitle { font-size:.56rem; margin:4px auto 6px !important; }
+  .cinematic-briefing { height:340px; padding:6px !important; }
+  .briefing-terminal { padding:9px !important; }
+  .briefing-terminal h2 { font-size:.76rem !important; }
+  .briefing-line { font-size:.50rem; }
+
+  .game-dashboard { padding:8px; grid-template-rows:78px 1fr 52px 48px; gap:6px; }
+  .game-dashboard .traveler-panel { padding:7px 9px !important; }
+  .game-dashboard .traveler-panel h2 { font-size:.76rem; }
+  .game-dashboard .traveler-panel p, .panel-label { font-size:.55rem; }
+  .game-dashboard .traveler-panel .townie-canvas { width:56px; height:56px; }
+  .game-dashboard .status-grid { gap:5px !important; }
+  .game-dashboard .status-card { padding:6px 7px !important; }
+  .game-dashboard .status-card span { font-size:.46rem; }
+  .game-dashboard .status-card strong { font-size:.64rem !important; }
+  .game-dashboard .time-panel { padding:6px 8px !important; }
+  .game-dashboard .time-panel span { font-size:.45rem; }
+  .game-dashboard .time-panel strong { font-size:.57rem; }
+  .game-dashboard .tab-bar { gap:4px !important; }
+  .game-dashboard .tab-btn { font-size:.45rem; padding:5px 2px !important; }
+
+  .cabinet-screen .tab-panel { padding:7px 8px 8px !important; grid-template-rows:34px auto minmax(0,1fr) 32px; }
+  .overlay-screen-header { padding-bottom:5px; margin-bottom:4px; }
+  .overlay-close-btn, .overlay-screen-header strong { font-size:.45rem; }
+  .tab-panel .section-heading { margin-bottom:4px !important; }
+  .tab-panel .section-heading h2 { font-size:.72rem !important; }
+  .tab-panel .section-heading p { font-size:.43rem; }
+  .screen-pager { min-height:30px; margin-top:3px; gap:7px; }
+  .screen-pager button { width:34px; min-height:26px; font-size:.8rem; }
+  .screen-pager span { font-size:.48rem; }
+
+  #market .market-list { gap:5px !important; }
+  #market .coin-card { padding:6px !important; gap:3px !important; }
+  #market .coin-symbol { font-size:.62rem; }
+  #market .coin-symbol small { font-size:.42rem; }
+  #market .coin-icon { width:25px; height:25px; flex-basis:25px; }
+  #market .coin-price { font-size:.48rem; }
+  #market .coin-buttons button { min-height:27px; padding:4px; font-size:.46rem; }
+
+  #portfolio { grid-template-rows:34px auto 78px minmax(0,1fr) 32px !important; }
+  #portfolio .portfolio-chart-card { padding:6px !important; }
+  #portfolio .portfolio-list { gap:4px !important; }
+  #portfolio .portfolio-row { padding:5px 7px !important; }
+
+  #travel .traveler-stage { height:145px !important; }
+  #travel .travel-card p { font-size:.48rem; }
+
+  #townies .townie-select-list { gap:5px !important; }
+  #townies .townie-select-card { padding:5px !important; grid-template-columns:42px 1fr !important; }
+  #townies .townie-select-card .townie-canvas { width:42px; height:42px; }
+  #townies .townie-select-info h3 { font-size:.48rem !important; }
+  #townies .townie-select-info p, #townies .unlock-note { font-size:.38rem !important; }
+  #townies .townie-select-card button { min-height:25px; font-size:.43rem; padding:3px; }
+
+  .leaderboard-entry { min-height:42px; grid-template-columns:38px 50px 1fr 48px !important; font-size:.58rem; }
+  .leaderboard-entry .mini-townie { width:35px !important; height:35px !important; }
+}
+
+
+/* =========================================================
+   CRYPTO TIME TRAVELERS — UX/UI WOW PASS
+   Fixed-square arcade app. No cabinet scrolling.
+   ========================================================= */
+
+/* ---------- GLOBAL FIXED-SQUARE RULE ---------- */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden !important;
+}
+
+body {
+  display: grid !important;
+  place-items: start center !important;
+}
+
+.arcade-page {
+  width: 100%;
+  height: 100vh;
+  min-height: 0 !important;
+  padding: 8px !important;
+  display: grid !important;
+  place-items: start center !important;
+  overflow: hidden !important;
+}
+
+.arcade-square {
+  width: min(960px, calc(100vw - 16px), calc(100vh - 16px)) !important;
+  height: auto !important;
+  aspect-ratio: 1 / 1 !important;
+  max-height: calc(100vh - 16px) !important;
+  overflow: hidden !important;
+}
+
+.cabinet-screen,
+.cabinet-screen .title-screen,
+.cabinet-screen .leaderboard-screen,
+.cabinet-screen .game-shell {
+  overflow: hidden !important;
+}
+
+/* ---------- HOME / MISSION ---------- */
+
+.cabinet-screen .title-card {
+  width: min(94%, 760px) !important;
+  height: calc(100% - 10px) !important;
+  margin: 5px auto !important;
+  padding: 10px 16px !important;
+  justify-content: center !important;
+}
+
+.title-card > .eyebrow {
+  font-size: .62rem !important;
+}
+
+.title-card > h1 {
+  font-size: clamp(1.8rem, 4.7vw, 2.8rem) !important;
+  margin-top: 4px !important;
+}
+
+.title-subtitle {
+  margin: 4px auto 7px !important;
+  font-size: .72rem !important;
+}
+
+.cinematic-briefing {
+  height: min(360px, 63%) !important;
+  margin-top: 4px !important;
+  padding: 8px !important;
+}
+
+.briefing-terminal {
+  padding: 11px 13px !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.briefing-terminal h2 {
+  font-size: 1.02rem !important;
+  margin: 4px 0 7px !important;
+}
+
+.briefing-lines {
+  gap: 3px !important;
+}
+
+.briefing-line {
+  min-height: 1.2em !important;
+  font-size: .67rem !important;
+  line-height: 1.28 !important;
+}
+
+.mission-actions {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  margin-top: 9px !important;
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 6px !important;
+}
+
+.mission-actions .start-run-btn,
+.mission-actions .secondary-title-btn {
+  width: 100% !important;
+  min-height: 34px !important;
+  margin: 0 !important;
+  padding: 7px 10px !important;
+  font-size: .72rem !important;
+}
+
+.mission-actions .secondary-title-btn {
+  background: #202b3d !important;
+  border: 1px solid rgba(255,255,255,.09);
+}
+
+/* ---------- LEADERBOARD ---------- */
+
+.cabinet-screen .leaderboard-card {
+  height: calc(100% - 8px) !important;
+  width: min(94%, 780px) !important;
+  margin: 4px auto !important;
+  padding: 10px 14px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+}
+
+.leaderboard-card h1 {
+  font-size: 1.85rem !important;
+  margin: 2px 0 7px !important;
+}
+
+.leaderboard-entry {
+  min-height: 47px !important;
+  padding: 5px 9px !important;
+}
+
+.leaderboard-entry .rank,
+.leaderboard-initials,
+.leaderboard-score {
+  font-size: .78rem !important;
+}
+
+.leaderboard-entry .mini-townie {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.screen-pager {
+  min-height: 31px !important;
+  margin-top: 3px !important;
+}
+
+.screen-pager button {
+  min-height: 28px !important;
+}
+
+#leaderboardPlayBtn {
+  min-height: 32px !important;
+  margin-top: 3px !important;
+}
+
+/* ---------- DASHBOARD ---------- */
+
+.game-dashboard {
+  height: 100% !important;
+  min-height: 0 !important;
+  padding: 10px 14px 12px !important;
+  display: grid !important;
+  grid-template-rows: 82px 126px 52px 54px minmax(0, 1fr) !important;
+  gap: 8px !important;
+}
+
+.game-dashboard .traveler-panel {
+  min-height: 0 !important;
+  padding: 9px 14px !important;
+  border-radius: 15px !important;
+  background:
+    linear-gradient(110deg, #111b2a 0%, #172033 55%, #2c2857 100%) !important;
+}
+
+.game-dashboard .traveler-panel h2 {
+  font-size: 1.12rem !important;
+}
+
+.game-dashboard .traveler-panel p,
+.game-dashboard .panel-label {
+  font-size: .76rem !important;
+}
+
+.game-dashboard .traveler-panel .townie-canvas {
+  width: 64px !important;
+  height: 64px !important;
+}
+
+.game-dashboard .status-grid {
+  min-height: 0 !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-template-rows: repeat(2, 1fr) !important;
+  gap: 7px !important;
+}
+
+.game-dashboard .status-card {
+  min-height: 0 !important;
+  padding: 8px 11px !important;
+  border-radius: 12px !important;
+  justify-content: center !important;
+  background:
+    linear-gradient(145deg, #182537 0%, #152032 100%) !important;
+  border: 1px solid rgba(255,255,255,.055);
+}
+
+.game-dashboard .status-card span {
+  font-size: .72rem !important;
+  color: #9eabc0 !important;
+}
+
+.game-dashboard .status-card strong {
+  margin-top: 4px !important;
+  font-size: 1.04rem !important;
+  line-height: 1.12 !important;
+}
+
+.game-dashboard .status-wallet {
+  box-shadow: inset 3px 0 0 #22c55e;
+}
+
+.game-dashboard .status-loan {
+  box-shadow: inset 3px 0 0 #ef4444;
+}
+
+.game-dashboard .status-day {
+  box-shadow: inset 3px 0 0 #38bdf8;
+}
+
+.game-dashboard .status-location {
+  box-shadow: inset 3px 0 0 #8b5cf6;
+}
+
+.game-dashboard .status-timeline-era {
+  box-shadow: inset 3px 0 0 #f7931a;
+}
+
+.game-dashboard .status-market-mood {
+  box-shadow: inset 3px 0 0 #facc15;
+}
+
+.game-dashboard .time-panel {
+  min-height: 0 !important;
+  padding: 8px 12px !important;
+  display: grid;
+  align-content: center;
+  border: 1px solid rgba(56,189,248,.14);
+}
+
+.game-dashboard .time-panel span {
+  font-size: .66rem !important;
+}
+
+.game-dashboard .time-panel strong {
+  font-size: .87rem !important;
+}
+
+.game-dashboard .tab-bar {
+  min-height: 0;
+  gap: 6px !important;
+}
+
+.game-dashboard .tab-btn {
+  padding: 6px 3px !important;
+  min-height: 0 !important;
+  font-size: .68rem !important;
+  background: #202c3e !important;
+  border: 1px solid rgba(255,255,255,.05);
+}
+
+.game-dashboard .tab-btn:hover {
+  background: #2a3950 !important;
+}
+
+/* Activity Log is part of the dashboard again. */
+.dashboard-log {
+  min-height: 0 !important;
+  padding: 0 !important;
+  display: grid !important;
+  grid-template-rows: 25px minmax(0,1fr) !important;
+  overflow: hidden !important;
+}
+
+.dashboard-log .section-heading {
+  margin: 0 !important;
+  padding: 0 3px !important;
+  display: flex;
+  align-items: center;
+}
+
+.dashboard-log .section-heading h2 {
+  font-size: .70rem !important;
+  letter-spacing: .08em;
+  color: #f7931a;
+  text-transform: uppercase;
+}
+
+.dashboard-log .log-box {
+  min-height: 0 !important;
+  max-height: none !important;
+  overflow: hidden !important;
+  padding: 8px 10px !important;
+  border-radius: 11px !important;
+  background:
+    linear-gradient(180deg, rgba(3,8,18,.95), rgba(8,15,27,.95)) !important;
+  border: 1px solid rgba(56,189,248,.12);
+}
+
+.dashboard-log .log-box p {
+  margin: 0 0 4px !important;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: .64rem !important;
+  line-height: 1.28 !important;
+  color: #b9c8d9 !important;
+}
+
+.dashboard-log .log-box p:nth-child(n+4) {
+  display: none;
+}
+
+/* ---------- MARKET: WALLET / EXCHANGE APP ---------- */
+
+#market {
+  grid-template-rows: 42px auto minmax(0,1fr) 36px !important;
+}
+
+#market .market-list {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  grid-template-rows: repeat(4, 1fr) !important;
+  gap: 7px !important;
+}
+
+.market-asset-row {
+  width: 100%;
+  min-height: 0;
+  padding: 8px 11px;
+  display: grid;
+  grid-template-columns: minmax(155px, 1.35fr) minmax(120px, .9fr) minmax(115px, .85fr) 20px;
+  gap: 12px;
+  align-items: center;
+  text-align: left;
+  color: #fff;
+  background:
+    linear-gradient(115deg, #162335 0%, #101b2b 100%);
+  border: 1px solid rgba(255,255,255,.055);
+  border-radius: 12px;
+}
+
+.market-asset-row:hover {
+  transform: translateY(-1px);
+  border-color: rgba(56,189,248,.28);
+  background:
+    linear-gradient(115deg, #1a2a3f 0%, #132238 100%);
+}
+
+.market-asset-main {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.market-asset-name,
+.market-asset-market,
+.market-asset-holding {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+}
+
+.market-asset-name strong,
+.market-asset-market strong,
+.market-asset-holding strong {
+  font-size: .80rem;
+  white-space: nowrap;
+}
+
+.market-asset-name small,
+.market-asset-market small,
+.market-asset-holding small {
+  color: #8fa0b6;
+  font-size: .61rem;
+  white-space: nowrap;
+}
+
+.market-asset-market,
+.market-asset-holding {
+  text-align: right;
+}
+
+.market-asset-chevron {
+  color: #74869d;
+  font-size: 1.3rem;
+  text-align: right;
+}
+
+/* Trade sheet is global, so Market and Portfolio share the same interaction. */
+.trade-sheet {
+  position: absolute !important;
+  left: 50% !important;
+  top: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  z-index: 120 !important;
+  width: min(90%, 480px) !important;
+  margin: 0 !important;
+  padding: 15px !important;
+  border-radius: 16px !important;
+  background:
+    radial-gradient(circle at 85% 0%, rgba(139,92,246,.18), transparent 32%),
+    #0d1523 !important;
+  border: 1px solid rgba(56,189,248,.24) !important;
+  box-shadow: 0 25px 90px #000d !important;
+}
+
+.trade-sheet h3 {
+  font-size: 1.25rem;
+  margin-bottom: 9px !important;
+}
+
+.trade-side-toggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px;
+  padding: 4px;
+  margin-bottom: 11px;
+  border-radius: 10px;
+  background: #070d17;
+}
+
+.trade-side-toggle button {
+  min-height: 34px;
+  padding: 6px;
+  background: transparent;
+  color: #8ea0b7;
+  border-radius: 7px;
+}
+
+.trade-side-toggle button.active:first-child {
+  background: #173b2a;
+  color: #45e78a;
+}
+
+.trade-side-toggle button.active:last-child {
+  background: #492226;
+  color: #ff7b7b;
+}
+
+/* ---------- PORTFOLIO ---------- */
+
+#portfolio .portfolio-row {
+  background:
+    linear-gradient(110deg, #162335, #111c2d) !important;
+  border: 1px solid rgba(255,255,255,.055);
+}
+
+#portfolio .portfolio-actions button {
+  background: #492226 !important;
+  color: #ff8b8b !important;
+}
+
+/* ---------- TRAVEL: PERSISTENT LAST JUMP ---------- */
+
+#travel {
+  grid-template-columns: 1fr 1fr !important;
+  grid-template-rows: 42px auto minmax(0,1fr) !important;
+  gap: 0 10px;
+}
+
+#travel .overlay-screen-header,
+#travel .section-heading {
+  grid-column: 1 / -1;
+}
+
+#travel .travel-card {
+  grid-column: 1;
+  grid-row: 3;
+  min-height: 0;
+}
+
+.travel-last-jump {
+  grid-column: 2;
+  grid-row: 3;
+  min-height: 0;
+  padding: 13px;
+  overflow: hidden;
+  border-radius: 14px;
+  background:
+    linear-gradient(145deg, #101b2d 0%, #15152d 100%);
+  border: 1px solid rgba(139,92,246,.24);
+}
+
+.travel-last-jump-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: .63rem;
+  letter-spacing: .07em;
+  color: #9ba8bc;
+}
+
+.travel-last-jump-heading strong {
+  color: #c4b5fd;
+}
+
+.travel-last-jump-content {
+  display: grid;
+  gap: 10px;
+}
+
+.travel-last-jump-content p,
+.travel-last-jump-content span {
+  color: #9eabc0;
+  font-size: .66rem;
+  line-height: 1.35;
+}
+
+.travel-last-jump-content strong {
+  color: #fff;
+  font-size: .82rem;
+}
+
+.jump-summary-location,
+.jump-summary-event,
+.jump-summary-reaction {
+  display: grid;
+  gap: 4px;
+  padding-bottom: 9px;
+  border-bottom: 1px solid rgba(255,255,255,.06);
+}
+
+.jump-summary-reaction {
+  border-bottom: 0;
+}
+
+.last-jump-toggle {
+  display: none;
+}
+
+/* ---------- DESKTOP TYPE / PROPORTIONS ---------- */
+
+@media (min-width: 701px) {
+  .cabinet-header {
+    min-height: 58px;
+  }
+
+  .game-name,
+  .game-home-btn {
+    font-size: .72rem !important;
+  }
+
+  .tab-panel .section-heading h2 {
+    font-size: 1.28rem !important;
+  }
+
+  .tab-panel .section-heading p {
+    font-size: .74rem !important;
+  }
+}
+
+/* ---------- MOBILE: SAME APP, DENSER COMPOSITION ---------- */
+
+@media (max-width: 700px) {
+  .arcade-page {
+    padding: 4px !important;
+  }
+
+  .arcade-square {
+    width: min(calc(100vw - 8px), calc(100vh - 8px)) !important;
+    max-height: calc(100vh - 8px) !important;
+  }
+
+  .cabinet-screen .title-card {
+    height: calc(100% - 4px) !important;
+    width: 98% !important;
+    margin: 2px auto !important;
+    padding: 7px 8px !important;
+  }
+
+  .title-card > h1 {
+    font-size: 1.42rem !important;
+  }
+
+  .title-subtitle {
+    font-size: .52rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .cinematic-briefing {
+    height: 68% !important;
+    padding: 5px !important;
+  }
+
+  .briefing-terminal {
+    padding: 7px 8px !important;
+  }
+
+  .briefing-terminal h2 {
+    font-size: .69rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  .briefing-line {
+    font-size: .49rem !important;
+  }
+
+  .mission-actions {
+    gap: 4px !important;
+    margin-top: 5px !important;
+  }
+
+  .mission-actions .start-run-btn,
+  .mission-actions .secondary-title-btn {
+    min-height: 27px !important;
+    padding: 4px 7px !important;
+    font-size: .48rem !important;
+  }
+
+  .game-dashboard {
+    padding: 5px 7px 7px !important;
+    grid-template-rows: 54px 83px 37px 40px minmax(0,1fr) !important;
+    gap: 5px !important;
+  }
+
+  .game-dashboard .traveler-panel {
+    padding: 5px 8px !important;
+  }
+
+  .game-dashboard .traveler-panel h2 {
+    font-size: .72rem !important;
+  }
+
+  .game-dashboard .traveler-panel p,
+  .game-dashboard .panel-label {
+    font-size: .50rem !important;
+  }
+
+  .game-dashboard .traveler-panel .townie-canvas {
+    width: 48px !important;
+    height: 48px !important;
+  }
+
+  .game-dashboard .status-grid {
+    gap: 4px !important;
+  }
+
+  .game-dashboard .status-card {
+    padding: 4px 6px !important;
+    border-radius: 8px !important;
+  }
+
+  .game-dashboard .status-card span {
+    font-size: .46rem !important;
+  }
+
+  .game-dashboard .status-card strong {
+    font-size: .63rem !important;
+    margin-top: 2px !important;
+  }
+
+  .game-dashboard .time-panel {
+    padding: 4px 7px !important;
+  }
+
+  .game-dashboard .time-panel span {
+    font-size: .43rem !important;
+  }
+
+  .game-dashboard .time-panel strong {
+    font-size: .55rem !important;
+  }
+
+  .game-dashboard .tab-btn {
+    font-size: .42rem !important;
+    padding: 4px 1px !important;
+  }
+
+  .dashboard-log {
+    grid-template-rows: 18px minmax(0,1fr) !important;
+  }
+
+  .dashboard-log .section-heading h2 {
+    font-size: .44rem !important;
+  }
+
+  .dashboard-log .log-box {
+    padding: 5px 6px !important;
+  }
+
+  .dashboard-log .log-box p {
+    font-size: .42rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  /* wallet list */
+  #market .market-list {
+    grid-template-rows: repeat(4, 1fr) !important;
+    gap: 4px !important;
+  }
+
+  .market-asset-row {
+    grid-template-columns: 1.2fr .9fr .8fr 10px;
+    gap: 5px;
+    padding: 5px 6px;
+    border-radius: 8px;
+  }
+
+  .market-asset-row .coin-icon {
+    width: 24px;
+    height: 24px;
+    flex-basis: 24px;
+  }
+
+  .market-asset-main {
+    gap: 5px;
+  }
+
+  .market-asset-name strong,
+  .market-asset-market strong,
+  .market-asset-holding strong {
+    font-size: .48rem;
+  }
+
+  .market-asset-name small,
+  .market-asset-market small,
+  .market-asset-holding small {
+    font-size: .36rem;
+  }
+
+  .market-asset-chevron {
+    font-size: .85rem;
+  }
+
+  .trade-sheet {
+    width: 94% !important;
+    padding: 9px !important;
+  }
+
+  .trade-sheet h3 {
+    font-size: .78rem;
+  }
+
+  #travel {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 34px auto minmax(0,1fr) 30px !important;
+  }
+
+  #travel .overlay-screen-header,
+  #travel .section-heading,
+  #travel .travel-card {
+    grid-column: 1;
+  }
+
+  #travel .travel-card {
+    grid-row: 3;
+  }
+
+  .travel-last-jump {
+    position: absolute;
+    left: 8px;
+    right: 8px;
+    top: 46px;
+    bottom: 8px;
+    z-index: 90;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(10px);
+    transition: .18s ease;
+    box-shadow: 0 18px 55px #000c;
+  }
+
+  .travel-last-jump.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  .last-jump-toggle {
+    display: block;
+    grid-row: 4;
+    min-height: 27px !important;
+    padding: 4px !important;
+    background: #202b3d !important;
+    color: #d9e0ea !important;
+    font-size: .44rem !important;
+  }
+
+  .travel-last-jump-content p,
+  .travel-last-jump-content span {
+    font-size: .52rem;
+  }
+
+  .travel-last-jump-content strong {
+    font-size: .66rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .cabinet-brand,
+  .back-link {
+    font-size: .40rem !important;
+  }
+
+  .game-dashboard .status-card strong {
+    font-size: .58rem !important;
+  }
+
+  .market-asset-holding small {
+    display: none;
+  }
+}
+
+
+/* =========================================================
+   CRYPTO TIME TRAVELERS — READABILITY + NET WORTH PASS
+   ========================================================= */
+
+.cabinet-screen button,
+.cabinet-screen .start-run-btn,
+.cabinet-screen .secondary-title-btn,
+.cabinet-screen .tab-btn,
+.cabinet-screen .screen-pager button {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif !important;
+  font-weight: 800 !important;
+  letter-spacing: .01em !important;
+  line-height: 1 !important;
+}
+
+.cabinet-screen button { font-size: .78rem !important; }
+.mission-actions button { font-size: .86rem !important; }
+
+.title-card > .eyebrow { font-size: .78rem !important; }
+.title-card > h1 {
+  font-size: clamp(2rem, 5.2vw, 3.15rem) !important;
+  line-height: 1 !important;
+}
+.title-subtitle {
+  font-size: .86rem !important;
+  line-height: 1.35 !important;
+}
+.briefing-terminal { padding: 16px 18px !important; }
+.briefing-terminal > .eyebrow { font-size: .78rem !important; }
+.briefing-terminal h2 {
+  font-size: 1.25rem !important;
+  line-height: 1.15 !important;
+  margin: 6px 0 11px !important;
+}
+.briefing-line {
+  font-size: .78rem !important;
+  line-height: 1.42 !important;
+  min-height: 1.35em !important;
+  margin-bottom: 3px !important;
+}
+.mission-actions {
+  margin-top: 13px !important;
+  gap: 8px !important;
+}
+.mission-actions .start-run-btn,
+.mission-actions .secondary-title-btn {
+  min-height: 40px !important;
+  padding: 9px 12px !important;
+}
+
+/* Dashboard hierarchy */
+.game-dashboard {
+  grid-template-rows: 72px 88px 112px 46px 48px minmax(0,1fr) !important;
+}
+
+.net-worth-hero {
+  position: relative;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:16px;
+  padding:10px 16px;
+  overflow:hidden;
+  border-radius:15px;
+  border:1px solid rgba(34,197,94,.26);
+  background:
+    radial-gradient(circle at 82% 50%, rgba(34,197,94,.17), transparent 28%),
+    linear-gradient(110deg,#0c1718 0%,#10221c 45%,#122338 100%);
+  box-shadow: inset 3px 0 0 #22c55e, 0 8px 26px rgba(0,0,0,.16);
+}
+
+.net-worth-copy {
+  display:grid;
+  gap:2px;
+  position:relative;
+  z-index:2;
+}
+.net-worth-copy > span {
+  color:#70e6a0;
+  font-size:.69rem;
+  font-weight:900;
+  letter-spacing:.15em;
+}
+.net-worth-copy > strong {
+  color:#f5fff8;
+  font-size:clamp(1.65rem,4vw,2.35rem);
+  line-height:1;
+  letter-spacing:-.035em;
+  text-shadow:0 0 22px rgba(34,197,94,.2);
+  font-variant-numeric:tabular-nums;
+}
+.net-worth-copy > small {
+  color:#87a897;
+  font-size:.60rem;
+}
+.net-worth-signal {
+  z-index:2;
+  height:36px;
+  display:flex;
+  align-items:end;
+  gap:4px;
+}
+.net-worth-signal i {
+  width:6px;
+  border-radius:999px;
+  background:linear-gradient(180deg,#78f7a8,#22c55e);
+  box-shadow:0 0 8px rgba(34,197,94,.38);
+  animation:netWorthBars 1.8s ease-in-out infinite;
+}
+.net-worth-signal i:nth-child(1){height:32%;animation-delay:-.5s}
+.net-worth-signal i:nth-child(2){height:58%;animation-delay:-.9s}
+.net-worth-signal i:nth-child(3){height:42%;animation-delay:-.25s}
+.net-worth-signal i:nth-child(4){height:78%;animation-delay:-.7s}
+.net-worth-signal i:nth-child(5){height:100%;animation-delay:-.1s}
+
+@keyframes netWorthBars {
+  0%,100%{transform:scaleY(.75);opacity:.65}
+  50%{transform:scaleY(1);opacity:1}
+}
+.net-worth-hero.net-worth-pop { animation:netWorthPop .82s ease; }
+.net-worth-hero.net-worth-up {
+  border-color:rgba(34,197,94,.72);
+  box-shadow:inset 3px 0 0 #22c55e,0 0 30px rgba(34,197,94,.17);
+}
+.net-worth-hero.net-worth-down {
+  border-color:rgba(239,68,68,.65);
+  box-shadow:inset 3px 0 0 #ef4444,0 0 26px rgba(239,68,68,.13);
+}
+.net-worth-hero.net-worth-down .net-worth-copy > strong { color:#ffd4d4; }
+
+@keyframes netWorthPop {
+  0%{transform:scale(1)}
+  38%{transform:scale(1.012)}
+  100%{transform:scale(1)}
+}
+
+/* Smaller activity log */
+.dashboard-log {
+  max-height:92px !important;
+  align-self:end;
+}
+.dashboard-log .log-box {
+  max-height:63px !important;
+  min-height:0 !important;
+}
+.dashboard-log .log-box p {
+  font-size:.60rem !important;
+  line-height:1.2 !important;
+}
+
+/* Market up/down colors on both price and change */
+.market-asset-market .price-up,
+.market-asset-market small.price-up,
+.price-up {
+  color:#2ee77d !important;
+  text-shadow:0 0 9px rgba(46,231,125,.15);
+}
+.market-asset-market .price-down,
+.market-asset-market small.price-down,
+.price-down {
+  color:#ff5c63 !important;
+  text-shadow:0 0 9px rgba(255,92,99,.13);
+}
+.market-asset-row:has(.price-up) .market-asset-market > strong {
+  color:#2ee77d !important;
+}
+.market-asset-row:has(.price-down) .market-asset-market > strong {
+  color:#ff5c63 !important;
+}
+
+@media(max-width:700px){
+  .title-card > .eyebrow { font-size:.55rem !important; }
+  .title-card > h1 { font-size:1.62rem !important; }
+  .title-subtitle { font-size:.60rem !important; }
+  .briefing-terminal { padding:9px 10px !important; }
+  .briefing-terminal > .eyebrow { font-size:.54rem !important; }
+  .briefing-terminal h2 { font-size:.78rem !important; }
+  .briefing-line {
+    font-size:.55rem !important;
+    line-height:1.36 !important;
+  }
+  .mission-actions button {
+    min-height:31px !important;
+    font-size:.55rem !important;
+  }
+
+  .game-dashboard {
+    grid-template-rows:48px 60px 82px 34px 38px minmax(0,1fr) !important;
+  }
+  .net-worth-hero {
+    padding:6px 9px;
+    border-radius:10px;
+  }
+  .net-worth-copy > span { font-size:.45rem; }
+  .net-worth-copy > strong { font-size:1.15rem; }
+  .net-worth-copy > small { font-size:.38rem; }
+  .net-worth-signal { height:25px; gap:3px; }
+  .net-worth-signal i { width:4px; }
+
+  .dashboard-log { max-height:66px !important; }
+  .dashboard-log .log-box { max-height:46px !important; }
+  .dashboard-log .log-box p { font-size:.39rem !important; }
+
+  .cabinet-screen button { font-size:.50rem !important; }
+}
+
+@media(max-width:390px){
+  .briefing-line { font-size:.50rem !important; }
+  .net-worth-copy > strong { font-size:1.03rem; }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .net-worth-signal i,
+  .net-worth-hero.net-worth-pop {
+    animation:none !important;
+  }
+}
+
+
+/* =========================================================
+   MISSION BRIEFING TYPOGRAPHY — FINAL OVERRIDES
+   Keeps structure intact while increasing readability.
+   ========================================================= */
+
+/* Desktop / larger screens */
+.title-card > .eyebrow {
+  font-size: .85rem !important;
+}
+
+.title-card > h1 {
+  font-size: clamp(2.3rem, 5.6vw, 3.4rem) !important;
+}
+
+.title-subtitle {
+  font-size: .95rem !important;
+}
+
+.briefing-terminal > .eyebrow {
+  font-size: .85rem !important;
+}
+
+.briefing-terminal h2 {
+  font-size: 1.4rem !important;
+}
+
+.briefing-line {
+  font-size: .92rem !important;
+}
+
+/* Force the two Mission Briefing buttons to use the larger size.
+   This intentionally comes after the global button rules. */
+.mission-actions .start-run-btn,
+.mission-actions .secondary-title-btn,
+.mission-actions button {
+  font-size: 1rem !important;
+  line-height: 1.1 !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  .title-card > .eyebrow {
+    font-size: .62rem !important;
+  }
+
+  .title-card > h1 {
+    font-size: 1.9rem !important;
+  }
+
+  .title-subtitle {
+    font-size: .74rem !important;
+  }
+
+  .briefing-terminal > .eyebrow {
+    font-size: .60rem !important;
+  }
+
+  .briefing-terminal h2 {
+    font-size: .98rem !important;
+  }
+
+  .briefing-line {
+    font-size: .82rem !important;
+  }
+
+  .mission-actions .start-run-btn,
+  .mission-actions .secondary-title-btn,
+  .mission-actions button {
+    font-size: .88rem !important;
+    line-height: 1.1 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .briefing-line {
+    font-size: .58rem !important;
+  }
+
+  .mission-actions .start-run-btn,
+  .mission-actions .secondary-title-btn,
+  .mission-actions button {
+    font-size: .60rem !important;
+  }
+}
+
+
+/* =========================================================
+   BETA READABILITY PASS — DASHBOARD / MOBILE
+   ========================================================= */
+
+.game-dashboard .tab-btn {
+  font-size: .80rem !important;
+  font-weight: 800 !important;
+  line-height: 1.1 !important;
+  min-height: 44px !important;
+  padding: 8px 6px !important;
+}
+
+.dashboard-log .section-heading h2 {
+  font-size: .78rem !important;
+}
+
+.dashboard-log .log-box {
+  padding: 9px 11px !important;
+}
+
+.dashboard-log .log-box p {
+  font-size: .68rem !important;
+  line-height: 1.35 !important;
+  margin-bottom: 4px !important;
+}
+
+.game-dashboard .traveler-panel {
+  overflow: hidden !important;
+}
+
+.game-dashboard .traveler-panel .townie-canvas {
+  width: 68px !important;
+  height: 68px !important;
+  overflow: hidden !important;
+  flex: 0 0 68px !important;
+}
+
+.game-dashboard .traveler-panel h2 {
+  font-size: 1.08rem !important;
+}
+
+.game-dashboard .traveler-panel p,
+.game-dashboard .panel-label {
+  font-size: .72rem !important;
+}
+
+.game-dashboard .status-card span {
+  font-size: .70rem !important;
+}
+
+.game-dashboard .status-card strong {
+  font-size: 1.00rem !important;
+}
+
+.net-worth-copy > small {
+  font-size: .64rem !important;
+  line-height: 1.25 !important;
+}
+
+@media (max-width: 700px) {
+  .game-dashboard {
+    grid-template-rows:
+      64px
+      62px
+      88px
+      36px
+      48px
+      minmax(0, 1fr) !important;
+    gap: 5px !important;
+  }
+
+  .game-dashboard .traveler-panel {
+    padding: 6px 9px !important;
+  }
+
+  .game-dashboard .traveler-panel .townie-canvas {
+    width: 58px !important;
+    height: 58px !important;
+    flex-basis: 58px !important;
+  }
+
+  .game-dashboard .traveler-panel h2 {
+    font-size: .80rem !important;
+  }
+
+  .game-dashboard .traveler-panel p,
+  .game-dashboard .panel-label {
+    font-size: .58rem !important;
+  }
+
+  .game-dashboard .tab-btn {
+    font-size: .62rem !important;
+    min-height: 42px !important;
+    padding: 6px 3px !important;
+    letter-spacing: 0 !important;
+  }
+
+  .cabinet-screen button {
+    font-size: .58rem !important;
+  }
+
+  .game-dashboard .status-card span {
+    font-size: .52rem !important;
+  }
+
+  .game-dashboard .status-card strong {
+    font-size: .70rem !important;
+  }
+
+  .net-worth-copy > span {
+    font-size: .50rem !important;
+  }
+
+  .net-worth-copy > strong {
+    font-size: 1.24rem !important;
+  }
+
+  .net-worth-copy > small {
+    font-size: .43rem !important;
+  }
+
+  .dashboard-log {
+    max-height: 74px !important;
+  }
+
+  .dashboard-log .section-heading {
+    min-height: 19px !important;
+  }
+
+  .dashboard-log .section-heading h2 {
+    font-size: .52rem !important;
+  }
+
+  .dashboard-log .log-box {
+    max-height: 52px !important;
+    padding: 6px 7px !important;
+  }
+
+  .dashboard-log .log-box p {
+    font-size: .48rem !important;
+    line-height: 1.32 !important;
+    margin-bottom: 2px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .game-dashboard .tab-btn {
+    font-size: .57rem !important;
+  }
+
+  .dashboard-log .log-box p {
+    font-size: .45rem !important;
+  }
+
+  .game-dashboard .status-card strong {
+    font-size: .66rem !important;
+  }
+}
+
+
+/* =========================================================
+   BETA READABILITY PASS — MARKET OVERLAY
+   ========================================================= */
+
+/* Desktop / tablet */
+#market .section-heading h2 {
+  font-size: 1.35rem !important;
+}
+
+#market .section-heading p {
+  font-size: .82rem !important;
+  line-height: 1.35 !important;
+}
+
+.market-asset-row {
+  min-height: 78px !important;
+  padding: 11px 14px !important;
+}
+
+.market-asset-name strong {
+  font-size: .92rem !important;
+}
+
+.market-asset-name small {
+  font-size: .70rem !important;
+}
+
+.market-asset-market > strong {
+  font-size: .90rem !important;
+}
+
+.market-asset-market small {
+  font-size: .69rem !important;
+  font-weight: 800 !important;
+}
+
+.market-asset-holding > strong {
+  font-size: .88rem !important;
+}
+
+.market-asset-holding small {
+  font-size: .66rem !important;
+}
+
+.market-asset-chevron {
+  font-size: 1.55rem !important;
+}
+
+#market .coin-icon {
+  width: 38px !important;
+  height: 38px !important;
+  flex-basis: 38px !important;
+}
+
+#market .screen-pager span {
+  font-size: .76rem !important;
+}
+
+#market .screen-pager button {
+  font-size: 1.15rem !important;
+  min-height: 34px !important;
+}
+
+/* Small screens: override the older ultra-small market rules. */
+@media (max-width: 700px) {
+  #market .section-heading h2 {
+    font-size: .92rem !important;
+  }
+
+  #market .section-heading p {
+    font-size: .58rem !important;
+  }
+
+  #market .market-list {
+    gap: 6px !important;
+  }
+
+  .market-asset-row {
+    min-height: 82px !important;
+    grid-template-columns: minmax(115px, 1.25fr) minmax(90px, .9fr) minmax(82px, .8fr) 14px !important;
+    gap: 7px !important;
+    padding: 8px 9px !important;
+    border-radius: 9px !important;
+  }
+
+  #market .coin-icon {
+    width: 30px !important;
+    height: 30px !important;
+    flex-basis: 30px !important;
+  }
+
+  .market-asset-main {
+    gap: 7px !important;
+  }
+
+  .market-asset-name strong {
+    font-size: .66rem !important;
+  }
+
+  .market-asset-name small {
+    font-size: .48rem !important;
+  }
+
+  .market-asset-market > strong {
+    font-size: .66rem !important;
+  }
+
+  .market-asset-market small {
+    font-size: .50rem !important;
+    font-weight: 900 !important;
+  }
+
+  .market-asset-holding > strong {
+    font-size: .64rem !important;
+  }
+
+  .market-asset-holding small {
+    font-size: .46rem !important;
+  }
+
+  .market-asset-chevron {
+    font-size: 1.05rem !important;
+  }
+
+  #market .screen-pager {
+    min-height: 34px !important;
+  }
+
+  #market .screen-pager span {
+    font-size: .56rem !important;
+  }
+
+  #market .screen-pager button {
+    width: 40px !important;
+    min-height: 30px !important;
+    font-size: .92rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .market-asset-row {
+    grid-template-columns: minmax(102px, 1.18fr) minmax(82px, .88fr) minmax(74px, .78fr) 12px !important;
+    gap: 5px !important;
+    padding: 7px !important;
+  }
+
+  .market-asset-name strong {
+    font-size: .61rem !important;
+  }
+
+  .market-asset-name small {
+    font-size: .45rem !important;
+  }
+
+  .market-asset-market > strong,
+  .market-asset-holding > strong {
+    font-size: .60rem !important;
+  }
+
+  .market-asset-market small,
+  .market-asset-holding small {
+    font-size: .43rem !important;
+  }
+}
+
+
+/* =========================================================
+   MARKET FIT FIX — SHORTER ASSET ROWS + CLEAR PAGER SPACE
+   ========================================================= */
+
+/* Slightly compress the desktop/tablet cards without shrinking text. */
+#market {
+  grid-template-rows: 42px auto minmax(0, 1fr) 42px !important;
+}
+
+#market .market-list {
+  grid-template-rows: repeat(4, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+  min-height: 0 !important;
+}
+
+.market-asset-row {
+  min-height: 0 !important;
+  height: 100% !important;
+  padding-top: 7px !important;
+  padding-bottom: 7px !important;
+}
+
+/* Pager gets its own dedicated row below the assets. */
+#market .screen-pager {
+  position: relative !important;
+  z-index: 2 !important;
+  margin-top: 4px !important;
+  min-height: 36px !important;
+  align-self: end !important;
+}
+
+/* Mobile-specific fit */
+@media (max-width: 700px) {
+  #market {
+    grid-template-rows: 34px auto minmax(0, 1fr) 36px !important;
+  }
+
+  #market .market-list {
+    gap: 5px !important;
+  }
+
+  .market-asset-row {
+    min-height: 0 !important;
+    padding: 6px 8px !important;
+  }
+
+  #market .screen-pager {
+    min-height: 32px !important;
+    margin-top: 3px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .market-asset-row {
+    padding: 5px 7px !important;
+  }
+
+  #market .market-list {
+    gap: 4px !important;
+  }
+}
+
+
+/* =========================================================
+   TRAVEL SCREEN STACK + APP-WIDE MOBILE BUTTON READABILITY
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   TRAVEL: always stack the Last Jump panel below the portal.
+   --------------------------------------------------------- */
+
+#travel {
+  grid-template-columns: 1fr !important;
+  grid-template-rows:
+    42px
+    auto
+    minmax(0, 1fr)
+    auto !important;
+  gap: 8px !important;
+}
+
+#travel .overlay-screen-header,
+#travel .section-heading,
+#travel .travel-card,
+#travel .travel-last-jump {
+  grid-column: 1 !important;
+}
+
+#travel .travel-card {
+  grid-row: 3 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 10px 12px !important;
+  align-self: stretch !important;
+}
+
+#travel .traveler-stage {
+  height: 185px !important;
+  margin-bottom: 8px !important;
+}
+
+#travel .travel-card p {
+  margin: 0 auto !important;
+  max-width: 92% !important;
+  font-size: .74rem !important;
+  line-height: 1.35 !important;
+}
+
+#travel #timeJumpBtn {
+  margin-top: 9px !important;
+  min-height: 42px !important;
+  font-size: .86rem !important;
+}
+
+#travel .travel-last-jump {
+  position: static !important;
+  grid-row: 4 !important;
+  width: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 10px 12px !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  transform: none !important;
+  box-shadow: none !important;
+  border-radius: 12px !important;
+}
+
+#travel .travel-last-jump-heading {
+  margin-bottom: 6px !important;
+  font-size: .66rem !important;
+}
+
+#travel .travel-last-jump-content {
+  gap: 6px !important;
+}
+
+#travel .travel-last-jump-content p,
+#travel .travel-last-jump-content span {
+  font-size: .64rem !important;
+  line-height: 1.28 !important;
+}
+
+#travel .travel-last-jump-content strong {
+  font-size: .78rem !important;
+}
+
+#travel .jump-summary-location,
+#travel .jump-summary-event,
+#travel .jump-summary-reaction {
+  gap: 3px !important;
+  padding-bottom: 6px !important;
+}
+
+/* The info is now always visible, so the reveal button is no longer needed. */
+#travel .last-jump-toggle {
+  display: none !important;
+}
+
+/* ---------------------------------------------------------
+   APP-WIDE BUTTON TYPE SCALE
+   --------------------------------------------------------- */
+
+/* Desktop/tablet baseline */
+.cabinet-screen button {
+  font-size: .76rem !important;
+}
+
+.game-dashboard .tab-btn {
+  font-size: .80rem !important;
+}
+
+#travel #timeJumpBtn,
+#broker .broker-grid button,
+.trade-actions button,
+.trade-side-toggle button,
+.quick-trade-buttons button,
+.townie-select-card button,
+.screen-pager button,
+#leaderboardPlayBtn,
+#saveScoreBtn {
+  font-size: .78rem !important;
+}
+
+/* ---------------------------------------------------------
+   MOBILE
+   --------------------------------------------------------- */
+
+@media (max-width: 700px) {
+  #travel {
+    grid-template-rows:
+      34px
+      auto
+      minmax(0, 1fr)
+      auto !important;
+    gap: 5px !important;
+  }
+
+  #travel .travel-card {
+    padding: 8px !important;
+  }
+
+  #travel .traveler-stage {
+    height: 132px !important;
+    margin-bottom: 6px !important;
+  }
+
+  #travel .travel-card p {
+    max-width: 96% !important;
+    font-size: .53rem !important;
+    line-height: 1.3 !important;
+  }
+
+  #travel #timeJumpBtn {
+    min-height: 38px !important;
+    margin-top: 7px !important;
+    padding: 7px 10px !important;
+    font-size: .68rem !important;
+  }
+
+  #travel .travel-last-jump {
+    padding: 7px 8px !important;
+    border-radius: 9px !important;
+  }
+
+  #travel .travel-last-jump-heading {
+    margin-bottom: 4px !important;
+    font-size: .48rem !important;
+  }
+
+  #travel .travel-last-jump-content {
+    gap: 4px !important;
+  }
+
+  #travel .travel-last-jump-content p,
+  #travel .travel-last-jump-content span {
+    font-size: .45rem !important;
+    line-height: 1.24 !important;
+  }
+
+  #travel .travel-last-jump-content strong {
+    font-size: .56rem !important;
+  }
+
+  #travel .jump-summary-location,
+  #travel .jump-summary-event,
+  #travel .jump-summary-reaction {
+    padding-bottom: 4px !important;
+  }
+
+  /* Override older rules that forced controls down around .4-.5rem. */
+  .cabinet-screen button {
+    font-size: .62rem !important;
+  }
+
+  .game-dashboard .tab-btn {
+    font-size: .62rem !important;
+  }
+
+  #travel #timeJumpBtn,
+  #broker .broker-grid button,
+  .trade-actions button,
+  .trade-side-toggle button,
+  .quick-trade-buttons button,
+  .townie-select-card button,
+  #leaderboardPlayBtn,
+  #saveScoreBtn {
+    font-size: .66rem !important;
+  }
+
+  #broker .broker-grid button,
+  .trade-actions button,
+  #leaderboardPlayBtn,
+  #saveScoreBtn {
+    min-height: 38px !important;
+  }
+
+  .screen-pager button {
+    font-size: .86rem !important;
+  }
+
+  .overlay-close-btn {
+    font-size: .54rem !important;
+  }
+
+  .overlay-screen-header strong {
+    font-size: .54rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #travel .traveler-stage {
+    height: 120px !important;
+  }
+
+  #travel #timeJumpBtn {
+    font-size: .64rem !important;
+  }
+
+  .cabinet-screen button {
+    font-size: .59rem !important;
+  }
+
+  #broker .broker-grid button,
+  .trade-actions button,
+  .trade-side-toggle button,
+  .quick-trade-buttons button,
+  .townie-select-card button,
+  #leaderboardPlayBtn,
+  #saveScoreBtn {
+    font-size: .62rem !important;
+  }
+}
+
+
+/* =========================================================
+   TOWNIES TAB — CARD READABILITY PASS
+   ========================================================= */
+
+/* Desktop / tablet */
+#townies .townie-select-card {
+  padding: 11px 12px !important;
+  gap: 8px !important;
+}
+
+#townies .townie-select-card .townie-canvas {
+  width: 66px !important;
+  height: 66px !important;
+}
+
+#townies .townie-select-info h3 {
+  font-size: .92rem !important;
+  line-height: 1.15 !important;
+  margin-bottom: 3px !important;
+}
+
+#townies .townie-select-info p {
+  font-size: .72rem !important;
+  line-height: 1.3 !important;
+  margin-top: 3px !important;
+}
+
+#townies .townie-select-info p:nth-of-type(1) {
+  font-size: .68rem !important;
+  color: #aeb9cb !important;
+}
+
+#townies .townie-select-info p:nth-of-type(2) {
+  font-size: .72rem !important;
+  color: #cbd5e1 !important;
+}
+
+#townies .unlock-note {
+  font-size: .70rem !important;
+  line-height: 1.25 !important;
+  margin-top: 5px !important;
+  color: #f7931a !important;
+}
+
+#townies .townie-select-card button {
+  font-size: .76rem !important;
+  min-height: 34px !important;
+  padding: 7px 10px !important;
+}
+
+/* Improve locked-card readability without losing the locked treatment. */
+#townies .townie-select-card.locked {
+  opacity: .72 !important;
+}
+
+#townies .townie-select-card.locked .townie-select-info h3,
+#townies .townie-select-card.locked .townie-select-info p,
+#townies .townie-select-card.locked .unlock-note {
+  opacity: .86 !important;
+}
+
+/* Mobile / small screens */
+@media (max-width: 700px) {
+  #townies .townie-select-card {
+    padding: 7px 8px !important;
+    grid-template-columns: 50px 1fr !important;
+    gap: 6px !important;
+  }
+
+  #townies .townie-select-card .townie-canvas {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
+  #townies .townie-select-info h3 {
+    font-size: .62rem !important;
+    line-height: 1.14 !important;
+  }
+
+  #townies .townie-select-info p {
+    font-size: .49rem !important;
+    line-height: 1.26 !important;
+    margin-top: 2px !important;
+  }
+
+  #townies .townie-select-info p:nth-of-type(1) {
+    font-size: .47rem !important;
+  }
+
+  #townies .townie-select-info p:nth-of-type(2) {
+    font-size: .49rem !important;
+  }
+
+  #townies .unlock-note {
+    font-size: .48rem !important;
+    line-height: 1.22 !important;
+    margin-top: 3px !important;
+  }
+
+  #townies .townie-select-card button {
+    font-size: .58rem !important;
+    min-height: 30px !important;
+    padding: 5px 7px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #townies .townie-select-info h3 {
+    font-size: .58rem !important;
+  }
+
+  #townies .townie-select-info p,
+  #townies .townie-select-info p:nth-of-type(1),
+  #townies .townie-select-info p:nth-of-type(2),
+  #townies .unlock-note {
+    font-size: .45rem !important;
+  }
+
+  #townies .townie-select-card button {
+    font-size: .55rem !important;
+  }
+}
+
+
+/* =========================================================
+   START RUN BUTTON + MOBILE LEADERBOARD FIT
+   ========================================================= */
+
+/* Traveler-selection Start Run button */
+.townie-selection-area .start-run-btn {
+  font-size: 1rem !important;
+  line-height: 1.1 !important;
+  font-weight: 900 !important;
+}
+
+@media (max-width: 700px) {
+  .townie-selection-area .start-run-btn {
+    font-size: .68rem !important;
+    min-height: 42px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .townie-selection-area .start-run-btn {
+    font-size: .64rem !important;
+  }
+}
+
+/* Mobile leaderboard: recover a little vertical room without changing style */
+@media (max-width: 700px) {
+  .cabinet-screen .leaderboard-screen {
+    padding: 5px 8px 6px !important;
+  }
+
+  .cabinet-screen .leaderboard-card {
+    height: calc(100% - 4px) !important;
+    margin: 2px auto !important;
+    padding: 8px 10px !important;
+    justify-content: flex-start !important;
+  }
+
+  .leaderboard-card .eyebrow {
+    margin-top: 0 !important;
+    font-size: .48rem !important;
+    line-height: 1 !important;
+  }
+
+  .leaderboard-card h1 {
+    font-size: 1.55rem !important;
+    line-height: 1 !important;
+    margin: 1px 0 5px !important;
+  }
+
+  .leaderboard-list {
+    gap: 4px !important;
+    margin-bottom: 4px !important;
+  }
+
+  .leaderboard-entry {
+    min-height: 39px !important;
+    padding: 4px 7px !important;
+  }
+
+  .leaderboard-entry .mini-townie {
+    width: 32px !important;
+    height: 32px !important;
+  }
+
+  .screen-pager {
+    min-height: 27px !important;
+    margin-top: 1px !important;
+    margin-bottom: 2px !important;
+  }
+
+  #leaderboardPlayBtn {
+    min-height: 32px !important;
+    margin-top: 2px !important;
+    padding: 5px 8px !important;
+    font-size: .64rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .leaderboard-card h1 {
+    font-size: 1.42rem !important;
+  }
+
+  .leaderboard-entry {
+    min-height: 36px !important;
+  }
+
+  .leaderboard-entry .mini-townie {
+    width: 29px !important;
+    height: 29px !important;
+  }
+
+  #leaderboardPlayBtn {
+    min-height: 30px !important;
+    font-size: .60rem !important;
+  }
+}
+
+
+/* =========================================================
+   MARKET MOBILE TYPOGRAPHY — LARGER, SAME ROW HEIGHTS
+   ========================================================= */
+
+@media (max-width: 700px) {
+  .market-asset-name strong {
+    font-size: .76rem !important;
+  }
+
+  .market-asset-name small {
+    font-size: .56rem !important;
+  }
+
+  .market-asset-market > strong {
+    font-size: .76rem !important;
+  }
+
+  .market-asset-market small {
+    font-size: .58rem !important;
+    font-weight: 900 !important;
+  }
+
+  .market-asset-holding > strong {
+    font-size: .74rem !important;
+  }
+
+  .market-asset-holding small {
+    font-size: .54rem !important;
+  }
+
+  #market .coin-icon {
+    width: 33px !important;
+    height: 33px !important;
+    flex-basis: 33px !important;
+  }
+
+  .market-asset-main {
+    gap: 8px !important;
+  }
+}
+
+@media (max-width: 390px) {
+  .market-asset-name strong {
+    font-size: .70rem !important;
+  }
+
+  .market-asset-name small {
+    font-size: .52rem !important;
+  }
+
+  .market-asset-market > strong,
+  .market-asset-holding > strong {
+    font-size: .69rem !important;
+  }
+
+  .market-asset-market small,
+  .market-asset-holding small {
+    font-size: .50rem !important;
+  }
+
+  #market .coin-icon {
+    width: 31px !important;
+    height: 31px !important;
+    flex-basis: 31px !important;
+  }
+}
+
+
+/* =========================================================
+   TIME BROKER — LOAN ACCOUNT UX
+   ========================================================= */
+
+#broker {
+  grid-template-rows: 42px auto auto auto auto minmax(0,1fr) !important;
+  align-content: start !important;
+}
+
+#broker .section-heading {
+  margin-bottom: 8px !important;
+}
+
+.broker-account {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  gap: 9px;
+  margin-bottom: 9px;
+}
+
+.broker-balance-card,
+.broker-account-mini,
+.broker-terms,
+.broker-status {
+  border-radius: 13px;
+  border: 1px solid rgba(255,255,255,.07);
+  background: linear-gradient(135deg,#152234,#101a29);
+}
+
+.broker-balance-card {
+  padding: 12px 14px;
+  display: grid;
+  align-content: center;
+  gap: 3px;
+  box-shadow: inset 3px 0 0 #f7931a;
+}
+
+.broker-balance-card span,
+.broker-account-mini span,
+.broker-terms-heading span,
+.broker-status > span {
+  color: #8fa0b6;
+  font-size: .62rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.broker-balance-card strong {
+  color: #fff;
+  font-size: 1.65rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.broker-balance-card small {
+  color: #f7b45a;
+  font-size: .66rem;
+}
+
+.broker-account-mini {
+  padding: 9px 11px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.broker-account-mini > div {
+  display: grid;
+  align-content: center;
+  gap: 4px;
+}
+
+.broker-account-mini strong {
+  font-size: .92rem;
+  color: #fff;
+}
+
+.broker-terms {
+  padding: 10px 12px;
+  margin-bottom: 9px;
+}
+
+.broker-terms-heading {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.broker-terms-heading strong {
+  color: #f7931a;
+  font-size: .64rem;
+}
+
+.broker-terms ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5px 12px;
+}
+
+.broker-terms li {
+  position: relative;
+  padding-left: 12px;
+  color: #c7d2e2;
+  font-size: .68rem;
+  line-height: 1.3;
+}
+
+.broker-terms li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #38bdf8;
+}
+
+.broker-grid {
+  width: min(100%, 620px) !important;
+  margin: 0 auto 9px !important;
+  align-self: auto !important;
+}
+
+.broker-grid button {
+  min-height: 42px !important;
+  font-size: .78rem !important;
+}
+
+.broker-status {
+  padding: 10px 12px;
+  display: grid;
+  gap: 3px;
+  border-left: 3px solid #64748b;
+}
+
+.broker-status strong {
+  font-size: .80rem;
+}
+
+.broker-status p {
+  color: #9eabc0;
+  font-size: .66rem;
+  line-height: 1.3;
+}
+
+.broker-status.success { border-left-color:#22c55e; background:#10251d; }
+.broker-status.success strong { color:#60ee96; }
+.broker-status.warning { border-left-color:#f7931a; background:#241b10; }
+.broker-status.warning strong { color:#ffb85c; }
+.broker-status.danger { border-left-color:#ef4444; background:#261417; }
+.broker-status.danger strong { color:#ff7b82; }
+
+@media (max-width:700px) {
+  #broker {
+    grid-template-rows: 34px auto auto auto auto minmax(0,1fr) !important;
+  }
+
+  .broker-account {
+    gap: 5px;
+    margin-bottom: 5px;
+  }
+
+  .broker-balance-card {
+    padding: 7px 8px;
+  }
+
+  .broker-balance-card span,
+  .broker-account-mini span,
+  .broker-terms-heading span,
+  .broker-status > span {
+    font-size: .45rem;
+  }
+
+  .broker-balance-card strong {
+    font-size: 1.08rem;
+  }
+
+  .broker-balance-card small {
+    font-size: .46rem;
+  }
+
+  .broker-account-mini {
+    padding: 6px;
+    gap: 4px;
+  }
+
+  .broker-account-mini strong {
+    font-size: .60rem;
+  }
+
+  .broker-terms {
+    padding: 6px 8px;
+    margin-bottom: 5px;
+  }
+
+  .broker-terms-heading {
+    margin-bottom: 4px;
+  }
+
+  .broker-terms-heading strong {
+    font-size: .45rem;
+  }
+
+  .broker-terms ul {
+    gap: 3px 7px;
+  }
+
+  .broker-terms li {
+    padding-left: 9px;
+    font-size: .48rem;
+    line-height: 1.22;
+  }
+
+  .broker-grid {
+    margin-bottom: 5px !important;
+    gap: 6px !important;
+  }
+
+  .broker-grid button {
+    min-height: 38px !important;
+    font-size: .66rem !important;
+  }
+
+  .broker-status {
+    padding: 6px 8px;
+  }
+
+  .broker-status strong {
+    font-size: .57rem;
+  }
+
+  .broker-status p {
+    font-size: .47rem;
+    line-height: 1.22;
+  }
+}
+
+
+/* =========================================================
+   TIME BROKER — LOAN TERMS / STATUS BALANCE
+   ========================================================= */
+
+/* Give the important terms panel more space and readability. */
+#broker .broker-terms,
+#broker .loan-terms,
+#broker [class*="terms"] {
+  min-height: 112px !important;
+  padding: 13px 15px !important;
+}
+
+#broker .broker-terms h3,
+#broker .loan-terms h3,
+#broker [class*="terms"] h3 {
+  font-size: .82rem !important;
+  margin-bottom: 8px !important;
+}
+
+#broker .broker-terms li,
+#broker .loan-terms li,
+#broker [class*="terms"] li {
+  font-size: .69rem !important;
+  line-height: 1.38 !important;
+  margin-bottom: 5px !important;
+}
+
+#broker .broker-terms ul,
+#broker .loan-terms ul,
+#broker [class*="terms"] ul {
+  row-gap: 5px !important;
+}
+
+/* Broker Status should behave more like a compact transaction receipt. */
+#broker .broker-status,
+#broker [class*="broker-status"],
+#broker [class*="status-box"] {
+  min-height: 82px !important;
+  max-height: 98px !important;
+  padding: 11px 14px !important;
+  align-self: start !important;
+}
+
+#broker .broker-status h3,
+#broker [class*="broker-status"] h3,
+#broker [class*="status-box"] h3 {
+  font-size: .76rem !important;
+  margin-bottom: 6px !important;
+}
+
+#broker .broker-status strong,
+#broker [class*="broker-status"] strong,
+#broker [class*="status-box"] strong {
+  font-size: .76rem !important;
+  line-height: 1.25 !important;
+}
+
+#broker .broker-status p,
+#broker [class*="broker-status"] p,
+#broker [class*="status-box"] p {
+  font-size: .65rem !important;
+  line-height: 1.32 !important;
+  margin-top: 4px !important;
+}
+
+/* Mobile: preserve the same hierarchy, just denser. */
+@media (max-width: 700px) {
+  #broker .broker-terms,
+  #broker .loan-terms,
+  #broker [class*="terms"] {
+    min-height: 102px !important;
+    padding: 10px 11px !important;
+  }
+
+  #broker .broker-terms h3,
+  #broker .loan-terms h3,
+  #broker [class*="terms"] h3 {
+    font-size: .59rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  #broker .broker-terms li,
+  #broker .loan-terms li,
+  #broker [class*="terms"] li {
+    font-size: .50rem !important;
+    line-height: 1.32 !important;
+    margin-bottom: 4px !important;
+  }
+
+  #broker .broker-status,
+  #broker [class*="broker-status"],
+  #broker [class*="status-box"] {
+    min-height: 68px !important;
+    max-height: 78px !important;
+    padding: 8px 10px !important;
+  }
+
+  #broker .broker-status h3,
+  #broker [class*="broker-status"] h3,
+  #broker [class*="status-box"] h3 {
+    font-size: .55rem !important;
+    margin-bottom: 4px !important;
+  }
+
+  #broker .broker-status strong,
+  #broker [class*="broker-status"] strong,
+  #broker [class*="status-box"] strong {
+    font-size: .57rem !important;
+  }
+
+  #broker .broker-status p,
+  #broker [class*="broker-status"] p,
+  #broker [class*="status-box"] p {
+    font-size: .48rem !important;
+    line-height: 1.26 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #broker .broker-terms li,
+  #broker .loan-terms li,
+  #broker [class*="terms"] li {
+    font-size: .47rem !important;
+  }
+
+  #broker .broker-status p,
+  #broker [class*="broker-status"] p,
+  #broker [class*="status-box"] p {
+    font-size: .45rem !important;
+  }
+}
+
+
+/* =========================================================
+   TIME BROKER — LARGER TERMS + RED DEBT ACCENT
+   ========================================================= */
+
+/* Loan / debt uses the same red visual language as the dashboard Loan card. */
+#broker .overlay-screen-header strong {
+  color: #ff5c63 !important;
+}
+
+#broker .broker-account-card,
+#broker .broker-balance-card,
+#broker [class*="loan-balance"] {
+  border-left-color: #ef4444 !important;
+}
+
+#broker .broker-account-card::before,
+#broker .broker-balance-card::before {
+  background: #ef4444 !important;
+}
+
+#broker .broker-terms,
+#broker .loan-terms,
+#broker [class*="terms"] {
+  border-color: rgba(239,68,68,.20) !important;
+}
+
+/* Make the Loan Terms panel actually use its available space. */
+#broker .broker-terms,
+#broker .loan-terms,
+#broker [class*="terms"] {
+  padding: 16px 18px !important;
+}
+
+#broker .broker-terms h3,
+#broker .loan-terms h3,
+#broker [class*="terms"] h3 {
+  font-size: .94rem !important;
+  margin-bottom: 13px !important;
+}
+
+#broker .broker-terms li,
+#broker .loan-terms li,
+#broker [class*="terms"] li {
+  font-size: .82rem !important;
+  line-height: 1.45 !important;
+  margin-bottom: 8px !important;
+}
+
+#broker .broker-terms ul,
+#broker .loan-terms ul,
+#broker [class*="terms"] ul {
+  row-gap: 7px !important;
+  column-gap: 28px !important;
+}
+
+/* Broker status remains compact, but readable. */
+#broker .broker-status h3,
+#broker [class*="broker-status"] h3,
+#broker [class*="status-box"] h3 {
+  font-size: .80rem !important;
+}
+
+#broker .broker-status strong,
+#broker [class*="broker-status"] strong,
+#broker [class*="status-box"] strong {
+  font-size: .80rem !important;
+}
+
+#broker .broker-status p,
+#broker [class*="broker-status"] p,
+#broker [class*="status-box"] p {
+  font-size: .68rem !important;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+  #broker .broker-terms,
+  #broker .loan-terms,
+  #broker [class*="terms"] {
+    padding: 11px 12px !important;
+  }
+
+  #broker .broker-terms h3,
+  #broker .loan-terms h3,
+  #broker [class*="terms"] h3 {
+    font-size: .66rem !important;
+    margin-bottom: 8px !important;
+  }
+
+  #broker .broker-terms li,
+  #broker .loan-terms li,
+  #broker [class*="terms"] li {
+    font-size: .58rem !important;
+    line-height: 1.38 !important;
+    margin-bottom: 5px !important;
+  }
+
+  #broker .broker-terms ul,
+  #broker .loan-terms ul,
+  #broker [class*="terms"] ul {
+    row-gap: 5px !important;
+    column-gap: 14px !important;
+  }
+
+  #broker .broker-status h3,
+  #broker [class*="broker-status"] h3,
+  #broker [class*="status-box"] h3 {
+    font-size: .59rem !important;
+  }
+
+  #broker .broker-status strong,
+  #broker [class*="broker-status"] strong,
+  #broker [class*="status-box"] strong {
+    font-size: .61rem !important;
+  }
+
+  #broker .broker-status p,
+  #broker [class*="broker-status"] p,
+  #broker [class*="status-box"] p {
+    font-size: .52rem !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #broker .broker-terms li,
+  #broker .loan-terms li,
+  #broker [class*="terms"] li {
+    font-size: .54rem !important;
+  }
+
+  #broker .broker-status p,
+  #broker [class*="broker-status"] p,
+  #broker [class*="status-box"] p {
+    font-size: .49rem !important;
+  }
+}
+
+/* =========================================================
+   TIME BROKER — TERMS LAYOUT + STATUS FIT FIX
+   ========================================================= */
+
+/* Make the loan terms read like a normal, readable block. */
+#broker .broker-terms,
+#broker .loan-terms,
+#broker [class*="terms"] {
+  display: grid !important;
+  align-content: start !important;
+  min-height: 126px !important;
+  padding: 12px 16px !important;
+}
+
+#broker .broker-terms-heading {
+  margin-bottom: 8px !important;
+  align-items: center !important;
+}
+
+#broker .broker-terms-heading span {
+  font-size: .76rem !important;
+}
+
+#broker .broker-terms-heading strong {
+  font-size: .76rem !important;
+  color: #ef4444 !important;
+}
+
+#broker .broker-terms ul,
+#broker .loan-terms ul,
+#broker [class*="terms"] ul {
+  grid-template-columns: 1fr !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  align-content: start !important;
+}
+
+#broker .broker-terms li,
+#broker .loan-terms li,
+#broker [class*="terms"] li {
+  font-size: .84rem !important;
+  line-height: 1.38 !important;
+  padding-left: 14px !important;
+  margin: 0 !important;
+}
+
+/* Keep broker status fully inside the panel. */
+#broker .broker-status,
+#broker [class*="broker-status"],
+#broker [class*="status-box"] {
+  min-height: 66px !important;
+  max-height: 66px !important;
+  padding: 9px 12px !important;
+  overflow: hidden !important;
+  display: grid !important;
+  align-content: start !important;
+  gap: 2px !important;
+}
+
+#broker .broker-status > span,
+#broker [class*="broker-status"] > span,
+#broker [class*="status-box"] > span {
+  font-size: .67rem !important;
+}
+
+#broker .broker-status strong,
+#broker [class*="broker-status"] strong,
+#broker [class*="status-box"] strong {
+  font-size: .90rem !important;
+  line-height: 1.1 !important;
+}
+
+#broker .broker-status p,
+#broker [class*="broker-status"] p,
+#broker [class*="status-box"] p {
+  font-size: .67rem !important;
+  line-height: 1.24 !important;
+  margin: 0 !important;
+}
+
+@media (max-width: 700px) {
+  #broker .broker-terms,
+  #broker .loan-terms,
+  #broker [class*="terms"] {
+    min-height: 104px !important;
+    padding: 9px 11px !important;
+  }
+
+  #broker .broker-terms-heading {
+    margin-bottom: 6px !important;
+  }
+
+  #broker .broker-terms-heading span {
+    font-size: .58rem !important;
+  }
+
+  #broker .broker-terms-heading strong {
+    font-size: .58rem !important;
+  }
+
+  #broker .broker-terms ul,
+  #broker .loan-terms ul,
+  #broker [class*="terms"] ul {
+    gap: 5px !important;
+  }
+
+  #broker .broker-terms li,
+  #broker .loan-terms li,
+  #broker [class*="terms"] li {
+    font-size: .61rem !important;
+    line-height: 1.34 !important;
+    padding-left: 11px !important;
+  }
+
+  #broker .broker-status,
+  #broker [class*="broker-status"],
+  #broker [class*="status-box"] {
+    min-height: 58px !important;
+    max-height: 58px !important;
+    padding: 7px 9px !important;
+    gap: 1px !important;
+  }
+
+  #broker .broker-status > span,
+  #broker [class*="broker-status"] > span,
+  #broker [class*="status-box"] > span {
+    font-size: .53rem !important;
+  }
+
+  #broker .broker-status strong,
+  #broker [class*="broker-status"] strong,
+  #broker [class*="status-box"] strong {
+    font-size: .68rem !important;
+  }
+
+  #broker .broker-status p,
+  #broker [class*="broker-status"] p,
+  #broker [class*="status-box"] p {
+    font-size: .50rem !important;
+    line-height: 1.18 !important;
+  }
+}
+
+/* =========================================================
+   TIME BROKER — FINAL MOBILE FIT + COLOR CORRECTION
+   ========================================================= */
+
+/* Reserve explicit room for buttons + status so nothing can run offscreen. */
+#broker {
+  grid-template-rows:
+    42px
+    auto
+    auto
+    minmax(0, 1fr)
+    48px
+    70px !important;
+  gap: 6px !important;
+  align-content: stretch !important;
+  overflow: hidden !important;
+}
+
+/* Loan Terms occupies the flexible middle region, but its content stays at top. */
+#broker .broker-terms {
+  min-height: 0 !important;
+  height: 100% !important;
+  padding: 12px 16px !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+  border-color: rgba(255,255,255,.07) !important;
+}
+
+#broker .broker-terms-heading {
+  flex: 0 0 auto !important;
+  margin: 0 0 10px !important;
+  align-items: center !important;
+}
+
+#broker .broker-terms-heading span {
+  color: #8fa0b6 !important;
+  font-size: .76rem !important;
+}
+
+/* Restore the original Time Broker Credit orange. */
+#broker .broker-terms-heading strong {
+  color: #f7931a !important;
+  font-size: .76rem !important;
+}
+
+#broker .broker-terms ul {
+  flex: 0 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  align-content: flex-start !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: auto !important;
+  min-height: 0 !important;
+}
+
+#broker .broker-terms li {
+  flex: 0 0 auto !important;
+  font-size: .84rem !important;
+  line-height: 1.34 !important;
+  margin: 0 !important;
+  padding-left: 14px !important;
+}
+
+/* Restore normal orange tab/header branding. */
+#broker .overlay-screen-header strong {
+  color: #f7931a !important;
+}
+
+/* CURRENT LOAN BALANCE is the debt area: make only this card red. */
+#broker .broker-balance-card {
+  box-shadow: inset 3px 0 0 #ef4444 !important;
+}
+
+#broker .broker-balance-card strong {
+  color: #ff5c63 !important;
+}
+
+#broker .broker-balance-card small {
+  color: #ff8b8b !important;
+}
+
+/* Broker Status always owns the final grid row and cannot extend past it. */
+#broker .broker-status {
+  height: 100% !important;
+  min-height: 0 !important;
+  max-height: none !important;
+  padding: 8px 12px !important;
+  overflow: hidden !important;
+  align-self: stretch !important;
+  display: grid !important;
+  grid-template-rows: auto auto minmax(0,1fr) !important;
+  align-content: start !important;
+  gap: 2px !important;
+}
+
+#broker .broker-status > span {
+  font-size: .64rem !important;
+}
+
+#broker .broker-status strong {
+  font-size: .82rem !important;
+  line-height: 1.1 !important;
+}
+
+#broker .broker-status p {
+  font-size: .64rem !important;
+  line-height: 1.2 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+/* Only the active-loan status uses red. */
+#broker .broker-status.warning {
+  border-left-color: #ef4444 !important;
+  background: #261417 !important;
+}
+
+#broker .broker-status.warning strong {
+  color: #ff6b72 !important;
+}
+
+/* Keep other feedback states as they originally behaved. */
+#broker .broker-status.neutral {
+  border-left-color: #64748b !important;
+  background: linear-gradient(135deg,#152234,#101a29) !important;
+}
+
+#broker .broker-status.success {
+  border-left-color: #22c55e !important;
+  background: #10251d !important;
+}
+
+#broker .broker-status.success strong {
+  color: #60ee96 !important;
+}
+
+#broker .broker-status.danger {
+  border-left-color: #ef4444 !important;
+  background: #261417 !important;
+}
+
+#broker .broker-status.danger strong {
+  color: #ff7b82 !important;
+}
+
+@media (max-width: 700px) {
+  #broker {
+    grid-template-rows:
+      34px
+      auto
+      auto
+      minmax(0, 1fr)
+      42px
+      58px !important;
+    gap: 5px !important;
+  }
+
+  #broker .broker-terms {
+    min-height: 0 !important;
+    height: 100% !important;
+    padding: 9px 11px !important;
+  }
+
+  #broker .broker-terms-heading {
+    margin-bottom: 7px !important;
+  }
+
+  #broker .broker-terms-heading span,
+  #broker .broker-terms-heading strong {
+    font-size: .58rem !important;
+  }
+
+  #broker .broker-terms ul {
+    gap: 5px !important;
+  }
+
+  #broker .broker-terms li {
+    font-size: .60rem !important;
+    line-height: 1.28 !important;
+    padding-left: 11px !important;
+  }
+
+  #broker .broker-status {
+    padding: 6px 9px !important;
+    gap: 1px !important;
+  }
+
+  #broker .broker-status > span {
+    font-size: .50rem !important;
+  }
+
+  #broker .broker-status strong {
+    font-size: .64rem !important;
+  }
+
+  #broker .broker-status p {
+    font-size: .47rem !important;
+    line-height: 1.15 !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #broker {
+    grid-template-rows:
+      32px
+      auto
+      auto
+      minmax(0, 1fr)
+      40px
+      54px !important;
+  }
+
+  #broker .broker-terms li {
+    font-size: .56rem !important;
+  }
+
+  #broker .broker-status p {
+    font-size: .44rem !important;
+  }
+}
+
+/* =========================================================
+   TIME BROKER — HEADING GAP ROOT-CAUSE FIX
+   ========================================================= */
+
+/* Earlier [class*="terms"] rules also matched .broker-terms-heading,
+   accidentally giving the heading a large min-height and padding. */
+#broker .broker-terms-heading {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  flex: 0 0 auto !important;
+  margin: 0 0 8px !important;
+}
+
+#broker .broker-terms-heading span,
+#broker .broker-terms-heading strong {
+  min-height: 0 !important;
+  height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+#broker .broker-terms ul {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto !important;
+}
+
+/* Give Broker Status enough guaranteed room now that the wasted heading
+   height is gone, while still keeping it fully inside the square. */
+#broker {
+  grid-template-rows:
+    42px
+    auto
+    auto
+    minmax(0, 1fr)
+    48px
+    76px !important;
+}
+
+#broker .broker-status {
+  min-height: 0 !important;
+  height: 100% !important;
+  max-height: 76px !important;
+  overflow: hidden !important;
+}
+
+@media (max-width: 700px) {
+  #broker .broker-terms-heading {
+    min-height: 0 !important;
+    height: auto !important;
+    padding: 0 !important;
+    margin: 0 0 6px !important;
+  }
+
+  #broker {
+    grid-template-rows:
+      34px
+      auto
+      auto
+      minmax(0, 1fr)
+      42px
+      66px !important;
+  }
+
+  #broker .broker-status {
+    height: 100% !important;
+    max-height: 66px !important;
+    overflow: hidden !important;
+  }
+}
+
+@media (max-width: 390px) {
+  #broker {
+    grid-template-rows:
+      32px
+      auto
+      auto
+      minmax(0, 1fr)
+      40px
+      62px !important;
+  }
+
+  #broker .broker-status {
+    max-height: 62px !important;
+  }
+}
