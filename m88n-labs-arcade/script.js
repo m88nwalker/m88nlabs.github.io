@@ -31,16 +31,16 @@ const games = [
     url: "./space-owls/index.html"
   },
   {
-    id: "crypto-time-travellers",
-    title: "Crypto Time Travellers",
-    description: "Travel through crypto history and survive the strangest timeline imaginable.",
+    id: "crypto-time-travelers",
+    title: "Crypto Time Travelers",
+    description: "Trade across timelines, grow your net worth, and survive crypto history.",
     symbol: "⏳",
     theme: "theme-time",
     accent: "orange",
-    status: "PLAYABLE",
+    status: "BETA",
     statusClass: "status-playable",
     playable: true,
-    url: "./crypto-time-travellers/index.html"
+    url: "./crypto-time-travelers/index.html"
   },
   {
     id: "bitcoin-piano",
