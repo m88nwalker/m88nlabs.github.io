@@ -376,16 +376,15 @@ function bindKeyInteractions() {
   keys.forEach((key) => {
     const note = key.dataset.note;
 
-    key.addEventListener("pointerdown", async (event) => {
+    key.addEventListener("pointerdown", (event) => {
       event.preventDefault();
       activePointerId = event.pointerId;
       activePointerNote = note;
 
       try { key.setPointerCapture(event.pointerId); } catch (_) {}
 
-      // Explicitly unlock synthesized instruments from the user's touch/click.
       if (currentSoundMode !== "classic") {
-        await unlockSynthAudio();
+        primeSynthForGesture();
       }
 
       playNote(note);
@@ -509,16 +508,41 @@ function getSynthContext() {
   return synthContext;
 }
 
-async function unlockSynthAudio() {
+function primeSynthForGesture() {
   try {
     const ctx = getSynthContext();
-    if (ctx.state === "suspended") {
-      await ctx.resume();
+
+    // iOS WebKit can report either "suspended" or "interrupted".
+    // Call resume() directly inside the trusted user gesture and do not
+    // await it here, so we don't lose transient user activation.
+    if (ctx.state === "suspended" || ctx.state === "interrupted") {
+      const resumePromise = ctx.resume();
+      if (resumePromise && typeof resumePromise.catch === "function") {
+        resumePromise.catch((error) => {
+          console.warn("Synth AudioContext resume failed:", error);
+        });
+      }
     }
-    return ctx.state === "running";
+
+    // Start an inaudible one-shot oscillator in the SAME gesture.
+    // This "warms" the output path on iOS without producing a sound.
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    gain.gain.value = 0.00001;
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start();
+    osc.stop(ctx.currentTime + 0.015);
+
+    osc.addEventListener("ended", () => {
+      try { osc.disconnect(); } catch (_) {}
+      try { gain.disconnect(); } catch (_) {}
+    }, { once: true });
+
+    return ctx;
   } catch (error) {
-    console.warn("Synth audio unlock failed:", error);
-    return false;
+    console.warn("Synth audio prime failed:", error);
+    return null;
   }
 }
 
@@ -546,6 +570,24 @@ function releaseAllSynthVoices() {
 
 function playSynthesizedNote(note) {
   const ctx = getSynthContext();
+
+  // iPhone/iPad WebKit may leave Web Audio suspended/interrupted even after
+  // a page has been interacted with. Resume first, then retry this note.
+  if (ctx.state === "suspended" || ctx.state === "interrupted") {
+    const resumePromise = ctx.resume();
+    if (resumePromise && typeof resumePromise.then === "function") {
+      resumePromise
+        .then(() => {
+          if (ctx.state === "running") playSynthesizedNote(note);
+        })
+        .catch((error) => {
+          console.warn("Could not resume synth for note:", error);
+          soundStatusDisplay.textContent = "Tap the piano again to enable synth audio";
+        });
+    }
+    return;
+  }
+
   const midi = noteToMidi(note);
   if (midi === null) return;
   const frequency = 440 * Math.pow(2, (midi - 69) / 12);
@@ -1526,19 +1568,15 @@ function bindUI() {
 
   sustainBtn.addEventListener("click", toggleSustain);
   volumeSlider.addEventListener("input", updateVolume);
-  soundModeSelect.addEventListener("change", async () => {
+  soundModeSelect.addEventListener("change", () => {
     releaseAllSynthVoices();
     currentSoundMode = soundModeSelect.value;
 
     if (currentSoundMode !== "classic") {
-      const unlocked = await unlockSynthAudio();
-      soundStatusDisplay.textContent = unlocked
-        ? `Sound mode: ${soundModeSelect.options[soundModeSelect.selectedIndex].text}`
-        : "Tap a piano key to enable synthesized audio";
-    } else {
-      soundStatusDisplay.textContent = `Sound mode: ${soundModeSelect.options[soundModeSelect.selectedIndex].text}`;
+      primeSynthForGesture();
     }
 
+    soundStatusDisplay.textContent = `Sound mode: ${soundModeSelect.options[soundModeSelect.selectedIndex].text}`;
     saveSettings();
   });
 
@@ -1638,6 +1676,26 @@ function init() {
 
 init();
 
+
+/* =========================================================
+   IOS WEB AUDIO LIFECYCLE RECOVERY
+   ========================================================= */
+document.addEventListener("visibilitychange", () => {
+  if (document.visibilityState === "visible" && synthContext) {
+    // We cannot force playback without a user gesture, but we can reset the
+    // status so the next tap will prime/resume the context correctly.
+    if (synthContext.state === "interrupted" || synthContext.state === "suspended") {
+      soundStatusDisplay.textContent = "Tap a key to resume synth audio";
+    }
+  }
+});
+
+window.addEventListener("pageshow", () => {
+  if (synthContext && (synthContext.state === "interrupted" || synthContext.state === "suspended")) {
+    soundStatusDisplay.textContent = "Tap a key to resume synth audio";
+  }
+});
+
 /* =========================================================
    M88N LABS ARCADE SHELL
    ========================================================= */
@@ -1686,6 +1744,10 @@ init();
     }
   }
 
+  homePlayBtn?.addEventListener("pointerdown", () => {
+    // Unlock the Web Audio path on the very first explicit app interaction.
+    primeSynthForGesture();
+  });
   homePlayBtn?.addEventListener("click", showWorkbench);
   gameHomeBtn?.addEventListener("click", showHome);
 
@@ -1742,17 +1804,21 @@ init();
   }
 
   buttons.forEach((button) => {
-    button.addEventListener("click", async () => {
+    // pointerdown is used deliberately here: iOS is strict about Web Audio
+    // being unlocked inside the original trusted gesture.
+    button.addEventListener("pointerdown", () => {
       const mode = button.dataset.soundMode;
+      if (mode && mode !== "classic") {
+        primeSynthForGesture();
+      }
+    });
 
+    button.addEventListener("click", () => {
+      const mode = button.dataset.soundMode;
       if (!mode || mode === soundModeSelect.value) {
-        if (mode && mode !== "classic") await unlockSynthAudio();
+        if (mode && mode !== "classic") primeSynthForGesture();
         syncInstrumentGrid();
         return;
-      }
-
-      if (mode !== "classic") {
-        await unlockSynthAudio();
       }
 
       soundModeSelect.value = mode;
