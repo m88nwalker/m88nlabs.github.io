@@ -37,7 +37,7 @@ const games = [
     symbol: "⏳",
     theme: "theme-time",
     accent: "green",
-    status: "PLAYABLE",
+    status: "BETA",
     statusClass: "status-playable",
     playable: true,
     url: "./crypto-time-travelers/index.html"
@@ -61,7 +61,7 @@ const games = [
     symbol: "🐾",
     theme: "theme-companion",
     accent: "yellow",
-    status: "BETA",
+    status: "PLAYABLE",
     statusClass: "status-playable",
     playable: true,
     url: "./townie-companion/index.html"
