@@ -1153,3 +1153,123 @@ button { cursor: pointer; }
     font-size: .45rem;
   }
 }
+
+
+/* =========================================================
+   PIANO ARROW NAVIGATION
+   Keys own touch gestures; arrows own horizontal navigation.
+   ========================================================= */
+
+.piano-section {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 5px;
+}
+
+/* Restore the instrument-style gesture: dragging across keys plays notes. */
+.piano-wrapper,
+.key {
+  touch-action: none !important;
+}
+
+.piano-nav {
+  display: grid;
+  grid-template-columns: 58px minmax(0, 1fr) 58px;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+}
+
+.piano-nav-btn {
+  height: 38px;
+  border: 1px solid rgba(247,147,26,.34);
+  border-radius: 9px;
+  background:
+    linear-gradient(180deg, rgba(247,147,26,.18), rgba(247,147,26,.07)),
+    #151b24;
+  color: var(--btc);
+  font-size: 1.45rem;
+  font-weight: 900;
+  line-height: 1;
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  transition: background .12s ease, border-color .12s ease, transform .08s ease, box-shadow .12s ease;
+}
+
+.piano-nav-btn:active,
+.piano-nav-btn.holding {
+  transform: translateY(1px);
+  border-color: rgba(247,147,26,.72);
+  background:
+    linear-gradient(180deg, rgba(247,147,26,.32), rgba(247,147,26,.13)),
+    #181d25;
+  box-shadow: 0 0 14px rgba(247,147,26,.15);
+}
+
+.piano-nav-hint {
+  min-width: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  color: var(--muted);
+  text-align: center;
+}
+
+.piano-nav-hint span {
+  color: var(--btc);
+  font-size: .44rem;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.piano-nav-hint small {
+  font-size: .43rem;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .workbench-screen {
+    grid-template-rows: 30px 53px 38px minmax(0,1fr) 30px 40px !important;
+  }
+
+  .piano-section {
+    gap: 4px;
+  }
+
+  .piano-nav {
+    grid-template-columns: 46px minmax(0,1fr) 46px;
+    gap: 5px;
+    min-height: 32px;
+  }
+
+  .piano-nav-btn {
+    height: 32px;
+    border-radius: 8px;
+    font-size: 1.18rem;
+  }
+
+  .piano-nav-hint {
+    gap: 4px;
+  }
+
+  .piano-nav-hint span {
+    font-size: .34rem;
+  }
+
+  .piano-nav-hint small {
+    font-size: .33rem;
+  }
+}
+
+@media (max-width: 390px) {
+  .piano-nav {
+    grid-template-columns: 44px minmax(0,1fr) 44px;
+  }
+
+  .piano-nav-hint {
+    flex-direction: column;
+    gap: 0;
+  }
+}

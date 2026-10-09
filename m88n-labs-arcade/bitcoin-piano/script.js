@@ -376,11 +376,18 @@ function bindKeyInteractions() {
   keys.forEach((key) => {
     const note = key.dataset.note;
 
-    key.addEventListener("pointerdown", (event) => {
+    key.addEventListener("pointerdown", async (event) => {
       event.preventDefault();
       activePointerId = event.pointerId;
       activePointerNote = note;
-      key.setPointerCapture(event.pointerId);
+
+      try { key.setPointerCapture(event.pointerId); } catch (_) {}
+
+      // Explicitly unlock synthesized instruments from the user's touch/click.
+      if (currentSoundMode !== "classic") {
+        await unlockSynthAudio();
+      }
+
       playNote(note);
     });
 
@@ -499,8 +506,20 @@ function getSynthContext() {
     output.connect(synthMaster);
     synthRoom = {input};
   }
-  if (synthContext.state === "suspended") synthContext.resume().catch(console.warn);
   return synthContext;
+}
+
+async function unlockSynthAudio() {
+  try {
+    const ctx = getSynthContext();
+    if (ctx.state === "suspended") {
+      await ctx.resume();
+    }
+    return ctx.state === "running";
+  } catch (error) {
+    console.warn("Synth audio unlock failed:", error);
+    return false;
+  }
 }
 
 function releaseSynthVoice(voice, fade = 0.055) {
@@ -1507,10 +1526,19 @@ function bindUI() {
 
   sustainBtn.addEventListener("click", toggleSustain);
   volumeSlider.addEventListener("input", updateVolume);
-  soundModeSelect.addEventListener("change", () => {
+  soundModeSelect.addEventListener("change", async () => {
     releaseAllSynthVoices();
     currentSoundMode = soundModeSelect.value;
-    soundStatusDisplay.textContent = `Sound mode: ${soundModeSelect.options[soundModeSelect.selectedIndex].text}`;
+
+    if (currentSoundMode !== "classic") {
+      const unlocked = await unlockSynthAudio();
+      soundStatusDisplay.textContent = unlocked
+        ? `Sound mode: ${soundModeSelect.options[soundModeSelect.selectedIndex].text}`
+        : "Tap a piano key to enable synthesized audio";
+    } else {
+      soundStatusDisplay.textContent = `Sound mode: ${soundModeSelect.options[soundModeSelect.selectedIndex].text}`;
+    }
+
     saveSettings();
   });
 
@@ -1714,11 +1742,17 @@ init();
   }
 
   buttons.forEach((button) => {
-    button.addEventListener("click", () => {
+    button.addEventListener("click", async () => {
       const mode = button.dataset.soundMode;
+
       if (!mode || mode === soundModeSelect.value) {
+        if (mode && mode !== "classic") await unlockSynthAudio();
         syncInstrumentGrid();
         return;
+      }
+
+      if (mode !== "classic") {
+        await unlockSynthAudio();
       }
 
       soundModeSelect.value = mode;
@@ -1729,4 +1763,151 @@ init();
 
   soundModeSelect.addEventListener("change", syncInstrumentGrid);
   syncInstrumentGrid();
+})();
+
+
+/* =========================================================
+   MOBILE / TOUCH KEYBOARD ARROW NAVIGATION
+   Tap = one white key. Hold = continuous movement.
+   Piano keys retain drag-across-keys glissando behavior.
+   ========================================================= */
+(function initPianoArrowNavigation(){
+  const leftBtn = document.getElementById("pianoNavLeft");
+  const rightBtn = document.getElementById("pianoNavRight");
+  if (!leftBtn || !rightBtn || !pianoWrapperEl) return;
+
+  const HOLD_DELAY = 260;
+
+  let holdFrame = null;
+  let holdDelayTimer = null;
+  let holdDirection = 0;
+  let holdStartedAt = 0;
+  let holdActive = false;
+
+  function maxScrollLeft() {
+    return Math.max(0, pianoWrapperEl.scrollWidth - pianoWrapperEl.clientWidth);
+  }
+
+  function clampScroll(value) {
+    return Math.max(0, Math.min(maxScrollLeft(), value));
+  }
+
+  function whiteKeyStep() {
+    // Always use the live key width so mobile/tablet/desktop all move
+    // exactly one visible white piano key per tap.
+    return Math.max(1, getWhiteKeyWidth());
+  }
+
+  function tapMove(direction) {
+    pianoWrapperEl.scrollTo({
+      left: clampScroll(pianoWrapperEl.scrollLeft + direction * whiteKeyStep()),
+      behavior: "smooth"
+    });
+  }
+
+  function clearHoldDelay() {
+    if (holdDelayTimer !== null) {
+      clearTimeout(holdDelayTimer);
+      holdDelayTimer = null;
+    }
+  }
+
+  function stopHold() {
+    clearHoldDelay();
+
+    if (holdFrame !== null) {
+      cancelAnimationFrame(holdFrame);
+      holdFrame = null;
+    }
+
+    holdDirection = 0;
+    holdActive = false;
+    leftBtn.classList.remove("holding");
+    rightBtn.classList.remove("holding");
+  }
+
+  function holdTick(now) {
+    if (!holdActive || !holdDirection) return;
+
+    const elapsed = now - holdStartedAt;
+
+    // Gentle start, then gradually faster for long holds.
+    const speed = elapsed > 1200 ? 9 : elapsed > 700 ? 6.5 : 4.25;
+    const current = pianoWrapperEl.scrollLeft;
+    const next = clampScroll(current + holdDirection * speed);
+
+    pianoWrapperEl.scrollLeft = next;
+
+    if (next === current || next === 0 || next === maxScrollLeft()) {
+      stopHold();
+      return;
+    }
+
+    holdFrame = requestAnimationFrame(holdTick);
+  }
+
+  function beginContinuousHold(direction, button) {
+    holdDirection = direction;
+    holdActive = true;
+    holdStartedAt = performance.now();
+    button.classList.add("holding");
+    holdFrame = requestAnimationFrame(holdTick);
+  }
+
+  function startPress(direction, button, event) {
+    event.preventDefault();
+    stopHold();
+
+    holdDirection = direction;
+
+    try {
+      button.setPointerCapture(event.pointerId);
+    } catch (_) {}
+
+    // Do not move immediately. This delay is what separates a normal
+    // tap from a deliberate press-and-hold.
+    holdDelayTimer = setTimeout(() => {
+      holdDelayTimer = null;
+      beginContinuousHold(direction, button);
+    }, HOLD_DELAY);
+  }
+
+  function finishPress(direction, event) {
+    event.preventDefault();
+
+    const wasHolding = holdActive;
+
+    // If the hold threshold was never reached, this was a tap.
+    if (!wasHolding) {
+      clearHoldDelay();
+      tapMove(direction);
+    }
+
+    stopHold();
+  }
+
+  [
+    [leftBtn, -1],
+    [rightBtn, 1]
+  ].forEach(([button, direction]) => {
+    button.addEventListener("pointerdown", (event) => {
+      startPress(direction, button, event);
+    });
+
+    button.addEventListener("pointerup", (event) => {
+      finishPress(direction, event);
+    });
+
+    button.addEventListener("pointercancel", stopHold);
+    button.addEventListener("lostpointercapture", stopHold);
+
+    // Keyboard-accessible controls.
+    button.addEventListener("keydown", (event) => {
+      if (event.key !== "Enter" && event.key !== " ") return;
+      event.preventDefault();
+      tapMove(direction);
+    });
+  });
+
+  window.addEventListener("blur", stopHold);
 })();
