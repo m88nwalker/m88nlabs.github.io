@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="m88n Labs Arcade — games, experiments, and weird little worlds.">
+  <title>m88n Labs Arcade</title>
+  <link rel="icon" href="assets/m88n-labs-logo.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <div class="ambient" aria-hidden="true">
+    <div class="ambient-orb orb-cyan"></div>
+    <div class="ambient-orb orb-pink"></div>
+    <div class="ambient-orb orb-purple"></div>
+    <div class="ambient-orb orb-orange"></div>
+    <div class="ambient-grid"></div>
+    <div class="scanlines"></div>
+    <div class="spark-field" id="sparkField"></div>
+  </div>
+
+  <div class="arcade-shell">
+
+    <header class="site-header">
+      <a href="arcade-lobby.html" class="brand" aria-label="m88n Labs Arcade home">
+
+        <div class="orbit-badge orbit-badge--header" aria-hidden="true">
+          <div class="orbit orbit-back orbit-back-one"><span class="orbit-dot dot-cyan"></span></div>
+          <div class="orbit orbit-back orbit-back-two"><span class="orbit-dot dot-pink"></span></div>
+          <div class="orbit orbit-back orbit-back-three"><span class="orbit-dot dot-yellow"></span></div>
+          <img src="assets/m88n-labs-logo.png" alt="" class="orbit-logo">
+          <div class="orbit orbit-front orbit-front-one"><span class="orbit-dot dot-purple"></span></div>
+          <div class="orbit orbit-front orbit-front-two"><span class="orbit-dot dot-orange"></span></div>
+          <div class="orbit orbit-front orbit-front-three"><span class="orbit-dot dot-green"></span></div>
+        </div>
+
+        <div class="brand-text">
+          <span class="brand-labs">M88N LABS</span>
+          <span class="brand-arcade" aria-label="Arcade">
+            <span class="neon-letter letter-cyan">A</span>
+            <span class="neon-letter letter-pink">R</span>
+            <span class="neon-letter letter-purple">C</span>
+            <span class="neon-letter letter-orange">A</span>
+            <span class="neon-letter letter-green">D</span>
+            <span class="neon-letter letter-yellow">E</span>
+          </span>
+        </div>
+      </a>
+
+      <div class="header-status">
+        <span class="status-light"></span>
+        <span class="status-text">SYSTEM ONLINE</span>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy-wrap hero-copy-center">
+          <p class="hero-eyebrow">// INTERACTIVE EXPERIMENTS \\</p>
+          <h1>
+            <span class="hero-small">ENTER THE</span>
+            <span class="neon-word" aria-label="Arcade">
+              <span class="neon-letter letter-cyan">A</span>
+              <span class="neon-letter letter-pink">R</span>
+              <span class="neon-letter letter-purple">C</span>
+              <span class="neon-letter letter-orange">A</span>
+              <span class="neon-letter letter-green">D</span>
+              <span class="neon-letter letter-yellow">E</span>
+            </span>
+          </h1>
+          <p class="hero-copy">Games, experiments, strange little worlds, and whatever else escapes from the lab.</p>
+          <div class="hero-marquee" aria-hidden="true"><span></span><b>INSERT CURIOSITY</b><span></span></div>
+        </div>
+      </section>
+
+      <section class="games-section">
+        <div class="section-heading">
+          <div>
+            <p class="section-kicker">
+              <span class="kicker-arrow">▶</span>
+              SELECT SOMETHING TO TEST
+              <span class="kicker-arrow">◀</span>
+            </p>
+            <h2>Arcade Floor</h2>
+          </div>
+          <div class="game-count" id="gameCount">0 GAMES ONLINE</div>
+        </div>
+        <div class="game-grid" id="gameGrid" aria-live="polite"></div>
+      </section>
+
+      <section class="lab-message">
+        <div class="lab-message-logo-wrap">
+          <img src="assets/m88n-labs-logo.png" alt="" class="lab-message-logo">
+        </div>
+        <div>
+          <p class="lab-message-label">M88N LABS // ACTIVE DEVELOPMENT</p>
+          <h2>The arcade is always evolving.</h2>
+          <p>New games, experiments, hidden features, and strange things will continue appearing as they escape containment.</p>
+        </div>
+        <div class="lab-leds" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-center">
+        <div class="orbit-badge orbit-badge--footer" aria-hidden="true">
+          <div class="orbit orbit-back orbit-back-one"><span class="orbit-dot dot-cyan"></span></div>
+          <div class="orbit orbit-back orbit-back-two"><span class="orbit-dot dot-pink"></span></div>
+          <div class="orbit orbit-back orbit-back-three"><span class="orbit-dot dot-yellow"></span></div>
+          <img src="assets/m88n-labs-logo.png" alt="" class="orbit-logo">
+          <div class="orbit orbit-front orbit-front-one"><span class="orbit-dot dot-purple"></span></div>
+          <div class="orbit orbit-front orbit-front-two"><span class="orbit-dot dot-orange"></span></div>
+          <div class="orbit orbit-front orbit-front-three"><span class="orbit-dot dot-green"></span></div>
+        </div>
+        <span>M88N LABS</span>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
