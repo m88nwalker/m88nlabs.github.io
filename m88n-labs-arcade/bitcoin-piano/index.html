@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Bitcoin Piano | M88N Labs Arcade</title>
+  <link rel="icon" href="assets/favicon.png" type="image/png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="arcade-page">
+    <section class="arcade-square" aria-label="Bitcoin Piano arcade cabinet">
+      <header class="cabinet-header">
+        <a class="arcade-back" href="../arcade-lobby.html">← ARCADE LOBBY</a>
+        <div class="cabinet-brand">M88N LABS <span>ARCADE</span></div>
+        <div class="cabinet-status"><i></i> ONLINE</div>
+      </header>
+
+      <div class="cabinet-screen">
+        <!-- HOME -->
+        <section id="homeScreen" class="app-screen home-screen visible">
+          <div class="home-grid-bg" aria-hidden="true"></div>
+          <div class="home-keys" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="home-content">
+            <div class="home-badge">₿ ON-CHAIN SOUND LAB</div>
+            <h1>Bitcoin Piano</h1>
+            <p class="home-subtitle">Play the blockchain.</p>
+
+            <div class="home-brief">
+              <div><span>88</span><small>PIANO KEYS</small></div>
+              <div><span>9</span><small>SOUND MODES</small></div>
+              <div><span>A–Z</span><small>CIPHER MODE</small></div>
+            </div>
+
+            <p class="home-copy">
+              Play on-chain piano samples, switch instruments, record melodies,
+              save sequences, export WAV files, and encode hidden messages.
+            </p>
+
+            <button id="homePlayBtn" class="primary-btn home-play" type="button">PLAY PIANO</button>
+          </div>
+        </section>
+
+        <!-- WORKBENCH -->
+        <section id="workbenchScreen" class="app-screen workbench-screen">
+          <div class="game-bar">
+            <button id="gameHomeBtn" class="game-home-btn" type="button">← HOME</button>
+            <strong>BITCOIN PIANO // SOUND LAB</strong>
+          </div>
+
+          <header class="hero compact-hero" id="hero">
+            <div>
+              <div class="hero-badge" id="heroBadge">₿ ON-CHAIN SOUND LAB</div>
+              <h1 id="heroTitle">Bitcoin Piano</h1>
+            </div>
+            <p class="hero-subtitle" id="heroSubtitle">88 keys. Nine voices. One blockchain.</p>
+          </header>
+
+          <div class="quick-strip">
+            <div class="field-inline range-inline">
+              <label for="rangeSelect">RANGE</label>
+              <select id="rangeSelect"></select>
+            </div>
+
+            <div class="field-inline quick-volume">
+              <label for="volumeSlider">VOL</label>
+              <input id="volumeSlider" type="range" min="0" max="1" step="0.01" value="0.85" />
+              <span id="volumeValue">85%</span>
+            </div>
+
+            <div class="quick-status">
+              <span>LAST NOTE</span>
+              <strong id="lastNoteDisplay">None</strong>
+            </div>
+          </div>
+
+          <section class="piano-section">
+            <div id="pianoWrapper" class="piano-wrapper">
+              <div id="piano" class="piano"></div>
+            </div>
+          </section>
+
+          <div class="performance-status">
+            <div>
+              <span>SOUND</span>
+              <strong id="soundStatusDisplay">Ready</strong>
+            </div>
+            <div>
+              <span>RECORDER</span>
+              <strong id="recordingStatusDisplay">Idle</strong>
+            </div>
+          </div>
+
+          <nav class="tool-dock" aria-label="Bitcoin Piano tools">
+            <button type="button" data-overlay="soundOverlay">SOUND</button>
+            <button type="button" data-overlay="recordOverlay">RECORD</button>
+            <button type="button" data-overlay="cipherOverlay">CIPHER</button>
+            <button type="button" data-overlay="savedOverlay">SAVED</button>
+            <button type="button" data-overlay="toolsOverlay">TOOLS</button>
+          </nav>
+        </section>
+
+        <!-- SOUND -->
+        <section id="soundOverlay" class="tool-overlay" aria-hidden="true">
+          <div class="overlay-header">
+            <button class="overlay-close" type="button">← PIANO</button>
+            <strong>SOUND LAB</strong>
+          </div>
+
+          <div class="overlay-body sound-layout">
+            <div class="overlay-title">
+              <span>INSTRUMENT ENGINE</span>
+              <h2>Shape Your Sound</h2>
+              <p>Choose a voice, set volume, sustain notes, and control key labels.</p>
+            </div>
+
+            <div class="sound-card featured">
+              <div class="sound-card-heading">
+                <div>
+                  <span>CHOOSE A VOICE</span>
+                  <strong id="activeSoundLabel">Grand Piano</strong>
+                </div>
+                <small>Tap an instrument to switch instantly.</small>
+              </div>
+
+              <select id="soundModeSelect" class="sound-mode-select-hidden" aria-hidden="true" tabindex="-1">
+                <option value="classic">Grand Piano (On-Chain)</option>
+                <option value="electric">Electric Piano</option>
+                <option value="arcade">8-Bit Arcade</option>
+                <option value="lead">Synth Lead</option>
+                <option value="organ">Drawbar Organ</option>
+                <option value="vibes">Vibraphone</option>
+                <option value="musicbox">Music Box</option>
+                <option value="celesta">Bell / Celesta</option>
+                <option value="clavinet">Clavinet</option>
+              </select>
+
+              <div class="instrument-grid" id="instrumentGrid" role="list" aria-label="Sound modes">
+                <button type="button" class="instrument-option" data-sound-mode="classic">
+                  <b>♩</b><span>Grand Piano</span><small>On-Chain</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="electric">
+                  <b>⚡</b><span>Electric Piano</span><small>Warm Keys</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="arcade">
+                  <b>8</b><span>8-Bit Arcade</span><small>Pixel Tone</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="lead">
+                  <b>⌁</b><span>Synth Lead</span><small>Bright Lead</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="organ">
+                  <b>≋</b><span>Drawbar Organ</span><small>Classic Organ</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="vibes">
+                  <b>✦</b><span>Vibraphone</span><small>Soft Vibes</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="musicbox">
+                  <b>♫</b><span>Music Box</span><small>Glass Notes</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="celesta">
+                  <b>✧</b><span>Bell / Celesta</span><small>Bell Tone</small>
+                </button>
+                <button type="button" class="instrument-option" data-sound-mode="clavinet">
+                  <b>◆</b><span>Clavinet</span><small>Funky Pluck</small>
+                </button>
+              </div>
+            </div>
+
+            <div class="sound-actions">
+              <button id="sustainBtn" class="ui-btn secondary" type="button">Sustain Off</button>
+              <button id="toggleLabelsBtn" class="ui-btn active" type="button">Hide Note Labels</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- RECORD -->
+        <section id="recordOverlay" class="tool-overlay" aria-hidden="true">
+          <div class="overlay-header">
+            <button class="overlay-close" type="button">← PIANO</button>
+            <strong>RECORDER</strong>
+          </div>
+
+          <div class="overlay-body record-layout">
+            <div class="record-hero">
+              <div class="record-dot" aria-hidden="true"></div>
+              <div>
+                <span>SEQUENCE RECORDER</span>
+                <h2>Capture a Melody</h2>
+              </div>
+            </div>
+
+            <div class="record-actions">
+              <button id="recordBtn" class="ui-btn record-primary" type="button">● RECORD</button>
+              <button id="stopBtn" class="ui-btn secondary" type="button">STOP</button>
+              <button id="playSequenceBtn" class="ui-btn" type="button">PLAY</button>
+              <button id="clearSequenceBtn" class="ui-btn danger" type="button">CLEAR</button>
+            </div>
+
+            <div class="sequence-name-card">
+              <label for="sequenceNameInput">Sequence Name</label>
+              <input id="sequenceNameInput" type="text" placeholder="My Bitcoin Melody" />
+            </div>
+
+            <div class="preview-card">
+              <span>SEQUENCE PREVIEW</span>
+              <pre id="sequencePreviewMini" class="preview-box">[]</pre>
+            </div>
+
+            <div class="export-actions">
+              <button id="saveSequenceBtn" class="ui-btn" type="button">SAVE LOCAL</button>
+              <button id="exportSequenceBtn" class="ui-btn secondary" type="button">EXPORT JSON</button>
+              <button id="importSequenceBtn" class="ui-btn secondary" type="button">IMPORT JSON</button>
+              <button id="exportWavBtn" class="ui-btn" type="button">EXPORT WAV</button>
+              <input id="importSequenceInput" type="file" accept=".json,application/json" hidden />
+            </div>
+          </div>
+        </section>
+
+        <!-- CIPHER -->
+        <section id="cipherOverlay" class="tool-overlay" aria-hidden="true">
+          <div class="overlay-header">
+            <button class="overlay-close" type="button">← PIANO</button>
+            <strong>CIPHER MODE</strong>
+          </div>
+
+          <div class="overlay-body cipher-layout">
+            <div class="cipher-lock" aria-hidden="true">₿</div>
+            <div class="overlay-title centered">
+              <span>HIDDEN MESSAGE MODE</span>
+              <h2>Play a Message</h2>
+              <p>White keys map to uppercase and lowercase letters. Turn Cipher Mode on, then play or record your message.</p>
+            </div>
+
+            <button id="toggleCipherBtn" class="ui-btn secondary cipher-toggle" type="button">Cipher Mode Off</button>
+
+            <div class="cipher-preview-card">
+              <span>MESSAGE PREVIEW</span>
+              <div id="cipherTextPreviewMini" class="preview-box preview-box-cipher preview-box-empty">Cipher Mode Off</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SAVED -->
+        <section id="savedOverlay" class="tool-overlay" aria-hidden="true">
+          <div class="overlay-header">
+            <button class="overlay-close" type="button">← PIANO</button>
+            <strong>SAVED MUSIC</strong>
+          </div>
+
+          <div id="savedSequencesPanel" class="saved-sequences-panel collapsed">
+            <div class="saved-panel-header saved-panel-header-toggle">
+              <div>
+                <span>LOCAL LIBRARY</span>
+                <h2>Your Recordings</h2>
+                <p>Stored locally in this browser.</p>
+              </div>
+              <button id="toggleSavedSequencesBtn" class="ui-btn secondary hidden-control" type="button">Show Saved Sequences</button>
+            </div>
+
+            <div id="savedSequencesContent" class="saved-sequences-content hidden">
+              <div id="savedSequencesList" class="saved-sequences-list">
+                <div class="empty-state">No saved sequences yet.</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TOOLS / NOTE MAPPING -->
+        <section id="toolsOverlay" class="tool-overlay" aria-hidden="true">
+          <div class="overlay-header">
+            <button class="overlay-close" type="button">← PIANO</button>
+            <strong>TOOLS</strong>
+          </div>
+
+          <div class="overlay-body tools-layout">
+            <div class="overlay-title">
+              <span>DEVELOPER TOOLS</span>
+              <h2>Note Mapping</h2>
+              <p>Map an individual piano note to its Ordinals inscription audio URL.</p>
+            </div>
+
+            <button id="toggleMappingBtn" class="ui-btn secondary mapping-toggle" type="button">Show Mapping Panel</button>
+
+            <section id="mappingPanel" class="mapping-panel hidden">
+              <div class="mapping-controls">
+                <div class="field-group">
+                  <label for="noteSelect">Note</label>
+                  <select id="noteSelect"></select>
+                </div>
+
+                <div class="field-group field-group-wide">
+                  <label for="noteUrlInput">Audio URL</label>
+                  <input id="noteUrlInput" type="text" placeholder="https://ordinals.com/content/..." />
+                </div>
+
+                <div class="mapping-button-group">
+                  <button id="saveMappingBtn" class="ui-btn" type="button">Save Mapping</button>
+                  <button id="clearMappingBtn" class="ui-btn danger" type="button">Clear Note</button>
+                  <button id="loadSelectedBtn" class="ui-btn secondary" type="button">Load Current</button>
+                </div>
+              </div>
+
+              <div class="mapping-preview-wrap">
+                <h3>Current NOTE_URLS Preview</h3>
+                <textarea id="mappingPreview" readonly></textarea>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
